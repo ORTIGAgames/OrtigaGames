@@ -15,10 +15,10 @@ public class Scenes : MonoBehaviour
     }
     public void playLevel()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     public void playCredits()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

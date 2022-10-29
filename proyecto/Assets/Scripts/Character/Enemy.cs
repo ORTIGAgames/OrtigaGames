@@ -27,19 +27,19 @@ public class Enemy : Character
     // Update is called once per frame
     void Update()
     {
-        if (turn > 0)
+        /*if (turn > 0)
         {
             Invoke("minusturn", 2.0f);
-        }
+        }*/
     }
 
     void minusturn()
     {
-        if (turn > 0)
+        /*if (turn > 0)
         {
             turn--;
-            
-        }
+
+        }*/
     }
 
     public override void OnMouseDown()
@@ -77,7 +77,7 @@ public class Enemy : Character
         game.InteractionDeactivate();
     }
 
-    public override void Move(Hexagon t, int i) //Manera mas simple de implementar movimiento con uno de casillas individuales que avanza en bucle según un determinado enumerador
+    public override void Move(Hexagon t, int i) //Manera mas simple de implementar movimiento con uno de casillas individuales que avanza en bucle segÃºn un determinado enumerador
     {
         t.setState(Hexagon.CodeState.WalkableE);
         i++;
@@ -98,9 +98,7 @@ public class Enemy : Character
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
         h.setOccupant(this);
-        game.activeAlly = null;
-        game.PlayerReset();
-        game.stage.Reset();
+        turn--;
     }
     public override void ShowMove(Hexagon h)
     {

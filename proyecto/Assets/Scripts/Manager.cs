@@ -22,6 +22,7 @@ public class Manager : MonoBehaviour
     public GameObject SceneryH;
     public GameObject InteractionH;
     public GameObject CharacterH;
+    public GameObject TurnH;
     #endregion
 
     #region combat
@@ -40,6 +41,8 @@ public class Manager : MonoBehaviour
         CombatH = GameObject.Find("Combat Hud");
         SceneryH = GameObject.Find("Scenery Hud");
         CharacterH = GameObject.Find("Stats");
+        TurnH = GameObject.Find("Turn Hud");
+        TurnH.SetActive(false);
         CharacterDeactivate();
         CombatDeactivate();
         InteractionDeactivate();
@@ -50,7 +53,7 @@ public class Manager : MonoBehaviour
             if (c.getSide() == "Ally")
             {
                 allies.Add(c);
-                c.setTurn(300);
+                c.setTurn(1);
             }
             else
                 enemies.Add(c);
@@ -62,6 +65,7 @@ public class Manager : MonoBehaviour
             box.setOccupant(c);
             c.transform.position = box.transform.position + new Vector3(0, .05f, 0);
             c.setInitialBlock(box);
+            StartCoroutine(ShowMessage("Ally turn", 1.0f));
         }
     }
     void Update()
@@ -78,15 +82,18 @@ public class Manager : MonoBehaviour
 
         if (allyturn && CheckTurn(allies))
         {
+            StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
             allyturn = false;
-            foreach (Enemy e in enemies)
+            for(int i = 0; i < enemies.Count; i++)
             {
-                e.setTurn(1);
+                enemies[i].setTurn(1);
+                StartCoroutine(Movement(2.0f * (i + 1), (Enemy)enemies[i]));
             }
         }
 
         if (!allyturn && CheckTurn(enemies))
         {
+            StartCoroutine(ShowMessage("Ally turn", 1.0f)); 
             allyturn = true;
             foreach (Ally a in allies)
             {
@@ -104,6 +111,19 @@ public class Manager : MonoBehaviour
         }
         return true;
     }
+    IEnumerator ShowMessage(string message, float delay)
+    {
+        TurnH.SetActive(true);
+        TextMeshProUGUI Turn = GameObject.Find("Turn").GetComponent<TextMeshProUGUI>();
+        Turn.text = message;      
+        yield return new WaitForSeconds(delay);
+        TurnH.SetActive(false);
+    }
+    IEnumerator Movement(float timer, Enemy e)
+    {
+        yield return new WaitForSeconds(timer);
+        e.CharacterMove(e.getInitialBlock().randomNeighbour());
+    }
     public void CombatActivation(Character Figther1, Character Figther2)
     {
         if (Figther1.getTurn() > 0)
@@ -113,14 +133,12 @@ public class Manager : MonoBehaviour
             activeEnemy = null;
             attacker = Figther1;
             defender = Figther2;
-            attacker.CharacterMove(attacker.getActualBlock());
             stage.Reset();
             InteractionDeactivate();
             SceneryDeactivate();
             Figther1.healthBar.gameObject.SetActive(true);
             Figther2.healthBar.gameObject.SetActive(true);
             CombatActivate();
-            Figther1.setTurn(Figther1.getTurn() - 1);
         }
     }
 
