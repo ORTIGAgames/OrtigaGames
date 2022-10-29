@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 
 public class Ally : Character
 {
     [SerializeField] protected int character;
+    [SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField] CinemachineBrain worldcamera;
 
     static int[,] characters;
     static string[] names;
+
 
     // Start is called before the first frame update
     public override void Awake()
@@ -37,27 +41,33 @@ public class Ally : Character
     }
     public override void OnMouseDown()
     {
-        game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Speed.ToString(), Health, MaxHealth);
-        game.InteractionActivate();
-        game.PlayerReset();
-
-        if (game.activeAlly)
+        if(game.allyturn == true)
         {
-            if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)//cuando se haga la gestión de turnos y cada personaje tenga un movimiento y una accion sustituir esto por si no se ha movido
-                game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .05f, 0);
-            game.activeAlly.GetComponent<BoxCollider>().enabled = true;
-        }
+            worldcamera.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
+            camera.gameObject.SetActive(true);
+            game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Speed.ToString(), Health, MaxHealth);
+            game.InteractionActivate();
 
-        if (!game.CombatH.active)
-        {
-            game.setActiveAlly(this);
-            game.lastAction = this.InitialBlock;
-            this.ActualBlock = this.InitialBlock;
-            game.activeAlly.GetComponent<BoxCollider>().enabled = false;
-        }
-        game.stage.Reset();//para mostrar las casillas donde se esparce en el tablero se resetea   
-        this.Move(this.InitialBlock, 0);
-        style.Action(this.InitialBlock, 0, this);
+            if (game.activeAlly)
+            {
+                if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)//cuando se haga la gestión de turnos y cada personaje tenga un movimiento y una accion sustituir esto por si no se ha movido
+                    game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .05f, 0);
+                game.activeAlly.GetComponent<BoxCollider>().enabled = true;
+            }
+
+            game.PlayerReset();
+
+            if (!game.CombatH.active)
+            {
+                game.setActiveAlly(this);
+                game.lastAction = this.InitialBlock;
+                this.ActualBlock = this.InitialBlock;
+                game.activeAlly.GetComponent<BoxCollider>().enabled = false;
+            }
+            game.stage.Reset();//para mostrar las casillas donde se esparce en el tablero se resetea   
+            this.Move(this.InitialBlock, 0);
+            style.Action(this.InitialBlock, 0, this);
+        }       
     }
 
     public override void Move(Hexagon t, int i)//Manera mas simple de implementar movimiento con uno de casillas individuales que avanza en bucle según un determinado enumerador

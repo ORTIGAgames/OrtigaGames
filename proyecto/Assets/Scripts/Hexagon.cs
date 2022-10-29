@@ -42,6 +42,23 @@ public class Hexagon : MonoBehaviour
         }
     }
 
+    public Hexagon randomNeighbour()
+    {
+        int counter = 0;
+        Hexagon neighbour;
+        do
+        {
+            counter++;
+            if(counter == 7)
+            {
+                return this;
+            }
+            neighbour = neighbours[Random.Range(0, neighbours.Length)];
+        } while (neighbour == null || neighbour.getOccupant());
+
+        return (neighbour);
+    }
+
     public Character getOccupant()
     {
         return occupant;
