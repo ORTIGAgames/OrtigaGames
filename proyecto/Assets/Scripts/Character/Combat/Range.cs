@@ -85,6 +85,7 @@ public class Range : MonoBehaviour, Combat
             this.GetComponent<Character>().getAbilities().Effect(m.defender);
         }
 
+        this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
         m.CombatDeactivate();
     }
 }
