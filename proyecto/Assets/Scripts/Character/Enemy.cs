@@ -38,6 +38,7 @@ public class Enemy : Character
         /*if (turn > 0)
         {
             turn--;
+
         }*/
     }
 
@@ -76,7 +77,7 @@ public class Enemy : Character
         game.InteractionDeactivate();
     }
 
-    public override void Move(Hexagon t, int i)//Manera mas simple de implementar movimiento con uno de casillas individuales que avanza en bucle según un determinado enumerador
+    public override void Move(Hexagon t, int i) //Manera mas simple de implementar movimiento con uno de casillas individuales que avanza en bucle segÃºn un determinado enumerador
     {
         t.setState(Hexagon.CodeState.WalkableE);
         i++;
@@ -102,5 +103,66 @@ public class Enemy : Character
     public override void ShowMove(Hexagon h)
     {
         this.transform.position = h.transform.position + new Vector3(0, .05f, 0);
+    }
+
+    public Hexagon BestMove(Hexagon hex)
+    {
+        Hexagon[] movement = hex.neighbours;
+        var value = -1000;
+        Hexagon bestHexagon = hex;
+        foreach(Hexagon a in movement)
+        {
+            var tempValue = ValueHexagon(a);
+            if (tempValue > value)
+            {
+                value = tempValue;
+                bestHexagon = a;
+            }
+        }
+        return bestHexagon;
+    }
+
+    public int ValueHexagon(Hexagon hex)
+    {
+        var value = -1000;
+        foreach(Ally a in game.allies) 
+        {
+            int tempvalue = (40 * 2 - a.getHealth()) - DistanceHexagon(a.getActualBlock());
+            if (tempvalue > value)
+                value = tempvalue;
+        }
+        return value;
+    }
+
+    public int DistanceHexagon(Hexagon goal ) //Esto hay que cambiarlo porque xd
+    {
+        Vector3 goalPos = goal.transform.position;
+        Vector3 currentPos = getActualBlock().transform.position;
+
+        Vector3 distance = goalPos - currentPos;
+
+        return (int) Mathf.Round(distance.magnitude);
+
+        /*
+        foreach(Hexagon a in goal.neighbours)
+        {
+            if (a == ActualBlock)
+                return distance;
+            else
+                distance++;
+                DistanceHexagon(a,distance);
+        }
+        return distance;*/
+    }
+
+    public void EnemyControl()
+    {
+        Hexagon movement = getActualBlock();
+        for (int i = 0; i < ((int)displacement); i++)
+        {
+            movement = BestMove(movement);
+        }
+        CharacterMove(movement);
+
     }
 }

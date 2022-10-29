@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour
 {
 
     [SerializeField] List<Character> players = new List<Character>();
-    [SerializeField] List<Character> allies = new List<Character>();
+    public List<Character> allies = new List<Character>();
     [SerializeField] List<Character> enemies = new List<Character>();
     public bool allyturn;
     public Scenery stage;
