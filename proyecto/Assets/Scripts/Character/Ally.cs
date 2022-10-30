@@ -27,21 +27,21 @@ public class Ally : Character
         names = BetweenScenesControler.names;
 
         MaxHealth = characters[character, 0];
-        Debug.Log(Health);
+        //Debug.Log(Health);
         Damage = characters[character, 1];
-        Debug.Log(Damage);
+        //Debug.Log(Damage);
         Defense = characters[character, 2];
-        Debug.Log(Defense);
+        //Debug.Log(Defense);
         Speed = characters[character, 2];
-        Debug.Log(Speed);
+        //Debug.Log(Speed);
         Name = names[character];
-        Debug.Log(Name);
+        //Debug.Log(Name);
         Health = MaxHealth;
         healthBar.SetMaxHealth(MaxHealth);
     }
     public override void OnMouseDown()
     {
-        if(game.allyturn == true)
+        if(game.allyturn == true && turn > 0)
         {
             worldcamera.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
             camera.gameObject.SetActive(true);
@@ -51,7 +51,7 @@ public class Ally : Character
             if (game.activeAlly)
             {
                 if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)//cuando se haga la gestión de turnos y cada personaje tenga un movimiento y una accion sustituir esto por si no se ha movido
-                    game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .05f, 0);
+                    game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .075f, 0);
                 game.activeAlly.GetComponent<BoxCollider>().enabled = true;
             }
 
@@ -90,17 +90,18 @@ public class Ally : Character
         if (game.activeAlly)
         {
             if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)
-                game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .05f, 0);
+                game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .075f, 0);
             game.activeAlly.GetComponent<BoxCollider>().enabled = true;
         }
         game.stage.Reset();
         game.PlayerReset();
         game.InteractionDeactivate();
+        game.CharacterDeactivate();
     }
 
     public override void CharacterMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .05f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .075f, 0);
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
         h.setOccupant(this);
@@ -110,12 +111,13 @@ public class Ally : Character
         game.InteractionDeactivate();
         game.lastAction = null;
         turn--;
+        game.CharacterDeactivate();
     }
     public override void ShowMove(Hexagon h)
     {
         if (turn > 0)
         {
-            this.transform.position = h.transform.position + new Vector3(0, .05f, 0);
+            this.transform.position = h.transform.position + new Vector3(0, .075f, 0);
             this.setActualBlock(h);
             game.lastAction = h;
         }

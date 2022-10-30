@@ -63,7 +63,7 @@ public class Manager : MonoBehaviour
                 box = stage.randomBlock();
             }
             box.setOccupant(c);
-            c.transform.position = box.transform.position + new Vector3(0, .05f, 0);
+            c.transform.position = box.transform.position + new Vector3(0, .075f, 0);
             c.setInitialBlock(box);
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
         }
@@ -135,9 +135,6 @@ public class Manager : MonoBehaviour
             defender = Figther2;
             stage.Reset();
             InteractionDeactivate();
-            SceneryDeactivate();
-            Figther1.healthBar.gameObject.SetActive(true);
-            Figther2.healthBar.gameObject.SetActive(true);
             CombatActivate();
         }
     }
