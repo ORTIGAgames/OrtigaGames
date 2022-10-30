@@ -8,7 +8,7 @@ public class GameScene : MonoBehaviour
     public List<Button> buttonToHide;
     public Text Name;
     public List<Button> Back;
-    public Image Sprite;
+    public SpriteRenderer Sprite;
     public Canvas Stats;
 
     // Start is called before the first frame update

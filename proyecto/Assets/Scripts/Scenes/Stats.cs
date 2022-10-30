@@ -24,9 +24,11 @@ public class Stats : MonoBehaviour
     int charac = 0;
 
     public Text nameCharacter;
+    public SpriteRenderer spriteCharacter;
 
     int[,] characters;
     string[] names;
+    [SerializeField] Sprite[] sprites;
 
     private string characterPrefsName = "Characters";
 
@@ -44,6 +46,8 @@ public class Stats : MonoBehaviour
         speedNumber.text = characters[charac, 3].ToString();
         pointsNumber.text = characters[charac, 4].ToString();
         nameCharacter.text = names[charac];
+
+        spriteCharacter.sprite=sprites[charac];
     }
 
     private void OnDestroy()
