@@ -11,15 +11,15 @@ public class Enemy : Character
         side = "Enemy";
 
         MaxHealth = 35;
-        Debug.Log(Health);
+        //Debug.Log(Health);
         Damage = 5;
-        Debug.Log(Damage);
+        //Debug.Log(Damage);
         Defense = 5;
-        Debug.Log(Defense);
+        //Debug.Log(Defense);
         Speed = 5;
-        Debug.Log(Speed);
+        //Debug.Log(Speed);
         Name = "Enemigo";
-        Debug.Log(Name);
+        //Debug.Log(Name);
         Health = MaxHealth;
         healthBar.SetMaxHealth(MaxHealth);
     }
@@ -94,7 +94,7 @@ public class Enemy : Character
 
     public override void CharacterMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .05f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .075f, 0);
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
         h.setOccupant(this);
@@ -102,7 +102,7 @@ public class Enemy : Character
     }
     public override void ShowMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .05f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .075f, 0);
     }
 
     public Hexagon BestMove(Hexagon hex)
