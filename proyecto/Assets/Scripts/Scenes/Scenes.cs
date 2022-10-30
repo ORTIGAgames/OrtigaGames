@@ -8,17 +8,21 @@ public class Scenes : MonoBehaviour
     public void playMenu()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
     public void playGame()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
     }
     public void playLevel()
     {
         SceneManager.LoadScene(2);
+        Time.timeScale = 1f;
     }
     public void playCredits()
     {
         SceneManager.LoadScene(3);
+        Time.timeScale = 1f;
     }
 }
