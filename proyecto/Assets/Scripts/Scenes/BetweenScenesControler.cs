@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BetweenScenesControler : MonoBehaviour
 {
-    public static int[,] characters = new int[6, 5] { { 36, 20, 20, 8, 5 }, { 30, 20, 20, 4, 5 }, { 28, 20, 20, 5, 5 }, { 40, 20, 20, 2, 5 }, { 26, 20, 20, 10, 5 }, { 20, 20, 20, 5, 5 } };
+    public static int[,] characters = new int[6, 5] { { 36, 5, 5, 8, 5 }, { 30, 6, 4, 4, 5 }, { 28, 1, 3, 5, 5 }, { 40, 5, 10, 2, 5 }, { 26, 4, 6, 10, 5 }, { 20, 10,1, 5, 5 } };
     public static string[] names = new string[6] { "Declan", "Winnie", "G470", "Nass", "Norbert", "Caroline" };
     
 }
