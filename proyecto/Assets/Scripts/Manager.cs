@@ -120,7 +120,8 @@ public class Manager : MonoBehaviour
     IEnumerator Movement(float timer, Enemy e)
     {
         yield return new WaitForSeconds(timer);
-        e.CharacterMove(e.getInitialBlock().randomNeighbour());
+        //e.CharacterMove(e.getInitialBlock().randomNeighbour());
+        e.EnemyControl();
     }
     public void CombatActivation(Character Figther1, Character Figther2)
     {

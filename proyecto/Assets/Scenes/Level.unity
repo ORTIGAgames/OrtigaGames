@@ -691,7 +691,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  displacement: 1
+  displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
