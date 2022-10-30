@@ -43,8 +43,7 @@ public class Ally : Character
     {
         if(game.allyturn == true && turn > 0)
         {
-            worldcamera.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-            camera.gameObject.SetActive(true);
+            Camera();
             game.InteractionActivate();
             if (game.activeAlly)
             {
@@ -98,6 +97,12 @@ public class Ally : Character
         game.CharacterDeactivate();
         if(game.CombatH)
             game.CombatDeactivate();
+    }
+
+    public void Camera()
+    {
+        worldcamera.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
+        camera.gameObject.SetActive(true);
     }
 
     public override void CharacterMove(Hexagon h)
