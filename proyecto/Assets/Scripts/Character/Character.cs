@@ -37,10 +37,6 @@ public abstract class Character : MonoBehaviour
         //displacement = GetComponent<Movement>();//uso de la clase movement en un futuro si hay posiblidad para movimientos especiales
     }
 
-    void Update()
-    {
-
-    }
     public abstract void OnMouseDown();
     public abstract void CharacterMove(Hexagon h);
     public abstract void Move(Hexagon t, int i);//Manera mas simple de implementar movimiento con uno de casillas individuales que avanza en bucle según un determinado enumerador

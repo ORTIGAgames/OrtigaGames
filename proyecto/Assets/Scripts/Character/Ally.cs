@@ -45,9 +45,7 @@ public class Ally : Character
         {
             worldcamera.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
             camera.gameObject.SetActive(true);
-            game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Speed.ToString(), Health, MaxHealth);
             game.InteractionActivate();
-
             if (game.activeAlly)
             {
                 if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)//cuando se haga la gestión de turnos y cada personaje tenga un movimiento y una accion sustituir esto por si no se ha movido
@@ -60,6 +58,7 @@ public class Ally : Character
             if (!game.CombatH.active)
             {
                 game.setActiveAlly(this);
+                game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Speed.ToString(), Health, MaxHealth);
                 game.lastAction = this.InitialBlock;
                 this.ActualBlock = this.InitialBlock;
                 game.activeAlly.GetComponent<BoxCollider>().enabled = false;
@@ -97,6 +96,8 @@ public class Ally : Character
         game.PlayerReset();
         game.InteractionDeactivate();
         game.CharacterDeactivate();
+        if(game.CombatH)
+            game.CombatDeactivate();
     }
 
     public override void CharacterMove(Hexagon h)

@@ -19,7 +19,6 @@ public class Manager : MonoBehaviour
 
     #region UI
     public GameObject CombatH;
-    public GameObject SceneryH;
     public GameObject InteractionH;
     public GameObject CharacterH;
     public GameObject TurnH;
@@ -39,7 +38,6 @@ public class Manager : MonoBehaviour
         //interface
         InteractionH = GameObject.Find("Interaction Hud");
         CombatH = GameObject.Find("Combat Hud");
-        SceneryH = GameObject.Find("Scenery Hud");
         CharacterH = GameObject.Find("Stats");
         TurnH = GameObject.Find("Turn Hud");
         TurnH.SetActive(false);
@@ -129,12 +127,9 @@ public class Manager : MonoBehaviour
         if (Figther1.getTurn() > 0)
         {
             //preparations
-            activeAlly = null;
-            activeEnemy = null;
             attacker = Figther1;
             defender = Figther2;
             stage.Reset();
-            InteractionDeactivate();
             CombatActivate();
         }
     }
@@ -171,11 +166,9 @@ public class Manager : MonoBehaviour
         charactera.SetText(attack);
         TextMeshProUGUI characterd = GameObject.Find("DefenseValue").GetComponentInChildren<TextMeshProUGUI>();
         characterd.SetText(defense);
-        TextMeshProUGUI characterv = GameObject.Find("VelocityValue").GetComponentInChildren<TextMeshProUGUI>();
-        characterv.SetText(velocity);
         HealthBar bar = GetComponentInChildren<HealthBar>();
         bar.SetMaxHealth(maxHealth);
-        bar.setHealth(health);
+        bar.character = activeAlly;
     }
 
     public void CharacterDeactivate()
@@ -201,16 +194,6 @@ public class Manager : MonoBehaviour
     {
         CombatH.SetActive(false);
         stage.Reset();
-    }
-
-    public void SceneryActivate()
-    {
-        SceneryH.SetActive(true);
-    }
-
-    public void SceneryDeactivate()
-    {
-        SceneryH.SetActive(false);
     }
 
     #endregion
