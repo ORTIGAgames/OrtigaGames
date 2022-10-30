@@ -22,6 +22,11 @@ public class Scenery : MonoBehaviour
         return (board[Random.Range(0, board.Length)]);
     }
 
+    public Hexagon Block(int i)
+    {
+        return (board[i]);
+    }
+
     public void Reset()
     {
         foreach (Hexagon h in board)//siempre que no haya un jugador activo que ninguna ficha este marcada

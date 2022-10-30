@@ -73,7 +73,7 @@ public class Melee : MonoBehaviour, Combat
         {
             int damage = (this.GetComponent<Character>().getDamage() <= m.defender.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() - m.defender.getDefense();
             print(damage);
-            m.defender.healthBar.setHealth(m.defender.getHealth() - damage);          
+            m.defender.setHealth(m.defender.getHealth() - damage);     
         }
 
         if (d == "Ability")

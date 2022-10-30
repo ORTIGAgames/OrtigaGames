@@ -23,7 +23,7 @@ public class HealthBar : MonoBehaviour
 
         fill.color = gradient.Evaluate(1f);
     }
-    public void setHealth(int health)
+    private void setHealth(int health)
     {
         slider.value = health;
 
