@@ -48,21 +48,29 @@ public class Manager : MonoBehaviour
         foreach (Character c in StartingPlayers)//al iniciar la partida se le asignan a los jugadores posiciones aleatorias
         {
             players.Add(c);
+            Hexagon box;
             if (c.getSide() == "Ally")
             {
                 allies.Add(c);
-                c.setTurn(1);
+                box = stage.Block(Random.Range(0, 6));
+                while (box.getOccupant())
+                {
+                    box = stage.Block(Random.Range(0, 6));
+                }                
             }
             else
-                enemies.Add(c);
-            Hexagon box = stage.randomBlock();
-            while (box.getOccupant())
             {
-                box = stage.randomBlock();
+                box = stage.Block(Random.Range(38, 44));
+                while (box.getOccupant())
+                {
+                    box = stage.Block(Random.Range(38, 44));
+                }
+                enemies.Add(c);
             }
             box.setOccupant(c);
-            c.transform.position = box.transform.position + new Vector3(0, .075f, 0);
+            c.transform.position = box.transform.position + new Vector3(0, .085f, 0);
             c.setInitialBlock(box);
+            c.setTurn(1);
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
         }
     }

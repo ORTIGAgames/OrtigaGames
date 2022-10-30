@@ -94,7 +94,7 @@ public class Enemy : Character
 
     public override void CharacterMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .075f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
         h.setOccupant(this);
@@ -102,7 +102,7 @@ public class Enemy : Character
     }
     public override void ShowMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .075f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
     }
 
     public Hexagon BestMove(Hexagon hex)

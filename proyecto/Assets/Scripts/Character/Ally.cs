@@ -48,7 +48,7 @@ public class Ally : Character
             if (game.activeAlly)
             {
                 if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)//cuando se haga la gestión de turnos y cada personaje tenga un movimiento y una accion sustituir esto por si no se ha movido
-                    game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .075f, 0);
+                    game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .085f, 0);
                 game.activeAlly.GetComponent<BoxCollider>().enabled = true;
             }
 
@@ -88,7 +88,7 @@ public class Ally : Character
         if (game.activeAlly)
         {
             if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)
-                game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .075f, 0);
+                game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .085f, 0);
             game.activeAlly.GetComponent<BoxCollider>().enabled = true;
         }
         game.stage.Reset();
@@ -107,7 +107,7 @@ public class Ally : Character
 
     public override void CharacterMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .075f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
         h.setOccupant(this);
@@ -123,7 +123,7 @@ public class Ally : Character
     {
         if (turn > 0)
         {
-            this.transform.position = h.transform.position + new Vector3(0, .075f, 0);
+            this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
             this.setActualBlock(h);
             game.lastAction = h;
         }
