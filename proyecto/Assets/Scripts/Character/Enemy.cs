@@ -12,7 +12,7 @@ public class Enemy : Character
 
         MaxHealth = 35;
         Debug.Log(Health);
-        Damage = 5;
+        Damage = 10;
         Debug.Log(Damage);
         Defense = 5;
         Debug.Log(Defense);
@@ -98,7 +98,7 @@ public class Enemy : Character
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
         h.setOccupant(this);
-        turn--;
+        
     }
     public override void ShowMove(Hexagon h)
     {
@@ -157,12 +157,52 @@ public class Enemy : Character
 
     public void EnemyControl()
     {
+        //Movement
+        setActualBlock(getInitialBlock());
+        this.getStyle().Action(getActualBlock(), 0, this);
         Hexagon movement = getActualBlock();
-        for (int i = 0; i < ((int)displacement); i++)
+        for (int i = 0; i <= ((int)displacement); i++)
         {
-            movement = BestMove(movement);
+            Hexagon aux = BestMove(movement);
+            movement = aux;
         }
-        CharacterMove(movement);
 
+        if(!movement.getOccupant())
+            CharacterMove(movement);
+        else
+        {
+            foreach(Hexagon h in movement.neighbours)
+            {
+                if (!h.getOccupant())
+                {
+                    CharacterMove(h);
+                    break;
+                }
+                    
+            }
+        }
+
+        //Combat 
+        
+        Character weaker = null;
+        int weakerLife = 100;
+        foreach(Hexagon hex in game.stage.board)
+        {
+            if(hex.getState()== Hexagon.CodeState.EnemyT)
+            {
+                if (hex.getOccupant().getHealth() < weakerLife)
+                {
+                    weakerLife = hex.getOccupant().getHealth();
+                    weaker = hex.getOccupant();
+                }
+            }
+            
+        }
+        if (weaker)
+        {
+            game.CombatActivation(this, weaker);
+            this.getStyle().Action(game, "Action");
+        }
+        turn--;
     }
 }

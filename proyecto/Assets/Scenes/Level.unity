@@ -673,7 +673,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  displacement: 1
+  displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 0
+  maxCasillas: 2
 --- !u!1 &124140455
 GameObject:
   m_ObjectHideFlags: 3
