@@ -12,9 +12,9 @@ public class Enemy : Character
 
         MaxHealth = 35;
         //Debug.Log(Health);
-        Damage = 5;
+        Damage = 6;
         //Debug.Log(Damage);
-        Defense = 5;
+        Defense = 4;
         //Debug.Log(Defense);
         Speed = 5;
         //Debug.Log(Speed);
