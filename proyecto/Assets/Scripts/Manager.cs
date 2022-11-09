@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
     [SerializeField] List<Character> players = new List<Character>();
     public List<Character> allies = new List<Character>();
     [SerializeField] List<Character> enemies = new List<Character>();
+    public List<PreTurn> preTurn = new List<PreTurn>();
     public bool allyturn;
     public Scenery stage;
     public Character activeAlly;
@@ -18,7 +19,7 @@ public class Manager : MonoBehaviour
     public Character lastClicked;
 
     #region UI
-    public GameObject CombatH;
+    public CombatHud CombatH;
     public GameObject InteractionH;
     public GameObject CharacterH;
     public GameObject TurnH;
@@ -37,7 +38,7 @@ public class Manager : MonoBehaviour
 
         //interface
         InteractionH = GameObject.Find("Interaction Hud");
-        CombatH = GameObject.Find("Combat Hud");
+        CombatH = GameObject.Find("Combat Hud").GetComponent<CombatHud>();
         CharacterH = GameObject.Find("Stats");
         TurnH = GameObject.Find("Turn Hud");
         TurnH.SetActive(false);
@@ -91,7 +92,8 @@ public class Manager : MonoBehaviour
             PlayerReset();
             StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
             allyturn = false;
-            //funcion que llama a todas las funcionalidades que se hacen al empezar el turno, de momento solo la de calamari
+            foreach (PreTurn p in preTurn)
+                p.BeforeTurn();
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
@@ -104,7 +106,8 @@ public class Manager : MonoBehaviour
             PlayerReset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f)); 
             allyturn = true;
-            //funcion que llama a todas las funcionalidades que se hacen al empezar el turno, de momento solo la de calamari
+            foreach (PreTurn p in preTurn)
+                p.BeforeTurn();
             foreach (Ally a in allies)
             {
                 a.setTurn(1);
@@ -200,14 +203,16 @@ public class Manager : MonoBehaviour
 
     public void CombatActivate()
     {
-        CombatH.SetActive(true);
+        CombatH.gameObject.SetActive(true);
         if(attacker.getSide() == defender.getSide())
-            GameObject.Find("Action/Attack").SetActive(false);//tengo que arreglarlo
+            CombatH.Action.SetActive(false);
+        else
+            CombatH.Action.SetActive(true);
     }
 
     public void CombatDeactivate()
     {
-        CombatH.SetActive(false);
+        CombatH.gameObject.SetActive(false);
         stage.Reset();
     }
 

@@ -2,28 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CalamariPet : MonoBehaviour
+public class CalamariPet : PreTurn
 {
     public Ally attached;
     public Manager game;
-    public int counts;
+    float timerCount;
 
+    public void Start()
+    {
+        game.preTurn.Add(this);
+    }
     public void Update()
     {
-        this.transform.position = attached.transform.position + new Vector3(-.05f, .02f, 0);
-        if (game.allyturn && counts < 0)
-        {
-            Heal();
-            counts++;
-        }
-        if (!game.allyturn && counts > 0)
-        {
-            counts--;
-        }
-            
+        timerCount += Time.deltaTime;
+
+        this.transform.position = attached.transform.position + new Vector3(Mathf.Cos(timerCount)/15, .02f, Mathf.Sin(timerCount)/15);
     }
-    public void Heal()
+    public override void BeforeTurn()
     {
-            attached.setHealth(attached.getHealth() + 1);
+        print("hola" + attached.getHealth());
+        attached.setHealth(attached.getHealth() + 1);
     }
 }

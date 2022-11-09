@@ -70,7 +70,7 @@ public class Ally : Character
             game.InteractionActivate();
             game.PlayerReset();
 
-            if (!game.CombatH.active)
+            if (!game.CombatH.gameObject.active)
             {
                 game.setActiveAlly(this);
                 game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Speed.ToString(), Health, MaxHealth);

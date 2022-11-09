@@ -767,7 +767,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attached: {fileID: 1435065685}
   game: {fileID: 1559168337}
-  counts: 0
 --- !u!212 &86069917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1542,7 +1541,7 @@ RectTransform:
   m_Children:
   - {fileID: 1071077949}
   m_Father: {fileID: 1873962371}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2472,7 +2471,7 @@ RectTransform:
   - {fileID: 796797481}
   - {fileID: 1790828884}
   m_Father: {fileID: 1873962371}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4779,7 +4778,7 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: 8fb55f437a2caf644b407ec2c1c8e260, type: 3}
+  Face: {fileID: 21300000, guid: 8259f100bec2c0d439913dafe9578a37, type: 3}
   healthBar: {fileID: 177329795}
   character: 0
   camera: {fileID: 104934283}
@@ -4895,7 +4894,7 @@ RectTransform:
   m_Children:
   - {fileID: 1690385036}
   m_Father: {fileID: 1873962371}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7371,6 +7370,7 @@ GameObject:
   - component: {fileID: 1057802396}
   - component: {fileID: 1057802395}
   - component: {fileID: 1057802394}
+  - component: {fileID: 1057802397}
   m_Layer: 5
   m_Name: Combat Hud
   m_TagString: Untagged
@@ -7393,7 +7393,7 @@ RectTransform:
   - {fileID: 50702776}
   - {fileID: 265345580}
   m_Father: {fileID: 1873962371}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7461,6 +7461,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1057802397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057802391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8613fbb55fbb82c49a48677f50c1af9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Action: {fileID: 0}
+  Ability: {fileID: 0}
 --- !u!1001 &1068940513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10238,7 +10252,7 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: 1771881e55641dd499892109b9785454, type: 3}
+  Face: {fileID: 21300000, guid: 03b2cc37f22c4464d8fe996cae496e84, type: 3}
   healthBar: {fileID: 223637536}
   character: 1
   camera: {fileID: 1631942251}
@@ -11254,6 +11268,7 @@ MonoBehaviour:
   players: []
   allies: []
   enemies: []
+  preTurn: []
   allyturn: 0
   stage: {fileID: 0}
   activeAlly: {fileID: 0}
@@ -13063,7 +13078,7 @@ RectTransform:
   m_Children:
   - {fileID: 393100879}
   m_Father: {fileID: 1873962371}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13318,11 +13333,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1057802392}
   - {fileID: 1821779998}
   - {fileID: 161370006}
   - {fileID: 315883982}
   - {fileID: 703210637}
+  - {fileID: 1057802392}
   - {fileID: 386813672}
   m_Father: {fileID: 1559168338}
   m_RootOrder: 1
