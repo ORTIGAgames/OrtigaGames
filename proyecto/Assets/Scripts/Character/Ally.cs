@@ -63,7 +63,7 @@ public class Ally : Character
                 game.activeAlly.getStyle().ValuablePosition(this.InitialBlock, 0);
             }
         }
-        else if (game.allyturn == true && turn > 0)
+        else if (game.allyturn && turn > 0)
         {
             game.lastClicked = this;
             Camera();

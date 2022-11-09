@@ -128,9 +128,10 @@ public abstract class Character : MonoBehaviour
 
     public virtual void setHealth(int h)
     {
-        Health = h;
+        if (h <= MaxHealth)
+            Health = h;
         if (Health <= 0)
-            game.DeleteCharacter(this);
+            game.DeleteCharacter(this);      
     }
 
     public virtual int getDamage()

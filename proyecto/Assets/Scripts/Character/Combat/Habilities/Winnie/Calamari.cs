@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spore :Abilities
+public class Calamari : Abilities
 {
     public void Awake()
     {
@@ -10,6 +10,7 @@ public class Spore :Abilities
     }
     public override void Effect(Character Figther)
     {
-        Figther.setTurn(Figther.getTurn() + 1);
+        GameObject.Find("Calamari").GetComponent<CalamariPet>().attached = (Ally)Figther;
     }
 }
+
