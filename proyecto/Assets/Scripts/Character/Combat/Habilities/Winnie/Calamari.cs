@@ -8,6 +8,7 @@ public class Calamari : Abilities
     {
         Role = "Support";
     }
+
     public override void Effect(Character Figther)
     {
         GameObject.Find("Calamari").GetComponent<CalamariPet>().attached = (Ally)Figther;

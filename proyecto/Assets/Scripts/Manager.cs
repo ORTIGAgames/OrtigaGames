@@ -88,9 +88,11 @@ public class Manager : MonoBehaviour
 
         if (allyturn && CheckTurn(allies))
         {
+            PlayerReset();
             StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
             allyturn = false;
-            for(int i = 0; i < enemies.Count; i++)
+            //funcion que llama a todas las funcionalidades que se hacen al empezar el turno, de momento solo la de calamari
+            for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
                 StartCoroutine(Movement(2.0f * (i + 1), (Enemy)enemies[i]));
@@ -99,8 +101,10 @@ public class Manager : MonoBehaviour
 
         if (!allyturn && CheckTurn(enemies))
         {
+            PlayerReset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f)); 
             allyturn = true;
+            //funcion que llama a todas las funcionalidades que se hacen al empezar el turno, de momento solo la de calamari
             foreach (Ally a in allies)
             {
                 a.setTurn(1);
@@ -198,9 +202,7 @@ public class Manager : MonoBehaviour
     {
         CombatH.SetActive(true);
         if(attacker.getSide() == defender.getSide())
-        {
-            GameObject.Find("Action/Attack").SetActive(false);
-        }
+            GameObject.Find("Action/Attack").SetActive(false);//tengo que arreglarlo
     }
 
     public void CombatDeactivate()
