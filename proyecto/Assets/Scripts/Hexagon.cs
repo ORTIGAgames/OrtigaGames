@@ -90,9 +90,11 @@ public class Hexagon : MonoBehaviour
                 break;
             case CodeState.EnemyT:
                 this.VisualState.material.color = Color.red;
+                occupant.setTarget(true);
                 break;
             case CodeState.AllyT:
                 this.VisualState.material.color = Color.yellow;
+                occupant.setTarget(true);
                 break;
             case CodeState.Action:
                 this.VisualState.material.color = Color.blue;

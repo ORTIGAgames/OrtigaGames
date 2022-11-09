@@ -44,26 +44,23 @@ public class Enemy : Character
 
     public override void OnMouseDown()
     {
-        if (game.activeAlly)//si el jugador esta con un personaje activo
+        if (this.targetable)//si esta a rango
         {
-            if (this.targetable)//si esta a rango
+            if (game.activeAlly.getActualBlock().getState() == Hexagon.CodeState.Action && game.lastClicked == this)//si esta a rango de combate se pegan
             {
-                if (game.activeAlly.getActualBlock().getState() == Hexagon.CodeState.Action && game.activeEnemy == this)//si esta a rango de combate se pegan
-                {
-                    game.CombatActivation(game.activeAlly, this);
-                }
-                else//si no esta a rango de combate pero podria estarlo se muestran las casillas donde se podria pegar
-                {
-                    game.activeEnemy = this;
-                    game.stage.NoAttacks();
-                    game.activeAlly.getStyle().ValuablePosition(this.InitialBlock, 0);
-                }
+                game.CombatActivation(game.activeAlly, this);
+            }
+            else//si no esta a rango de combate pero podria estarlo se muestran las casillas donde se podria pegar
+            {
+                game.lastClicked = this;
+                game.stage.NoAttacks();
+                game.activeAlly.getStyle().ValuablePosition(this.InitialBlock, 0);
             }
         }
         else//si el jugador no esta con ningun personaje activo
         {
+            game.lastClicked = this;
             game.stage.Reset();//para mostrar las casillas donde se esparce en el tablero se resetea
-            game.activeEnemy = this;
             game.InteractionActivate();
             this.Move(this.InitialBlock, 0);
             style.Action(this.InitialBlock, 0, this);

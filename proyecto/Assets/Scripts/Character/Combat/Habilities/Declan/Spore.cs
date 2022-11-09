@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spore : MonoBehaviour, Abilities
+public class Spore :Abilities
 {
-    public void Effect(Character Figther)
+    public void Awake()
+    {
+        Role = "Support";
+    }
+    public override void Effect(Character Figther)
     {
         print("hello");
     }

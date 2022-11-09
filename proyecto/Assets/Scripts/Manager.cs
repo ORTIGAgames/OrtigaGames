@@ -14,8 +14,8 @@ public class Manager : MonoBehaviour
     public bool allyturn;
     public Scenery stage;
     public Character activeAlly;
-    public Character activeEnemy;
     public Hexagon lastAction;
+    public Character lastClicked;
 
     #region UI
     public GameObject CombatH;
@@ -149,7 +149,7 @@ public class Manager : MonoBehaviour
         {
             c.setTarget(false);
         }
-        activeEnemy = null;
+        lastClicked = null;
         activeAlly = null;
     }
 
@@ -197,6 +197,10 @@ public class Manager : MonoBehaviour
     public void CombatActivate()
     {
         CombatH.SetActive(true);
+        if(attacker.getSide() == defender.getSide())
+        {
+            GameObject.Find("Action/Attack").SetActive(false);
+        }
     }
 
     public void CombatDeactivate()
