@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseLevel : MonoBehaviour
+public class PauseHud : MonoBehaviour
 {
     [SerializeField] GameObject butonPause;
     [SerializeField] GameObject menuPause;

@@ -23,7 +23,8 @@ public class Range : MonoBehaviour, Combat
                         }
                         else
                         {
-                            h.setState(Hexagon.CodeState.AllyT);
+                            if (this.GetComponentInParent<Abilities>() && this.GetComponentInParent<Abilities>().Role == "Support")
+                                h.setState(Hexagon.CodeState.AllyT);
                         }
                     }
                     if (i < (((int)c.getMovement()) + 1) && h != null)

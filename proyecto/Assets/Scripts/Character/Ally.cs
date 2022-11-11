@@ -21,6 +21,15 @@ public class Ally : Character
         side = "Ally";
         LoadData();
     }
+
+    public void Update()
+    {
+        if(game.activeAlly != this){
+            if(getInitialBlock().transform.position != this.transform.position)
+                this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, 0);                  
+            this.GetComponent<BoxCollider>().enabled = true;
+        }
+    }
     void LoadData()
     {
         characters = BetweenScenesControler.characters;
@@ -41,20 +50,27 @@ public class Ally : Character
     }
     public override void OnMouseDown()
     {
-        if(game.allyturn == true && turn > 0)
+        if (this.targetable)//si esta a rango
         {
+            if (game.activeAlly.getActualBlock().getState() == Hexagon.CodeState.Action && game.lastClicked == this)//si esta a rango de combate se pegan
+            {
+                game.CombatActivation(game.activeAlly, this);
+            }
+            else//si no esta a rango de combate pero podria estarlo se muestran las casillas donde se podria pegar
+            {
+                game.lastClicked = this;
+                game.stage.NoAttacks();
+                game.activeAlly.getStyle().ValuablePosition(this.InitialBlock, 0);
+            }
+        }
+        else if (game.allyturn && turn > 0)
+        {
+            game.lastClicked = this;
             Camera();
             game.InteractionActivate();
-            if (game.activeAlly)
-            {
-                if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)//cuando se haga la gestión de turnos y cada personaje tenga un movimiento y una accion sustituir esto por si no se ha movido
-                    game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .085f, 0);
-                game.activeAlly.GetComponent<BoxCollider>().enabled = true;
-            }
-
             game.PlayerReset();
 
-            if (!game.CombatH.active)
+            if (!game.CombatH.gameObject.active)
             {
                 game.setActiveAlly(this);
                 game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Speed.ToString(), Health, MaxHealth);
@@ -85,12 +101,6 @@ public class Ally : Character
 
     public void Cancel()
     {
-        if (game.activeAlly)
-        {
-            if (game.activeAlly.transform.position != game.activeAlly.getInitialBlock().transform.position)
-                game.activeAlly.transform.position = game.activeAlly.getInitialBlock().transform.position + new Vector3(0, .085f, 0);
-            game.activeAlly.GetComponent<BoxCollider>().enabled = true;
-        }
         game.stage.Reset();
         game.PlayerReset();
         game.InteractionDeactivate();
@@ -101,8 +111,8 @@ public class Ally : Character
 
     public void Camera()
     {
-        worldcamera.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-        camera.gameObject.SetActive(true);
+        worldcamera.ActiveVirtualCamera.Priority = 10;
+        camera.Priority = 100;
     }
 
     public override void CharacterMove(Hexagon h)
@@ -121,11 +131,8 @@ public class Ally : Character
     }
     public override void ShowMove(Hexagon h)
     {
-        if (turn > 0)
-        {
-            this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
-            this.setActualBlock(h);
-            game.lastAction = h;
-        }
+        this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
+        this.setActualBlock(h);
+        game.lastAction = h;
     }
 }

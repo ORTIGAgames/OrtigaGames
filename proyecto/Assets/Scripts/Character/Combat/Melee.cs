@@ -18,11 +18,11 @@ public class Melee : MonoBehaviour, Combat
                         if (h.getOccupant().getSide() != c.getSide())
                         {
                             h.setState(Hexagon.CodeState.EnemyT);
-                            h.getOccupant().setTarget(true);
                         }
                         else
                         {
-                            h.setState(Hexagon.CodeState.AllyT);
+                            if(this.GetComponentInParent<Abilities>() && this.GetComponentInParent<Abilities>().Role == "Support")
+                                h.setState(Hexagon.CodeState.AllyT);
                         }
                     }
                     if (i < (((int)c.getMovement())) && h != null)

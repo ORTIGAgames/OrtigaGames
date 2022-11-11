@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Abilities
+public abstract class Abilities: MonoBehaviour
 {
-    void Effect(Character Figther);
+    public string Role;
+    public abstract void Effect(Character Figther);
 }
