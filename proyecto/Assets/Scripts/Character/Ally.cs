@@ -111,8 +111,8 @@ public class Ally : Character
 
     public void Camera()
     {
-        worldcamera.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-        camera.gameObject.SetActive(true);
+        worldcamera.ActiveVirtualCamera.Priority = 10;
+        camera.Priority = 100;
     }
 
     public override void CharacterMove(Hexagon h)
