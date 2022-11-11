@@ -12853,6 +12853,7 @@ GameObject:
   - component: {fileID: 1435065685}
   - component: {fileID: 1435065687}
   - component: {fileID: 1435065686}
+  - component: {fileID: 1435065688}
   m_Layer: 0
   m_Name: Winnie
   m_TagString: Untagged
@@ -12994,6 +12995,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Role: 
+--- !u!95 &1435065688
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435065678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5c3d0534ef3d21f4e86a0a5c7aea8cf2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1442601383
 PrefabInstance:
   m_ObjectHideFlags: 0
