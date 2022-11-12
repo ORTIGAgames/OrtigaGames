@@ -4754,7 +4754,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 544586301}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 544586303}
+        m_TargetAssemblyTypeName: PositionCaller, Assembly-CSharp
+        m_MethodName: CameraActivation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &544586301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4805,7 +4817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2457f3d3770308e47a135f78fd2d3f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character: {fileID: 911102358}
 --- !u!1001 &562483852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5873,7 +5885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678324454}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.13485137, y: 14.581499, z: -28.552689}
+  m_LocalPosition: {x: 0.13483611, y: 14.581484, z: -28.55269}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6133,6 +6145,7 @@ GameObject:
   - component: {fileID: 724867076}
   - component: {fileID: 724867075}
   - component: {fileID: 724867074}
+  - component: {fileID: 724867077}
   m_Layer: 0
   m_Name: NASS Invoker
   m_TagString: Untagged
@@ -6203,7 +6216,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 724867075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 724867077}
+        m_TargetAssemblyTypeName: PositionCaller, Assembly-CSharp
+        m_MethodName: CameraActivation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &724867075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6242,6 +6267,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724867072}
   m_CullTransparentMesh: 1
+--- !u!114 &724867077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724867072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2457f3d3770308e47a135f78fd2d3f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 859609627}
 --- !u!1 &732407377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6403,8 +6441,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745738186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 163.97523, y: -116.82838, z: -1.9813226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 163.97522, y: -116.82839, z: -1.9813263}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8017,6 +8055,7 @@ GameObject:
   - component: {fileID: 934856035}
   - component: {fileID: 934856034}
   - component: {fileID: 934856033}
+  - component: {fileID: 934856036}
   m_Layer: 0
   m_Name: Caroline Invoker
   m_TagString: Untagged
@@ -8087,7 +8126,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 934856034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 934856036}
+        m_TargetAssemblyTypeName: PositionCaller, Assembly-CSharp
+        m_MethodName: CameraActivation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &934856034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8126,6 +8177,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934856031}
   m_CullTransparentMesh: 1
+--- !u!114 &934856036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934856031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2457f3d3770308e47a135f78fd2d3f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 1089269482}
 --- !u!1 &942354750
 GameObject:
   m_ObjectHideFlags: 0
@@ -14263,6 +14327,7 @@ GameObject:
   - component: {fileID: 1584228403}
   - component: {fileID: 1584228402}
   - component: {fileID: 1584228401}
+  - component: {fileID: 1584228404}
   m_Layer: 0
   m_Name: Norbert Invoker
   m_TagString: Untagged
@@ -14334,13 +14399,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 147311315d94f3143b258919125472ae, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1584228404}
+        m_TargetAssemblyTypeName: PositionCaller, Assembly-CSharp
+        m_MethodName: CameraActivation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14384,6 +14449,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584228399}
   m_CullTransparentMesh: 1
+--- !u!114 &1584228404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584228399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2457f3d3770308e47a135f78fd2d3f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 745738189}
 --- !u!1001 &1585527234
 PrefabInstance:
   m_ObjectHideFlags: 0
