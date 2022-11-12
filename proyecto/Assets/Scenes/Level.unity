@@ -5629,6 +5629,7 @@ GameObject:
   - component: {fileID: 672783052}
   - component: {fileID: 672783051}
   - component: {fileID: 672783053}
+  - component: {fileID: 672783054}
   m_Layer: 0
   m_Name: Declan
   m_TagString: Untagged
@@ -5771,6 +5772,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.79, y: 2.4, z: 1}
   m_Center: {x: -0.000061273575, y: 0, z: 0.0000019073486}
+--- !u!95 &672783054
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672783042}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d74fd2cf9db40144f9b17d4951d2bbd5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &678324454
 GameObject:
   m_ObjectHideFlags: 0
@@ -6367,6 +6388,7 @@ GameObject:
   - component: {fileID: 745738189}
   - component: {fileID: 745738188}
   - component: {fileID: 745738191}
+  - component: {fileID: 745738192}
   m_Layer: 0
   m_Name: Norbert
   m_TagString: Untagged
@@ -6431,7 +6453,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3455dbe89cd917249a71127528c431e2, type: 3}
+  m_Sprite: {fileID: 904445279, guid: 1043f7a0a1801284790dfdc6d5a2e10e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6496,6 +6518,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxCasillas: 2
+--- !u!95 &745738192
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745738186}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae805b86a34770845a0d1455c30fa867, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &747874838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7289,6 +7331,7 @@ GameObject:
   - component: {fileID: 859609627}
   - component: {fileID: 859609628}
   - component: {fileID: 859609629}
+  - component: {fileID: 859609630}
   m_Layer: 0
   m_Name: NASS
   m_TagString: Untagged
@@ -7353,7 +7396,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ef0a33fa0e91369488ab92083c1029a4, type: 3}
+  m_Sprite: {fileID: 1473719897, guid: ad04d83b542e9b444b366f41d784521b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7417,6 +7460,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a17d96d89517e47a0c460c7ce54775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &859609630
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859609624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60f2d8d8ab65a154b8dcb763b4621f9b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &859870953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7717,6 +7780,7 @@ GameObject:
   - component: {fileID: 911102358}
   - component: {fileID: 911102359}
   - component: {fileID: 911102360}
+  - component: {fileID: 911102361}
   m_Layer: 0
   m_Name: G470
   m_TagString: Untagged
@@ -7781,7 +7845,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b65f349e9d96afc48a50658f0b312b72, type: 3}
+  m_Sprite: {fileID: 688745266, guid: cacadb0d59cea8c4191f9233e5024d04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7845,6 +7909,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a17d96d89517e47a0c460c7ce54775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &911102361
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911102355}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 289e819af52211e4f9a23c46a95cc38d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &920793639
 GameObject:
   m_ObjectHideFlags: 0
@@ -9436,6 +9520,7 @@ GameObject:
   - component: {fileID: 1089269482}
   - component: {fileID: 1089269483}
   - component: {fileID: 1089269484}
+  - component: {fileID: 1089269485}
   m_Layer: 0
   m_Name: Caroline
   m_TagString: Untagged
@@ -9500,7 +9585,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: debca0b45a53d6c4287d5d3a2b81c316, type: 3}
+  m_Sprite: {fileID: 1268023324, guid: fdd33bd9de02e5440997c2dbcdda3fa3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9565,6 +9650,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxCasillas: 2
+--- !u!95 &1089269485
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089269479}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4252ee299a0e2b4c8bb9a23aadfe4ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1095361645
 PrefabInstance:
   m_ObjectHideFlags: 0
