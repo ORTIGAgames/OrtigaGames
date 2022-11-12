@@ -7,6 +7,7 @@ public class PisotónDeLaMuerte : Abilities
     public void Awake()
     {
         Role = "Damage";
+        Name = "Death Stomp";
     }
     public override void Effect(Character Figther)
     {

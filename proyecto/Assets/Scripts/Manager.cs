@@ -171,7 +171,7 @@ public class Manager : MonoBehaviour
     }
 
     #region interface
-    public void CharacterActivate(Sprite face, string name, string attack, string defense, string velocity, int health, int maxHealth)
+    public void CharacterActivate(Sprite face, string name, string attack, string defense, string velocity, int health, int maxHealth, string ability)
     {
         CharacterH.SetActive(true);
         Image characterf = GameObject.Find("Face").GetComponent<Image>();
@@ -185,6 +185,8 @@ public class Manager : MonoBehaviour
         HealthBar bar = GetComponentInChildren<HealthBar>();
         bar.SetMaxHealth(maxHealth);
         bar.character = activeAlly;
+        TextMeshProUGUI abilityn = GameObject.Find("Ability").GetComponent<TextMeshProUGUI>();
+        abilityn.SetText(ability);
     }
 
     public void CharacterDeactivate()

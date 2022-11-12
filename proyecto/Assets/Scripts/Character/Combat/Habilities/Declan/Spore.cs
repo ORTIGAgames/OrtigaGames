@@ -7,6 +7,7 @@ public class Spore :Abilities
     public void Awake()
     {
         Role = "Support";
+        Name = "Spore";
     }
     public override void Effect(Character Figther)
     {
