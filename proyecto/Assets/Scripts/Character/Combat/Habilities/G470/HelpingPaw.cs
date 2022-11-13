@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HelpingPaw : MonoBehaviour
+public class HelpingPaw : Abilities
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        
+        Role = "Support";
+        Name = "HelpingPaw";
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void Effect(Character Figther)
     {
-        
+        DefBoost deff = DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, Figther);
     }
 }
