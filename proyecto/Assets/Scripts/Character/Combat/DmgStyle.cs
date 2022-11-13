@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Range : MonoBehaviour, Combat
+public class DmgStyle : MonoBehaviour, Combat
 {
     [SerializeField] int maxCasillas;
     public void Action(Hexagon t, int i, Character c)
@@ -76,7 +76,7 @@ public class Range : MonoBehaviour, Combat
     {
         if (d == "Action")
         {
-            FindObjectOfType<AudioManager>().Play("Range");
+            //FindObjectOfType<AudioManager>().Play("Range");
             int damage = (this.GetComponent<Character>().getDamage() <= m.defender.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() - m.defender.getDefense();
             print(damage);
             m.defender.setHealth(m.defender.getHealth() - damage);   

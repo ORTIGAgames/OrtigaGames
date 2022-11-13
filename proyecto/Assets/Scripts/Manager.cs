@@ -206,7 +206,7 @@ public class Manager : MonoBehaviour
     public void CombatActivate()
     {
         CombatH.gameObject.SetActive(true);
-        if(attacker.getSide() == defender.getSide())
+        if(!attacker.GetComponent<SupportStyle>() && attacker.getSide() == defender.getSide())
             CombatH.Action.SetActive(false);
         else
             CombatH.Action.SetActive(true);

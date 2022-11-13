@@ -8,7 +8,7 @@ public class CalamariPet : PreTurn
     public Manager game;
     float timerCount;
 
-    public void Start()
+    public void Awake()
     {
         game.preTurn.Add(this);
     }
