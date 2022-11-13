@@ -7,7 +7,7 @@ public class Calamari : Abilities
     public void Awake()
     {
         Role = "Support";
-        Name = "Calamari's touch";
+        Name = "CALAMARI'S TOUCH";
     }
 
     public override void Effect(Character Figther)

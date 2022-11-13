@@ -79,7 +79,7 @@ public class SupportStyle : MonoBehaviour, Combat
         if (d == "Action")
         {
             //FindObjectOfType<AudioManager>().Play("Range");
-            int Healing = this.GetComponent<Character>().getHealth() / 5;
+            int Healing = this.GetComponent<Attack>().Action();
             m.defender.setHealth(m.defender.getHealth() + Healing);
         }
 

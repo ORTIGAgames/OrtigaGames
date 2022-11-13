@@ -7,7 +7,7 @@ public class HelpingPaw : Abilities
     public void Awake()
     {
         Role = "Support";
-        Name = "Helping Paw";
+        Name = "HELPING PAW";
     }
     public override void Effect(Character Figther)
     {
