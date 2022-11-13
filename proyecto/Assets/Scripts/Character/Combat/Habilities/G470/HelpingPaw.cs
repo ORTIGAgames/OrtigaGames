@@ -7,10 +7,10 @@ public class HelpingPaw : Abilities
     public void Awake()
     {
         Role = "Support";
-        Name = "HelpingPaw";
+        Name = "Helping Paw";
     }
     public override void Effect(Character Figther)
     {
-        DefBoost deff = DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, Figther);
+        DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, Figther);
     }
 }
