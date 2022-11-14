@@ -8,6 +8,7 @@ public class LuckyShot : Abilities
     {
         Role = "Damage";
         Name = "LUCKY SHOT";
+        description = "Norbert tries a risky strategy in combat having a 50% chance to success, dealing a big amount of damage to an enemy if hit";
     }
     public override void Effect(Character Figther)
     {

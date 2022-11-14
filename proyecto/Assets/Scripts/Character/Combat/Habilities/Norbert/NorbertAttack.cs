@@ -10,7 +10,7 @@ public class NorbertAttack : Attack
 
         for (int i = 0; i < 2; i++)
         {
-            dmg = dmg + Random.Range(2, 6);
+            dmg = dmg + Random.Range(2, this.GetComponent<Character>().getDamage());
         }
 
         return dmg;

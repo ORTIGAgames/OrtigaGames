@@ -146,7 +146,7 @@ public class Manager : MonoBehaviour
             attacker = Figther1;
             defender = Figther2;
             stage.Reset();
-            CombatActivate();
+            CombatActivate(Figther1.GetComponent<Abilities>().Name);
         }
     }
 
@@ -171,22 +171,19 @@ public class Manager : MonoBehaviour
     }
 
     #region interface
-    public void CharacterActivate(Sprite face, string name, string attack, string defense, string velocity, int health, int maxHealth, string ability)
+    public void CharacterActivate(Sprite face, string name, string attack, string defense, string velocity, int health, int maxHealth, string ability, string explanation)
     {
         CharacterH.SetActive(true);
-        Image characterf = GameObject.Find("Face").GetComponent<Image>();
-        characterf.sprite = face;
-        TextMeshProUGUI charactern = GameObject.Find("Name").GetComponentInChildren<TextMeshProUGUI>();
-        charactern.SetText(name);
-        TextMeshProUGUI charactera = GameObject.Find("AttackValue").GetComponentInChildren<TextMeshProUGUI>();
-        charactera.SetText(attack);
-        TextMeshProUGUI characterd = GameObject.Find("DefenseValue").GetComponentInChildren<TextMeshProUGUI>();
-        characterd.SetText(defense);
+        GameObject.Find("Face").GetComponent<Image>().sprite = face;
+        GameObject.Find("Name").GetComponentInChildren<TextMeshProUGUI>().SetText(name);
+        GameObject.Find("AttackValue").GetComponentInChildren<TextMeshProUGUI>().SetText(attack); ;
+        GameObject.Find("DefenseValue").GetComponentInChildren<TextMeshProUGUI>().SetText(defense);
         HealthBar bar = GetComponentInChildren<HealthBar>();
         bar.SetMaxHealth(maxHealth);
         bar.character = activeAlly;
-        TextMeshProUGUI abilityn = GameObject.Find("Ability").GetComponent<TextMeshProUGUI>();
-        abilityn.SetText(ability);
+        GameObject.Find("Ability").GetComponent<TextMeshProUGUI>().SetText(ability);
+        GameObject.Find("Ability").GetComponent<AbilityController>().Ability.GetComponentInChildren<TextMeshProUGUI>().SetText(explanation);
+        GameObject.Find("Ability").GetComponent<AbilityController>().Ability.SetActive(false);
     }
 
     public void CharacterDeactivate()
@@ -203,10 +200,11 @@ public class Manager : MonoBehaviour
         InteractionH.SetActive(false);
     }
 
-    public void CombatActivate()
+    public void CombatActivate(string an)
     {
+        CombatH.Ability.GetComponentInChildren<TextMeshProUGUI>().SetText(an);
         CombatH.gameObject.SetActive(true);
-        if(!attacker.GetComponent<SupportStyle>() && attacker.getSide() == defender.getSide())
+        if (!attacker.GetComponent<SupportStyle>() && attacker.getSide() == defender.getSide())
             CombatH.Action.SetActive(false);
         else
             CombatH.Action.SetActive(true);

@@ -30,7 +30,7 @@ public class Stats : MonoBehaviour
     string[] names;
     [SerializeField] Sprite[] sprites;
 
-    private string characterPrefsName = "Characters";
+    //private string characterPrefsName = "Characters";
 
     private void Awake()
     {

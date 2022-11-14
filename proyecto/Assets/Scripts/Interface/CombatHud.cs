@@ -10,7 +10,7 @@ public class CombatHud : MonoBehaviour//calse para tener referencias a los boton
     public void Start()
     {
         Action = GameObject.Find("Action/Attack");
-        Ability = GameObject.Find("Abiluity");
+        Ability = GameObject.Find("AbilityCom");
     }
 
 }

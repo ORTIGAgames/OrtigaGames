@@ -8,6 +8,7 @@ public class Spore : Abilities
     {
         Role = "Support";
         Name = "SPORE";
+        description = "Declan, shakes his spores out of his body boosting an ally and giving him an extra turn";
     }
     public override void Effect(Character Figther)
     {
