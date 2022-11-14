@@ -79,8 +79,7 @@ public class DmgStyle : MonoBehaviour, Combat
             //FindObjectOfType<AudioManager>().Play("Range");
             int damage = (this.GetComponent<Attack>().Action() <= m.defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - m.defender.getDefense();
             print(damage + "A");
-            m.defender.setHealth(m.defender.getHealth() - damage);   
-            
+            m.defender.setHealth(m.defender.getHealth() - damage);              
         }
 
         if (d == "Ability")

@@ -90,6 +90,7 @@ public class Manager : MonoBehaviour
         if (allyturn && CheckTurn(allies))
         {
             PlayerReset();
+            stage.Reset();
             StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
             allyturn = false;
             foreach (PreTurn p in preTurn)
@@ -104,6 +105,7 @@ public class Manager : MonoBehaviour
         if (!allyturn && CheckTurn(enemies))
         {
             PlayerReset();
+            stage.Reset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f)); 
             allyturn = true;
             foreach (PreTurn p in preTurn)
@@ -146,7 +148,10 @@ public class Manager : MonoBehaviour
             attacker = Figther1;
             defender = Figther2;
             stage.Reset();
-            CombatActivate(Figther1.GetComponent<Abilities>().Name);
+            if(Figther1.GetComponent<Abilities>())
+                CombatActivate(Figther1.GetComponent<Abilities>().Name);
+            else
+                CombatActivate("No abilities");
         }
     }
 
@@ -158,6 +163,8 @@ public class Manager : MonoBehaviour
         }
         lastClicked = null;
         activeAlly = null;
+        attacker = null;
+        defender = null;
     }
 
     public void DeleteCharacter(Character c)
@@ -184,10 +191,18 @@ public class Manager : MonoBehaviour
         GameObject.Find("Ability").GetComponent<TextMeshProUGUI>().SetText(ability);
         GameObject.Find("Ability").GetComponent<AbilityController>().Ability.GetComponentInChildren<TextMeshProUGUI>().SetText(explanation);
         GameObject.Find("Ability").GetComponent<AbilityController>().Ability.SetActive(false);
+        if(activeAlly.GetComponent<Abilities>().Role == "SelfSupport")
+        {
+            attacker = activeAlly;
+            CharacterH.GetComponent<StatsHud>().Ability.SetActive(true);
+        }
+        else
+            CharacterH.GetComponent<StatsHud>().Ability.SetActive(false);
     }
 
     public void CharacterDeactivate()
     {
+        CharacterH.GetComponent<StatsHud>().Ability.SetActive(false);
         CharacterH.SetActive(false);
     }
     public void InteractionActivate()
@@ -204,7 +219,7 @@ public class Manager : MonoBehaviour
     {
         CombatH.Ability.GetComponentInChildren<TextMeshProUGUI>().SetText(an);
         CombatH.gameObject.SetActive(true);
-        if (!attacker.GetComponent<SupportStyle>() && attacker.getSide() == defender.getSide())
+        if (attacker.getSide() == defender.getSide())
             CombatH.Action.SetActive(false);
         else
             CombatH.Action.SetActive(true);

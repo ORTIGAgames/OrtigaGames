@@ -8,6 +8,7 @@ public class HelpingPaw : Abilities
     {
         Role = "Support";
         Name = "HELPING PAW";
+        description = "G470 lends a paw to an ally, boosting defense for 3 turns";
     }
     public override void Effect(Character Figther)
     {

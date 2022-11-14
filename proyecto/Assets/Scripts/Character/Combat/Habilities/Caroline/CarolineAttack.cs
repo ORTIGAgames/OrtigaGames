@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class G470Attack : Attack
+public class CarolineAttack : Attack
 {
     public override int Action()
     {

@@ -8,6 +8,7 @@ public class DeathStomp : Abilities
     {
         Role = "Damage";
         Name = "DEATH STOMP";
+        description = "NASS unleash his power, stomping the ground and dealing damage to the enemies surrounding";
     }
     public override void Effect(Character Figther)
     {
@@ -15,7 +16,7 @@ public class DeathStomp : Abilities
         {
             if(h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
             {
-                int damage = (this.GetComponent<Character>().getDamage()/3 <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage()/3 - h.getOccupant().getDefense();
+                int damage = (this.GetComponent<Character>().getDamage() <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - h.getOccupant().getDefense();
                 h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
             }               
         }
