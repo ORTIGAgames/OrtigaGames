@@ -7,7 +7,8 @@ public class Calamari : Abilities
     public void Awake()
     {
         Role = "Support";
-        Name = "Calamari's touch";
+        Name = "CALAMARI'S TOUCH";
+        description = "Winnie grants her faithful Calamari to an ally, healing a small amount of health at the start of each turn";
     }
 
     public override void Effect(Character Figther)

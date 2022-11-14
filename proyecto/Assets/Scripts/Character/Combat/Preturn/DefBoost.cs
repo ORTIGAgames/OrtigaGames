@@ -12,16 +12,15 @@ public class DefBoost : PreTurn
     {
         game = GameObject.Find("Manager").GetComponent<Manager>();
         game.preTurn.Add(this);
-        Boosted.setDefense(Boosted.getDefense() + BoostPower);
     }
 
-    public static DefBoost CreateDefBoost(int b, int c, Character ch)
+    public static void CreateDefBoost(int b, int c, Character ch)
     {
         DefBoost myC = ch.gameObject.AddComponent<DefBoost>();
         myC.BoostPower = b;
         myC.counter = c;
         myC.Boosted = ch;
-        return myC;
+        myC.Boosted.setDefense(myC.Boosted.getDefense() + myC.BoostPower);
     }
 
     public override void BeforeTurn()

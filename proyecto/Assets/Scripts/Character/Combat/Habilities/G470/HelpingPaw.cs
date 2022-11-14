@@ -7,10 +7,11 @@ public class HelpingPaw : Abilities
     public void Awake()
     {
         Role = "Support";
-        Name = "HelpingPaw";
+        Name = "HELPING PAW";
+        description = "G470 lends a paw to an ally, boosting defense for 3 turns";
     }
     public override void Effect(Character Figther)
     {
-        DefBoost deff = DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, Figther);
+        DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, Figther);
     }
 }
