@@ -5,24 +5,55 @@ using UnityEngine.SceneManagement;
 
 public class Scenes : MonoBehaviour
 {
+    public Animator transition;
+    public float transitionTime = 1f;
+
+
     public void playMenu()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadMenu());
         Time.timeScale = 1f;
     }
+    IEnumerator LoadMenu()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(0);
+    }
+
     public void playGame()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadGame());
         Time.timeScale = 1f;
     }
+    IEnumerator LoadGame()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(1);
+    }
+
     public void playLevel()
     {
-        SceneManager.LoadScene(2);
+        StartCoroutine(LoadLevel());
         Time.timeScale = 1f;
     }
+    IEnumerator LoadLevel()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(2);
+    }
+
     public void playCredits()
     {
-        SceneManager.LoadScene(3);
+        StartCoroutine(LoadCredits());
         Time.timeScale = 1f;
+    }
+    IEnumerator LoadCredits()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(3);
     }
 }

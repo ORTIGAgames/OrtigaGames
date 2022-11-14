@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794872076}
+      - m_Target: {fileID: 1595034110}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
         m_MethodName: playLevel
         m_Mode: 1
@@ -2949,7 +2949,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794872076}
+      - m_Target: {fileID: 1595034110}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
         m_MethodName: playMenu
         m_Mode: 1
@@ -4782,6 +4782,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567186952}
   m_CullTransparentMesh: 1
+--- !u!1001 &1595034109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.264584
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.92216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.516024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613511556311890006, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3990428359787506229, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+--- !u!114 &1595034110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7765271389004136608, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+  m_PrefabInstance: {fileID: 1595034109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af161cab81214ab4a9292e68615e08cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1603233431
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,7 +4942,6 @@ GameObject:
   - component: {fileID: 1794872079}
   - component: {fileID: 1794872078}
   - component: {fileID: 1794872077}
-  - component: {fileID: 1794872076}
   - component: {fileID: 1794872081}
   m_Layer: 5
   m_Name: Canvas
@@ -4883,18 +4950,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1794872076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794872075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af161cab81214ab4a9292e68615e08cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1794872077
 MonoBehaviour:
   m_ObjectHideFlags: 0
