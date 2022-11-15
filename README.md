@@ -1,4 +1,6 @@
-### Hi there 👋
+Hi, and welcome to How The Heck Do I Become A Space Captain.
+
+A space opera where you must become the captain of your own space base, learn to lead your troops against the enemy in life or death battles in adverse environments while you improve and control your entire space company. Although, before all that, you will have to pass the mock exam of everything said above to see if you are prepared or not.
 
 <!--
 **ORTIGAgames/OrtigaGames** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
