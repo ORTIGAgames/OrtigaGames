@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TVFade
+  m_Controller: {fileID: 9100000, guid: a0b14738777e3964f82e8992eee6bb81, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 81bfa60eb125cc6499a9ae856854b888, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4d251f8029222ce4ea65334ae4d038d2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cef66135b7b3bb046b87af45b8ce66ed, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e90260bfb0abed0428469e65897a9952, type: 2}
