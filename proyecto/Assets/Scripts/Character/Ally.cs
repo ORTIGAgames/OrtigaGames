@@ -66,7 +66,6 @@ public class Ally : Character
         else if (game.allyturn && turn > 0)
         {
             game.lastClicked = this;
-            Camera();
             game.InteractionActivate();
             game.PlayerReset();
 

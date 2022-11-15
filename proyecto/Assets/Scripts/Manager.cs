@@ -14,7 +14,7 @@ public class Manager : MonoBehaviour
     public List<PreTurn> preTurn = new List<PreTurn>();
     public bool allyturn;
     public Scenery stage;
-    public Character activeAlly;
+    public Ally activeAlly;
     public Hexagon lastAction;
     public Character lastClicked;
 
@@ -232,7 +232,7 @@ public class Manager : MonoBehaviour
     }
 
     #endregion
-    public void setActiveAlly(Character a)
+    public void setActiveAlly(Ally a)
     {
         activeAlly = a;
     }
