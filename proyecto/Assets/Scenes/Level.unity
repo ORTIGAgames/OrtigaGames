@@ -2243,6 +2243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1435065685}
+  draggin: {fileID: 2027600387}
 --- !u!1 &223637532
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,6 +5121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 911102358}
+  draggin: {fileID: 2027600387}
 --- !u!1001 &562483852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6574,6 +6576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 859609627}
+  draggin: {fileID: 2027600387}
 --- !u!1 &732407377
 GameObject:
   m_ObjectHideFlags: 0
@@ -8760,6 +8763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1089269482}
+  draggin: {fileID: 2027600387}
 --- !u!1 &942354750
 GameObject:
   m_ObjectHideFlags: 0
@@ -13201,6 +13205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 672783049}
+  draggin: {fileID: 2027600387}
 --- !u!1 &1365051827
 GameObject:
   m_ObjectHideFlags: 3
@@ -15374,6 +15379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 745738189}
+  draggin: {fileID: 2027600387}
 --- !u!1001 &1585527234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18656,6 +18662,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab77ef90a60b7644591c3a8ff5410419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragSpeed: 2
+  outerLeft: 10
+  outerRight: 10
+  outerDown: 10
+  outerUp: 10
+  camera: {fileID: 2027600386}
+  worldcamera: {fileID: 963194230}
+  game: {fileID: 1559168337}
+  activate: 1
 --- !u!1 &2074982275
 GameObject:
   m_ObjectHideFlags: 0
