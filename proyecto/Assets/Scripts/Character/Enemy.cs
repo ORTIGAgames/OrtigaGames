@@ -70,7 +70,7 @@ public class Enemy : Character
         }
     }
 
-    public void Cancel()
+    public override void Cancel()
     {
         game.stage.Reset();
         game.PlayerReset();

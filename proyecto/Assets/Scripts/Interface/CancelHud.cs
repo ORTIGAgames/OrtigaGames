@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CancelHud : MonoBehaviour
 {
     public Button CancelB;
-    public Ally active;
+    public Character active;
     public Manager game;
 
     public void Awake()
@@ -18,7 +18,7 @@ public class CancelHud : MonoBehaviour
     {
         if (CancelB.gameObject.active)
         {
-            active = game.activeAlly;
+            active = game.lastClicked;
             CancelB.onClick.AddListener(active.Cancel);
         }
     }

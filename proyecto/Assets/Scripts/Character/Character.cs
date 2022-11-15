@@ -41,6 +41,7 @@ public abstract class Character : MonoBehaviour
     public abstract void CharacterMove(Hexagon h);
     public abstract void Move(Hexagon t, int i);//Manera mas simple de implementar movimiento con uno de casillas individuales que avanza en bucle según un determinado enumerador
     public abstract void ShowMove(Hexagon h);
+    public abstract void Cancel();
 
     #region getters setter
     public virtual void setTurn(int t)

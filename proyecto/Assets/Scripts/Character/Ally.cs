@@ -65,10 +65,10 @@ public class Ally : Character
         }
         else if (game.allyturn && turn > 0)
         {
+            game.PlayerReset();
             game.lastClicked = this;
             game.InteractionActivate();
-            game.PlayerReset();
-
+            
             if (!game.CombatH.gameObject.active)
             {
                 game.setActiveAlly(this);
@@ -98,7 +98,7 @@ public class Ally : Character
         }
     }
 
-    public void Cancel()
+    public override void Cancel()
     {
         game.stage.Reset();
         game.PlayerReset();
