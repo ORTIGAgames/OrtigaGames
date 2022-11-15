@@ -8,7 +8,7 @@ public class DeathStomp : Abilities
     {
         Role = "Damage";
         Name = "DEATH STOMP";
-        description = "NASS unleash his power, stomping the ground and dealing damage to the enemies surrounding";
+        description = "NASS unleashes his power, stomping the ground and dealing damage to the enemies surrounding him";
     }
     public override void Effect(Character Figther)
     {

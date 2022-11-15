@@ -8,7 +8,7 @@ public class HealingPaw : Abilities
     {
         Role = "Support";
         Name = "HEALING PAW";
-        description = "G470 rubs against an ally, healing a percentage of G470'S life";
+        description = "G470 rubs against an ally, healing that ally the same amount as 1/5 of G470'S life";
     }
     public override void Effect(Character Figther)
     {

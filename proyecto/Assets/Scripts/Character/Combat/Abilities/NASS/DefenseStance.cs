@@ -8,10 +8,10 @@ public class DefenseStance : Abilities
     {
         Role = "SelfSupport";
         Name = "DEFENSE STANCE";
-        description = "NASS hugs himself tightly, boosting his defense and protecting himself for some turns";
+        description = "NASS hugs himself tightly, boosting his defense and protecting himself for one turns";
     }
     public override void Effect(Character Figther)
     {
-        DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, this.GetComponent<Character>());
+        DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 1, this.GetComponent<Character>());
     }
 }
