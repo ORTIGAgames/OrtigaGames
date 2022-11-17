@@ -30,19 +30,7 @@ public class Enemy : Character
     // Update is called once per frame
     void Update()
     {
-        /*if (turn > 0)
-        {
-            Invoke("minusturn", 2.0f);
-        }*/
-    }
-
-    void minusturn()
-    {
-        /*if (turn > 0)
-        {
-            turn--;
-
-        }*/
+        healthBar.gameObject.SetActive(game.lastClicked == this ? true : false);
     }
 
     public override void OnMouseDown()
@@ -62,6 +50,7 @@ public class Enemy : Character
         }
         else//si el jugador no esta con ningun personaje activo
         {
+            game.PlayerReset();
             game.lastClicked = this;
             game.stage.Reset();//para mostrar las casillas donde se esparce en el tablero se resetea
             game.InteractionActivate();
@@ -94,7 +83,7 @@ public class Enemy : Character
 
     public override void CharacterMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .085f, -0.05f);
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
         h.setOccupant(this);
@@ -102,7 +91,7 @@ public class Enemy : Character
     }
     public override void ShowMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .085f, -0.05f);
     }
 
     public void Camera()

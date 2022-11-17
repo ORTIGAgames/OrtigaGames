@@ -26,9 +26,10 @@ public class Ally : Character
     {
         if(game.activeAlly != this){
             if(getInitialBlock().transform.position != this.transform.position)
-                this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, 0);                  
+                this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, -0.05f);                  
             this.GetComponent<BoxCollider>().enabled = true;
         }
+        healthBar.gameObject.SetActive((game.activeAlly == this || game.lastClicked == this) ? true : false);
     }
     void LoadData()
     {
@@ -72,7 +73,7 @@ public class Ally : Character
             if (!game.CombatH.gameObject.active)
             {
                 game.setActiveAlly(this);
-                game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Speed.ToString(), Health, MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description);
+                game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Health, MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description);
                 game.lastAction = this.InitialBlock;
                 this.ActualBlock = this.InitialBlock;
                 game.activeAlly.GetComponent<BoxCollider>().enabled = false;
@@ -116,7 +117,7 @@ public class Ally : Character
 
     public override void CharacterMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .085f, -0.05f);
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
         h.setOccupant(this);
@@ -130,7 +131,7 @@ public class Ally : Character
     }
     public override void ShowMove(Hexagon h)
     {
-        this.transform.position = h.transform.position + new Vector3(0, .085f, 0);
+        this.transform.position = h.transform.position + new Vector3(0, .085f, -0.05f);
         this.setActualBlock(h);
         game.lastAction = h;
     }
