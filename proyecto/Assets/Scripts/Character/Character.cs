@@ -25,6 +25,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField] protected Sprite Face;
     //[SerializeField] Movement displacement; posible uso en mejoras para diferentes movimientos variados
     public HealthBar healthBar;
+    public Animator myAnimator;
 
 
     public virtual void Awake()

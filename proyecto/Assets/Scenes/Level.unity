@@ -374,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &19201600
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1250,6 +1250,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 0}
   healthBar: {fileID: 1043117721}
+  myAnimator: {fileID: 0}
   camera: {fileID: 700402609}
   worldcamera: {fileID: 963194230}
 --- !u!114 &118484500
@@ -2055,7 +2056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &177329794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2239,7 +2240,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.44705883, g: 0.44705883, b: 0.44705883, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2334,6 +2335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1435065685}
   draggin: {fileID: 2027600387}
+  ImageButton: {fileID: 222703512}
 --- !u!1 &223637532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,7 +2353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &223637533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4744,7 +4746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &499869979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5117,7 +5119,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.44705883, g: 0.44705883, b: 0.44705883, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5212,6 +5214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 911102358}
   draggin: {fileID: 2027600387}
+  ImageButton: {fileID: 544586300}
 --- !u!1001 &562483852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5737,7 +5740,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.612, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6070,6 +6073,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 21300000, guid: 8259f100bec2c0d439913dafe9578a37, type: 3}
   healthBar: {fileID: 177329795}
+  myAnimator: {fileID: 672783054}
   character: 0
   camera: {fileID: 104934283}
   worldcamera: {fileID: 963194230}
@@ -6645,7 +6649,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6740,6 +6744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 859609627}
   draggin: {fileID: 2027600387}
+  ImageButton: {fileID: 724867074}
 --- !u!1 &732407377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6774,7 +6779,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.45200002, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6989,6 +6994,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 21300000, guid: 9b7d94a963bf5b84387054acb1a72115, type: 3}
   healthBar: {fileID: 1133765610}
+  myAnimator: {fileID: 745738192}
   character: 0
   camera: {fileID: 678324455}
   worldcamera: {fileID: 963194230}
@@ -7538,6 +7544,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 0}
   healthBar: {fileID: 19201603}
+  myAnimator: {fileID: 0}
   camera: {fileID: 1821908167}
   worldcamera: {fileID: 963194230}
 --- !u!212 &803636754
@@ -7977,6 +7984,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 21300000, guid: 152f514bc7db6d547af912e3cc0273d8, type: 3}
   healthBar: {fileID: 1040635343}
+  myAnimator: {fileID: 859609630}
   character: 0
   camera: {fileID: 1807168468}
   worldcamera: {fileID: 963194230}
@@ -8617,6 +8625,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 21300000, guid: 94fe420834c779741a4a7a1904e9d50b, type: 3}
   healthBar: {fileID: 499869980}
+  myAnimator: {fileID: 911102361}
   character: 0
   camera: {fileID: 1433792488}
   worldcamera: {fileID: 963194230}
@@ -8834,7 +8843,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.44705883, g: 0.44705883, b: 0.44705883, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8929,6 +8938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1089269482}
   draggin: {fileID: 2027600387}
+  ImageButton: {fileID: 934856033}
 --- !u!1 &942354750
 GameObject:
   m_ObjectHideFlags: 0
@@ -9834,7 +9844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1040635342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9970,7 +9980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1043117718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10571,6 +10581,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 21300000, guid: a5b25c97ec6330e4092bd952be21b684, type: 3}
   healthBar: {fileID: 1978172620}
+  myAnimator: {fileID: 1089269485}
   character: 0
   camera: {fileID: 2074982276}
   worldcamera: {fileID: 963194230}
@@ -11182,7 +11193,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.612, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11351,7 +11362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1133765609
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11724,7 +11735,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.45200002, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11986,7 +11997,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.612, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12265,7 +12276,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.612, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12778,7 +12789,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.612, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13276,7 +13287,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.44705883, g: 0.44705883, b: 0.44705883, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -13371,6 +13382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 672783049}
   draggin: {fileID: 2027600387}
+  ImageButton: {fileID: 1360404348}
 --- !u!1 &1365051827
 GameObject:
   m_ObjectHideFlags: 3
@@ -14139,6 +14151,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 21300000, guid: 03b2cc37f22c4464d8fe996cae496e84, type: 3}
   healthBar: {fileID: 223637536}
+  myAnimator: {fileID: 1435065688}
   character: 1
   camera: {fileID: 1631942251}
   worldcamera: {fileID: 963194230}
@@ -14815,7 +14828,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.612, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15450,7 +15463,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.44705883, g: 0.44705883, b: 0.44705883, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -15545,6 +15558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 745738189}
   draggin: {fileID: 2027600387}
+  ImageButton: {fileID: 1584228401}
 --- !u!1001 &1585527234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18444,7 +18458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1978172619
 RectTransform:
   m_ObjectHideFlags: 0

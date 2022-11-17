@@ -69,7 +69,7 @@ public class Manager : MonoBehaviour
                 enemies.Add(c);
             }
             box.setOccupant(c);
-            c.transform.position = box.transform.position + new Vector3(0, .085f, 0);
+            c.transform.position = box.transform.position + new Vector3(0, .085f, -0.05f);
             c.setInitialBlock(box);
             c.setTurn(1);
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
@@ -138,6 +138,7 @@ public class Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
+        e.Camera();
         e.EnemyControl();
     }
     public void CombatActivation(Character Figther1, Character Figther2)
@@ -178,7 +179,7 @@ public class Manager : MonoBehaviour
     }
 
     #region interface
-    public void CharacterActivate(Sprite face, string name, string attack, string defense, string velocity, int health, int maxHealth, string ability, string explanation)
+    public void CharacterActivate(Sprite face, string name, string attack, string defense, int health, int maxHealth, string ability, string explanation)
     {
         CharacterH.SetActive(true);
         GameObject.Find("Face").GetComponent<Image>().sprite = face;
