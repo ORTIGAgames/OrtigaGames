@@ -6,45 +6,85 @@ using UnityEngine.UI;
 public class GameScene : MonoBehaviour
 {
     public List<Button> buttonToHide;
-    public Text Name;
-    public List<Button> Back;
-    public SpriteRenderer Sprite;
+    public Text NameStats;
+    public Text NameGlossary;
+    public List<Button> buttonsStats;
+    public List<Button> buttonsGlossary;
+    public List<Button> buttonsLevels;
+    public SpriteRenderer SpriteStas;
+    public SpriteRenderer SpriteGlossary;
     public Canvas Stats;
+    public Canvas Glossary;
+    public Canvas Level;
 
-    // Start is called before the first frame update
-    void Start()
+    public void HideBaseGlossary()
     {
+        foreach (Button b in buttonToHide)
+        {
+            b.gameObject.SetActive(false);
+        }
+        foreach (Button b in buttonsGlossary)
+        {
+            b.gameObject.SetActive(true);
+        }
 
-       
+        NameGlossary.gameObject.SetActive(true);
+        SpriteGlossary.gameObject.SetActive(true);
+        Glossary.gameObject.SetActive(true);
     }
 
-    public void HideBase()
+    public void HideBaseLevel()
+    {
+        foreach (Button b in buttonToHide)
+        {
+            b.gameObject.SetActive(false);
+        }
+        foreach (Button b in buttonsLevels)
+        {
+            b.gameObject.SetActive(true);
+        }
+
+        Level.gameObject.SetActive(true);
+    }
+    public void HideBaseStats()
     {
         foreach(Button b in buttonToHide)
         {
             b.gameObject.SetActive(false);
         }
-        foreach (Button b in Back)
+        foreach (Button b in buttonsStats)
         {
             b.gameObject.SetActive(true);
         }
-        Name.gameObject.SetActive(true);
-        Sprite.gameObject.SetActive(true);
+        NameStats.gameObject.SetActive(true);
+        SpriteStas.gameObject.SetActive(true);
         Stats.gameObject.SetActive(true);
     }
-    public void HideStats()
+    public void Hide()
     {
         foreach (Button b in buttonToHide)
         {
             b.gameObject.SetActive(true);
         }
-        foreach (Button b in Back)
+        foreach (Button b in buttonsStats)
         {
             b.gameObject.SetActive(false);
         }
-        Name.gameObject.SetActive(false);
-        Sprite.gameObject.SetActive(false);
+        foreach (Button b in buttonsGlossary)
+        {
+            b.gameObject.SetActive(false);
+        }
+        foreach (Button b in buttonsLevels)
+        {
+            b.gameObject.SetActive(false);
+        }
+        NameStats.gameObject.SetActive(false);
+        NameGlossary.gameObject.SetActive(false);
+        SpriteStas.gameObject.SetActive(false);
+        SpriteGlossary.gameObject.SetActive(false);
         Stats.gameObject.SetActive(false);
+        Glossary.gameObject.SetActive(false);
+        Level.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
