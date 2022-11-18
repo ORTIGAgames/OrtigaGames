@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Stats : MonoBehaviour
 {
+    //Stats
     public Button upLive;
     public Button downLive;
     public Text lifeNumber;
@@ -14,21 +15,44 @@ public class Stats : MonoBehaviour
     public Button upDefense;
     public Button downDefense;
     public Text defenseNumber;
-    public Button upSpeed;
-    public Button downSpeed;
-    public Text speedNumber;
     public Text pointsNumber;
+    public Text nameCharacter;
+    public SpriteRenderer spriteCharacter;
+
+    //Glossary
+    public Text info;
+    int type = 0;
+    public Text nameCharacterGlossary;
+    public SpriteRenderer spriteCharacterGlossary;
+
+    //Levels
+    public Text nameLevel;
+    public Text descriptionLevel;
+    public SpriteRenderer spriteLevel;
+    public SpriteRenderer spriteEnemies1;
+    public SpriteRenderer spriteEnemies2;
+
 
     public Button nextCharacter;
     public Button previousCharacter;
     int charac = 0;
+    int level = 0;
+    int enemies = 0;
 
-    public Text nameCharacter;
-    public SpriteRenderer spriteCharacter;
-
-    int[,] characters;
+    int[,] characterStats;
     string[] names;
+    string[] namesEnemies;
+    string[,] charactersTexts;
+    string[] levelNames;
+    string[] descriptionLevels;
+    
     [SerializeField] Sprite[] sprites;
+    [SerializeField] Sprite[] spritesEnemies;
+    [SerializeField] Sprite[] levelsImage;
+    [SerializeField] Sprite[] levelEnemies1;
+    [SerializeField] Sprite[] levelEnemies2;
+    [SerializeField] Button[] levels;
+
 
     //private string characterPrefsName = "Characters";
 
@@ -40,92 +64,103 @@ public class Stats : MonoBehaviour
 
     private void Update()
     {
-        lifeNumber.text = characters[charac,0].ToString();
-        attackNumber.text = characters[charac, 1].ToString();
-        defenseNumber.text = characters[charac, 2].ToString();
-        speedNumber.text = characters[charac, 3].ToString();
-        pointsNumber.text = characters[charac, 4].ToString();
+        lifeNumber.text = characterStats[charac,0].ToString();
+        attackNumber.text = characterStats[charac, 1].ToString();
+        defenseNumber.text = characterStats[charac, 2].ToString();
+        pointsNumber.text = characterStats[charac, 3].ToString();
         nameCharacter.text = names[charac];
+        spriteCharacter.sprite = sprites[charac];
 
-        spriteCharacter.sprite=sprites[charac];
+        nameLevel.text = levelNames[level];
+        descriptionLevel.text = descriptionLevels[level];
+        spriteLevel.sprite = levelsImage[level];
+        spriteEnemies1.sprite = levelEnemies1[level];
+        spriteEnemies2.sprite = levelEnemies2[level];
+
+        foreach (Button b in levels)
+        {
+            b.gameObject.SetActive(false);
+        }
+        levels[level].gameObject.SetActive(true);
+
+        info.text = charactersTexts[type, charac];
+        if (type == 3)
+        {
+            nameCharacterGlossary.text = namesEnemies[enemies];
+            spriteCharacterGlossary.sprite = spritesEnemies[enemies];
+        }
+        else
+        {
+            nameCharacterGlossary.text = names[charac];
+            spriteCharacterGlossary.sprite = sprites[charac];
+        }
+        
     }
-
+    public void typeText(int t)
+    {
+        type = t;
+    }
+    
     private void OnDestroy()
     {
         SaveData();
     }
     public void UpLive()
     {
-        if (characters[charac, 0] + 2 <= 40 && characters[charac, 4] > 0)
+        if (characterStats[charac, 0] + 2 <= 40 && characterStats[charac, 3] > 0)
         {
-            characters[charac, 0] += 2;
-            characters[charac, 4]--;
+            characterStats[charac, 0] += 2;
+            characterStats[charac, 3]--;
         }
         
     }
     public void DownLive()
     {
-        if (characters[charac, 0] - 2 >= 20 && characters[charac, 4] < 10)
+        if (characterStats[charac, 0] - 2 >= 20 && characterStats[charac, 3] < 10)
         {
-            characters[charac, 0] -= 2;
-            characters[charac, 4]++;
+            characterStats[charac, 0] -= 2;
+            characterStats[charac, 3]++;
         }
             
     }
     public void UpAttack()
     {
-        if (characters[charac, 1] + 1 <= 10 && characters[charac, 4] > 0)
+        if (characterStats[charac, 1] + 1 <= 10 && characterStats[charac, 3] > 0)
         {
-            characters[charac, 1]++;
-            characters[charac, 4]--;
+            characterStats[charac, 1]++;
+            characterStats[charac, 3]--;
         }
             
     }
     public void DownAttack()
     {
-        if(characters[charac, 1] - 1 > 0 && characters[charac, 4] < 10)
+        if(characterStats[charac, 1] - 1 > 0 && characterStats[charac, 3] < 10)
         {
-            characters[charac, 1]--;
-            characters[charac, 4]++;
+            characterStats[charac, 1]--;
+            characterStats[charac, 3]++;
         }
         
     }
     public void UpDefense()
     {
-        if (characters[charac, 2] + 1 <= 10 && characters[charac, 4] > 0)
+        if (characterStats[charac, 2] + 1 <= 10 && characterStats[charac, 3] > 0)
         {
-            characters[charac, 2]++;
-            characters[charac, 4]--;
+            characterStats[charac, 2]++;
+            characterStats[charac, 3]--;
         }
             
     }
     public void DownDefense()
     {
-        if (characters[charac, 2] - 1 > 0 && characters[charac, 4] < 10)
+        if (characterStats[charac, 2] - 1 > 0 && characterStats[charac, 3] < 10)
         {
-            characters[charac, 2]--;
-            characters[charac, 4]++;
+            characterStats[charac, 2]--;
+            characterStats[charac, 3]++;
         }
             
     }
-    public void UpSpeed()
-    {
-        if (characters[charac, 3] + 1 <= 10 && characters[charac, 4] > 0)
-        {
-            characters[charac, 3]++;
-            characters[charac, 4]--;
-        }
-            
-    }
-    public void DownSpeed()
-    {
-        if (characters[charac, 3] - 1 > 0 && characters[charac, 4] < 10)
-        {
-            characters[charac, 3]--;
-            characters[charac, 4]++;
-        }
-            
-    }
+    
+   
 
     public void UpCharacter()
     {
@@ -133,6 +168,12 @@ public class Stats : MonoBehaviour
             charac = 0;
         else
             charac++;
+        enemies = charac;
+
+        if (level == 3)
+            level = 0;
+        else
+            level++;
     }
     public void DownCharacter()
     {
@@ -140,6 +181,12 @@ public class Stats : MonoBehaviour
             charac = 5;
         else
             charac--;
+        enemies = charac;
+
+        if (level == 0)
+            level = 3;
+        else
+            level--;
     }
 
     private void SaveData()
@@ -153,7 +200,7 @@ public class Stats : MonoBehaviour
                 Debug.Log(characters.ToString().Length);
             }
         }*/
-        BetweenScenesControler.characters = characters;
+        BetweenScenesControler.characters = characterStats;
     }
     private void LoadData()
     {
@@ -166,7 +213,11 @@ public class Stats : MonoBehaviour
                 characters[i, j] = aux[i * 5 + j]; //juas juas esto no furula porque hay valores dobles
             }
         }*/
-        characters = BetweenScenesControler.characters;
+        characterStats = BetweenScenesControler.characters;
         names = BetweenScenesControler.names;
+        namesEnemies = BetweenScenesControler.namesEnemies;
+        charactersTexts = BetweenScenesControler.backgrounds;
+        levelNames= BetweenScenesControler.levelNames;
+        descriptionLevels = BetweenScenesControler.levelDescription;
     }
 }
