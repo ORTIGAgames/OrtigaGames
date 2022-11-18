@@ -76,20 +76,24 @@ public class DmgStyle : MonoBehaviour, Combat
     {
         if (d == "Action")
         {
-            //FindObjectOfType<AudioManager>().Play("Range");
             this.GetComponent<Character>().myAnimator.SetTrigger("Attack");
-            int damage = (this.GetComponent<Attack>().Action() <= m.defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - m.defender.getDefense();
-            print(damage + "A");
-            m.defender.setHealth(m.defender.getHealth() - damage);              
+            //FindObjectOfType<AudioManager>().Play("Range");
+                     
         }
 
         if (d == "Ability")
         {
             this.GetComponent<Character>().getAbilities().Effect(m.defender);
         }
+        this.GetComponent<Character>().game.CombatDeactivate();
+    }
 
+    public void AttackSequence()
+    {
+        int damage = (this.GetComponent<Attack>().Action() <= this.GetComponent<Character>().game.defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - this.GetComponent<Character>().game.defender.getDefense();
+        print(damage + "A");
+        this.GetComponent<Character>().game.defender.setHealth(this.GetComponent<Character>().game.defender.getHealth() - damage);
         this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
-        m.CombatDeactivate();
     }
 }
 

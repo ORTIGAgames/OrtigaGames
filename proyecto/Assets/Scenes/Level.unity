@@ -900,7 +900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &86069915
 Transform:
   m_ObjectHideFlags: 0
@@ -1244,6 +1244,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -6067,6 +6068,7 @@ MonoBehaviour:
   Speed: 0
   Name: Declan
   turn: 0
+  game: {fileID: 0}
   displacement: 2
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -6900,7 +6902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &745738187
 Transform:
   m_ObjectHideFlags: 0
@@ -6988,6 +6990,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
+  game: {fileID: 0}
   displacement: 2
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -7538,6 +7541,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -7890,7 +7894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &859609625
 Transform:
   m_ObjectHideFlags: 0
@@ -7978,6 +7982,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -8531,7 +8536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &911102356
 Transform:
   m_ObjectHideFlags: 0
@@ -8619,6 +8624,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -10487,7 +10493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1089269480
 Transform:
   m_ObjectHideFlags: 0
@@ -10575,6 +10581,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -14096,7 +14103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1435065679
 Transform:
   m_ObjectHideFlags: 0
@@ -14145,6 +14152,7 @@ MonoBehaviour:
   Speed: 0
   Name: Winnie
   turn: 0
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}

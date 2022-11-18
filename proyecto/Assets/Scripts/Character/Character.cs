@@ -12,7 +12,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField]  protected string Name;
     [SerializeField]  protected int turn;
     protected Abilities Abilities;
-    protected Manager game;
+    public Manager game;
     protected string side;
     protected bool Action;
     protected bool PositionChange;
