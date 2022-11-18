@@ -73,7 +73,7 @@ public class Ally : Character
             if (!game.CombatH.gameObject.active)
             {
                 game.setActiveAlly(this);
-                game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), Health, MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description);
+                game.CharacterActivate(Face, Name, Damage.ToString(), Defense.ToString(), MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description);
                 game.lastAction = this.InitialBlock;
                 this.ActualBlock = this.InitialBlock;
                 game.activeAlly.GetComponent<BoxCollider>().enabled = false;

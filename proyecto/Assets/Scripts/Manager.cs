@@ -179,31 +179,29 @@ public class Manager : MonoBehaviour
     }
 
     #region interface
-    public void CharacterActivate(Sprite face, string name, string attack, string defense, int health, int maxHealth, string ability, string explanation)
+    public void CharacterActivate(Sprite face, string name, string attack, string defense, int maxHealth, string ability, string explanation)
     {
         CharacterH.SetActive(true);
         GameObject.Find("Face").GetComponent<Image>().sprite = face;
-        GameObject.Find("Name").GetComponentInChildren<TextMeshProUGUI>().SetText(name);
+        //GameObject.Find("Name").GetComponentInChildren<TextMeshProUGUI>().SetText(name);
         GameObject.Find("AttackValue").GetComponentInChildren<TextMeshProUGUI>().SetText(attack); ;
         GameObject.Find("DefenseValue").GetComponentInChildren<TextMeshProUGUI>().SetText(defense);
         HealthBar bar = GetComponentInChildren<HealthBar>();
         bar.SetMaxHealth(maxHealth);
         bar.character = activeAlly;
-        GameObject.Find("Ability").GetComponent<TextMeshProUGUI>().SetText(ability);
         GameObject.Find("Ability").GetComponent<AbilityController>().Ability.GetComponentInChildren<TextMeshProUGUI>().SetText(explanation);
         GameObject.Find("Ability").GetComponent<AbilityController>().Ability.SetActive(false);
-        if(activeAlly.GetComponent<Abilities>().Role == "SelfSupport")
+        if (activeAlly.GetComponent<Abilities>().Role == "SelfSupport")
         {
             attacker = activeAlly;
-            CharacterH.GetComponent<StatsHud>().Ability.SetActive(true);
+            CharacterH.GetComponent<StatsHud>().Ability.interactable = true;
         }
         else
-            CharacterH.GetComponent<StatsHud>().Ability.SetActive(false);
+            CharacterH.GetComponent<StatsHud>().Ability.interactable = false;
     }
 
     public void CharacterDeactivate()
     {
-        CharacterH.GetComponent<StatsHud>().Ability.SetActive(false);
         CharacterH.SetActive(false);
     }
     public void InteractionActivate()

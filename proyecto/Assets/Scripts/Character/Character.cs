@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Character : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField]  protected int Speed;
     [SerializeField]  protected string Name;
     [SerializeField]  protected int turn;
+    public Image NameIcon;
     protected Abilities Abilities;
     public Manager game;
     protected string side;
