@@ -150,9 +150,7 @@ public class Manager : MonoBehaviour
             defender = Figther2;
             stage.Reset();
             if(Figther1.GetComponent<Abilities>())
-                CombatActivate(Figther1.GetComponent<Abilities>().Name);
-            else
-                CombatActivate("No abilities");
+                CombatActivate(Figther1.GetComponent<Abilities>().ActiveIcon);
         }
     }
 
@@ -215,14 +213,14 @@ public class Manager : MonoBehaviour
         InteractionH.SetActive(false);
     }
 
-    public void CombatActivate(string an)
+    public void CombatActivate(Sprite Image)
     {
-        CombatH.Ability.GetComponentInChildren<TextMeshProUGUI>().SetText(an);
+        CombatH.Ability.GetComponent<Image>().sprite = Image;
         CombatH.gameObject.SetActive(true);
         if (attacker.getSide() == defender.getSide())
-            CombatH.Action.SetActive(false);
+            CombatH.Action.gameObject.SetActive(false);
         else
-            CombatH.Action.SetActive(true);
+            CombatH.Action.gameObject.SetActive(true);
     }
 
     public void CombatDeactivate()
