@@ -179,12 +179,12 @@ public class Manager : MonoBehaviour
     }
 
     #region interface
-    public void CharacterActivate(Sprite face, string name, string attack, string defense, int maxHealth, string ability, string explanation)
+    public void CharacterActivate(Sprite face, Sprite name, string attack, string defense, int maxHealth, string ability, string explanation)
     {
         CharacterH.SetActive(true);
         GameObject.Find("Face").GetComponent<Image>().sprite = face;
-        //GameObject.Find("Name").GetComponentInChildren<TextMeshProUGUI>().SetText(name);
-        GameObject.Find("AttackValue").GetComponentInChildren<TextMeshProUGUI>().SetText(attack); ;
+        GameObject.Find("Name").GetComponent<Image>().sprite = name;
+        GameObject.Find("AttackValue").GetComponentInChildren<TextMeshProUGUI>().SetText(attack);
         GameObject.Find("DefenseValue").GetComponentInChildren<TextMeshProUGUI>().SetText(defense);
         HealthBar bar = GetComponentInChildren<HealthBar>();
         bar.SetMaxHealth(maxHealth);

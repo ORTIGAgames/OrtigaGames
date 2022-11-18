@@ -12,7 +12,6 @@ public abstract class Character : MonoBehaviour
     [SerializeField]  protected int Speed;
     [SerializeField]  protected string Name;
     [SerializeField]  protected int turn;
-    public Image NameIcon;
     protected Abilities Abilities;
     public Manager game;
     protected string side;
@@ -28,6 +27,7 @@ public abstract class Character : MonoBehaviour
     //[SerializeField] Movement displacement; posible uso en mejoras para diferentes movimientos variados
     public HealthBar healthBar;
     public Animator myAnimator;
+    public Sprite NameIcon;
 
 
     public virtual void Awake()
