@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 395096743}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: UpLive
         m_Mode: 1
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 395096743}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: UpDefense
         m_Mode: 1
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 395096743}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: DownCharacter
         m_Mode: 1
@@ -1268,7 +1268,7 @@ MonoBehaviour:
           m_StringArgument: Large
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1995776202}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: DownCharacter
         m_Mode: 1
@@ -1927,7 +1927,7 @@ MonoBehaviour:
           m_StringArgument: Click
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1995776202}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: typeText
         m_Mode: 3
@@ -2881,7 +2881,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 395096743}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: UpAttack
         m_Mode: 1
@@ -3582,7 +3582,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 395096743}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: UpCharacter
         m_Mode: 1
@@ -3606,7 +3606,7 @@ MonoBehaviour:
           m_StringArgument: Large
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1995776202}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: UpCharacter
         m_Mode: 1
@@ -4388,7 +4388,7 @@ MonoBehaviour:
           m_StringArgument: Click
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1995776202}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: typeText
         m_Mode: 3
@@ -5153,7 +5153,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 395096743}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: DownDefense
         m_Mode: 1
@@ -5598,7 +5598,7 @@ MonoBehaviour:
           m_StringArgument: Click
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1995776202}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: typeText
         m_Mode: 3
@@ -5987,7 +5987,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 395096743}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: DownLive
         m_Mode: 1
@@ -6213,7 +6213,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 395096743}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: DownAttack
         m_Mode: 1
@@ -6586,7 +6586,7 @@ MonoBehaviour:
           m_StringArgument: Click
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1995776202}
         m_TargetAssemblyTypeName: Stats, Assembly-CSharp
         m_MethodName: typeText
         m_Mode: 3
@@ -6784,6 +6784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4346464915774287618, guid: e99a95a05104fb94196e8a1860151f55, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c695b4e6d0368114fbd95da326451955, type: 3}
     - target: {fileID: 4346464915774287619, guid: e99a95a05104fb94196e8a1860151f55, type: 3}
       propertyPath: m_RootOrder
       value: 4
