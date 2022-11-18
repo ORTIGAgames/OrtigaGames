@@ -179,7 +179,7 @@ public class Manager : MonoBehaviour
     }
 
     #region interface
-    public void CharacterActivate(Sprite face, Sprite name, string attack, string defense, int maxHealth, string ability, string explanation)
+    public void CharacterActivate(Sprite face, Sprite name, string attack, string defense, int maxHealth, string ability, string explanation, Sprite Icon)
     {
         CharacterH.SetActive(true);
         GameObject.Find("Face").GetComponent<Image>().sprite = face;
@@ -191,6 +191,7 @@ public class Manager : MonoBehaviour
         bar.character = activeAlly;
         GameObject.Find("Ability").GetComponent<AbilityController>().Ability.GetComponentInChildren<TextMeshProUGUI>().SetText(explanation);
         GameObject.Find("Ability").GetComponent<AbilityController>().Ability.SetActive(false);
+        CharacterH.GetComponent<StatsHud>().Ability.image.sprite = Icon;
         if (activeAlly.GetComponent<Abilities>().Role == "SelfSupport")
         {
             attacker = activeAlly;
