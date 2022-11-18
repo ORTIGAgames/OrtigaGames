@@ -51,6 +51,7 @@ public class Ally : Character
     }
     public override void OnMouseDown()
     {
+        Camera();
         if (this.targetable)//si esta a rango
         {
             if (game.activeAlly.getActualBlock().getState() == Hexagon.CodeState.Action && game.lastClicked == this)//si esta a rango de combate se pegan
@@ -67,7 +68,7 @@ public class Ally : Character
         else if (game.allyturn && turn > 0)
         {
             game.PlayerReset();
-            game.lastClicked = this;
+            game.lastClicked = this;          
             game.InteractionActivate();
             
             if (!game.CombatH.gameObject.active)
