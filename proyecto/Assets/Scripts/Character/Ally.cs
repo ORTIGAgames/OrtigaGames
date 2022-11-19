@@ -7,7 +7,7 @@ using Cinemachine;
 public class Ally : Character
 {
     [SerializeField] protected int character;
-    [SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField] CinemachineVirtualCamera ncamera;
     [SerializeField] CinemachineBrain worldcamera;
     [SerializeField] CameraDrag drag;
 
@@ -72,7 +72,7 @@ public class Ally : Character
             game.lastClicked = this;          
             game.InteractionActivate();
             
-            if (!game.CombatH.gameObject.active)
+            if (!game.CombatH.gameObject.activeSelf)
             {
                 game.setActiveAlly(this);
                 game.CharacterActivate(Face, NameIcon, Damage.ToString(), Defense.ToString(), MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description, this.GetComponent<Abilities>().icon);
@@ -119,7 +119,7 @@ public class Ally : Character
     public void Camera()
     {
         worldcamera.ActiveVirtualCamera.Priority = 10;
-        camera.Priority = 100;
+        ncamera.Priority = 100;
     }
 
     public override void CharacterMove(Hexagon h)

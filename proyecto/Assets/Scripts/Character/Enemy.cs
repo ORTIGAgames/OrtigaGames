@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class Enemy : Character
 {
-    [SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField] CinemachineVirtualCamera ncamera;
     [SerializeField] CinemachineBrain worldcamera;
     // Start is called before the first frame update
     public override void Awake()
@@ -97,7 +97,7 @@ public class Enemy : Character
     public void Camera()
     {
         worldcamera.ActiveVirtualCamera.Priority = 10;
-        camera.Priority = 100;
+        ncamera.Priority = 100;
     }
 
     public Hexagon BestMove(Hexagon hex)

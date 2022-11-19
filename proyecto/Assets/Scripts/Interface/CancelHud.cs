@@ -16,7 +16,7 @@ public class CancelHud : MonoBehaviour
 
     public void Update()
     {
-        if (CancelB.gameObject.active)
+        if (CancelB.gameObject.activeSelf)
         {
             active = game.lastClicked;
             CancelB.onClick.AddListener(active.Cancel);

@@ -6,12 +6,11 @@ using Cinemachine;
 public class CameraDrag : MonoBehaviour
 {
     public float dragSpeed;
-
     public float outerLeft;
     public float outerRight;
     public float outerDown;
     public float outerUp;
-    [SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField] CinemachineVirtualCamera ncamera;
     [SerializeField] CinemachineBrain worldcamera;
     public Manager game;
     Ray ray;
@@ -24,24 +23,11 @@ public class CameraDrag : MonoBehaviour
     }
     private void LateUpdate()
     {
-        /*ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit) && hit.collider.GetComponent<Character>() && Input.GetMouseButton(0))
-        {
-            StartCoroutine(Wait());
-        }
-        else
-        {
-            if (Activated)
-            {
-                
-            }            
-        }*/
         if (Input.GetMouseButton(0) && Activated && !worldcamera.IsBlending)
         {
             worldcamera.ActiveVirtualCamera.Priority = 10;
-            camera.gameObject.transform.position = worldcamera.gameObject.transform.position;
-            worldcamera.m_DefaultBlend.m_Time = 0;
-            camera.Priority = 100;
+            ncamera.gameObject.transform.position = worldcamera.gameObject.transform.position;
+            ncamera.Priority = 100;
 
             var newPosition = new Vector3();
             newPosition.x = Input.GetAxis("Mouse X") * dragSpeed * Time.deltaTime;
@@ -67,7 +53,7 @@ public class CameraDrag : MonoBehaviour
     }
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.2f);
         Activated = true;
     }
 }

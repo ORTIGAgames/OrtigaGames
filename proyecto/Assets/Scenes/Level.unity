@@ -1326,7 +1326,7 @@ MonoBehaviour:
   healthBar: {fileID: 595531457}
   myAnimator: {fileID: 0}
   NameIcon: {fileID: 0}
-  camera: {fileID: 700402609}
+  ncamera: {fileID: 700402609}
   worldcamera: {fileID: 963194230}
 --- !u!114 &118484500
 MonoBehaviour:
@@ -7577,7 +7577,7 @@ MonoBehaviour:
   myAnimator: {fileID: 672783054}
   NameIcon: {fileID: 21300000, guid: bf3b7e71d4e17ae42b091b822ec954b6, type: 3}
   character: 0
-  camera: {fileID: 104934283}
+  ncamera: {fileID: 104934283}
   worldcamera: {fileID: 963194230}
   drag: {fileID: 2027600387}
 --- !u!114 &672783050
@@ -8508,7 +8508,7 @@ MonoBehaviour:
   myAnimator: {fileID: 745738192}
   NameIcon: {fileID: 21300000, guid: 28f3092f45c5a5d4d9614da5c27aa6fd, type: 3}
   character: 0
-  camera: {fileID: 678324455}
+  ncamera: {fileID: 678324455}
   worldcamera: {fileID: 963194230}
   drag: {fileID: 2027600387}
 --- !u!65 &745738190
@@ -9138,7 +9138,7 @@ MonoBehaviour:
   healthBar: {fileID: 660273956}
   myAnimator: {fileID: 0}
   NameIcon: {fileID: 0}
-  camera: {fileID: 1821908167}
+  ncamera: {fileID: 1821908167}
   worldcamera: {fileID: 963194230}
 --- !u!212 &803636754
 SpriteRenderer:
@@ -9877,7 +9877,7 @@ MonoBehaviour:
   myAnimator: {fileID: 859609630}
   NameIcon: {fileID: 21300000, guid: 7f3c20461d5fffd4aa3b74f024cc39d0, type: 3}
   character: 0
-  camera: {fileID: 1807168468}
+  ncamera: {fileID: 1807168468}
   worldcamera: {fileID: 963194230}
   drag: {fileID: 2027600387}
 --- !u!65 &859609628
@@ -10523,7 +10523,7 @@ MonoBehaviour:
   myAnimator: {fileID: 911102361}
   NameIcon: {fileID: 21300000, guid: 3facf3209157ce14aa2b0406d79ae219, type: 3}
   character: 0
-  camera: {fileID: 1433792488}
+  ncamera: {fileID: 1433792488}
   worldcamera: {fileID: 963194230}
   drag: {fileID: 2027600387}
 --- !u!65 &911102359
@@ -12581,7 +12581,7 @@ MonoBehaviour:
   myAnimator: {fileID: 1089269485}
   NameIcon: {fileID: 21300000, guid: e748fb48eeee7e0458bbc7b1fa4d5ec1, type: 3}
   character: 0
-  camera: {fileID: 2074982276}
+  ncamera: {fileID: 2074982276}
   worldcamera: {fileID: 963194230}
   drag: {fileID: 2027600387}
 --- !u!65 &1089269483
@@ -15871,7 +15871,7 @@ MonoBehaviour:
   myAnimator: {fileID: 1435065688}
   NameIcon: {fileID: 21300000, guid: d4fff22d70cdacb46a29d62206cf3f99, type: 3}
   character: 1
-  camera: {fileID: 1631942251}
+  ncamera: {fileID: 1631942251}
   worldcamera: {fileID: 963194230}
   drag: {fileID: 2027600387}
 --- !u!212 &1435065686
@@ -21149,7 +21149,7 @@ MonoBehaviour:
   outerRight: 10
   outerDown: 10
   outerUp: 10
-  camera: {fileID: 2027600386}
+  ncamera: {fileID: 2027600386}
   worldcamera: {fileID: 963194230}
   game: {fileID: 1559168337}
   Activated: 1
