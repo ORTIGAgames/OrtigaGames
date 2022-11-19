@@ -190,14 +190,14 @@ public class Manager : MonoBehaviour
         bar.character = activeAlly;
         GameObject.Find("Ability").GetComponent<AbilityController>().Ability.GetComponentInChildren<TextMeshProUGUI>().SetText(explanation);
         GameObject.Find("Ability").GetComponent<AbilityController>().Ability.SetActive(false);
-        CharacterH.GetComponent<StatsHud>().Ability.image.sprite = Icon;
+        CharacterH.GetComponent<StatsHud>().Ability.GetComponent<Image>().sprite = Icon;
         if (activeAlly.GetComponent<Abilities>().Role == "SelfSupport")
         {
             attacker = activeAlly;
-            CharacterH.GetComponent<StatsHud>().Ability.interactable = true;
+            CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.gameObject.SetActive(true);
         }
         else
-            CharacterH.GetComponent<StatsHud>().Ability.interactable = false;
+            CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.gameObject.SetActive(false);
     }
 
     public void CharacterDeactivate()

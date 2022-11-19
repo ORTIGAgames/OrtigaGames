@@ -7,6 +7,7 @@ public class AbilityController : MonoBehaviour
 {
     [SerializeField] Button btn;
     public GameObject Ability;
+    public Button AbilityCaller;
 
     public void AbilityA()
     {
