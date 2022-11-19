@@ -25,7 +25,8 @@ public class Ally : Character
 
     public void Update()
     {
-        if(game.activeAlly != this){
+        if(game.activeAlly != this && !game.CombatH.gameObject.activeSelf)
+        {
             if(getInitialBlock().transform.position != this.transform.position)
                 this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, -0.05f);                  
             this.GetComponent<BoxCollider>().enabled = true;
