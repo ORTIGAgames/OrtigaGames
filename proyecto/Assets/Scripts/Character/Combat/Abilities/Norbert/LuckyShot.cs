@@ -12,6 +12,7 @@ public class LuckyShot : Abilities
     }
     public override void Effect(Character Figther)
     {
+        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Norbert");
         int chanza = Random.Range(0, 2);
         print(chanza);
         if(chanza == 1)

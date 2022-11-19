@@ -11,6 +11,7 @@ public class Scenes : MonoBehaviour
 
     public void playMenu()
     {
+        
         StartCoroutine(LoadMenu());
         Time.timeScale = 1f;
     }

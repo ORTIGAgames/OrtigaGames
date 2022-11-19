@@ -45,27 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Click
-    clip: {fileID: 8300000, guid: ce064d39a9f222f49884162358b53b31, type: 3}
-    volume: 0.723
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: 676e62b580743be429bcffba59339452, type: 3}
-    volume: 0.308
+    clip: {fileID: 8300000, guid: c695b4e6d0368114fbd95da326451955, type: 3}
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Short
-    clip: {fileID: 8300000, guid: 4eaa08c690276e64792b8ab57fffed2c, type: 3}
-    volume: 0.828
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Large
-    clip: {fileID: 8300000, guid: 8bb70ca0f8aa8534883b23be982f64a5, type: 3}
-    volume: 0.828
+  - name: Click
+    clip: {fileID: 8300000, guid: ce064d39a9f222f49884162358b53b31, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}

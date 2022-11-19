@@ -12,6 +12,7 @@ public class Spore : Abilities
     }
     public override void Effect(Character Figther)
     {
+        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Declan");
         Figther.setTurn(Figther.getTurn() + 1);
     }
 }
