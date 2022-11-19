@@ -228,12 +228,19 @@ public class Manager : MonoBehaviour
     public void CombatActivate(Sprite Image)
     {
         ColliderDown();
-        CombatH.Ability.GetComponent<Image>().sprite = Image;
+        if (Image)//cambiar cuando todos tengan habilidad
+        {
+            CombatH.Ability.GetComponent<Image>().sprite = Image;
+        }    
         CombatH.gameObject.SetActive(true);
-        if (attacker.getSide() == defender.getSide())
+        if(attacker.getSide() == defender.getSide())
             CombatH.Action.gameObject.SetActive(false);
         else
-            CombatH.Action.gameObject.SetActive(true);      
+        {
+            if (attacker.GetComponent<Abilities>().Role == "Support" || attacker.GetComponent<Abilities>().Role == "SlefSupport")
+                CombatH.Ability.gameObject.SetActive(false);
+            CombatH.Action.gameObject.SetActive(true);
+        }
     }
 
     public void CombatDeactivate()
