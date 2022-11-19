@@ -67,7 +67,7 @@ public class CameraDrag : MonoBehaviour
     }
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
         Activated = true;
     }
 }
