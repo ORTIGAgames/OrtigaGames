@@ -9,6 +9,7 @@ public class Ally : Character
     [SerializeField] protected int character;
     [SerializeField] CinemachineVirtualCamera camera;
     [SerializeField] CinemachineBrain worldcamera;
+    [SerializeField] CameraDrag drag;
 
     static int[,] characters;
     static string[] names;
@@ -83,6 +84,11 @@ public class Ally : Character
             this.Move(this.InitialBlock, 0);
             style.Action(this.InitialBlock, 0, this);
         }       
+    }
+
+    private void OnMouseOver()
+    {
+        drag.Activated = false;
     }
 
     public override void Move(Hexagon t, int i)//Manera mas simple de implementar movimiento con uno de casillas individuales que avanza en bucle según un determinado enumerador
