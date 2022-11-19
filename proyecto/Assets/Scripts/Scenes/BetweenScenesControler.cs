@@ -11,4 +11,5 @@ public class BetweenScenesControler : MonoBehaviour
     public static string[] levelDescription = new string[4] { "Mantis", "Invasión", "Parasitos", "Jefe " };
     public static string[] levelNames = new string[4] { "Mantis", "Invasión", "Parasitos", "Jefe " };
     public static bool firstTime = true;
+    public static bool firstStats = true;
 }
