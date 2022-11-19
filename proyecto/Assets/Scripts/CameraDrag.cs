@@ -25,10 +25,11 @@ public class CameraDrag : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && Activated && !worldcamera.IsBlending)
         {
-            worldcamera.ActiveVirtualCamera.Priority = 10;
             ncamera.gameObject.transform.position = worldcamera.gameObject.transform.position;
+            worldcamera.ActiveVirtualCamera.Priority = 10;
+           
             ncamera.Priority = 100;
-
+            
             var newPosition = new Vector3();
             newPosition.x = Input.GetAxis("Mouse X") * dragSpeed * Time.deltaTime;
             newPosition.y = Input.GetAxis("Mouse Y") * dragSpeed * Time.deltaTime;
