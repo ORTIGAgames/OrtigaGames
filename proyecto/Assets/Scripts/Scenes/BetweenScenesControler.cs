@@ -10,4 +10,6 @@ public class BetweenScenesControler : MonoBehaviour
     public static string[,] backgrounds = new string[4,6] { { "Declan", "Winnie", "G470", "Nass", "Norbert", "Caroline" }, { "a", "b", "c", "d", "e", "f" }, { "1", "2", "3", "4", "5", "6" },{ "enemi1", "e2", "e3", "e4", "e5", "e6" } };
     public static string[] levelDescription = new string[4] { "Mantis", "Invasión", "Parasitos", "Jefe " };
     public static string[] levelNames = new string[4] { "Mantis", "Invasión", "Parasitos", "Jefe " };
+    public static bool firstTime = true;
+    public static bool firstStats = true;
 }
