@@ -10,7 +10,7 @@ public class AbilityController : MonoBehaviour
 
     public void AbilityA()
     {
-        if (!Ability.active)
+        if (!Ability.activeSelf)
             Ability.SetActive(true);
         else
             Ability.SetActive(false);

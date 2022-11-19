@@ -26,7 +26,7 @@ public class Hexagon : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (game.activeAlly && !game.CombatH.gameObject.active)
+        if (game.activeAlly && !game.CombatH.gameObject.activeSelf)
         {
             if (this.state == CodeState.Action || this.state == CodeState.WalkableA)//si el jugador esta activo y la casilla a la que quiere ir es verde se podrá mover a dicha casilla primero se le mostrara la posicion y con doble click se movera definitivamente
             {
