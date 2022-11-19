@@ -99,11 +99,14 @@ public class Ally : Character
         {
             if (h != null && !h.getOccupant())
             {
-                h.setState(Hexagon.CodeState.WalkableA);
-                if (i <= ((int)displacement) && h != null)
-                    Move(h, i);
+                if(h.transform.childCount <= 0 || h.transform.GetChild(0).name != "ArbolSinHexagono")
+                {
+                    h.setState(Hexagon.CodeState.WalkableA);
+                    if (i <= ((int)displacement) && h != null)
+                        Move(h, i);
+                }
             }
-        }
+        }        
     }
 
     public override void Cancel()

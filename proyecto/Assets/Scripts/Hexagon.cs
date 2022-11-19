@@ -19,10 +19,6 @@ public class Hexagon : MonoBehaviour
         VisualState = GetComponent<Renderer>();
         state = CodeState.Empty;
     }
-    void Update()
-    {
-
-    }
 
     private void OnMouseDown()
     {
