@@ -12,6 +12,7 @@ public class BlubBlub : Abilities
     }
     public override void Effect(Character Figther)
     {
+        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Caroline");
         int damage;
         damage = (this.GetComponent<Character>().getDamage() <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - Figther.getDefense();
         Figther.setHealth(Figther.getHealth() - damage);

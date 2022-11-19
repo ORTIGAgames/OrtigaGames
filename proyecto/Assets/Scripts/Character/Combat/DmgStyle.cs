@@ -99,6 +99,7 @@ public class DmgStyle : MonoBehaviour, Combat
 
     public void AttackSequence()
     {
+        
         int damage = (this.GetComponent<Attack>().Action() <= this.GetComponent<Character>().game.defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - this.GetComponent<Character>().game.defender.getDefense();
         print(damage + "A");
         this.GetComponent<Character>().game.defender.setHealth(this.GetComponent<Character>().game.defender.getHealth() - damage);

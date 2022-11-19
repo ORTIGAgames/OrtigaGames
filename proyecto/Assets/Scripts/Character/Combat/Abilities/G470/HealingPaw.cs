@@ -12,6 +12,7 @@ public class HealingPaw : Abilities
     }
     public override void Effect(Character Figther)
     {
+        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Gato");
         Figther.setHealth(Figther.getHealth() + this.GetComponent<Character>().getHealth() * 1 / 5);
     }
 }
