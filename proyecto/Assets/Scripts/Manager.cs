@@ -149,6 +149,7 @@ public class Manager : MonoBehaviour
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
         e.EnemyControl();
     }
+
     public void CombatActivation(Character Figther1, Character Figther2)
     {
         if (Figther1.getTurn() > 0)

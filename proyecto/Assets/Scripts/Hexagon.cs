@@ -28,7 +28,7 @@ public class Hexagon : MonoBehaviour
             {
                 if (game.lastAction == this)
                 {
-                    //FindObjectOfType<AudioManager>().Play("Move");
+                    FindObjectOfType<AudioManager>().Play("Move");
                     game.activeAlly.CharacterMove(this);
                 }
                 else
