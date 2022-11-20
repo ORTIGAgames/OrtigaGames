@@ -1,4 +1,4 @@
-[embed]https://github.com/ORTIGAgames/OrtigaGames/edit/main/GDD_HTHDIBSC.pdf[embed]
+[embed]https://github.com/ORTIGAgames/OrtigaGames/edit/main/GDD_HTHDIBSC.pdf[/embed]
 <!--
 **ORTIGAgames/OrtigaGames** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
