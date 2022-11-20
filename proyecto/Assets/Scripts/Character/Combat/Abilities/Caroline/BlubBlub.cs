@@ -16,6 +16,9 @@ public class BlubBlub : Abilities
         int damage;
         damage = (this.GetComponent<Character>().getDamage() <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - Figther.getDefense();
         Figther.setHealth(Figther.getHealth() - damage);
+        print(Figther + "F");
+        print(Figther.getActualBlock() + "AB");
+        print(Figther.getActualBlock().neighbours + "N");
         foreach (Hexagon h in Figther.getActualBlock().neighbours)
         {
             if (h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())

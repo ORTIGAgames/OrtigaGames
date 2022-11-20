@@ -72,6 +72,7 @@ public class Manager : MonoBehaviour
             box.setOccupant(c);
             c.transform.position = box.transform.position + new Vector3(0, .085f, -0.05f);
             c.setInitialBlock(box);
+            c.setActualBlock(box);
             c.setTurn(1);
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
         }
