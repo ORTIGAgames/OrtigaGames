@@ -22,6 +22,8 @@ public class Stats : MonoBehaviour
     //Glossary
     public Text info;
     int type = 0;
+    bool enemy = false;
+    bool image = false;
     public Text nameCharacterGlossary;
     public SpriteRenderer spriteCharacterGlossary;
 
@@ -40,9 +42,11 @@ public class Stats : MonoBehaviour
     int enemies = 0;
 
     int[,] characterStats;
+    int upgradePoints;
     string[] names;
     string[] namesEnemies;
     string[,] charactersTexts;
+    string[,] enemiesTexts;
     string[] levelNames;
     string[] descriptionLevels;
     
@@ -67,7 +71,7 @@ public class Stats : MonoBehaviour
         lifeNumber.text = characterStats[charac,0].ToString();
         attackNumber.text = characterStats[charac, 1].ToString();
         defenseNumber.text = characterStats[charac, 2].ToString();
-        pointsNumber.text = characterStats[charac, 3].ToString();
+        pointsNumber.text = upgradePoints.ToString();
         nameCharacter.text = names[charac];
         spriteCharacter.sprite = sprites[charac];
 
@@ -83,16 +87,27 @@ public class Stats : MonoBehaviour
         }
         levels[level].gameObject.SetActive(true);
 
-        info.text = charactersTexts[type, charac];
-        if (type == 3)
+        if (image == true)
+        {
+            spriteCharacterGlossary.gameObject.SetActive(true);
+            info.gameObject.SetActive(false);
+        }
+        else
+        {
+            spriteCharacterGlossary.gameObject.SetActive(false);
+            info.gameObject.SetActive(true);
+        }
+        if (enemy==true)
         {
             nameCharacterGlossary.text = namesEnemies[enemies];
             spriteCharacterGlossary.sprite = spritesEnemies[enemies];
+            info.text = enemiesTexts[type, enemies];
         }
         else
         {
             nameCharacterGlossary.text = names[charac];
             spriteCharacterGlossary.sprite = sprites[charac];
+            info.text = charactersTexts[type, charac];
         }
         
     }
@@ -100,62 +115,77 @@ public class Stats : MonoBehaviour
     {
         type = t;
     }
-    
+    public void Enemies()
+    {
+        enemy = true;
+    }
+    public void Allies()
+    {
+        enemy = false;
+    }
+    public void Image()
+    {
+        image = true;
+    }
+    public void NoImage()
+    {
+        image = false;
+    }
     private void OnDestroy()
     {
         SaveData();
     }
     public void UpLive()
     {
-        if (characterStats[charac, 0] + 2 <= 40 && characterStats[charac, 3] > 0)
+        if (characterStats[charac, 0] + 2 <= 40 && upgradePoints > 0)
         {
             characterStats[charac, 0] += 2;
-            characterStats[charac, 3]--;
+            upgradePoints--;
         }
         
     }
     public void DownLive()
     {
-        if (characterStats[charac, 0] - 2 >= 20 && characterStats[charac, 3] < 10)
+        if (characterStats[charac, 0] - 2 >= 20 && upgradePoints < 10)
         {
             characterStats[charac, 0] -= 2;
-            characterStats[charac, 3]++;
+            upgradePoints++;
         }
             
     }
     public void UpAttack()
     {
-        if (characterStats[charac, 1] + 1 <= 10 && characterStats[charac, 3] > 0)
+        if (characterStats[charac, 1] + 1 <= 10 && upgradePoints > 0)
         {
             characterStats[charac, 1]++;
-            characterStats[charac, 3]--;
+            upgradePoints--;
         }
             
     }
     public void DownAttack()
     {
-        if(characterStats[charac, 1] - 1 > 0 && characterStats[charac, 3] < 10)
+        if(characterStats[charac, 1] - 1 > 0 && upgradePoints < 10)
         {
             characterStats[charac, 1]--;
-            characterStats[charac, 3]++;
+            upgradePoints++;
         }
         
     }
     public void UpDefense()
     {
-        if (characterStats[charac, 2] + 1 <= 10 && characterStats[charac, 3] > 0)
+        if (characterStats[charac, 2] + 1 <= 10 && upgradePoints > 0)
         {
             characterStats[charac, 2]++;
-            characterStats[charac, 3]--;
+            upgradePoints--;
         }
             
     }
     public void DownDefense()
     {
-        if (characterStats[charac, 2] - 1 > 0 && characterStats[charac, 3] < 10)
+        if (characterStats[charac, 2] - 1 > 0 && upgradePoints < 10)
         {
             characterStats[charac, 2]--;
-            characterStats[charac, 3]++;
+            upgradePoints++;
         }
             
     }
@@ -201,6 +231,7 @@ public class Stats : MonoBehaviour
             }
         }*/
         BetweenScenesControler.characters = characterStats;
+        BetweenScenesControler.upgradePiont = upgradePoints;
     }
     private void LoadData()
     {
@@ -214,9 +245,11 @@ public class Stats : MonoBehaviour
             }
         }*/
         characterStats = BetweenScenesControler.characters;
+        upgradePoints = BetweenScenesControler.upgradePiont;
         names = BetweenScenesControler.names;
         namesEnemies = BetweenScenesControler.namesEnemies;
         charactersTexts = BetweenScenesControler.backgrounds;
+        enemiesTexts = BetweenScenesControler.backgroundsEnemies;
         levelNames= BetweenScenesControler.levelNames;
         descriptionLevels = BetweenScenesControler.levelDescription;
     }
