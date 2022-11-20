@@ -3165,7 +3165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &584679832
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3296,7 +3296,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ebfd1acdff6231549b9232ee78dac8f5, type: 3}
   - {fileID: 21300000, guid: 5d8fdb10e5b7a8b45930ab717e417d05, type: 3}
   - {fileID: 21300000, guid: a923213b63df44b4dbd42e955bf2d1a0, type: 3}
-  spritesGlossary: []
+  spritesGlossary:
+  - {fileID: 21300000, guid: 87c78fdc020517e45934fd2a930d671a, type: 3}
+  - {fileID: 21300000, guid: 04405da87bc766d4f85f68d5c28c8a7a, type: 3}
+  - {fileID: 21300000, guid: 1ac7a4f8fafe35a4a9cdc84b37661445, type: 3}
+  - {fileID: 21300000, guid: 645155a0b88565e4b8a695a15e171734, type: 3}
+  - {fileID: 21300000, guid: 26efd90482c5a2a4d9bc6c5eb0979ef3, type: 3}
+  - {fileID: 21300000, guid: c6bddf44298c34a40a02c5e9469d3b99, type: 3}
   levelsImage:
   - {fileID: 21300000, guid: a47c7ebe5a7259e42b8809368516083d, type: 3}
   - {fileID: 21300000, guid: a47c7ebe5a7259e42b8809368516083d, type: 3}
@@ -10931,7 +10937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!223 &1995776198
 Canvas:
   m_ObjectHideFlags: 0
