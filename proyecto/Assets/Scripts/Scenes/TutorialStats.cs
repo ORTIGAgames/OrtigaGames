@@ -94,4 +94,9 @@ public class TutorialStats : MonoBehaviour, IPointerClickHandler
             firstStats = false;
         }
     }
+    public void Help()
+    {
+        firstStats = true;
+        step = 0;
+    }
 }

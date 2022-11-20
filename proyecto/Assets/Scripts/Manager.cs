@@ -24,6 +24,8 @@ public class Manager : MonoBehaviour
     public GameObject InteractionH;
     public GameObject CharacterH;
     public GameObject TurnH;
+    public Scenes scene;
+    public int perder;
     #endregion
 
     #region combat
@@ -79,14 +81,15 @@ public class Manager : MonoBehaviour
     }
     void Update()
     {
-        if (allies.Count <= 0)
+        
+        if (allies.Count < perder)
         {
-            SceneManager.LoadScene(2);
+            scene.playLose();
         }
 
         if (enemies.Count <= 0)
         {
-            SceneManager.LoadScene(1);
+            scene.playWin();
         }
 
         if (allyturn && CheckTurn(allies))

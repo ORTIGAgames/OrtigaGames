@@ -57,4 +57,39 @@ public class Scenes : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(3);
     }
+    public void playLose()
+    {
+        StartCoroutine(LoadLose());
+        Time.timeScale = 1f;
+    }
+    IEnumerator LoadLose()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(4);
+    }
+    public void playWin()
+    {
+        StartCoroutine(LoadWin());
+        Time.timeScale = 1f;
+    }
+    IEnumerator LoadWin()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(5);
+    }
+
+    public void playTutorial()
+    {
+        StartCoroutine(LoadTutorial());
+        Time.timeScale = 1f;
+    }
+
+    IEnumerator LoadTutorial()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(6);
+    }
 }

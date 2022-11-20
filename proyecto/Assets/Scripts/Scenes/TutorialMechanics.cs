@@ -116,6 +116,8 @@ public class TutorialMechanics : MonoBehaviour, IPointerClickHandler
             }
         }
     }
+
+    
     public void OnPointerClick(PointerEventData eventData)
     {
         if(step>=5)

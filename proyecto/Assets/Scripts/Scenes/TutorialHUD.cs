@@ -109,6 +109,10 @@ public class TutorialHUD : MonoBehaviour,IPointerClickHandler
         }
     }
 
-   
+    public void Help()
+    {
+        firstTime = true;
+        step = 0;
+    }
 }
 
