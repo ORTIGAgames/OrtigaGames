@@ -102,7 +102,7 @@ public class Ally : Character
                 if(h.transform.childCount <= 0 || h.transform.GetChild(0).name != "ArbolSinHexagono")
                 {
                     h.setState(Hexagon.CodeState.WalkableA);
-                    if (i <= (((int)displacement) + 2) && h != null)
+                    if (i <= ((int)displacement) && h != null)
                         Move(h, i);
                 }
             }

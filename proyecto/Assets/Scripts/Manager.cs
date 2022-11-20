@@ -62,10 +62,10 @@ public class Manager : MonoBehaviour
             }
             else
             {
-                box = stage.Block(Random.Range(38, 44));
+                box = stage.Block(Random.Range(64, 71));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(38, 44));
+                    box = stage.Block(Random.Range(64, 71));
                 }
                 enemies.Add(c);
             }
@@ -100,7 +100,7 @@ public class Manager : MonoBehaviour
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
-                StartCoroutine(Movement(2.0f * (i + 1), (Enemy)enemies[i]));
+                StartCoroutine(CameraFocus(2.0f * (i + 1), (Enemy)enemies[i]));
             }
         }
 
@@ -136,11 +136,17 @@ public class Manager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         TurnH.SetActive(false);
     }
+
+    IEnumerator CameraFocus(float timer, Enemy e)
+    {
+        yield return new WaitForSeconds(timer);
+        e.Camera();
+        StartCoroutine(Movement(2f, e));
+    }
     IEnumerator Movement(float timer, Enemy e)
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.Camera();
         e.EnemyControl();
     }
     public void CombatActivation(Character Figther1, Character Figther2)
