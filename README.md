@@ -1,4 +1,4 @@
-https://github.com/ORTIGAgames/OrtigaGames/edit/main/GDD HTHDIBSC.pdf
+https://github.com/ORTIGAgames/OrtigaGames/edit/main/GDD_HTHDIBSC.pdf
 
 
 <!--
