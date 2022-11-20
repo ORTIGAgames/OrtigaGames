@@ -236,7 +236,10 @@ public class Manager : MonoBehaviour
         {
             if (attacker.GetComponent<Abilities>().Role == "Support" || attacker.GetComponent<Abilities>().Role == "SlefSupport")
                 CombatH.Ability.gameObject.SetActive(false);
-            CombatH.Action.gameObject.SetActive(true);
+            else {
+                CombatH.Action.gameObject.SetActive(true);
+                CombatH.Ability.gameObject.SetActive(true);
+            }
         }
     }
 
