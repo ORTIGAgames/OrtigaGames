@@ -27,12 +27,12 @@ public class DmgStyle : MonoBehaviour, Combat
                                 h.setState(Hexagon.CodeState.AllyT);
                         }
                     }
-                    if (i < (((int)c.getMovement()) + 1) && h != null)
-                        Action(h, i + ((int)c.getMovement()), c);
+                    if (i < (((int)c.getMovement()) + 1))
+                        Action(h, i + (((int)c.getMovement()) + 1), c);
                 }
                 else
                 {
-                    if (i <= (((int)c.getMovement()) + maxCasillas) && h != null)
+                    if (i <= (((int)c.getMovement()) + maxCasillas))
                         Action(h, i, c);
                 }
             }
