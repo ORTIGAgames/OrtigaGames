@@ -76,9 +76,14 @@ public class DmgStyle : MonoBehaviour, Combat
     {
         if (d == "Action")
         {
-            if(this.GetComponent<Character>().myAnimator)
+            if (this.GetComponent<Character>().myAnimator)
+            {
                 this.GetComponent<Character>().myAnimator.SetTrigger("Attack");
-            //FindObjectOfType<AudioManager>().Play("Range");
+                if (maxCasillas > 1)
+                    FindObjectOfType<AudioManager>().Play("Range");
+                else
+                    FindObjectOfType<AudioManager>().Play("Melee");
+            }
             else//cambiar cuando todos tengan animacion de ataque, quitar esta linea
             {
                 int damage = (this.GetComponent<Attack>().Action() <= this.GetComponent<Character>().game.defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - this.GetComponent<Character>().game.defender.getDefense();
