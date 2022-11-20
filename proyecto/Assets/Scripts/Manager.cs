@@ -165,19 +165,6 @@ public class Manager : MonoBehaviour
         defender = null;
     }
 
-    public void ColliderDown()
-    {
-        foreach (Character a in players)
-            a.GetComponent<BoxCollider>().enabled = false;
-    }
-
-    public void ColliderUp()
-    {
-        foreach (Character a in players)
-            a.GetComponent<BoxCollider>().enabled = true;
-    }
-
-
     public void DeleteCharacter(Character c)
     {
         if (c.getSide() == "Ally")
@@ -227,7 +214,6 @@ public class Manager : MonoBehaviour
 
     public void CombatActivate(Sprite Image)
     {
-        ColliderDown();
         if (Image)//cambiar cuando todos tengan habilidad
         {
             CombatH.Ability.GetComponent<Image>().sprite = Image;
@@ -247,7 +233,6 @@ public class Manager : MonoBehaviour
     {
         CombatH.gameObject.SetActive(false);
         stage.Reset();
-        ColliderUp();
     }
 
     #endregion

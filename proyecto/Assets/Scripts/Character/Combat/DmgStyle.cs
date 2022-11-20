@@ -28,7 +28,7 @@ public class DmgStyle : MonoBehaviour, Combat
                         }
                     }
                     if (i < (((int)c.getMovement()) + 1) && h != null)
-                        Action(h, i, c);
+                        Action(h, i + ((int)c.getMovement()), c);
                 }
                 else
                 {

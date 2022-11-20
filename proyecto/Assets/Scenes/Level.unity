@@ -7531,7 +7531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 3
+  maxCasillas: 2
 --- !u!212 &672783051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8438,7 +8438,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 0}
-  displacement: 2
+  displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
@@ -8475,7 +8475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 3
 --- !u!95 &745738192
 Animator:
   serializedVersion: 4
@@ -8525,6 +8525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ae2d285a136f24e9241ee04ed81169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variance: 2
 --- !u!1001 &747874838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10613,7 +10614,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 0}
-  displacement: 0
+  displacement: 2
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
@@ -10699,7 +10700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 1
+  maxCasillas: 2
 --- !u!1 &920793639
 GameObject:
   m_ObjectHideFlags: 0
@@ -12671,7 +12672,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 0}
-  displacement: 0
+  displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
@@ -12708,7 +12709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 3
 --- !u!95 &1089269485
 Animator:
   serializedVersion: 4
@@ -16073,7 +16074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 1
+  maxCasillas: 2
 --- !u!114 &1435065690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20971,7 +20972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab77ef90a60b7644591c3a8ff5410419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpeed: 20
+  dragSpeed: 10
   outerLeft: 10
   outerRight: 10
   outerDown: 10

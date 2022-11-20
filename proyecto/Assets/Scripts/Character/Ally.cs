@@ -68,13 +68,12 @@ public class Ally : Character
             }
         }
         else if (game.allyturn && turn > 0)
-        {
-            game.PlayerReset();
-            game.lastClicked = this;          
-            game.InteractionActivate();
-            
+        {            
             if (!game.CombatH.gameObject.activeSelf)
             {
+                game.PlayerReset();
+                game.lastClicked = this;
+                game.InteractionActivate();
                 game.setActiveAlly(this);
                 game.CharacterActivate(Face, NameIcon, Damage.ToString(), Defense.ToString(), MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description, this.GetComponent<Abilities>().icon);
                 game.lastAction = this.InitialBlock;
@@ -103,7 +102,7 @@ public class Ally : Character
                 if(h.transform.childCount <= 0 || h.transform.GetChild(0).name != "ArbolSinHexagono")
                 {
                     h.setState(Hexagon.CodeState.WalkableA);
-                    if (i <= ((int)displacement) && h != null)
+                    if (i <= (((int)displacement) + 2) && h != null)
                         Move(h, i);
                 }
             }
