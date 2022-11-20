@@ -52,6 +52,7 @@ public class Stats : MonoBehaviour
     
     [SerializeField] Sprite[] sprites;
     [SerializeField] Sprite[] spritesEnemies;
+    [SerializeField] Sprite[] spritesGlossary;
     [SerializeField] Sprite[] levelsImage;
     [SerializeField] Sprite[] levelEnemies1;
     [SerializeField] Sprite[] levelEnemies2;
@@ -106,7 +107,7 @@ public class Stats : MonoBehaviour
         else
         {
             nameCharacterGlossary.text = names[charac];
-            spriteCharacterGlossary.sprite = sprites[charac];
+            spriteCharacterGlossary.sprite = spritesGlossary[charac];
             info.text = charactersTexts[type, charac];
         }
         
