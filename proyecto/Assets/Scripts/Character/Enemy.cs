@@ -86,7 +86,7 @@ public class Enemy : Character
         this.InitialBlock = h;
         this.ActualBlock = h;
         h.setOccupant(this);
-
+        game.InteractionDeactivate();
     }
     public override void ShowMove(Hexagon h)
     {
@@ -167,7 +167,7 @@ public class Enemy : Character
         {
             foreach(Hexagon h in movement.neighbours)
             {
-                if (!h.getOccupant() && h != null)
+                if (h && !h.getOccupant())
                 {
                     CharacterMove(h);
                     break;
