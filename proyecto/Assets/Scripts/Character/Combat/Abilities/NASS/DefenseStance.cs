@@ -13,6 +13,6 @@ public class DefenseStance : Abilities
     public override void Effect(Character Figther)
     {
         GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Nass");
-        DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 1, this.GetComponent<Character>());
+        DefBoost.CreateDefBoost(5, 1, this.GetComponent<Character>());
     }
 }

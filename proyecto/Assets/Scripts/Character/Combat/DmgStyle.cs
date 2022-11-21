@@ -27,7 +27,7 @@ public class DmgStyle : MonoBehaviour, Combat
                                 h.setState(Hexagon.CodeState.AllyT);
                         }
                     }
-                    if (i < (((int)c.getMovement()) + 1))
+                    if (i <= (((int)c.getMovement()) + 1))
                         Action(h, i + (((int)c.getMovement()) + 1), c);
                 }
                 else
@@ -76,13 +76,13 @@ public class DmgStyle : MonoBehaviour, Combat
     {
         if (d == "Action")
         {
-            if (this.GetComponent<Character>().myAnimator)
+            if (maxCasillas > 1)
+                FindObjectOfType<AudioManager>().Play("Range");
+            else
+                FindObjectOfType<AudioManager>().Play("Melee");
+            if (this.GetComponent<Character>().myAnimator.parameterCount > 0)
             {
                 this.GetComponent<Character>().myAnimator.SetTrigger("Attack");
-                if (maxCasillas > 1)
-                    FindObjectOfType<AudioManager>().Play("Range");
-                else
-                    FindObjectOfType<AudioManager>().Play("Melee");
             }
             else//cambiar cuando todos tengan animacion de ataque, quitar esta linea
             {
@@ -105,9 +105,7 @@ public class DmgStyle : MonoBehaviour, Combat
 
     public void AttackSequence()
     {
-        
         int damage = (this.GetComponent<Attack>().Action() <= this.GetComponent<Character>().game.defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - this.GetComponent<Character>().game.defender.getDefense();
-        print(damage + "A");
         this.GetComponent<Character>().game.defender.setHealth(this.GetComponent<Character>().game.defender.getHealth() - damage);
         this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
     }

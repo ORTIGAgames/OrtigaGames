@@ -136,6 +136,7 @@ public class Ally : Character
         game.lastAction = null;
         turn--;
         game.CharacterDeactivate();
+        game.InteractionDeactivate();
     }
     public override void ShowMove(Hexagon h)
     {

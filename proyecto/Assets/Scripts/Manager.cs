@@ -18,6 +18,7 @@ public class Manager : MonoBehaviour
     public Ally activeAlly;
     public Hexagon lastAction;
     public Character lastClicked;
+    int lose;
 
     #region UI
     public CombatHud CombatH;
@@ -25,7 +26,6 @@ public class Manager : MonoBehaviour
     public GameObject CharacterH;
     public GameObject TurnH;
     public Scenes scene;
-    public int perder;
     #endregion
 
     #region combat
@@ -78,11 +78,12 @@ public class Manager : MonoBehaviour
             c.setTurn(1);
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
         }
+        lose = allies.Count;
     }
     void Update()
     {
         
-        if (allies.Count < perder)
+        if (allies.Count < lose)
         {
             scene.playLose();
         }
@@ -261,7 +262,7 @@ public class Manager : MonoBehaviour
             else
             {
                 CombatH.Ability.gameObject.SetActive(true);
-                CombatH.Action.gameObject.SetActive(true);
+                CombatH.Action.gameObject.SetActive(true);                           
             }
         }     
     }
