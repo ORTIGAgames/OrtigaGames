@@ -41,9 +41,9 @@ public class BetweenScenesControler : MonoBehaviour
             "Wormy threatening creatures in disguised ", 
             "Creepy looking boss.", 
             "Silly little guys." }, 
-        { "The female variation figths with their big front legs in a close combat style.",
-            "The male variation has sticky useless front legs and figths throwing bulges that grom in their tail and explode like bombs. ",
-            "They thend to move as group and have a desesperate last attack that release their toxic.",
+        { "The female variation figths with their big front legs in a close range combat style.",
+            "The male variation has sticky useless front legs and figths throwing bulges that gry in their tail and explode like bombs. ",
+            "They tend to move as groups and have a desesperate last attack that releases their toxins.",
             "They dont fight, they just run away.",
             "Immovable, It only thinks in creating minions.",
             "Fight until they die." } 
