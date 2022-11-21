@@ -13,14 +13,12 @@ public class Enemy : Character
         base.Awake();
         side = "Enemy";
 
-        MaxHealth = 35;
+        MaxHealth = 30;
         //Debug.Log(Health);
         Damage = 6;
         //Debug.Log(Damage);
-        Defense = 4;
+        Defense = 2;
         //Debug.Log(Defense);
-        Speed = 5;
-        //Debug.Log(Speed);
         Name = "Enemigo";
         //Debug.Log(Name);
         Health = MaxHealth;
@@ -169,7 +167,7 @@ public class Enemy : Character
         {
             foreach(Hexagon h in movement.neighbours)
             {
-                if (!h.getOccupant())
+                if (!h.getOccupant() && h != null)
                 {
                     CharacterMove(h);
                     break;

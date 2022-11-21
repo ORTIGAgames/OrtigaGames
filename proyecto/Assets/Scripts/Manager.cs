@@ -64,10 +64,10 @@ public class Manager : MonoBehaviour
             }
             else
             {
-                box = stage.Block(Random.Range(64, 71));
+                box = stage.Block(Random.Range(60, 71));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(64, 71));
+                    box = stage.Block(Random.Range(60, 71));
                 }
                 enemies.Add(c);
             }
