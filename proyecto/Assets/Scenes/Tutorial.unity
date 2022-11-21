@@ -1448,7 +1448,7 @@ MonoBehaviour:
   targetable: 0
   Face: {fileID: 0}
   healthBar: {fileID: 537873238}
-  myAnimator: {fileID: 0}
+  myAnimator: {fileID: 134245953}
   NameIcon: {fileID: 0}
   ncamera: {fileID: 474179898}
   worldcamera: {fileID: 1505644379}
@@ -10423,7 +10423,6 @@ MonoBehaviour:
   CharacterH: {fileID: 0}
   TurnH: {fileID: 0}
   scene: {fileID: 952264783}
-  perder: 1
   attacker: {fileID: 0}
   defender: {fileID: 0}
 --- !u!1 &1309877813 stripped
