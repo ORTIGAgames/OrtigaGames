@@ -20,7 +20,6 @@ public class CalamariPet : PreTurn
     }
     public override void BeforeTurn()
     {
-        print("hola" + attached.getHealth());
         attached.setHealth(attached.getHealth() + 1);
     }
 }

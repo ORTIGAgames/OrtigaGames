@@ -98,7 +98,7 @@ public class Manager : MonoBehaviour
             stage.Reset();
             StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
             allyturn = false;
-            foreach (PreTurn p in preTurn)
+            foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
             for (int i = 0; i < enemies.Count; i++)
             {
@@ -113,7 +113,7 @@ public class Manager : MonoBehaviour
             stage.Reset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f)); 
             allyturn = true;
-            foreach (PreTurn p in preTurn)
+            foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
             foreach (Ally a in allies)
             {
@@ -186,6 +186,20 @@ public class Manager : MonoBehaviour
         Destroy(c.gameObject);
     }
 
+    public void CollisionUp()
+    {
+        foreach(Character c in players)
+            c.GetComponent<BoxCollider>().enabled = true;
+
+    }
+
+    public void CollisionDown()
+    {
+        foreach (Character c in players)
+            c.GetComponent<BoxCollider>().enabled = false;
+    }
+
+
     #region interface
     public void CharacterActivate(Sprite face, Sprite name, string attack, string defense, int maxHealth, string ability, string explanation, Sprite Icon)
     {
@@ -204,6 +218,7 @@ public class Manager : MonoBehaviour
         {
             attacker = activeAlly;
             CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.gameObject.SetActive(true);
+            CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.GetComponent<Image>().sprite = attacker.GetComponent<Abilities>().ActiveIcon;
         }
         else
             CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.gameObject.SetActive(false);
@@ -225,26 +240,35 @@ public class Manager : MonoBehaviour
 
     public void CombatActivate(Sprite Image)
     {
+        CollisionDown();
         if (Image)//cambiar cuando todos tengan habilidad
         {
             CombatH.Ability.GetComponent<Image>().sprite = Image;
         }    
         CombatH.gameObject.SetActive(true);
-        if(attacker.getSide() == defender.getSide())
+        if (attacker.getSide() == defender.getSide())
+        {
+            CombatH.Ability.gameObject.SetActive(true);
             CombatH.Action.gameObject.SetActive(false);
+        }
         else
         {
-            if (attacker.GetComponent<Abilities>().Role == "Support" || attacker.GetComponent<Abilities>().Role == "SlefSupport")
+            if (attacker.GetComponent<Abilities>().Role == "Support")
+            {
                 CombatH.Ability.gameObject.SetActive(false);
-            else {
                 CombatH.Action.gameObject.SetActive(true);
-                CombatH.Ability.gameObject.SetActive(true);
             }
-        }
+            else
+            {
+                CombatH.Ability.gameObject.SetActive(true);
+                CombatH.Action.gameObject.SetActive(true);
+            }
+        }     
     }
 
     public void CombatDeactivate()
     {
+        CollisionUp();
         CombatH.gameObject.SetActive(false);
         stage.Reset();
     }

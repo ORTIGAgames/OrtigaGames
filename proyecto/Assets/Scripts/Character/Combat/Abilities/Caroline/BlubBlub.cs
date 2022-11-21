@@ -14,18 +14,17 @@ public class BlubBlub : Abilities
     {
         GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Caroline");
         int damage;
-        damage = (this.GetComponent<Character>().getDamage() <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - Figther.getDefense();
-        Figther.setHealth(Figther.getHealth() - damage);
-        print(Figther + "F");
-        print(Figther.getActualBlock() + "AB");
-        print(Figther.getActualBlock().neighbours + "N");
         foreach (Hexagon h in Figther.getActualBlock().neighbours)
         {
             if (h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
             {
-                damage = (this.GetComponent<Character>().getDamage() <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - h.getOccupant().getDefense();
+                damage = (this.GetComponent<Character>().getDamage() / 3 <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - h.getOccupant().getDefense();
                 h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
+                print(damage);
             }
-        }        
+        }
+        damage = (this.GetComponent<Character>().getDamage() / 3 <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - Figther.getDefense();
+        Figther.setHealth(Figther.getHealth() - damage);
+        print(damage);
     }
 }

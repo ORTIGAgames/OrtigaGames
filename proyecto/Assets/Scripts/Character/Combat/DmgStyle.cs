@@ -99,6 +99,7 @@ public class DmgStyle : MonoBehaviour, Combat
             this.GetComponent<Character>().getAbilities().Effect(m.defender);
             this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
         }
+
         this.GetComponent<Character>().game.CombatDeactivate();
     }
 

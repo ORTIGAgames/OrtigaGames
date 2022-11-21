@@ -69,17 +69,15 @@ public class Ally : Character
         }
         else if (game.allyturn && turn > 0)
         {            
-            if (!game.CombatH.gameObject.activeSelf)
-            {
-                game.PlayerReset();
-                game.lastClicked = this;
-                game.InteractionActivate();
-                game.setActiveAlly(this);
-                game.CharacterActivate(Face, NameIcon, Damage.ToString(), Defense.ToString(), MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description, this.GetComponent<Abilities>().icon);
-                game.lastAction = this.InitialBlock;
-                this.ActualBlock = this.InitialBlock;
-                game.activeAlly.GetComponent<BoxCollider>().enabled = false;
-            }
+
+            game.PlayerReset();
+            game.lastClicked = this;
+            game.InteractionActivate();
+            game.setActiveAlly(this);
+            game.CharacterActivate(Face, NameIcon, Damage.ToString(), Defense.ToString(), MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description, this.GetComponent<Abilities>().icon);
+            game.lastAction = this.InitialBlock;
+            this.ActualBlock = this.InitialBlock;
+            game.activeAlly.GetComponent<BoxCollider>().enabled = false;
             game.stage.Reset();//para mostrar las casillas donde se esparce en el tablero se resetea   
             this.Move(this.InitialBlock, 0);
             style.Action(this.InitialBlock, 0, this);

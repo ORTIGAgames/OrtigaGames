@@ -86,8 +86,9 @@ public class Enemy : Character
         this.transform.position = h.transform.position + new Vector3(0, .085f, -0.05f);
         InitialBlock.setOccupant(null);
         this.InitialBlock = h;
+        this.ActualBlock = h;
         h.setOccupant(this);
-        
+
     }
     public override void ShowMove(Hexagon h)
     {
