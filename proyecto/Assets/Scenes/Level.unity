@@ -29934,11 +29934,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab77ef90a60b7644591c3a8ff5410419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpeed: 10
-  outerLeft: 10
-  outerRight: 10
-  outerDown: 10
-  outerUp: 10
+  dragSpeed: 5
+  outerLeft: 2
+  outerRight: 2
+  outerDown: -0.5
+  outerUp: 1
   ncamera: {fileID: 2027600386}
   worldcamera: {fileID: 963194230}
   game: {fileID: 1559168337}

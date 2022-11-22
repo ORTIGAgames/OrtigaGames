@@ -35,9 +35,9 @@ public class CameraDrag : MonoBehaviour
             newPosition.y = Input.GetAxis("Mouse Y") * dragSpeed * Time.deltaTime;
             newPosition.z = newPosition.y;
 
-            if (gameObject.transform.position.x > -outerLeft && gameObject.transform.position.x < outerRight && gameObject.transform.position.z > -outerDown && gameObject.transform.position.z < outerUp)
+            if (gameObject.transform.position.x > -outerLeft && gameObject.transform.position.x < outerRight && gameObject.transform.position.y > -outerDown && gameObject.transform.position.y < outerUp)
                 transform.Translate(-newPosition);
-            if (gameObject.transform.position.x < -outerLeft || gameObject.transform.position.x > outerRight || gameObject.transform.position.z < -outerDown || gameObject.transform.position.z > outerUp)
+            if (gameObject.transform.position.x < -outerLeft || gameObject.transform.position.x > outerRight || gameObject.transform.position.y < -outerDown || gameObject.transform.position.y > outerUp)
                 transform.Translate(newPosition);
         }
 
