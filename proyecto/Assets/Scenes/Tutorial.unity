@@ -1442,7 +1442,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 0}
-  displacement: 0
+  displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
