@@ -5,6 +5,7 @@ using UnityEngine;
 public class DmgStyle : MonoBehaviour, Combat
 {
     [SerializeField] int maxCasillas;
+    [SerializeField] Character defender;
     public void Action(Hexagon t, int i, Character c)
     {
         i++;
@@ -28,7 +29,7 @@ public class DmgStyle : MonoBehaviour, Combat
                         }
                     }
                     if (i <= (((int)c.getMovement()) + 1))
-                        Action(h, i + (((int)c.getMovement()) + 1), c);
+                        Action(h, i + ((int)c.getMovement() + 1), c);
                 }
                 else
                 {
@@ -73,7 +74,9 @@ public class DmgStyle : MonoBehaviour, Combat
     }
 
     public void Action(Manager m, string d)
-    {
+    {       
+        defender = m.defender;
+        this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
         if (d == "Action")
         {
             if (maxCasillas > 1)
@@ -86,28 +89,24 @@ public class DmgStyle : MonoBehaviour, Combat
             }
             else//cambiar cuando todos tengan animacion de ataque, quitar esta linea
             {
-                int damage = (this.GetComponent<Attack>().Action() <= this.GetComponent<Character>().game.defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - this.GetComponent<Character>().game.defender.getDefense();
-                print(damage + "A");
-                this.GetComponent<Character>().game.defender.setHealth(this.GetComponent<Character>().game.defender.getHealth() - damage);
-                this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
+                int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - this.GetComponent<Character>().game.defender.getDefense();
+                defender.setHealth(defender.getHealth() - damage);
             }
                      
         }
 
         if (d == "Ability")
         {
-            this.GetComponent<Character>().getAbilities().Effect(m.defender);
-            this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
+            this.GetComponent<Character>().getAbilities().Effect(defender);
         }
-
         this.GetComponent<Character>().game.CombatDeactivate();
     }
 
     public void AttackSequence()
     {
-        int damage = (this.GetComponent<Attack>().Action() <= this.GetComponent<Character>().game.defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - this.GetComponent<Character>().game.defender.getDefense();
-        this.GetComponent<Character>().game.defender.setHealth(this.GetComponent<Character>().game.defender.getHealth() - damage);
-        this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
+        int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - defender.getDefense();
+        defender.setHealth(defender.getHealth() - damage);
+        defender = null;
     }
 }
 

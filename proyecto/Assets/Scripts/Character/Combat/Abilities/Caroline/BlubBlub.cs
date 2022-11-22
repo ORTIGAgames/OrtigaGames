@@ -18,12 +18,12 @@ public class BlubBlub : Abilities
         {
             if (h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
             {
-                damage = (this.GetComponent<Character>().getDamage() / 2 <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 2 - h.getOccupant().getDefense();
+                damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - h.getOccupant().getDefense());
                 h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
                 print(damage);
             }
         }
-        damage = (this.GetComponent<Character>().getDamage() / 2 <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 2 - Figther.getDefense();
+        damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - Figther.getDefense());
         Figther.setHealth(Figther.getHealth() - damage);
         print(damage);
     }

@@ -13,7 +13,7 @@ public class Enemy : Character
         base.Awake();
         side = "Enemy";
 
-        MaxHealth = 30;
+        MaxHealth = 15;
         //Debug.Log(Health);
         Damage = 6;
         //Debug.Log(Damage);
