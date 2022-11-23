@@ -75,6 +75,10 @@ public class TutorialHUD : MonoBehaviour,IPointerClickHandler
         else
         {
             tutorial.gameObject.SetActive(false);
+            skip.gameObject.SetActive(false);
+            cont.gameObject.SetActive(false);
+            play.gameObject.SetActive(false);
+            icon.gameObject.SetActive(false);
             foreach (Button b in buttons)
             {
                 b.interactable = true;

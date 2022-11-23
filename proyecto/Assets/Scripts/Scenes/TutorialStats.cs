@@ -14,7 +14,7 @@ public class TutorialStats : MonoBehaviour, IPointerClickHandler
         "You will have to decide which stats of which allies you will improve.",
         "A tip just for you! I recommend seeing what will be the next level objective to boost the stats that will help you pass it easier.",
         "To see a level objective and enemies you just have to select that level, just remember to go back to update your allies stats after you read it!",
-        "If you need assistant just search for my icon",
+        "If you need assistance just search for my icon",
     };
     public Canvas tutorial;
     public Text text;
@@ -63,6 +63,9 @@ public class TutorialStats : MonoBehaviour, IPointerClickHandler
         else
         {
             tutorial.gameObject.SetActive(false);
+            skip.gameObject.SetActive(false);
+            cont.gameObject.SetActive(false);
+            icon.gameObject.SetActive(false);
             foreach (Button b in buttons)
             {
                 b.interactable = true;
