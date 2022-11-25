@@ -84,7 +84,7 @@ public class DmgStyle : MonoBehaviour, Combat
     public void Action(Manager m, string d)
     {       
         defender = m.defender;
-        this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock());
+        this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock(), true);
         if (d == "Action")
         {
             if (maxCasillas > 1)
@@ -106,6 +106,7 @@ public class DmgStyle : MonoBehaviour, Combat
         if (d == "Ability")
         {
             this.GetComponent<Character>().getAbilities().Effect(defender);
+            this.GetComponent<Character>().EndTurn();
         }
         this.GetComponent<Character>().game.CombatDeactivate();
     }
@@ -115,6 +116,7 @@ public class DmgStyle : MonoBehaviour, Combat
         int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - defender.getDefense();
         defender.setHealth(defender.getHealth() - damage);
         defender = null;
+        this.GetComponent<Character>().EndTurn();
     }
 }
 

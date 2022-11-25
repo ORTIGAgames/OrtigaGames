@@ -25,7 +25,7 @@ public class Ally : Character
 
     public void Update()
     {
-        if(game.activeAlly && game.activeAlly != this && !game.CombatH.gameObject.activeSelf)
+        if(game.activeAlly != this && !game.CombatH.gameObject.activeSelf)
         {
             if(getInitialBlock().transform.position != this.transform.position)
                 this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, -0.05f);                  
@@ -123,7 +123,7 @@ public class Ally : Character
         ncamera.Priority = 100;
     }
 
-    public override void CharacterMove(Hexagon h)
+    public override void CharacterMove(Hexagon h, bool c)
     {
         this.transform.position = h.transform.position + new Vector3(0, .085f, -0.05f);
         InitialBlock.setOccupant(null);
@@ -134,14 +134,19 @@ public class Ally : Character
         game.stage.Reset();
         game.InteractionDeactivate();
         game.lastAction = null;
-        turn--;
+        if(!c)
+            EndTurn();
         game.CharacterDeactivate();
-        game.InteractionDeactivate();
     }
     public override void ShowMove(Hexagon h)
     {
         this.transform.position = h.transform.position + new Vector3(0, .085f, -0.05f);
         this.setActualBlock(h);
         game.lastAction = h;
+    }
+
+    public override void EndTurn()
+    {
+        turn--;
     }
 }

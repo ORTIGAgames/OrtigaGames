@@ -79,7 +79,7 @@ public class Enemy : Character
         }
     }
 
-    public override void CharacterMove(Hexagon h)
+    public override void CharacterMove(Hexagon h, bool c)
     {
         this.transform.position = h.transform.position + new Vector3(0, .085f, -0.05f);
         InitialBlock.setOccupant(null);
@@ -99,6 +99,10 @@ public class Enemy : Character
         ncamera.Priority = 100;
     }
 
+    public override void EndTurn()
+    {
+        turn--;
+    }
     public Hexagon BestMove(Hexagon hex)
     {
         Hexagon[] movement = hex.neighbours;
@@ -162,14 +166,14 @@ public class Enemy : Character
         }
 
         if(!movement.getOccupant())
-            CharacterMove(movement);
+            CharacterMove(movement, false);
         else
         {
             foreach(Hexagon h in movement.neighbours)
             {
                 if (h && !h.getOccupant())
                 {
-                    CharacterMove(h);
+                    CharacterMove(h, false);
                     break;
                 }
                     
@@ -197,6 +201,6 @@ public class Enemy : Character
             game.CombatActivation(this, weaker);
             this.getStyle().Action(game, "Action");
         }
-        turn--;
+        EndTurn();
     }
 }
