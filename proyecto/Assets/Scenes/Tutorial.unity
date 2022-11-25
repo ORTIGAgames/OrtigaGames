@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   butonPause: {fileID: 1912837744}
   menuPause: {fileID: 2121737181}
+  game: {fileID: 0}
 --- !u!114 &4054238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +685,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 86, y: 0}
-  m_SizeDelta: {x: 30.7368, y: 30}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69038247
 MonoBehaviour:
@@ -2081,7 +2082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: -154}
+  m_AnchoredPosition: {x: -99.99997, y: -154}
   m_SizeDelta: {x: 240, y: 26.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206647543
@@ -5539,10 +5540,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSpeed: 10
-  outerLeft: 10
-  outerRight: 10
-  outerDown: 10
-  outerUp: 10
+  outerLeft: 2
+  outerRight: 2
+  outerDown: -0.5
+  outerUp: 1
   ncamera: {fileID: 688244568}
   worldcamera: {fileID: 1505644379}
   game: {fileID: 1303694897}
@@ -17964,7 +17965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: -31}
+  m_AnchoredPosition: {x: -100, y: -30.799988}
   m_SizeDelta: {x: 220, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2107816745
