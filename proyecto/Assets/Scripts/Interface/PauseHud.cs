@@ -6,11 +6,13 @@ public class PauseHud : MonoBehaviour
 {
     [SerializeField] GameObject butonPause;
     [SerializeField] GameObject menuPause;
+    public Manager game;
     public void Pause()
     {
         Time.timeScale = 0f;
         butonPause.SetActive(false);
         menuPause.SetActive(true);
+        game.CollisionDown();
     }
 
     public void Resume()
@@ -18,5 +20,6 @@ public class PauseHud : MonoBehaviour
         Time.timeScale = 1f;
         butonPause.SetActive(true);
         menuPause.SetActive(false);
+        game.CollisionUp();
     }
 }
