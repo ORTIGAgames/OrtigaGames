@@ -29,7 +29,6 @@ public class GameScene : MonoBehaviour
         }
 
         NameGlossary.gameObject.SetActive(true);
-        SpriteGlossary.gameObject.SetActive(true);
         Glossary.gameObject.SetActive(true);
     }
 
