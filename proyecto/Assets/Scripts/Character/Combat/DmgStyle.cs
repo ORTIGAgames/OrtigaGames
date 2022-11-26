@@ -40,7 +40,7 @@ public class DmgStyle : MonoBehaviour, Combat
                     }
                     else
                     {
-                        if (i <= (((int)c.getMovement()) + maxCasillas))
+                        if (i <= (((int)c.getMovement() + 1) + maxCasillas))
                             Action(h, i, c);
                     }
                 }
