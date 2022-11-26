@@ -8,13 +8,13 @@ public class FeedBack : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public Image sprite;
-    public float duration = .5f;
-    public float distance = .1f;
+    public float distance;
 
 
     private Vector3 iniPos;
     private Vector3 targetPos;
     private float timer;
+    private float duration = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,16 +30,21 @@ public class FeedBack : MonoBehaviour
         if (timer > duration) Destroy(gameObject);
         else
         {
-            text.alpha = (float)(duration - timer);
-            sprite.CrossFadeAlpha(0, duration/3, false);
+            if (text)
+            {
+                text.alpha = (float)(duration - timer);
+                sprite.CrossFadeAlpha(0, duration / 3, false);
+            }
         }
 
         transform.position = Vector3.Lerp(iniPos, targetPos, Mathf.Sin(timer / duration));
     }
 
-    public void SetAction(int number, Sprite spritetype)
+    public void SetAction(int number, Sprite spritetype, float dura)
     {
-        text.text = number.ToString();
+        duration = dura;
+        if (number >= 0) text.text = number.ToString();
+        else text = null;
         sprite.sprite = spritetype;
     }
 }
