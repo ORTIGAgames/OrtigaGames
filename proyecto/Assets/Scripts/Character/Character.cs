@@ -140,13 +140,13 @@ public abstract class Character : MonoBehaviour
         {
             EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
             FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
-            indicator.SetAction(h + Health, effect.Effect(0));
+            indicator.SetAction(h - Health, effect.Effect(0));
         }
         else
         {
             EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
             FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
-            indicator.SetAction(h - Health, effect.Effect(0));//cambiar a un sprite que sea de daño
+            indicator.SetAction(Health - h, effect.Effect(0));//cambiar a un sprite que sea de daño
         }
 
     }
