@@ -28,15 +28,15 @@ public class DmgStyle : MonoBehaviour, Combat
                                 h.setState(Hexagon.CodeState.AllyT);
                         }
                     }
-                    if (i <= (((int)c.getMovement()) + 1))
-                        Action(h, i + ((int)c.getMovement() + 1), c);
+                    if (i <= (((int)c.getMovement()) + 2))
+                        Action(h, i + ((int)c.getMovement() + 2), c);
                 }
                 else
                 {
                     if (h.transform.childCount > 0 && h.transform.GetChild(0).name == "ArbolSinHexagono")
                     {
-                        if (i <= (((int)c.getMovement()) + 1))
-                            Action(h, i + ((int)c.getMovement() + 1), c);
+                        if (i <= (((int)c.getMovement()) + 2))
+                            Action(h, i + ((int)c.getMovement() + 2), c);
                     }
                     else
                     {

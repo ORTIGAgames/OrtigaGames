@@ -136,11 +136,11 @@ public abstract class Character : MonoBehaviour
     {
         if (h <= MaxHealth) Health = h;
         if (Health <= 0) game.DeleteCharacter(this);
-        if(h < Health)
+        if(h > Health)
         {
             EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
             FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
-            indicator.SetAction(h - Health, effect.Effect(0));
+            indicator.SetAction(h + Health, effect.Effect(0));
         }
         else
         {
