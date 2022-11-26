@@ -120,6 +120,8 @@ public class Manager : MonoBehaviour
             {
                 a.setTurn(1);
             }
+            Ally focus = (Ally)allies[Random.Range(0, 6)];
+            focus.Camera();
         }
     }
 
