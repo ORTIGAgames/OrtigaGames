@@ -28,6 +28,7 @@ public abstract class Character : MonoBehaviour
     public HealthBar healthBar;
     public Animator myAnimator;
     public Sprite NameIcon;
+    public GameObject FeedbackResponse;
 
 
     public virtual void Awake()
@@ -133,10 +134,21 @@ public abstract class Character : MonoBehaviour
 
     public virtual void setHealth(int h)
     {
-        if (h <= MaxHealth)
-            Health = h;
-        if (Health <= 0)
-            game.DeleteCharacter(this);      
+        if (h <= MaxHealth) Health = h;
+        if (Health <= 0) game.DeleteCharacter(this);
+        if(h < Health)
+        {
+            EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
+            FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
+            indicator.SetAction(h - Health, effect.Effect(0));
+        }
+        else
+        {
+            EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
+            FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
+            indicator.SetAction(h - Health, effect.Effect(0));//cambiar a un sprite que sea de daño
+        }
+
     }
 
     public virtual int getDamage()
