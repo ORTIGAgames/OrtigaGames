@@ -1451,6 +1451,7 @@ MonoBehaviour:
   healthBar: {fileID: 537873238}
   myAnimator: {fileID: 134245953}
   NameIcon: {fileID: 0}
+  FeedbackResponse: {fileID: 0}
   ncamera: {fileID: 474179898}
   worldcamera: {fileID: 1505644379}
 --- !u!95 &134245953
@@ -2129,6 +2130,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 1131605002}
   character: {fileID: 0}
+  HealthText: {fileID: 0}
+  MaxHealthText: {fileID: 0}
 --- !u!114 &206647544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4191,6 +4194,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 414435266}
   character: {fileID: 134245952}
+  HealthText: {fileID: 0}
+  MaxHealthText: {fileID: 0}
 --- !u!114 &537873239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7282,6 +7287,7 @@ MonoBehaviour:
   healthBar: {fileID: 1108511952}
   myAnimator: {fileID: 982908364}
   NameIcon: {fileID: 21300000, guid: bf3b7e71d4e17ae42b091b822ec954b6, type: 3}
+  FeedbackResponse: {fileID: 0}
   character: 0
   ncamera: {fileID: 1981645118}
   worldcamera: {fileID: 1505644379}
@@ -8458,6 +8464,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 100346362}
   character: {fileID: 982908363}
+  HealthText: {fileID: 0}
+  MaxHealthText: {fileID: 0}
 --- !u!224 &1108511953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12165,7 +12173,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 210, y: -260}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 120, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1459549616
 SpriteRenderer:
@@ -12239,7 +12247,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e39ade68530f0e042a0b762ab74a7ea1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 631e23732d0e69547acfda8caf5000de, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14226,6 +14234,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 1283069369}
   character: {fileID: 0}
+  HealthText: {fileID: 0}
+  MaxHealthText: {fileID: 0}
 --- !u!114 &1709689455
 MonoBehaviour:
   m_ObjectHideFlags: 0
