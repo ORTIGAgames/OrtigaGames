@@ -14,8 +14,9 @@ public class DamageBlocker : PreTurn
         {
             print(health - Boosted.getHealth());
             int damage = ((health - Boosted.getHealth()) <= Booster.getDefense()) ? 1 : (health - Boosted.getHealth()) - Booster.getDefense();
+            print(damage);
             Boosted.setHealth(health);
-            Booster.setHealth(damage);
+            Booster.setHealth(Booster.getHealth() - damage);
         }
     }
     public void Awake()
