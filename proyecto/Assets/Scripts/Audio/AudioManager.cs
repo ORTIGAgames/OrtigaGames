@@ -54,4 +54,32 @@ public class AudioManager : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void ControlTheme(float sliderValue)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.name == "Theme")
+            {
+                
+                s.source.volume = sliderValue;
+
+            }
+        }
+    }
+
+    public void ControlEffects(float sliderValue)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.name != "Theme")
+            {
+                s.source.volume = sliderValue;
+               
+            }
+        }
+        Play("Click");
+    }
+
+
 }
