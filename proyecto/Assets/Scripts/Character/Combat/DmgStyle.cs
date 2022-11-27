@@ -97,7 +97,7 @@ public class DmgStyle : MonoBehaviour, Combat
             }
             else//cambiar cuando todos tengan animacion de ataque, quitar esta linea
             {
-                int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - this.GetComponent<Character>().game.defender.getDefense();
+                int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - defender.getDefense();
                 defender.setHealth(defender.getHealth() - damage);
             }
                      

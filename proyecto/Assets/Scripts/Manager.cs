@@ -104,7 +104,7 @@ public class Manager : MonoBehaviour
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
-                StartCoroutine(CameraFocus(.1f * (i + 1), (Enemy)enemies[i]));
+                StartCoroutine(CameraFocus(1f * (i + 1), (Enemy)enemies[i]));
             }
         }
 
@@ -147,7 +147,7 @@ public class Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(timer);
         e.Camera();
-        StartCoroutine(Movement(.1f, e));
+        StartCoroutine(Movement(1f, e));
     }
     IEnumerator Movement(float timer, Enemy e)
     {

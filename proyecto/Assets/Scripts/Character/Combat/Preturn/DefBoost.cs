@@ -36,5 +36,4 @@ public class DefBoost : PreTurn
             Destroy(this);
         }
     }
-
 }
