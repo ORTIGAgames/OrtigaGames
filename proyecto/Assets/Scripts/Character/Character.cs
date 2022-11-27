@@ -134,7 +134,6 @@ public abstract class Character : MonoBehaviour
 
     public virtual void setHealth(int h)
     {
-        if (h <= MaxHealth) Health = h;
         if (Health <= 0) game.DeleteCharacter(this);
         if(h > Health)
         {
@@ -146,9 +145,9 @@ public abstract class Character : MonoBehaviour
         {
             EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
             FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
-            indicator.SetAction(MaxHealth - Health, effect.Effect(1), 3.5f);//cambiar a un sprite que sea de daño
+            indicator.SetAction(Health - h, effect.Effect(1), 3.5f);//cambiar a un sprite que sea de daño
         }
-
+        if (h <= MaxHealth) Health = h;
     }
 
     public virtual int getDamage()

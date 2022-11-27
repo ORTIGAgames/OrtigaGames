@@ -7,6 +7,7 @@ public class Enemy : Character
 {
     [SerializeField] CinemachineVirtualCamera ncamera;
     [SerializeField] CinemachineBrain worldcamera;
+    public EnemyBehaviour EB;
     // Start is called before the first frame update
     public override void Awake()
     {

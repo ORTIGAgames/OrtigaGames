@@ -99,6 +99,7 @@ public class DmgStyle : MonoBehaviour, Combat
             {
                 int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - defender.getDefense();
                 defender.setHealth(defender.getHealth() - damage);
+                this.GetComponent<Character>().EndTurn();
             }
                      
         }

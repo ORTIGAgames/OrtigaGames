@@ -153,7 +153,7 @@ public class Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.EnemyControl();
+        e.EB.EnemyControl();
     }
 
     public void CombatActivation(Character Figther1, Character Figther2)

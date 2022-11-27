@@ -1989,6 +1989,7 @@ GameObject:
   - component: {fileID: 118484495}
   - component: {fileID: 118484500}
   - component: {fileID: 118484503}
+  - component: {fileID: 118484506}
   - component: {fileID: 118484501}
   - component: {fileID: 118484504}
   - component: {fileID: 118484505}
@@ -2046,6 +2047,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 700402609}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 118484506}
 --- !u!114 &118484500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2157,6 +2159,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &118484506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118484493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &120508737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4035,6 +4049,7 @@ GameObject:
   - component: {fileID: 212996057}
   - component: {fileID: 212996062}
   - component: {fileID: 212996061}
+  - component: {fileID: 212996063}
   - component: {fileID: 212996060}
   - component: {fileID: 212996059}
   - component: {fileID: 212996058}
@@ -4092,6 +4107,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 536600543}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 212996063}
 --- !u!95 &212996058
 Animator:
   serializedVersion: 4
@@ -4203,6 +4219,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
+--- !u!114 &212996063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212996055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &222703510
 GameObject:
   m_ObjectHideFlags: 0
@@ -7184,6 +7212,7 @@ GameObject:
   - component: {fileID: 384970721}
   - component: {fileID: 384970726}
   - component: {fileID: 384970725}
+  - component: {fileID: 384970727}
   - component: {fileID: 384970724}
   - component: {fileID: 384970723}
   - component: {fileID: 384970722}
@@ -7241,6 +7270,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 885247259}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 384970727}
 --- !u!95 &384970722
 Animator:
   serializedVersion: 4
@@ -7352,6 +7382,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
+--- !u!114 &384970727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384970719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &386813671
 GameObject:
   m_ObjectHideFlags: 0
@@ -12062,6 +12104,7 @@ GameObject:
   - component: {fileID: 724972031}
   - component: {fileID: 724972036}
   - component: {fileID: 724972035}
+  - component: {fileID: 724972037}
   - component: {fileID: 724972034}
   - component: {fileID: 724972033}
   - component: {fileID: 724972032}
@@ -12119,6 +12162,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1575602000}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 724972037}
 --- !u!95 &724972032
 Animator:
   serializedVersion: 4
@@ -12230,6 +12274,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 1
   defender: {fileID: 0}
+--- !u!114 &724972037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724972029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &732407377
 GameObject:
   m_ObjectHideFlags: 0
@@ -12990,6 +13046,7 @@ GameObject:
   - component: {fileID: 783895767}
   - component: {fileID: 783895772}
   - component: {fileID: 783895771}
+  - component: {fileID: 783895773}
   - component: {fileID: 783895770}
   - component: {fileID: 783895769}
   - component: {fileID: 783895768}
@@ -13047,6 +13104,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1699435403}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 783895773}
 --- !u!95 &783895768
 Animator:
   serializedVersion: 4
@@ -13158,6 +13216,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 1
   defender: {fileID: 0}
+--- !u!114 &783895773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783895765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &788658167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13664,6 +13734,7 @@ GameObject:
   - component: {fileID: 803636753}
   - component: {fileID: 803636756}
   - component: {fileID: 803636757}
+  - component: {fileID: 803636760}
   - component: {fileID: 803636754}
   - component: {fileID: 803636758}
   - component: {fileID: 803636759}
@@ -13721,6 +13792,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1821908167}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 803636760}
 --- !u!212 &803636754
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13832,6 +13904,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &803636760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803636746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &804743421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22811,6 +22895,7 @@ GameObject:
   - component: {fileID: 1412602627}
   - component: {fileID: 1412602632}
   - component: {fileID: 1412602631}
+  - component: {fileID: 1412602633}
   - component: {fileID: 1412602630}
   - component: {fileID: 1412602629}
   - component: {fileID: 1412602628}
@@ -22868,6 +22953,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1769827946}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 1412602633}
 --- !u!95 &1412602628
 Animator:
   serializedVersion: 4
@@ -22979,6 +23065,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
+--- !u!114 &1412602633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412602625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1424700661
 GameObject:
   m_ObjectHideFlags: 0
@@ -23863,6 +23961,7 @@ GameObject:
   - component: {fileID: 1509622918}
   - component: {fileID: 1509622923}
   - component: {fileID: 1509622922}
+  - component: {fileID: 1509622924}
   - component: {fileID: 1509622921}
   - component: {fileID: 1509622920}
   - component: {fileID: 1509622919}
@@ -23920,6 +24019,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1188391282}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 1509622924}
 --- !u!95 &1509622919
 Animator:
   serializedVersion: 4
@@ -24031,6 +24131,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
+--- !u!114 &1509622924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509622916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1516995732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24153,6 +24265,7 @@ GameObject:
   - component: {fileID: 1518962547}
   - component: {fileID: 1518962552}
   - component: {fileID: 1518962551}
+  - component: {fileID: 1518962553}
   - component: {fileID: 1518962550}
   - component: {fileID: 1518962549}
   - component: {fileID: 1518962548}
@@ -24210,6 +24323,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1748746223}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 1518962553}
 --- !u!95 &1518962548
 Animator:
   serializedVersion: 4
@@ -24321,6 +24435,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
+--- !u!114 &1518962553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518962545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1520391772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26770,6 +26896,7 @@ GameObject:
   - component: {fileID: 1700390872}
   - component: {fileID: 1700390877}
   - component: {fileID: 1700390876}
+  - component: {fileID: 1700390878}
   - component: {fileID: 1700390875}
   - component: {fileID: 1700390874}
   - component: {fileID: 1700390873}
@@ -26827,6 +26954,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1687465517}
   worldcamera: {fileID: 963194230}
+  EB: {fileID: 1700390878}
 --- !u!95 &1700390873
 Animator:
   serializedVersion: 4
@@ -26938,6 +27066,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 1
   defender: {fileID: 0}
+--- !u!114 &1700390878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700390870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1707576870
 GameObject:
   m_ObjectHideFlags: 0
@@ -31566,6 +31706,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8840465586531424082, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840465586943476791, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840465586943476791, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840465586943476791, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840465586943476791, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840465586943476791, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 8840465587718410754, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
