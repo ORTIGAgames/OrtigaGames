@@ -13,6 +13,6 @@ public class NASSShield : Abilities
     public override void Effect(Character Figther)
     {
         GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Nass");
-        DamageBlocker.CreateDamageBlocker(1, Figther.GetComponent<Character>(), this. GetComponent<Character>());
+        DamageBlocker.CreateDamageBlocker(1, Figther.GetComponent<Character>(), this.GetComponent<Character>());
     }
 }

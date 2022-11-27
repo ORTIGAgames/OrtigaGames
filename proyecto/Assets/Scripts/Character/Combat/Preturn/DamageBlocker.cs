@@ -12,11 +12,10 @@ public class DamageBlocker : PreTurn
     {
         if (Boosted.getHealth() < health)
         {
-            print(health - Boosted.getHealth());
-            int damage = ((health - Boosted.getHealth()) <= Booster.getDefense()) ? 1 : (health - Boosted.getHealth()) - Booster.getDefense();
-            print(damage);
+            //efecto de bloqueado
             Boosted.setHealth(health);
-            Booster.setHealth(Booster.getHealth() - damage);
+            FeedBack indicator = Instantiate(Boosted.FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
+            indicator.SetAction(-1, Booster.GetComponent<Abilities>().icon, 3.5f); ;
         }
     }
     public void Awake()
