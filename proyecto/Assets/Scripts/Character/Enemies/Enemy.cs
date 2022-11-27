@@ -104,7 +104,7 @@ public class Enemy : Character
     {
         turn--;
     }
-    public Hexagon BestMove(Hexagon hex)
+   /* public Hexagon BestMove(Hexagon hex)
     {
         Hexagon[] movement = hex.neighbours;
         var value = -1000;
@@ -151,7 +151,7 @@ public class Enemy : Character
                 distance++;
                 DistanceHexagon(a,distance);
         }
-        return distance;*/
+        return distance;//
     }
 
     public void EnemyControl()
@@ -203,5 +203,5 @@ public class Enemy : Character
             this.getStyle().Action(game, "Action");
         }
         EndTurn();
-    }
+    }*/
 }
