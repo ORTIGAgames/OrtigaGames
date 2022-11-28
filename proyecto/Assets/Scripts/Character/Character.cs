@@ -134,18 +134,25 @@ public abstract class Character : MonoBehaviour
 
     public virtual void setHealth(int h)
     {
-        if (Health <= 0) game.DeleteCharacter(this);
-        if(h > Health)
-        {
-            EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
-            FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
+        EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
+        FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
+        if (h > Health)
+        {            
             indicator.SetAction(h - Health, effect.Effect(0), 3.5f);
+            
         }
         else
         {
-            EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
-            FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
-            indicator.SetAction(Health - h, effect.Effect(1), 3.5f);//cambiar a un sprite que sea de daño
+            if (this.GetComponent<DamageBlocker>())
+            {
+                indicator.SetAction(-1, this.GetComponent<DamageBlocker>().GetBooster().GetComponent<Abilities>().icon, 3.5f);
+                return;
+            }
+            else
+            {
+                if (Health <= 0) game.DeleteCharacter(this);
+                indicator.SetAction(Health - h, effect.Effect(1), 3.5f);//cambiar a un sprite que sea de daño
+            }
         }
         if (h <= MaxHealth) Health = h;
     }

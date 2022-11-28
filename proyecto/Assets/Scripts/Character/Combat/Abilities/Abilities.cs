@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public abstract class Abilities: MonoBehaviour
 {
+    public CoolDown cooldown;
     public string Role;
     public string Name;
     public string description;

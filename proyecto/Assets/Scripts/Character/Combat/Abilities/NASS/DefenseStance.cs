@@ -6,6 +6,7 @@ public class DefenseStance : Abilities
 {
     public void Awake()
     {
+        cooldown = new CoolDown();
         Role = "SelfSupport";
         Name = "DEFENSE STANCE";
         description = "NASS hugs himself tightly, boosting his defense and protecting himself for one turns";

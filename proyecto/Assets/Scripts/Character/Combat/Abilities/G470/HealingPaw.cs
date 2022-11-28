@@ -6,6 +6,7 @@ public class HealingPaw : Abilities
 {
     public void Awake()
     {
+        cooldown = new CoolDown();
         Role = "Support";
         Name = "HEALING PAW";
         description = "G470 rubs against an ally, healing that ally the same amount as 1/5 of G470'S life";

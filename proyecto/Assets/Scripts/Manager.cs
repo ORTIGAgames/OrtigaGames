@@ -222,6 +222,8 @@ public class Manager : MonoBehaviour
             attacker = activeAlly;
             CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.gameObject.SetActive(true);
             CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.GetComponent<Image>().sprite = attacker.GetComponent<Abilities>().ActiveIcon;
+            if (attacker.getAbilities().cooldown.counter > 0) CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.interactable = false;
+            else CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.interactable = true;
         }
         else
             CharacterH.GetComponent<StatsHud>().Ability.GetComponent<AbilityController>().AbilityCaller.gameObject.SetActive(false);
@@ -243,6 +245,8 @@ public class Manager : MonoBehaviour
 
     public void CombatActivate(Sprite Image)
     {
+        if (attacker.getAbilities().cooldown.counter > 0) CombatH.Ability.interactable = false;
+        else CombatH.Ability.interactable = true;
         CollisionDown();
         if (Image)//cambiar cuando todos tengan habilidad
         {

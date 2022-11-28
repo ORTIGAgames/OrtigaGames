@@ -8,16 +8,6 @@ public class DamageBlocker : PreTurn
     private int counter, health;
     Manager game;
 
-    public void Update()
-    {
-        if (Boosted.getHealth() < health)
-        {
-            //efecto de bloqueado
-            Boosted.setHealth(health);
-            FeedBack indicator = Instantiate(Boosted.FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
-            indicator.SetAction(-1, Booster.GetComponent<Abilities>().icon, 3.5f); ;
-        }
-    }
     public void Awake()
     {
         game = GameObject.Find("Manager").GetComponent<Manager>();
@@ -44,5 +34,10 @@ public class DamageBlocker : PreTurn
             game.preTurn.Remove(this);
             Destroy(this);
         }
+    }
+
+    public Character GetBooster()
+    {
+        return Booster;
     }
 }
