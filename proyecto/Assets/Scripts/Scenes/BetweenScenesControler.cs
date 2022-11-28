@@ -27,7 +27,7 @@ public class BetweenScenesControler : MonoBehaviour
             "He is a sloppy and thin human male, 1.94 meters tall. He cuts his own hair, which is messy. He also has a scar on his nose and wears shabby clothes and a chain from his mother.",
             "Shoots with its bazooka and with its ability it overloads its weapon by sending a burster missile that spreads the damage over an area." } 
     }; //En orden, backgrounds, descripcion y estilo de combate
-    public static string[] namesEnemies = new string[6] { "Female Himenopio", "Male Himenopio", "Krandle", "Ixoda", "HARNCKXSHOR", "Minion" };
+    public static string[] namesEnemies = new string[6] { "F. Himenopio", "M. Himenopio", "Krandle", "Ixoda", "HARNCKXSHOR", "Minion" };
     public static string[,] backgroundsEnemies = new string[3, 6] { 
         { "The himenopios are alien species native to Declan's planet.",
             "The himenopios are alien species native to Declan's planet.",

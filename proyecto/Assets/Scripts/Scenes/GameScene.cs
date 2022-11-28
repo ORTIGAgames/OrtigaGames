@@ -11,12 +11,13 @@ public class GameScene : MonoBehaviour
     public List<Button> buttonsStats;
     public List<Button> buttonsGlossary;
     public List<Button> buttonsLevels;
+    public List<Button> buttonsSettings;
     public SpriteRenderer SpriteStas;
     public SpriteRenderer SpriteGlossary;
     public Canvas Stats;
     public Canvas Glossary;
     public Canvas Level;
-
+    public Canvas Settings;
     public void HideBaseGlossary()
     {
         foreach (Button b in buttonToHide)
@@ -59,6 +60,20 @@ public class GameScene : MonoBehaviour
         SpriteStas.gameObject.SetActive(true);
         Stats.gameObject.SetActive(true);
     }
+
+    public void HideBaseSettings()
+    {
+        foreach (Button b in buttonToHide)
+        {
+            b.gameObject.SetActive(false);
+        }
+        foreach (Button b in buttonsSettings)
+        {
+            b.gameObject.SetActive(true);
+        }
+        Settings.gameObject.SetActive(true);
+    }
+
     public void Hide()
     {
         foreach (Button b in buttonToHide)
@@ -77,6 +92,10 @@ public class GameScene : MonoBehaviour
         {
             b.gameObject.SetActive(false);
         }
+        foreach (Button b in buttonsSettings)
+        {
+            b.gameObject.SetActive(false);
+        }
         NameStats.gameObject.SetActive(false);
         NameGlossary.gameObject.SetActive(false);
         SpriteStas.gameObject.SetActive(false);
@@ -84,11 +103,8 @@ public class GameScene : MonoBehaviour
         Stats.gameObject.SetActive(false);
         Glossary.gameObject.SetActive(false);
         Level.gameObject.SetActive(false);
+        Settings.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
