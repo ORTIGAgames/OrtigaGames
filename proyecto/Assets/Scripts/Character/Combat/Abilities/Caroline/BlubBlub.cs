@@ -6,7 +6,6 @@ public class BlubBlub : Abilities
 {
     public void Awake()
     {
-        cooldown = new CoolDown();
         Role = "Damage";
         Name = "BLUB BLUB";
         description = "Brulb blub bulb blub BLUUUUUB (Caroline overcharges her cannon, throwing a SUPER MISSILE to an enemy, damaging the surrounding zone)";

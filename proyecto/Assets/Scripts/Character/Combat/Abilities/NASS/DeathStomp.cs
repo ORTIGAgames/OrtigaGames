@@ -6,7 +6,6 @@ public class DeathStomp : Abilities
 {
     public void Awake()
     {
-        cooldown = new CoolDown();
         Role = "Damage";
         Name = "DEATH STOMP";
         description = "NASS unleashes his power, stomping the ground and dealing damage to the enemies surrounding him";

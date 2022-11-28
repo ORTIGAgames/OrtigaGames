@@ -6,7 +6,6 @@ public class NASSShield : Abilities
 {
     public void Awake()
     {
-        cooldown = new CoolDown();
         Role = "Support";
         Name = "NASS SHIELD";
         description = "NASS protects an ally, blocking all the damage it recieves";

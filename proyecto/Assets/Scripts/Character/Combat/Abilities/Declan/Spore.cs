@@ -6,7 +6,6 @@ public class Spore : Abilities
 {
     public void Awake()
     {
-        cooldown = new CoolDown();
         Role = "Support";
         Name = "SPORE";
         description = "Declan shakes his spores out of his body, giving one ally an extra turn";
