@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public abstract class Abilities: PreTurn
 {
-    public int CoolDown;
-    public string Role;
-    public string Name;
-    public string description;
-    public Sprite icon;
-    public Sprite ActiveIcon;
+    public int cooldown;
+    public string Role, Name, description;
+    public Sprite icon, ActiveIcon;
     public abstract void Effect(Character Figther);
 }
