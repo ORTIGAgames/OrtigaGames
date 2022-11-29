@@ -12,26 +12,19 @@ public class BlubBlub : Abilities
     }
     public override void Effect(Character Figther)
     {
-        if(CoolDown == 0)
+        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Caroline");
+        int damage;
+        foreach (Hexagon h in Figther.getActualBlock().neighbours)
         {
-            GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Caroline");
-            int damage;
-            foreach (Hexagon h in Figther.getActualBlock().neighbours)
+            if (h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
             {
-                if (h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
-                {
-                    damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - h.getOccupant().getDefense());
-                    h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
-                    print(damage);
-                }
+                damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - h.getOccupant().getDefense());
+                h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
+                print(damage);
             }
-            damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - Figther.getDefense());
-            Figther.setHealth(Figther.getHealth() - damage);
-            CoolDown += 2;
         }
-    }
-    public override void BeforeTurn()
-    {
-        CoolDown--;
+        damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - Figther.getDefense());
+        Figther.setHealth(Figther.getHealth() - damage);
+        print(damage);
     }
 }
