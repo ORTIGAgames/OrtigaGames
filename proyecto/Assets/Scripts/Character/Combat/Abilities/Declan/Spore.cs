@@ -18,4 +18,8 @@ public class Spore : Abilities
         FeedBack indicator = Instantiate(Figther.FeedbackResponse, Figther.transform.position, Quaternion.identity).GetComponent<FeedBack>();
         indicator.SetAction(-1, effect.Effect(2), .5f);//cambiar a un sprite que sea de daño
     }
+    public override void BeforeTurn()
+    {
+        cooldown--;
+    }
 }

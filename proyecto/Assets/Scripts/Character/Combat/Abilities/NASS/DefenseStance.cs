@@ -15,4 +15,8 @@ public class DefenseStance : Abilities
         GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Nass");
         DefBoost.CreateDefBoost(5, 1, this.GetComponent<Character>());
     }
+    public override void BeforeTurn()
+    {
+        cooldown--;
+    }
 }

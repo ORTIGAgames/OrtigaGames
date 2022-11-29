@@ -16,5 +16,10 @@ public class Calamari : Abilities
         GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Winnie");
         GameObject.Find("Calamari").GetComponent<CalamariPet>().attached = (Ally)Figther;
     }
+
+    public override void BeforeTurn()
+    {
+        cooldown--;
+    }
 }
 

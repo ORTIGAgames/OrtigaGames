@@ -21,4 +21,8 @@ public class DeathStomp : Abilities
             }               
         }
     }
+    public override void BeforeTurn()
+    {
+        cooldown--;
+    }
 }

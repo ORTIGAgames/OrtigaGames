@@ -27,4 +27,8 @@ public class BlubBlub : Abilities
         Figther.setHealth(Figther.getHealth() - damage);
         print(damage);
     }
+    public override void BeforeTurn()
+    {
+        cooldown--;
+    }
 }

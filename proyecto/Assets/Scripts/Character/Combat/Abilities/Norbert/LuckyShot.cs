@@ -17,4 +17,8 @@ public class LuckyShot : Abilities
         if(chanza % 2 == 0)
             Figther.setHealth(Figther.getHealth() - 20);
     }
+    public override void BeforeTurn()
+    {
+        cooldown--;
+    }
 }

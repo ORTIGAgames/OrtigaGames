@@ -14,4 +14,8 @@ public class HelpingPaw : Abilities
     {
         DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, Figther);
     }
+    public override void BeforeTurn()
+    {
+        cooldown--;
+    }
 }
