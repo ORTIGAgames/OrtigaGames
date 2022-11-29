@@ -12,6 +12,14 @@ public class HelpingPaw : Abilities
     }
     public override void Effect(Character Figther)
     {
-        DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, Figther);
+        if(CoolDown == 0)
+        {
+            DefBoost.CreateDefBoost(this.GetComponent<Character>().getDefense(), 3, Figther);
+            CoolDown += 2;
+        }
+    }
+    public override void BeforeTurn()
+    {
+        CoolDown--;
     }
 }

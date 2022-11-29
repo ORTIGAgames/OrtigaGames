@@ -12,13 +12,21 @@ public class DeathStomp : Abilities
     }
     public override void Effect(Character Figther)
     {
-        foreach(Hexagon h in this.GetComponent<Character>().getActualBlock().neighbours)
+        if(CoolDown == 0)
         {
-            if(h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
+            foreach (Hexagon h in this.GetComponent<Character>().getActualBlock().neighbours)
             {
-                int damage = (this.GetComponent<Character>().getDamage() <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - h.getOccupant().getDefense();
-                h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
-            }               
+                if (h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
+                {
+                    int damage = (this.GetComponent<Character>().getDamage() <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 3 - h.getOccupant().getDefense();
+                    h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
+                }
+            }
+            CoolDown += 2;
         }
+    }
+    public override void BeforeTurn()
+    {
+        CoolDown--;
     }
 }

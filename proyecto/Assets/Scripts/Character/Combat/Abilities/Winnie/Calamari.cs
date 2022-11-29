@@ -13,8 +13,16 @@ public class Calamari : Abilities
 
     public override void Effect(Character Figther)
     {
-        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Winnie");
-        GameObject.Find("Calamari").GetComponent<CalamariPet>().attached = (Ally)Figther;
+        if (CoolDown == 0)
+        {
+            GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Winnie");
+            GameObject.Find("Calamari").GetComponent<CalamariPet>().attached = (Ally)Figther;
+            CoolDown += 2;
+        }
+    }
+    public override void BeforeTurn()
+    {
+        CoolDown--;
     }
 }
 

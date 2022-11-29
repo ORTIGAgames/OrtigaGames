@@ -12,9 +12,17 @@ public class LuckyShot : Abilities
     }
     public override void Effect(Character Figther)
     {
-        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Norbert");
-        int chanza = Random.Range(0, 11);
-        if(chanza % 2 == 0)
-            Figther.setHealth(Figther.getHealth() - 20);
+        if(CoolDown == 0)
+        {
+            GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Norbert");
+            int chanza = Random.Range(0, 11);
+            if (chanza % 2 == 0)
+                Figther.setHealth(Figther.getHealth() - 20);
+            CoolDown += 2;
+        }
+    }
+    public override void BeforeTurn()
+    {
+        CoolDown--;
     }
 }

@@ -12,7 +12,14 @@ public class DefenseStance : Abilities
     }
     public override void Effect(Character Figther)
     {
-        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Nass");
-        DefBoost.CreateDefBoost(5, 1, this.GetComponent<Character>());
+        if(CoolDown == 0) {
+            GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Nass");
+            DefBoost.CreateDefBoost(5, 1, this.GetComponent<Character>());
+            CoolDown += 2;
+        }
+    }
+    public override void BeforeTurn()
+    {
+        CoolDown--;
     }
 }

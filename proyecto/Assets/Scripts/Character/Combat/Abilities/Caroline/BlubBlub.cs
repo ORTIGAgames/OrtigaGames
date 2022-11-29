@@ -12,19 +12,26 @@ public class BlubBlub : Abilities
     }
     public override void Effect(Character Figther)
     {
-        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Caroline");
-        int damage;
-        foreach (Hexagon h in Figther.getActualBlock().neighbours)
+        if(CoolDown == 0)
         {
-            if (h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
+            GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Caroline");
+            int damage;
+            foreach (Hexagon h in Figther.getActualBlock().neighbours)
             {
-                damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - h.getOccupant().getDefense());
-                h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
-                print(damage);
+                if (h && h.getOccupant() && h.getOccupant().getSide() != this.GetComponent<Character>().getSide())
+                {
+                    damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= h.getOccupant().getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - h.getOccupant().getDefense());
+                    h.getOccupant().setHealth(h.getOccupant().getHealth() - damage);
+                    print(damage);
+                }
             }
+            damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - Figther.getDefense());
+            Figther.setHealth(Figther.getHealth() - damage);
+            CoolDown += 2;
         }
-        damage = (int)((this.GetComponent<Character>().getDamage() / 1.75 <= Figther.getDefense()) ? 1 : this.GetComponent<Character>().getDamage() / 1.75 - Figther.getDefense());
-        Figther.setHealth(Figther.getHealth() - damage);
-        print(damage);
+    }
+    public override void BeforeTurn()
+    {
+        CoolDown--;
     }
 }

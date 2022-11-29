@@ -12,10 +12,18 @@ public class Spore : Abilities
     }
     public override void Effect(Character Figther)
     {
-        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Declan");
-        Figther.setTurn(Figther.getTurn() + 1);
-        EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
-        FeedBack indicator = Instantiate(Figther.FeedbackResponse, Figther.transform.position, Quaternion.identity).GetComponent<FeedBack>();
-        indicator.SetAction(-1, effect.Effect(2), .5f);//cambiar a un sprite que sea de daño
+        if(CoolDown == 0)
+        {
+            GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Declan");
+            Figther.setTurn(Figther.getTurn() + 1);
+            EffectKeeper effect = GameObject.Find("Effects").GetComponent<EffectKeeper>();
+            FeedBack indicator = Instantiate(Figther.FeedbackResponse, Figther.transform.position, Quaternion.identity).GetComponent<FeedBack>();
+            indicator.SetAction(-1, effect.Effect(2), .5f);//cambiar a un sprite que sea de daño
+            CoolDown += 2;
+        }
+    }
+    public override void BeforeTurn()
+    {
+        CoolDown--;
     }
 }
