@@ -14,7 +14,7 @@ public class NASSShield : Abilities
     {
         GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Nass");
         DamageBlocker.CreateDamageBlocker(1, Figther.GetComponent<Character>(), this.GetComponent<Character>());
-        cooldown += 2;
+        cooldown += 4;//4 son 2 turnos.
         GameObject.Find("Manager").GetComponent<Manager>().preTurn.Add(this);
     }
 
