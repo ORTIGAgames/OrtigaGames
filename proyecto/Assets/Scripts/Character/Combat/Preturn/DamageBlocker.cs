@@ -12,6 +12,7 @@ public class DamageBlocker : PreTurn
     {
         game = GameObject.Find("Manager").GetComponent<Manager>();
         game.preTurn.Add(this);
+        //Boosted.Status.Add(Booster.GetComponent<Abilities>().icon);
     }
 
     public static void CreateDamageBlocker(int c, Character ch, Character ch2)

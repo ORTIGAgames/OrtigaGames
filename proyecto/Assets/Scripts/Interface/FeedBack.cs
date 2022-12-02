@@ -15,14 +15,12 @@ public class FeedBack : MonoBehaviour
     private Vector3 targetPos;
     private float timer;
     private float duration = 2;
-    // Start is called before the first frame update
     void Start()
     {
         iniPos = transform.position + new Vector3(0, .1f, 0);
         targetPos = iniPos + new Vector3(0, distance, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;

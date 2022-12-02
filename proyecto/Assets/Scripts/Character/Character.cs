@@ -29,7 +29,7 @@ public abstract class Character : MonoBehaviour
     public Animator myAnimator;
     public Sprite NameIcon;
     public GameObject FeedbackResponse;
-
+    //public List<Sprite> Status = new List<Sprite>();
 
     public virtual void Awake()
     {
@@ -138,8 +138,8 @@ public abstract class Character : MonoBehaviour
         FeedBack indicator = Instantiate(FeedbackResponse, transform.position, Quaternion.identity).GetComponent<FeedBack>();
         if (h > Health)
         {
-            if (h <= MaxHealth) Health = h;
             indicator.SetAction(h - Health, effect.Effect(0), 3.5f);
+            if (h <= MaxHealth) Health = h;
         }
         else
         {
@@ -150,9 +150,9 @@ public abstract class Character : MonoBehaviour
             }
             else
             {
-                if (h <= MaxHealth) Health = h;
-                if (Health <= 0) game.DeleteCharacter(this);
                 indicator.SetAction(Health - h, effect.Effect(1), 3.5f);//cambiar a un sprite que sea de daño
+                if (h <= MaxHealth) Health = h;
+                if (Health <= 0) game.DeleteCharacter(this);              
             }
         }
     }
