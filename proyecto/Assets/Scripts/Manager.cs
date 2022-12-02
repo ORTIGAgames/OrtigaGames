@@ -76,8 +76,11 @@ public class Manager : MonoBehaviour
             c.setInitialBlock(box);
             c.setActualBlock(box);
             c.setTurn(1);
-            StartCoroutine(ShowMessage("Ally turn", 1.0f));
         }
+
+        StartCoroutine(ShowMessage("Ally turn", 1.0f));
+        Ally focus = (Ally)allies[Random.Range(0, 6)];
+        focus.Camera();
         lose = allies.Count;
     }
     void Update()
