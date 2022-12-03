@@ -5,7 +5,7 @@ using UnityEngine;
 public class BetweenScenesControler : MonoBehaviour
 {
     public static int[,] characters = new int[6, 3] { { 24, 4, 5 }, { 24, 5, 4 }, { 26, 2, 4 }, { 30, 3, 7 }, { 20, 5, 4 }, { 20, 7, 2 } };
-    public static int upgradePiont = 0;
+    public static int upgradePoint = 0;
     public static string[] names = new string[6] { "Declan", "Winnie", "G470", "Nass", "Norbert", "Caroline" };
     public static string[,] backgrounds = new string[3, 6] { 
         { "A mushroom mercenary that comes from a wooded planet. Mercenaries of his species are highly requested by captains due to the different powers of its spores. They usually work with the highest bidder, but Declan got attracted by the protagonist´s quirky crew and decided to join them just for curiosity, although the pay was minimal.He is well known for his sarcasm and blank facial expression, what may make him look unfriendly, yet he is kind and generous towards his companions, even if he can´t stand Norbert.",

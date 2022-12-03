@@ -7,7 +7,7 @@ public class Win : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        BetweenScenesControler.upgradePiont += 10;
+        BetweenScenesControler.upgradePoint = 10;
     }
 
     
