@@ -7242,7 +7242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 680665107}
-  draggin: {fileID: 0}
+  draggin: {fileID: 2104920237}
   ImageButton: {fileID: 460330472}
 --- !u!114 &460330472
 MonoBehaviour:
@@ -9728,7 +9728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1654318295}
-  draggin: {fileID: 0}
+  draggin: {fileID: 2104920237}
   ImageButton: {fileID: 602404916}
 --- !u!114 &602404916
 MonoBehaviour:
@@ -10982,7 +10982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 622407195}
-  draggin: {fileID: 0}
+  draggin: {fileID: 2104920237}
   ImageButton: {fileID: 702917191}
 --- !u!114 &702917191
 MonoBehaviour:
@@ -15104,7 +15104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1587629860}
-  draggin: {fileID: 0}
+  draggin: {fileID: 2104920237}
   ImageButton: {fileID: 941825688}
 --- !u!114 &941825688
 MonoBehaviour:
@@ -27624,7 +27624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CancelB: {fileID: 0}
   active: {fileID: 0}
-  game: {fileID: 0}
+  game: {fileID: 1728820628}
 --- !u!114 &1691704918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28819,7 +28819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 59680249}
-  draggin: {fileID: 0}
+  draggin: {fileID: 2104920237}
   ImageButton: {fileID: 1769424713}
 --- !u!114 &1769424713
 MonoBehaviour:
@@ -29442,7 +29442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1942247700}
-  draggin: {fileID: 0}
+  draggin: {fileID: 2104920237}
   ImageButton: {fileID: 1799168931}
 --- !u!114 &1799168931
 MonoBehaviour:

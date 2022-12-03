@@ -107,12 +107,24 @@ public class DmgStyle : MonoBehaviour, Combat
 
         if (d == "Ability")
         {
-            this.GetComponent<Character>().getAbilities().Effect(defender);
-            this.GetComponent<Character>().EndTurn();
+            if (this.GetComponent<Character>().myAnimator.parameterCount > 0)
+            {
+                this.GetComponent<Character>().myAnimator.SetTrigger("Ability");
+            }
+            else//cambiar cuando todos tengan animacion de ataque, quitar esta linea
+            {
+                this.GetComponent<Character>().getAbilities().Effect(defender);
+                this.GetComponent<Character>().EndTurn();
+            }
         }
         this.GetComponent<Character>().game.CombatDeactivate();
     }
 
+    public void AbilitySequence()
+    {
+        this.GetComponent<Character>().getAbilities().Effect(defender);
+        this.GetComponent<Character>().EndTurn();
+    }
     public void AttackSequence()
     {
         int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - defender.getDefense();
