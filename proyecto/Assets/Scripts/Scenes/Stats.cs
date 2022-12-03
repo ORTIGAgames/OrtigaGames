@@ -42,7 +42,8 @@ public class Stats : MonoBehaviour
     int enemies = 0;
 
     int[,] characterStats;
-    int upgradePoints;
+    int[,] characterInitialStats = new int[6, 3] { { 24, 4, 5 }, { 24, 5, 4 }, { 26, 2, 4 }, { 30, 3, 7 }, { 20, 5, 4 }, { 20, 7, 2 } };
+int upgradePoints;
     string[] names;
     string[] namesEnemies;
     string[,] charactersTexts;
@@ -110,7 +111,8 @@ public class Stats : MonoBehaviour
             spriteCharacterGlossary.sprite = spritesGlossary[charac];
             info.text = charactersTexts[type, charac];
         }
-        
+        BetweenScenesControler.upgradePoint = upgradePoints;
+
     }
     public void typeText(int t)
     {
@@ -147,8 +149,9 @@ public class Stats : MonoBehaviour
     }
     public void DownLive()
     {
-        if (characterStats[charac, 0] - 2 >= 20 && upgradePoints < 10)
+        if (characterStats[charac, 0] - 2 >= characterInitialStats[charac, 0] && upgradePoints < 10)
         {
+            
             characterStats[charac, 0] -= 2;
             upgradePoints++;
         }
@@ -165,7 +168,7 @@ public class Stats : MonoBehaviour
     }
     public void DownAttack()
     {
-        if(characterStats[charac, 1] - 1 > 0 && upgradePoints < 10)
+        if(characterStats[charac, 1] - 1 >= characterInitialStats[charac, 1] && upgradePoints < 10)
         {
             characterStats[charac, 1]--;
             upgradePoints++;
@@ -183,7 +186,7 @@ public class Stats : MonoBehaviour
     }
     public void DownDefense()
     {
-        if (characterStats[charac, 2] - 1 > 0 && upgradePoints < 10)
+        if (characterStats[charac, 2] - 1 >= characterInitialStats[charac, 2] && upgradePoints < 10)
         {
             characterStats[charac, 2]--;
             upgradePoints++;
@@ -191,7 +194,6 @@ public class Stats : MonoBehaviour
             
     }
     
-   
 
     public void UpCharacter()
     {
@@ -232,7 +234,7 @@ public class Stats : MonoBehaviour
             }
         }*/
         BetweenScenesControler.characters = characterStats;
-        BetweenScenesControler.upgradePiont = upgradePoints;
+        
     }
     private void LoadData()
     {
@@ -246,7 +248,7 @@ public class Stats : MonoBehaviour
             }
         }*/
         characterStats = BetweenScenesControler.characters;
-        upgradePoints = BetweenScenesControler.upgradePiont;
+        upgradePoints = BetweenScenesControler.upgradePoint;
         names = BetweenScenesControler.names;
         namesEnemies = BetweenScenesControler.namesEnemies;
         charactersTexts = BetweenScenesControler.backgrounds;
