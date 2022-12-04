@@ -28,7 +28,7 @@ public class DmgStyle : MonoBehaviour, Combat
                                 h.setState(Hexagon.CodeState.AllyT);
                         }
                     }
-                    if (i <= (int)c.getMovement() && maxCasillas > 1)
+                    if (i <= (int)c.getMovement() + 1 && maxCasillas > 1)
                         Action(h, i + (int)c.getMovement() + 1, c);
 
                 }
@@ -36,7 +36,7 @@ public class DmgStyle : MonoBehaviour, Combat
                 {
                     if (h.transform.childCount > 0 && h.transform.GetChild(0).name == "ArbolSinHexagono")
                     {
-                        if (i <= (int)c.getMovement() && maxCasillas > 1)
+                        if (i <= (int)c.getMovement() + 1 && maxCasillas > 1)
                             Action(h, i + (int)c.getMovement() + 1, c);
                     }
                     else
