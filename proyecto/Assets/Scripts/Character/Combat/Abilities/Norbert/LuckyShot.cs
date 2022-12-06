@@ -5,7 +5,6 @@ using UnityEngine;
 public class LuckyShot : Abilities
 {
     public Character CombatFigther;
-    bool wait;
     public void Awake()
     {
         Role = "Damage";
@@ -15,28 +14,24 @@ public class LuckyShot : Abilities
     public override void Effect(Character Figther)
     {
         CombatFigther = Figther;
-        StartCoroutine(Chance());
+        Chance();
     }
     public override void BeforeTurn()
     {
         cooldown--;
     }
-    IEnumerator Chance()
-    {
-        GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Norbert");
+    void Chance()
+    {      
         int chanza = Random.Range(0, 11);
         if (chanza % 2 == 0)
         {
-            this.GetComponent<Character>().myAnimator.SetTrigger("Win");
-            float animationLength = this.GetComponent<Character>().myAnimator.GetCurrentAnimatorStateInfo(0).length;
-            yield return new WaitForSeconds(animationLength);
+            GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Norbert");
             CombatFigther.setHealth(CombatFigther.getHealth() - 20);
+            this.GetComponent<Character>().myAnimator.SetTrigger("Win");
         }
         else
         {
             this.GetComponent<Character>().myAnimator.SetTrigger("Lose");
-            float animationLength = this.GetComponent<Character>().myAnimator.GetCurrentAnimatorStateInfo(0).length;
-            yield return new WaitForSeconds(animationLength);
         }
     }
 }
