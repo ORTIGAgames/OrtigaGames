@@ -79,7 +79,7 @@ public class Manager : MonoBehaviour
         }
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
-        Ally focus = (Ally)allies[Random.Range(0, 6)];
+        Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
         focus.Camera();
         lose = allies.Count;
     }
@@ -123,7 +123,7 @@ public class Manager : MonoBehaviour
             {
                 a.setTurn(1);
             }
-            Ally focus = (Ally)allies[Random.Range(0, 6)];
+            Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
             focus.Camera();
         }
     }
