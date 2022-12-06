@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class TutorialStats : MonoBehaviour, IPointerClickHandler
 {
+    
     bool firstStats;
     int step = 0;
     string[] welcome = { "This is where you update your allies to make them stronger",

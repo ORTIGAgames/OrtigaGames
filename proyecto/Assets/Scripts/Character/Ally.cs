@@ -29,7 +29,7 @@ public class Ally : Character
         {
             if(getInitialBlock().transform.position != this.transform.position)
                 this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, -0.05f);                  
-            this.GetComponent<BoxCollider>().enabled = true;
+            //this.GetComponent<BoxCollider>().enabled = true;
         }
         healthBar.gameObject.SetActive((game.activeAlly == this || game.lastClicked == this) ? true : false);
     }
