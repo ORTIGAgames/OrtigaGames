@@ -8132,6 +8132,7 @@ GameObject:
   - component: {fileID: 780820357}
   - component: {fileID: 780820362}
   - component: {fileID: 780820361}
+  - component: {fileID: 780820363}
   - component: {fileID: 780820360}
   - component: {fileID: 780820359}
   - component: {fileID: 780820358}
@@ -8189,7 +8190,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 0}
   ncamera: {fileID: 1354519235}
   worldcamera: {fileID: 766317583}
-  EB: {fileID: 0}
+  EB: {fileID: 780820363}
 --- !u!95 &780820358
 Animator:
   serializedVersion: 4
@@ -8301,6 +8302,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 1
   defender: {fileID: 0}
+--- !u!114 &780820363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780820355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &785829670
 GameObject:
   m_ObjectHideFlags: 0
