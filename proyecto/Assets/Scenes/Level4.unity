@@ -1565,7 +1565,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121603635}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.1413211, y: 14.609379, z: -28.574999}
+  m_LocalPosition: {x: -0.17398652, y: 14.606174, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1590,7 +1590,7 @@ GameObject:
   - component: {fileID: 123731551}
   - component: {fileID: 123731550}
   m_Layer: 0
-  m_Name: Himenopio 9
+  m_Name: minion8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1604,7 +1604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123731546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 163.9817, y: -116.809, z: -1.9813226}
+  m_LocalPosition: {x: 164.1129, y: -116.809, z: -1.9813226}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1730,7 +1730,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f3a838744601d664c8215b2e08cf8ce5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2286,7 +2286,7 @@ GameObject:
   - component: {fileID: 153858866}
   - component: {fileID: 153858865}
   m_Layer: 0
-  m_Name: Himenopio 1
+  m_Name: BOSS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2300,7 +2300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153858861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 164.113, y: -116.809, z: -1.9813226}
+  m_LocalPosition: {x: 163.8886, y: -116.7786, z: -1.9813226}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2362,7 +2362,7 @@ Animator:
   m_GameObject: {fileID: 153858861}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
+  m_Controller: {fileID: 9100000, guid: ecdc33051a827cb4d9da22618befd6d5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2426,7 +2426,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f30ed830832722d44ad086ff66f5b58c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e38d8ae9d3f1334ba9b4896a5b451ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5174,7 +5174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attached: {fileID: 870175507}
-  game: {fileID: 495462872}
+  game: {fileID: 0}
 --- !u!1 &319935902
 GameObject:
   m_ObjectHideFlags: 0
@@ -5553,7 +5553,7 @@ GameObject:
   - component: {fileID: 325864646}
   - component: {fileID: 325864645}
   m_Layer: 0
-  m_Name: Himenopio 8
+  m_Name: minion7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5567,7 +5567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325864641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 163.981, y: -116.809, z: -1.9813226}
+  m_LocalPosition: {x: 164.1138, y: -116.8098, z: -1.9813226}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5693,7 +5693,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f3a838744601d664c8215b2e08cf8ce5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6420,7 +6420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378572883}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.1413211, y: 14.609379, z: -28.574999}
+  m_LocalPosition: {x: 0.27251616, y: 14.609379, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6591,7 +6591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CancelB: {fileID: 0}
   active: {fileID: 0}
-  game: {fileID: 495462872}
+  game: {fileID: 0}
 --- !u!114 &387852973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7366,7 +7366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449863325}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.2693881, y: 14.589378, z: -28.529}
+  m_LocalPosition: {x: 0.04497709, y: 14.619774, z: -28.529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7467,7 +7467,7 @@ GameObject:
   - component: {fileID: 457790771}
   - component: {fileID: 457790770}
   m_Layer: 0
-  m_Name: Himenopio 6
+  m_Name: minion5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7607,7 +7607,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f30ed830832722d44ad086ff66f5b58c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8310,22 +8310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a428b5fb08a674e8860174d8b54f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
-  allies: []
-  enemies: []
-  preTurn: []
-  allyturn: 0
-  stage: {fileID: 0}
-  activeAlly: {fileID: 0}
-  lastAction: {fileID: 0}
-  lastClicked: {fileID: 0}
-  CombatH: {fileID: 0}
-  InteractionH: {fileID: 0}
-  CharacterH: {fileID: 0}
-  TurnH: {fileID: 0}
-  scene: {fileID: 415553587}
-  attacker: {fileID: 0}
-  defender: {fileID: 0}
 --- !u!1001 &508147509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10344,7 +10328,7 @@ GameObject:
   - component: {fileID: 692281948}
   - component: {fileID: 692281947}
   m_Layer: 0
-  m_Name: Himenopio 4
+  m_Name: minion3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10358,7 +10342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692281943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 163.981, y: -116.809, z: -1.9813226}
+  m_LocalPosition: {x: 164.1138, y: -116.809, z: -1.9813226}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10484,7 +10468,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f3a838744601d664c8215b2e08cf8ce5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10673,7 +10657,7 @@ GameObject:
   - component: {fileID: 700649309}
   - component: {fileID: 700649308}
   m_Layer: 0
-  m_Name: Himenopio 5
+  m_Name: minion4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10813,7 +10797,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f30ed830832722d44ad086ff66f5b58c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13705,7 +13689,7 @@ GameObject:
   - component: {fileID: 879610737}
   - component: {fileID: 879610736}
   m_Layer: 0
-  m_Name: Himenopio 3
+  m_Name: minion2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13845,7 +13829,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f30ed830832722d44ad086ff66f5b58c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15663,7 +15647,7 @@ GameObject:
   - component: {fileID: 970897712}
   - component: {fileID: 970897711}
   m_Layer: 0
-  m_Name: Himenopio 2
+  m_Name: minion1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15677,7 +15661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970897707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 163.9817, y: -116.809, z: -1.9813226}
+  m_LocalPosition: {x: 163.6664, y: -116.8122, z: -1.9813226}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15739,7 +15723,7 @@ Animator:
   m_GameObject: {fileID: 970897707}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8dddef6e9e1c807418144c6ef187c33e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15803,7 +15787,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f3a838744601d664c8215b2e08cf8ce5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18933,7 +18917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a2ef55f886c0646b6e2ea857ade0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 495462872}
+  game: {fileID: 0}
   differentiator: Action
 --- !u!114 &1135177014
 MonoBehaviour:
@@ -20663,7 +20647,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205586620}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.14061919, y: 14.609379, z: -28.574999}
+  m_LocalPosition: {x: 0.27341643, y: 14.608578, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22513,7 +22497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361904601}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.1413211, y: 14.609379, z: -28.574999}
+  m_LocalPosition: {x: 0.27251616, y: 14.607777, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23004,7 +22988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413454072}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.14061919, y: 14.609379, z: -28.574999}
+  m_LocalPosition: {x: 0.27341643, y: 14.609379, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23822,7 +23806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a2ef55f886c0646b6e2ea857ade0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 495462872}
+  game: {fileID: 0}
   differentiator: Ability
 --- !u!114 &1432407652
 MonoBehaviour:
@@ -24949,7 +24933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533744817}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.14061919, y: 14.609379, z: -28.574999}
+  m_LocalPosition: {x: 0.27341643, y: 14.609379, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27173,7 +27157,7 @@ GameObject:
   - component: {fileID: 1699390444}
   - component: {fileID: 1699390443}
   m_Layer: 0
-  m_Name: Himenopio 10
+  m_Name: minion9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27187,7 +27171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699390439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 163.981, y: -116.809, z: -1.9813226}
+  m_LocalPosition: {x: 164.1138, y: -116.809, z: -1.9813226}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27313,7 +27297,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f3a838744601d664c8215b2e08cf8ce5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -28056,7 +28040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   butonPause: {fileID: 1351065055}
   menuPause: {fileID: 171378628}
-  game: {fileID: 495462872}
+  game: {fileID: 0}
   settings: {fileID: 606639250}
   board: []
   characters: []
@@ -28813,7 +28797,7 @@ MonoBehaviour:
   outerUp: 0.8
   ncamera: {fileID: 1818332122}
   worldcamera: {fileID: 442075810}
-  game: {fileID: 495462872}
+  game: {fileID: 0}
   Activated: 1
 --- !u!114 &1818332122
 MonoBehaviour:
@@ -29897,7 +29881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a2ef55f886c0646b6e2ea857ade0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 495462872}
+  game: {fileID: 0}
   differentiator: Ability
 --- !u!114 &1897024424
 MonoBehaviour:
@@ -32051,7 +32035,7 @@ GameObject:
   - component: {fileID: 2047699522}
   - component: {fileID: 2047699521}
   m_Layer: 0
-  m_Name: Himenopio 7
+  m_Name: minion6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32065,7 +32049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047699517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 163.9817, y: -116.809, z: -1.9813226}
+  m_LocalPosition: {x: 164.1129, y: -116.8106, z: -1.9813226}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32191,7 +32175,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f3a838744601d664c8215b2e08cf8ce5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57a25778d183a9a4e908bfbe39de14eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

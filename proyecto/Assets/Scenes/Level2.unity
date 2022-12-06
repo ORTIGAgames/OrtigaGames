@@ -1056,7 +1056,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -2475,7 +2475,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -2574,12 +2574,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5170,7 +5170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a2ef55f886c0646b6e2ea857ade0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   differentiator: Ability
 --- !u!114 &291392175
 MonoBehaviour:
@@ -10411,7 +10411,7 @@ MonoBehaviour:
   Speed: 0
   Name: Winnie
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -11153,7 +11153,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -13849,7 +13849,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -13948,12 +13948,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -14409,12 +14409,12 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 0}
+  Face: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   healthBar: {fileID: 219341404}
   myAnimator: {fileID: 862337043}
   NameIcon: {fileID: 0}
@@ -14508,12 +14508,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -17674,7 +17674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   butonPause: {fileID: 1691151020}
   menuPause: {fileID: 1842042256}
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   settings: {fileID: 1139456178}
   board: []
   characters: []
@@ -20872,7 +20872,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -20971,12 +20971,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -21673,12 +21673,12 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 0}
+  Face: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   healthBar: {fileID: 356002855}
   myAnimator: {fileID: 1335576455}
   NameIcon: {fileID: 0}
@@ -21772,12 +21772,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -23586,7 +23586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attached: {fileID: 622407195}
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
 --- !u!1 &1440022453
 GameObject:
   m_ObjectHideFlags: 3
@@ -24097,7 +24097,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -24196,12 +24196,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26074,7 +26074,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -26173,12 +26173,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26711,7 +26711,7 @@ MonoBehaviour:
   Speed: 0
   Name: Declan
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 2
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -27240,7 +27240,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -27339,12 +27339,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27862,7 +27862,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -28126,7 +28126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662283976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 164.0567, y: -116.8407, z: -1.9813226}
+  m_LocalPosition: {x: 164.0571, y: -116.8414, z: -1.9813226}
   m_LocalScale: {x: 0.008, y: 0.008, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28153,7 +28153,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -28252,12 +28252,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -28648,7 +28648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CancelB: {fileID: 0}
   active: {fileID: 0}
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
 --- !u!114 &1691704918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29294,22 +29294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a428b5fb08a674e8860174d8b54f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
-  allies: []
-  enemies: []
-  preTurn: []
-  allyturn: 0
-  stage: {fileID: 0}
-  activeAlly: {fileID: 0}
-  lastAction: {fileID: 0}
-  lastClicked: {fileID: 0}
-  CombatH: {fileID: 0}
-  InteractionH: {fileID: 0}
-  CharacterH: {fileID: 0}
-  TurnH: {fileID: 0}
-  scene: {fileID: 0}
-  attacker: {fileID: 0}
-  defender: {fileID: 0}
 --- !u!4 &1728820629
 Transform:
   m_ObjectHideFlags: 0
@@ -33309,7 +33293,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -35805,7 +35789,7 @@ MonoBehaviour:
   outerUp: 1
   ncamera: {fileID: 2104920238}
   worldcamera: {fileID: 2039265111}
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   Activated: 1
 --- !u!114 &2104920238
 MonoBehaviour:
@@ -35919,12 +35903,12 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 1728820628}
+  game: {fileID: 0}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 0}
+  Face: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   healthBar: {fileID: 906360678}
   myAnimator: {fileID: 2112628155}
   NameIcon: {fileID: 0}
@@ -36018,12 +36002,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747689e21499d0145bc2f501a611438d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.19, y: 9.32}
+  m_Size: {x: 15, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
