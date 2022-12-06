@@ -17,11 +17,10 @@ public class Scenes : MonoBehaviour
     }
     IEnumerator LoadMenu()
     {
-        transition.SetTrigger("Start");
+        transition.SetTrigger("Start"); 
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(0);
     }
-
     public void playGame()
     {
         StartCoroutine(LoadGame());

@@ -6524,9 +6524,9 @@ MonoBehaviour:
   - {fileID: 1591444632}
   - {fileID: 309562134}
   - {fileID: 4059799}
-  - {fileID: 951867806}
+  - {fileID: 2097709266}
   scene: {fileID: 1136824084}
-  Declan: {fileID: 2105299492}
+  Norbert: {fileID: 2105299492}
   Himenopio: {fileID: 780820357}
   game: {fileID: 557097870}
   cont: {fileID: 785829672}
@@ -6556,7 +6556,7 @@ MonoBehaviour:
   InteractionH: {fileID: 0}
   CharacterH: {fileID: 0}
   TurnH: {fileID: 0}
-  scene: {fileID: 0}
+  scene: {fileID: 591969250}
   attacker: {fileID: 0}
   defender: {fileID: 0}
 --- !u!1001 &557563702
@@ -8833,7 +8833,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 557097870}
-  displacement: 0
+  displacement: 2
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
@@ -24384,7 +24384,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 557097870}
-  displacement: 1
+  displacement: 2
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
