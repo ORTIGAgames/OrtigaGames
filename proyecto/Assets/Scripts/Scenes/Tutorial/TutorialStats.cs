@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TutorialStats : MonoBehaviour, IPointerClickHandler
+public class TutorialStats : MonoBehaviour
 {
     
     bool firstStats;
@@ -28,6 +28,7 @@ public class TutorialStats : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log(step);
         firstStats = BetweenScenesControler.firstStats;
+        
     }
 
     private void OnDestroy()
@@ -38,16 +39,21 @@ public class TutorialStats : MonoBehaviour, IPointerClickHandler
     // Update is called once per frame
     void Update()
     {
+        if (step == 7)
+        {
+            firstStats = false;
+        }
         if (firstStats == true)
         {
+            
             tutorial.gameObject.SetActive(true);
             foreach (Button b in buttons)
             {
                 b.interactable = false;
             }
             skip.gameObject.SetActive(false);
-            cont.gameObject.SetActive(false);
             icon.gameObject.SetActive(false);
+            cont.gameObject.SetActive(true);
             text.text = welcome[step];
             if (step == 1)
             {
@@ -59,7 +65,7 @@ public class TutorialStats : MonoBehaviour, IPointerClickHandler
             {
                 icon.gameObject.SetActive(true);
             }
-
+            
         }
         else
         {
@@ -80,24 +86,9 @@ public class TutorialStats : MonoBehaviour, IPointerClickHandler
     }
     public void Continue()
     {
-        if (step >= 6)
-            Skip();
-        else
-            step++;
-    }
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("click");
-        if (step == 1 )
-        {
-            return;
-        }
         step++;
-        if (step == 7)
-        {
-            firstStats = false;
-        }
     }
+    
     public void Help()
     {
         firstStats = true;

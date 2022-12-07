@@ -15250,12 +15250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99587b03f45eadf42825dba1d65a645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  butonPause: {fileID: 951867805}
+  butonPause:
+  - {fileID: 951867806}
   menuPause: {fileID: 56097274}
   game: {fileID: 557097870}
   settings: {fileID: 411919976}
-  board: []
-  characters: []
 --- !u!114 &1394137818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15315,7 +15314,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1402340229
 GameObject:
