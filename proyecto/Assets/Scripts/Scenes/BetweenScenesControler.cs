@@ -38,22 +38,22 @@ public class BetweenScenesControler : MonoBehaviour
         { "Insectoid creatures similar to orchid mantis.",
             "Insectoid creatures similar to orchid mantis.", 
             "Funky looking dudes with gas masks.",
-            "Wormy threatening creatures in disguised ", 
+            "Wormy threatening creatures in disguise ", 
             "Creepy looking boss.", 
             "Silly little guys." }, 
-        { "The female variation figths with their big front legs in a close range combat style.",
-            "The male variation has sticky useless front legs and figths throwing bulges that gry in their tail and explode like bombs. ",
+        { "The male variation figths with their big front legs in a close range combat style.",
+            "The female variation has sticky useless front legs and figths throwing bulges that gry in their tail and explode like bombs. ",
             "They tend to move as groups and have a desesperate last attack that releases their toxins.",
             "They dont fight, they just run away.",
             "Immovable, It only thinks in creating minions.",
             "Fight until they die." } 
     };
     public static string[] levelDescription = new string[4] {
-        "First level ever! The team is dropped in a woody area from the planet where Declan comes from. The Federation need the team to get rid of a higly aggresive group of Himenopios. To win you must kill them all while keeping your team safe", 
+        "First level ever! The team is dropped in a woody area from the planet where Declan comes from. The Federation need the team to get rid of a highly aggresive group of Himenopios. To win you must kill them all while keeping your team safe. They are able to go through the trees.", 
         "Second phase. You must defend the east sector of the colonial city of Keus. Your objective is to keep the enemy in line for a number of turns until the power fields are activated. (in contruction)",
-        "This level is located in a Federation spaceship infested with Ixodes. Your objective is to  eliminate all Ixodes before they escape and infest another spaceship. (in construction)", 
-        "The team was assigned to defeat a mysterious life form named HARNCKXSHOR that doesn’t let explorers enter an antique and culture rich ruin which were claimed as his home. You must kill him and his minions (in construction)." }; //Lo que tu quieres ese es el orden de aparición
-    public static string[] levelNames = new string[4] { "The Himenopio attack", "The invasion of the Keus deep", "Deparasiting it is gerundio", "Final Bossfigth " };
+        "This level is located in a Federation spaceship infested with Ixodas. Your objective is to  eliminate all Ixodas before they escape and infest another spaceship. (in construction)",
+        "The team was assigned to defeat a mysterious life form named HARNCKXSHOR that doesn’t let explorers enter an antique and culture rich ruin which were claimed as his home. You must defeat him to succeed but be aware of his minions, he will spawn new every three enemy's turns. (in construction)." }; //Lo que tu quieres ese es el orden de aparición
+    public static string[] levelNames = new string[4] { "The Himenopio attack", "The invasion of the Keus deep", "The infested spaceship", "The final boss" };
 
     public static bool firstTime = true;
     public static bool firstStats = true;
