@@ -21,6 +21,7 @@ public class Stats : MonoBehaviour
 
     //Glossary
     public Text info;
+    public GameObject panel;
     int type = 0;
     bool enemy = false;
     bool image = false;
@@ -92,12 +93,12 @@ int upgradePoints;
         if (image == true)
         {
             spriteCharacterGlossary.gameObject.SetActive(true);
-            info.gameObject.SetActive(false);
+            panel.SetActive(false);
         }
         else
         {
             spriteCharacterGlossary.gameObject.SetActive(false);
-            info.gameObject.SetActive(true);
+            panel.SetActive(true);
         }
         if (enemy==true)
         {
