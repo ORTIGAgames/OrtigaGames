@@ -44,6 +44,8 @@ public class ManagerHimenopios : Manager
                 {
                     box = stage.Block(Random.Range(60, 71));
                 }
+                c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
+                c.myAnimator.speed = Random.Range(0.5f, 1.6f);
                 enemies.Add(c);
             }
             box.setOccupant(c);
