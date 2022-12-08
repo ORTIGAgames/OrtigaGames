@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PauseHud : MonoBehaviour
 {
-    [SerializeField] GameObject butonPause;
+    [SerializeField] Button[] butonPause;
     [SerializeField] GameObject menuPause;
     public Manager game;
     public Canvas settings;
-    public List<Hexagon> board;
-    public List<Character> characters;
+
     public void Pause()
     {
         Time.timeScale = 0f;
-        butonPause.SetActive(false);
+        foreach(Button b in butonPause)
+        {
+            b.enabled = false;
+        }
         menuPause.SetActive(true);
         game.CollisionDown();
         
@@ -22,7 +26,10 @@ public class PauseHud : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1f;
-        butonPause.SetActive(true);
+        foreach (Button b in butonPause)
+        {
+            b.enabled = true;
+        }
         menuPause.SetActive(false);
         game.CollisionUp();
     }

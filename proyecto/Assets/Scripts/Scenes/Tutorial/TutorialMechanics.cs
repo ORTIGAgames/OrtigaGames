@@ -73,8 +73,13 @@ public class TutorialMechanics : MonoBehaviour
             if (step == 4)
             {
                 Norbert.GetComponent<BoxCollider>().enabled = false;
-            } 
-            
+            }
+
+            if (step == 5)
+            {
+                Norbert.GetComponent<BoxCollider>().enabled = true;
+            }
+
             if (step == 6)
             {
                 buttons[0].interactable = true;
@@ -91,6 +96,7 @@ public class TutorialMechanics : MonoBehaviour
                 {
                     h.GetComponent<BoxCollider>().enabled = true;
                 }
+                
             }
 
             if (Norbert.GetComponent<BoxCollider>().enabled == false && second == false && first==true)
