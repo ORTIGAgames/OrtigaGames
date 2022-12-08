@@ -10,9 +10,10 @@ public class ManagerIxodas : Manager
 {
 
     public List<Hexagon> hexagons; 
+
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
-        KrangleNumbers = enemies.Count;
+      
         allyturn = true;
         Character[] StartingPlayers = GetComponentsInChildren<Character>();
         stage = GetComponentInChildren<Scenery>();
@@ -65,21 +66,23 @@ public class ManagerIxodas : Manager
     }
     void Update()
     {
-
-        if (allies.Count < lose)
-        {
-            scene.playLose();
+        foreach (Hexagon h in hexagons){
+            if (h.getOccupant()){
+                if (h.getOccupant().GetComponent<Enemy>())
+                {
+                    scene.playLose();
+                }
+            }
         }
 
-        if (turnsCompleted == 2)
+    
+
+        if (enemies.Count == 0)
         {
             scene.playWin();
         }
 
-        if (enemies.Count < KrangleNumbers)
-        {
-
-        }
+      
 
         if (allyturn && CheckTurn(allies))
         {
@@ -94,7 +97,7 @@ public class ManagerIxodas : Manager
                 enemies[i].setTurn(1);
                 StartCoroutine(CameraFocus(0.5f * (i + 1), (Enemy)enemies[i]));
             }
-            turnsCompleted++;
+
         }
 
         if (!allyturn && CheckTurn(enemies))
@@ -111,7 +114,7 @@ public class ManagerIxodas : Manager
             }
             Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
             focus.Camera();
-            turnsCompleted++;
+          
         }
     }
 

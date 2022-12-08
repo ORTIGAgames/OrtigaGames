@@ -713,7 +713,7 @@ MonoBehaviour:
   Speed: 0
   Name: Winnie
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -2718,7 +2718,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -3565,7 +3565,7 @@ Transform:
   m_Children:
   - {fileID: 339329293}
   m_Father: {fileID: 1819567924}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &238724299
 MonoBehaviour:
@@ -3586,7 +3586,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -3881,7 +3881,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -4284,7 +4284,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -7683,7 +7683,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -11035,7 +11035,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -11590,7 +11590,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -14006,7 +14006,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -16273,7 +16273,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -18953,7 +18953,7 @@ Transform:
   m_Children:
   - {fileID: 2119326975}
   m_Father: {fileID: 1819567924}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1020342141
 MonoBehaviour:
@@ -18974,7 +18974,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -31047,7 +31047,7 @@ MonoBehaviour:
   Speed: 0
   Name: Declan
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 2
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -31976,7 +31976,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -32472,7 +32472,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -33943,8 +33943,8 @@ Transform:
   - {fileID: 659338737}
   - {fileID: 252780834}
   - {fileID: 1058414957}
-  - {fileID: 1020342140}
   - {fileID: 238724298}
+  - {fileID: 1020342140}
   - {fileID: 1765299123}
   - {fileID: 1927539627}
   - {fileID: 682666617}
@@ -35480,7 +35480,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1995151889}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -36780,9 +36780,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1995151888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81a428b5fb08a674e8860174d8b54f75, type: 3}
+  m_Script: {fileID: 11500000, guid: 4591c6d7b5598404b8577c4d2256be24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
+  allies: []
+  enemies: []
+  preTurn: []
+  allyturn: 0
+  stage: {fileID: 0}
+  activeAlly: {fileID: 0}
+  lastAction: {fileID: 0}
+  lastClicked: {fileID: 0}
+  lose: 0
+  CombatH: {fileID: 0}
+  InteractionH: {fileID: 0}
+  CharacterH: {fileID: 0}
+  TurnH: {fileID: 0}
+  scene: {fileID: 1184321594}
+  attacker: {fileID: 0}
+  defender: {fileID: 0}
+  hexagons:
+  - {fileID: 2729145}
 --- !u!4 &1995151890
 Transform:
   m_ObjectHideFlags: 0
