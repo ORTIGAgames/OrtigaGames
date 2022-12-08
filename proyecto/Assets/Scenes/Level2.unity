@@ -1908,7 +1908,7 @@ GameObject:
   - component: {fileID: 83273439}
   - component: {fileID: 83273438}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel9
+  m_Name: VirtualCameraKrangle9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3880,7 +3880,7 @@ GameObject:
   - component: {fileID: 225895363}
   - component: {fileID: 225895362}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel6
+  m_Name: VirtualCameraKrangle6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9283,7 +9283,7 @@ GameObject:
   - component: {fileID: 553590460}
   - component: {fileID: 553590459}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel1
+  m_Name: VirtualCameraKrangle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11916,7 +11916,7 @@ GameObject:
   - component: {fileID: 706306847}
   - component: {fileID: 706306848}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel10
+  m_Name: VirtualCameraKrangle10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12607,7 +12607,7 @@ GameObject:
   - component: {fileID: 759947385}
   - component: {fileID: 759947384}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel7
+  m_Name: VirtualCameraKrangle7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13185,6 +13185,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+--- !u!114 &783580823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7765271389004136608, guid: 7c7a46334bc92c74e98ca9aa56cf2415, type: 3}
+  m_PrefabInstance: {fileID: 783580822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af161cab81214ab4a9292e68615e08cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &790173304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13571,7 +13582,7 @@ GameObject:
   - component: {fileID: 808344776}
   - component: {fileID: 808344775}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel2
+  m_Name: VirtualCameraKrangle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20556,7 +20567,7 @@ GameObject:
   - component: {fileID: 1223606085}
   - component: {fileID: 1223606084}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel4
+  m_Name: VirtualCameraKrangle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25012,7 +25023,7 @@ GameObject:
   - component: {fileID: 1507675817}
   - component: {fileID: 1507675816}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel8
+  m_Name: VirtualCameraKrangle8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29446,7 +29457,7 @@ GameObject:
   - component: {fileID: 1718346785}
   - component: {fileID: 1718346784}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel5
+  m_Name: VirtualCameraKrangle5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29570,7 +29581,7 @@ MonoBehaviour:
   InteractionH: {fileID: 0}
   CharacterH: {fileID: 0}
   TurnH: {fileID: 0}
-  scene: {fileID: 0}
+  scene: {fileID: 783580823}
   attacker: {fileID: 0}
   defender: {fileID: 0}
   turnsCompleted: 0
@@ -32165,7 +32176,7 @@ GameObject:
   - component: {fileID: 1848487355}
   - component: {fileID: 1848487354}
   m_Layer: 0
-  m_Name: VirtualCameraKrandel3
+  m_Name: VirtualCameraKrangle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

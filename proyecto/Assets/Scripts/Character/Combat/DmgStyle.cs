@@ -34,7 +34,7 @@ public class DmgStyle : MonoBehaviour, Combat
                 }
                 else
                 {
-                    if (h.transform.childCount > 0 && h.transform.GetChild(0).name == "ArbolSinHexagono")
+                    if (h.transform.childCount > 0 && h.transform.GetChild(0).name == "Obstacle")
                     {
                         if (i <= (int)c.getMovement() + 1 && maxCasillas > 1)
                             Action(h, i + (int)c.getMovement() + 1, c);
