@@ -104,4 +104,40 @@ public class Scenes : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(7);
     }
+
+    public void playLevel2()
+    {
+        StartCoroutine(LoadLevel2());
+        Time.timeScale = 1f;
+    }
+    IEnumerator LoadLevel2()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(8);
+    }
+
+    public void playLevel3()
+    {
+        StartCoroutine(LoadLevel3());
+        Time.timeScale = 1f;
+    }
+    IEnumerator LoadLevel3()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(9);
+    }
+
+    public void playLevel4()
+    {
+        StartCoroutine(LoadLevel4());
+        Time.timeScale = 1f;
+    }
+    IEnumerator LoadLevel4()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(10);
+    }
 }
