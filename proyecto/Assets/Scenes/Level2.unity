@@ -1056,7 +1056,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -2434,7 +2434,7 @@ GameObject:
   - component: {fileID: 137741774}
   - component: {fileID: 137741773}
   m_Layer: 0
-  m_Name: Krandel 4
+  m_Name: Krangle 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2475,7 +2475,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -2508,9 +2508,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137741769}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -10411,7 +10411,7 @@ MonoBehaviour:
   Speed: 0
   Name: Winnie
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -11153,7 +11153,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -13808,7 +13808,7 @@ GameObject:
   - component: {fileID: 825966294}
   - component: {fileID: 825966293}
   m_Layer: 0
-  m_Name: Krandel 2
+  m_Name: Krangle 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13849,7 +13849,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -13882,9 +13882,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825966289}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14368,7 +14368,7 @@ GameObject:
   - component: {fileID: 862337044}
   - component: {fileID: 862337043}
   m_Layer: 0
-  m_Name: Krandel 9
+  m_Name: Krangle 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14409,7 +14409,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -14442,9 +14442,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862337039}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -17674,7 +17674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   butonPause: {fileID: 1691151020}
   menuPause: {fileID: 1842042256}
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   settings: {fileID: 1139456178}
   board: []
   characters: []
@@ -20831,7 +20831,7 @@ GameObject:
   - component: {fileID: 1304315112}
   - component: {fileID: 1304315111}
   m_Layer: 0
-  m_Name: Krandel 3
+  m_Name: Krangle 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20872,7 +20872,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -20905,7 +20905,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304315107}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
@@ -21632,7 +21632,7 @@ GameObject:
   - component: {fileID: 1335576456}
   - component: {fileID: 1335576455}
   m_Layer: 0
-  m_Name: Krandel 10
+  m_Name: Krangle 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21673,7 +21673,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -21706,9 +21706,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335576451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -22684,7 +22684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a2ef55f886c0646b6e2ea857ade0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   differentiator: Ability
 --- !u!114 &1380078097
 MonoBehaviour:
@@ -23586,7 +23586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attached: {fileID: 622407195}
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
 --- !u!1 &1440022453
 GameObject:
   m_ObjectHideFlags: 3
@@ -24056,7 +24056,7 @@ GameObject:
   - component: {fileID: 1460954740}
   - component: {fileID: 1460954739}
   m_Layer: 0
-  m_Name: Krandel 5
+  m_Name: Krangle 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24097,7 +24097,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -24130,7 +24130,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460954735}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
@@ -26033,7 +26033,7 @@ GameObject:
   - component: {fileID: 1570788600}
   - component: {fileID: 1570788599}
   m_Layer: 0
-  m_Name: Krandel 6
+  m_Name: Krangle 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26074,7 +26074,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -26107,7 +26107,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570788595}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
@@ -26711,7 +26711,7 @@ MonoBehaviour:
   Speed: 0
   Name: Declan
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 2
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -27199,7 +27199,7 @@ GameObject:
   - component: {fileID: 1616285369}
   - component: {fileID: 1616285368}
   m_Layer: 0
-  m_Name: Krandel 7
+  m_Name: Krangle 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27240,7 +27240,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -27273,9 +27273,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616285364}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -27862,7 +27862,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -28112,7 +28112,7 @@ GameObject:
   - component: {fileID: 1662283981}
   - component: {fileID: 1662283980}
   m_Layer: 0
-  m_Name: Krandel 1
+  m_Name: krangle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28153,7 +28153,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -28186,7 +28186,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662283976}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
@@ -28648,7 +28648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CancelB: {fileID: 0}
   active: {fileID: 0}
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
 --- !u!114 &1691704918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28859,7 +28859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a2ef55f886c0646b6e2ea857ade0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   differentiator: Action
 --- !u!114 &1704131836
 MonoBehaviour:
@@ -29274,7 +29274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1728820629}
-  - component: {fileID: 1728820628}
+  - component: {fileID: 1728820630}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -29282,18 +29282,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1728820628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728820627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81a428b5fb08a674e8860174d8b54f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1728820629
 Transform:
   m_ObjectHideFlags: 0
@@ -29315,6 +29303,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728820630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728820627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1267a5ed9e9011547935b8e39fb141fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: []
+  allies: []
+  enemies: []
+  preTurn: []
+  allyturn: 0
+  stage: {fileID: 0}
+  activeAlly: {fileID: 0}
+  lastAction: {fileID: 0}
+  lastClicked: {fileID: 0}
+  lose: 0
+  CombatH: {fileID: 0}
+  InteractionH: {fileID: 0}
+  CharacterH: {fileID: 0}
+  TurnH: {fileID: 0}
+  scene: {fileID: 0}
+  attacker: {fileID: 0}
+  defender: {fileID: 0}
+  turnsCompleted: 0
 --- !u!1001 &1734114950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33293,7 +33311,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -35789,7 +35807,7 @@ MonoBehaviour:
   outerUp: 1
   ncamera: {fileID: 2104920238}
   worldcamera: {fileID: 2039265111}
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   Activated: 1
 --- !u!114 &2104920238
 MonoBehaviour:
@@ -35862,7 +35880,7 @@ GameObject:
   - component: {fileID: 2112628156}
   - component: {fileID: 2112628155}
   m_Layer: 0
-  m_Name: Krandel 8
+  m_Name: Krangle 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35903,7 +35921,7 @@ MonoBehaviour:
   Speed: 0
   Name: 
   turn: 0
-  game: {fileID: 0}
+  game: {fileID: 1728820630}
   displacement: 0
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
@@ -35936,9 +35954,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112628151}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
