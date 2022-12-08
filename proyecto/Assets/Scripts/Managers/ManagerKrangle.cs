@@ -32,10 +32,10 @@ public class ManagerKrangle : Manager
             if (c.getSide() == "Ally")
             {
                 allies.Add(c);
-                box = stage.Block(Random.Range(12, 28));
+                box = stage.Block(Random.Range(23, 29));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(12, 28));
+                    box = stage.Block(Random.Range(23, 29));
                 }
             }
             else
