@@ -62,16 +62,27 @@ public class ManagerHimenopios : Manager
     }
     void Update()
     {
-        
+        if (allies.Count == 1)
+        {
+            if (enemies.Count <= 0)
+            {
+                scene.playTutorialWin();
+            }
+        }
+        else
+        {
+            if (enemies.Count <= 0)
+            {
+                scene.playWin();
+            }
+        }
+
         if (allies.Count < lose)
         {
             scene.playLose();
         }
 
-        if (enemies.Count <= 0)
-        {
-            scene.playWin();
-        }
+        
 
         if (allyturn && CheckTurn(allies))
         {

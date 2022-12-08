@@ -91,4 +91,17 @@ public class Scenes : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(6);
     }
+
+    public void playTutorialWin()
+    {
+        StartCoroutine(LoadTutorialWin());
+        Time.timeScale = 1f;
+    }
+
+    IEnumerator LoadTutorialWin()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(7);
+    }
 }
