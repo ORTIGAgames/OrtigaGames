@@ -10,12 +10,12 @@ public class TutorialHUD : MonoBehaviour,IPointerClickHandler
     int step = 0;
     string[] welcome = { "Welcome to the strategy exam to become an official Space Captain!",
         "If you think you are an expert Space Captain press skip. If not, please press continue.",
-        "This exam consists on four virtual missions, each of them have a different objective and you must complete them correctly to pass.",
-        "You will be controlling units that are based on your actual crew, with their same abilities and physical appearance.",
+        "This exam consists of four virtual missions, each of them have a different objective and you must complete them to pass.",
+        "You will be controlling units that are based on your real crew, with their same abilities and physical appearance.",
         "Remember that you must avoid getting your crew killed! If one of them dies you will fail the mission and will have to restart it!",
-        "If you need assistance just search for my icon",
+        "If you need assistance just click on my icon",
         "Would you like to review the battle mechanics?",
-        "If you need assistance just search for my icon"
+        "If you need assistance just click on my icon"
     };
 
     public Canvas tutorial;

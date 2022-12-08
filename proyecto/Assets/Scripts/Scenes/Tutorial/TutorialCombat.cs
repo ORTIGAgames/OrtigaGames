@@ -10,9 +10,9 @@ public class TutorialCombat : MonoBehaviour
     public Manager game;
     [SerializeField] Button[] buttons;
 
-    string[] texts = {"To move your crewmates you have to click on them and then on an empty green hexagon",
-    "To start a combat you have to click on a crewmate then, if the hexagon of an enemy is red, click on the enemy. The green hexagons will transform into blue, move your crewmate into one of this and click again on the enemy. To finish the attack you have to clik on one of the button that has appeared, the right one is the normal attack and the left one is the ability.",
-    "Each crewmate has an unique ability, click on the arrow next to the ability icon in the stats menu and see what does. Remember the abilities could be to help other or to attack enemies."
+    string[] texts = {"To move your crewmates you have to click on them, click on an empty green hexagon, and then click again.",
+    "To start a combat you have to click on a crewmate. If an enemy's hexagon is red, click on that enemy, after that, the hexagons from where that crewmate can attack the enemy will turn blue. Move your crewmate into one of these hexagons and click again on the enemy. To finish the attack you'll have to click on the rigth button for a regular attack, or on the left one for a special ability.",
+    "Each crewmate has an unique ability, click on the arrow next to the ability icon in the stats menu to learn about it. Keep in mind that abilities could be used for attack or for support, so you migth need to click on an enemy or an ally to use it."
     };
 
     int num = 0;

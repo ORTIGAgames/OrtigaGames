@@ -20,14 +20,14 @@ public class TutorialMechanics : MonoBehaviour
 
     int step = 0;
     string[] welcome = { 
-        "First of all, find your crewmate on the map. If you click on the face of the botton left of the screen the camera will navigate directly to him.",
-        "Then, you need to know how to move around the level, so click on Norbert, your ally, and see what happens.",
+        "First of all, find your crewmate on the map. If you click on his face at the botton left of the screen the camera will navigate directly to him.",
+        "Click on Norbert, your ally, and see what happens.",
         "Each ally has a movement and an action on each of their turns, the green hexagons represent empty spaces where they can move to, yellow ones represent allies and the red ones are for enemies. On the botton right will always appear a cross to cancel the current action. Click on an empty space to move Declan.",
         "The turn doesn´t end until you click again on an empy space or do an action. When all the allies end their turn the enemy starts their turn and moves on their own, so you have to think in advantage of what they would do.",
-        "You can see the movement and range of action of an enemy clicking on it, let´s try with the himenopio on the screen. When you are finish cancel and go back to Norbert.",
-        "Now let's attack that enemy, click on Norbert and then on the enemy, green hexagons will change into blue ones to show the range of attack of your unit. Click on one of the blue spaces.",
-        "See on the top, the combat menu has the stats of the ally and the possible actions, attack and ability. You can see what does the abity clicking on the arrow next to the icon in the combat menu. ",
-        "When one of your allies attack it will damage the enemy based on the enemies’ defense and your allies’ attack stat. Let's attack the enemy by clicking on them, and them on the right button that has appear",
+        "You can see the movement and range of action of an enemy by clicking on it. Let´s try with the enemy on the screen. When you are finished cancel and go back to Norbert.",
+        "Now let's attack that enemy, click on Norbert and then on the enemy, green hexagons will change into blue ones to show the range of attack of your unit. Click on one of the blue cells.",
+        "Notice that the attack and ability buttons pop up. You can learn about the ability by clicking the arrow next to the icon in the combat menu. ",
+        "When one of your allies attacks they will damage the enemy based on the enemy's defense and your ally's attack stat. Let's attack the enemy by clicking on them, and then on the button on the rigth that appears.",
         "Combat and strategy is not an easy task but that is why this is just a simulacrum of a real plausible scenery. The tutorial ends here, but find my button and I come back as you require. Now end this level and kill that enemy.",
         "If you need assistance just search for my icon"
     };

@@ -3250,7 +3250,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -16330,7 +16330,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -17672,12 +17672,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99587b03f45eadf42825dba1d65a645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  butonPause: {fileID: 1691151020}
+  butonPause:
+  - {fileID: 0}
   menuPause: {fileID: 1842042256}
   game: {fileID: 1728820630}
   settings: {fileID: 1139456178}
-  board: []
-  characters: []
 --- !u!114 &1079958931
 MonoBehaviour:
   m_ObjectHideFlags: 0

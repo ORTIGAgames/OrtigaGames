@@ -3632,7 +3632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346464915774287618, guid: e99a95a05104fb94196e8a1860151f55, type: 3}
       propertyPath: sounds.Array.data[12].volume
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4346464915774287619, guid: e99a95a05104fb94196e8a1860151f55, type: 3}
       propertyPath: m_RootOrder
@@ -22239,7 +22239,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play again the tutorial?
+  m_Text: Replay the tutorial
 --- !u!222 &1155473877
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25020,7 +25020,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Which tutorial you want to review?
+  m_Text: What do you want to review?
 --- !u!222 &1342111244
 CanvasRenderer:
   m_ObjectHideFlags: 0

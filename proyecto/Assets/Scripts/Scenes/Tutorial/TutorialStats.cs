@@ -11,11 +11,11 @@ public class TutorialStats : MonoBehaviour
     int step = 0;
     string[] welcome = { "This is where you update your allies to make them stronger",
         "If you are an expert Space Captain press skip if not please press continue.",
-        "When you complete successfully a level you will get a limited number of points which can be used to update the stats of each ally",
-        "You will have to decide which stats of which allies you will improve.",
-        "A tip just for you! I recommend seeing what will be the next level objective to boost the stats that will help you pass it easier.",
+        "When you successfully complete a level you will get a limited number of points which can be used to update the stats of each ally",
+        "You will have to decide which stats to improve.",
+        "Here's a tip! I recommend looking at the next level objective to boost the stats needed.",
         "To see a level objective and enemies you just have to select that level, just remember to go back to update your allies stats after you read it!",
-        "If you need assistance just search for my icon",
+        "If you need assistance just click on my icon",
     };
     public Canvas tutorial;
     public Text text;
