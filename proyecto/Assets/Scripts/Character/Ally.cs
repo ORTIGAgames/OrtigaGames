@@ -54,7 +54,7 @@ public class Ally : Character
     public override void OnMouseDown()
     {
         Camera();
-        if (this.targetable && game.lastClicked.getSide() == side)//si esta a rango
+        if (this.targetable && game.lastClicked.getSide() == side && game.allyturn)//si esta a rango
         {
             if (game.activeAlly.getActualBlock().getState() == Hexagon.CodeState.Action && game.lastClicked == this)//si esta a rango de combate se pegan
             {
