@@ -9,8 +9,10 @@ using Cinemachine;
 public class ManagerKrangle : Manager
 {
     public int turnsCompleted;
+    public int KrangleNumbers;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
+        KrangleNumbers = enemies.Count;
         allyturn = true;
         Character[] StartingPlayers = GetComponentsInChildren<Character>();
         stage = GetComponentInChildren<Scenery>();
@@ -72,6 +74,11 @@ public class ManagerKrangle : Manager
         if (turnsCompleted == 2)
         {
             scene.playWin();
+        }
+
+        if(enemies.Count < KrangleNumbers)
+        {
+
         }
 
         if (allyturn && CheckTurn(allies))
