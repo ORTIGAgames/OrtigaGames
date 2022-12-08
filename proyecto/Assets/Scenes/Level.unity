@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465797, g: 0.4964161, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465788, g: 0.49641544, b: 0.57481647, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27932,6 +27932,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 975049486}
     m_Modifications:
+    - target: {fileID: -8769226272823808290, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cca62fd8c60b5741a6f06fe3cd1f0a6, type: 2}
     - target: {fileID: -8679921383154817045, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -27976,6 +27980,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cca62fd8c60b5741a6f06fe3cd1f0a6, type: 2}
+    - target: {fileID: -1418168387022425682, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cca62fd8c60b5741a6f06fe3cd1f0a6, type: 2}
     - target: {fileID: 919132149155446097, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
       propertyPath: m_Name
       value: ArbolSinHexagono
