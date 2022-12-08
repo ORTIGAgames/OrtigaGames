@@ -3149,7 +3149,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.32452828, b: 0.84222037, a: 1}
+  m_Color: {r: 0.28751338, g: 0.83945805, b: 0.8584906, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -31460,7 +31460,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.612, y: 1}
   m_AnchoredPosition: {x: -21.1, y: 0.05499935}
   m_SizeDelta: {x: -1.6838, y: -2.0899997}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -34202,7 +34202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1834026199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34748,7 +34748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1880635620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36783,22 +36783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a428b5fb08a674e8860174d8b54f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
-  allies: []
-  enemies: []
-  preTurn: []
-  allyturn: 0
-  stage: {fileID: 0}
-  activeAlly: {fileID: 0}
-  lastAction: {fileID: 0}
-  lastClicked: {fileID: 0}
-  CombatH: {fileID: 0}
-  InteractionH: {fileID: 0}
-  CharacterH: {fileID: 0}
-  TurnH: {fileID: 0}
-  scene: {fileID: 1184321594}
-  attacker: {fileID: 0}
-  defender: {fileID: 0}
 --- !u!4 &1995151890
 Transform:
   m_ObjectHideFlags: 0
@@ -37468,7 +37452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2043787686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37583,7 +37567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2066224152
 RectTransform:
   m_ObjectHideFlags: 0
