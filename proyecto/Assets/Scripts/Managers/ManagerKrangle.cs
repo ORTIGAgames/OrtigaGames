@@ -33,18 +33,18 @@ public class ManagerKrangle : Manager
             if (c.getSide() == "Ally")
             {
                 allies.Add(c);
-                box = stage.Block(Random.Range(23, 29));
+                box = stage.Block(Random.Range(63, 72));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(23, 29));
+                    box = stage.Block(Random.Range(62, 72));
                 }
             }
             else
             {
-                box = stage.Block(Random.Range(79, 94));
+                box = stage.Block(Random.Range(10, 28));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(79, 94));
+                    box = stage.Block(Random.Range(10, 28));
                 }
                 c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
                 c.myAnimator.speed = Random.Range(0.5f, 1.6f);
