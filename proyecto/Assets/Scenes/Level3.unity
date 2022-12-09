@@ -28141,7 +28141,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1410198055
 GameObject:
@@ -39351,7 +39351,8 @@ MonoBehaviour:
   attacker: {fileID: 0}
   defender: {fileID: 0}
   hexagons:
-  - {fileID: 2729145}
+  - {fileID: 782684270}
+  - {fileID: 431417102}
 --- !u!4 &1995151890
 Transform:
   m_ObjectHideFlags: 0
