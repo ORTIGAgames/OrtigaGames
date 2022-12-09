@@ -20,6 +20,7 @@ public abstract class Manager : MonoBehaviour
     public GameObject InteractionH;
     public GameObject CharacterH;
     public GameObject TurnH;
+    public GameObject ObjectiveH;
     public Scenes scene;
     #endregion
 

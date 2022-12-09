@@ -19,6 +19,7 @@ public class ManagerHARNCKXSHOR : Manager
         CombatH = GameObject.Find("Combat Hud").GetComponent<CombatHud>();
         CharacterH = GameObject.Find("Stats");
         TurnH = GameObject.Find("Turn Hud");
+        ObjectiveH = GameObject.Find("Objective Hud");
         TurnH.SetActive(false);
         CharacterDeactivate();
         CombatDeactivate();
@@ -31,18 +32,24 @@ public class ManagerHARNCKXSHOR : Manager
             if (c.getSide() == "Ally")
             {
                 allies.Add(c);
-                box = stage.Block(Random.Range(23, 29));
+                box = stage.Block(Random.Range(7, 13));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(23, 29));
+                    box = stage.Block(Random.Range(7, 13));
                 }
             }
             else
             {
-                box = stage.Block(Random.Range(0, 77));
-                while (box.getOccupant())
+                if(enemies.Count == 0){
+                    box = stage.Block(13);
+                }
+                else
                 {
                     box = stage.Block(Random.Range(0, 77));
+                    while (box.getOccupant())
+                    {
+                        box = stage.Block(Random.Range(0, 77));
+                    }
                 }
                 c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
                 c.myAnimator.speed = Random.Range(0.5f, 1.6f);
@@ -56,7 +63,7 @@ public class ManagerHARNCKXSHOR : Manager
         }
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
-        StartCoroutine(ShowObjetive("End the terror of HARNCKXSHOR", 1.0f));
+        StartCoroutine(ShowObjetive("End the terror of HARNCKXSHOR", 4.0f));
         Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
         focus.Camera();
         lose = allies.Count;
@@ -79,7 +86,6 @@ public class ManagerHARNCKXSHOR : Manager
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
-            StartCoroutine(ShowObjetive("End the terror of HARNCKXSHOR", 1.0f));
             allyturn = false;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -95,7 +101,6 @@ public class ManagerHARNCKXSHOR : Manager
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
-            StartCoroutine(ShowObjetive("End the terror of HARNCKXSHOR", 1.0f));
             allyturn = true;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -127,11 +132,11 @@ public class ManagerHARNCKXSHOR : Manager
     }
     IEnumerator ShowObjetive(string message, float delay)
     {
-        TurnH.SetActive(true);
-        TextMeshProUGUI Turn = GameObject.Find("Objetive").GetComponent<TextMeshProUGUI>();
+        ObjectiveH.SetActive(true);
+        TextMeshProUGUI Turn = GameObject.Find("Objective").GetComponent<TextMeshProUGUI>();
         Turn.text = message;
         yield return new WaitForSeconds(delay);
-        TurnH.SetActive(false);
+        ObjectiveH.SetActive(false);
     }
 
     IEnumerator CameraFocus(float timer, Enemy e)
