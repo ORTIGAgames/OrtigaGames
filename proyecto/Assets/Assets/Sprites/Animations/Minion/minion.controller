@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: minionidle
+  m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -111,13 +111,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -8158729256411553540}
-    m_Position: {x: 340, y: 50, z: 0}
+    m_Position: {x: 400, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 125088642259361662}
-    m_Position: {x: 375, y: 115, z: 0}
+    m_Position: {x: 320, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 748140954614862938}
-    m_Position: {x: 410, y: 180, z: 0}
+    m_Position: {x: 630, y: 240, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

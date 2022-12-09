@@ -37,6 +37,8 @@ public abstract class Character : MonoBehaviour
         game = GetComponentInParent<Manager>();
         style = GetComponent<Combat>();
         targetable = false;
+        healthBar = GetComponentInChildren<HealthBar>();
+        print(GetComponentInChildren<HealthBar>());
         
         //displacement = GetComponent<Movement>();//uso de la clase movement en un futuro si hay posiblidad para movimientos especiales
     }
