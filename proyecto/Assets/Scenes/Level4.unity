@@ -31341,7 +31341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSpeed: 10
-  outerLeft: 1
+  outerLeft: 1.7
   outerRight: 1.5
   outerDown: -0.1
   outerUp: 0.8
@@ -35166,7 +35166,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1197398371}
+    m_TransformParent: {fileID: 793778410}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d24ee3600597f5341a3661145baac361, type: 3}
       propertyPath: m_RootOrder
@@ -35194,11 +35194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d24ee3600597f5341a3661145baac361, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.20809437
+      value: 0.2080944
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d24ee3600597f5341a3661145baac361, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20809437
+      value: 0.2080944
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d24ee3600597f5341a3661145baac361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
