@@ -2374,7 +2374,7 @@ GameObject:
   - component: {fileID: 153858863}
   - component: {fileID: 153858869}
   - component: {fileID: 153858870}
-  - component: {fileID: 153858864}
+  - component: {fileID: 153858871}
   - component: {fileID: 153858867}
   - component: {fileID: 153858866}
   - component: {fileID: 153858865}
@@ -2432,19 +2432,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 449863326}
   worldcamera: {fileID: 442075810}
-  EB: {fileID: 153858864}
---- !u!114 &153858864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153858861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  EB: {fileID: 153858871}
 --- !u!95 &153858865
 Animator:
   serializedVersion: 4
@@ -2554,6 +2542,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7898bbb01c1513479d6ab0f0a369635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &153858871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153858861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f350808cfddc1564f9bde425d67d660d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &154992335
@@ -7543,7 +7543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442075808}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.2693881, y: 14.589378, z: -28.529}
+  m_LocalPosition: {x: 0.27262297, y: 14.609379, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8589,6 +8589,7 @@ MonoBehaviour:
   scene: {fileID: 0}
   attacker: {fileID: 0}
   defender: {fileID: 0}
+  spawnturns: 0
 --- !u!1001 &508147509
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ using Cinemachine;
 
 public class ManagerHARNCKXSHOR : Manager
 {
+    public int spawnturns;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
@@ -86,6 +87,27 @@ public class ManagerHARNCKXSHOR : Manager
             scene.playWin();
         }
 
+        if(spawnturns == 2)
+        {
+            for(int i = 0; i <=2; i++){
+                Hexagon box = stage.Block(Random.Range(0, stage.board.Length));
+                while (box.getOccupant())
+                {
+                    box = stage.Block(Random.Range(0, stage.board.Length));
+                }
+                GameObject enemy = Instantiate(enemies[1].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
+                enemy.GetComponent<Enemy>().setActualBlock(box);
+                enemy.GetComponent<Enemy>().setInitialBlock(box);
+                box.setOccupant(enemy.GetComponent<Character>());
+                CinemachineVirtualCamera camera = Instantiate(enemies[1].GetComponent<Enemy>().ncamera);
+                camera.Follow = enemy.transform;
+                enemy.GetComponent<Enemy>().ncamera = camera;
+                enemies.Add(enemy.GetComponent<Enemy>());
+                players.Add(enemy.GetComponent<Character>());
+            }
+            spawnturns = 0;
+        }
+
         if (allyturn && CheckTurn(allies))
         {
             PlayerReset();
@@ -99,6 +121,7 @@ public class ManagerHARNCKXSHOR : Manager
                 enemies[i].setTurn(1);
                 StartCoroutine(CameraFocus(0.5f * (i + 1), (Enemy)enemies[i]));
             }
+            spawnturns++;
         }
 
         if (!allyturn && CheckTurn(enemies))
@@ -115,6 +138,7 @@ public class ManagerHARNCKXSHOR : Manager
             }
             Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
             focus.Camera();
+            spawnturns++;
         }
     }
 
