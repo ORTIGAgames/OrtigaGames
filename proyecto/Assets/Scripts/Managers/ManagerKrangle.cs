@@ -12,7 +12,6 @@ public class ManagerKrangle : Manager
     public int KrangleNumbers;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
-        KrangleNumbers = enemies.Count;
         allyturn = true;
         Character[] StartingPlayers = GetComponentsInChildren<Character>();
         stage = GetComponentInChildren<Scenery>();
@@ -62,6 +61,7 @@ public class ManagerKrangle : Manager
         Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
         focus.Camera();
         lose = allies.Count;
+        KrangleNumbers = enemies.Count;
     }
     void Update()
     {
@@ -76,9 +76,14 @@ public class ManagerKrangle : Manager
             scene.playWin();
         }
 
-        if(enemies.Count < KrangleNumbers)
+        if(enemies.Count < KrangleNumbers + 1)
         {
-
+            Hexagon box = stage.Block(Random.Range(0, stage.board.Length + 1));
+            while (box.getOccupant())
+            {
+                box = stage.Block(Random.Range(0, stage.board.Length + 1));
+            }
+            Instantiate(enemies[0], box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
         }
 
         if (allyturn && CheckTurn(allies))
