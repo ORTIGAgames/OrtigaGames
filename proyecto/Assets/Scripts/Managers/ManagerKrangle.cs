@@ -59,6 +59,7 @@ public class ManagerKrangle : Manager
         }
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
+        StartCoroutine(ShowObjetive("Protect the generator x turns", 1.0f));
         Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
         focus.Camera();
         lose = allies.Count;
@@ -93,6 +94,7 @@ public class ManagerKrangle : Manager
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
+            StartCoroutine(ShowObjetive("Protect the generator x turns", 1.0f));
             allyturn = false;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -109,6 +111,7 @@ public class ManagerKrangle : Manager
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
+            StartCoroutine(ShowObjetive("Protect the generator x turns", 1.0f));
             allyturn = true;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -135,6 +138,15 @@ public class ManagerKrangle : Manager
     {
         TurnH.SetActive(true);
         TextMeshProUGUI Turn = GameObject.Find("Turn").GetComponent<TextMeshProUGUI>();
+        Turn.text = message;
+        yield return new WaitForSeconds(delay);
+        TurnH.SetActive(false);
+    }
+
+    IEnumerator ShowObjetive(string message, float delay)
+    {
+        TurnH.SetActive(true);
+        TextMeshProUGUI Turn = GameObject.Find("Objetive").GetComponent<TextMeshProUGUI>();
         Turn.text = message;
         yield return new WaitForSeconds(delay);
         TurnH.SetActive(false);

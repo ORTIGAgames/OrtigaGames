@@ -60,6 +60,7 @@ public class ManagerIxodas : Manager
         }
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
+        StartCoroutine(ShowObjetive("Don´t let them get to the exit", 1.0f));
         Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
         focus.Camera();
         lose = allies.Count;
@@ -89,6 +90,7 @@ public class ManagerIxodas : Manager
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
+            StartCoroutine(ShowObjetive("Don´t let them get to the exit", 1.0f));
             allyturn = false;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -105,6 +107,7 @@ public class ManagerIxodas : Manager
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
+            StartCoroutine(ShowObjetive("Don´t let them get to the exit", 1.0f));
             allyturn = true;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -131,6 +134,15 @@ public class ManagerIxodas : Manager
     {
         TurnH.SetActive(true);
         TextMeshProUGUI Turn = GameObject.Find("Turn").GetComponent<TextMeshProUGUI>();
+        Turn.text = message;
+        yield return new WaitForSeconds(delay);
+        TurnH.SetActive(false);
+    }
+
+    IEnumerator ShowObjetive(string message, float delay)
+    {
+        TurnH.SetActive(true);
+        TextMeshProUGUI Turn = GameObject.Find("Objetive").GetComponent<TextMeshProUGUI>();
         Turn.text = message;
         yield return new WaitForSeconds(delay);
         TurnH.SetActive(false);
