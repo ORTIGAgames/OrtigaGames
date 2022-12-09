@@ -6,10 +6,14 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 
-public class ManagerHimenopios : Manager
+public class ManagerIxodas : Manager
 {
+
+    public List<Hexagon> hexagons; 
+
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
+      
         allyturn = true;
         Character[] StartingPlayers = GetComponentsInChildren<Character>();
         stage = GetComponentInChildren<Scenery>();
@@ -31,18 +35,18 @@ public class ManagerHimenopios : Manager
             if (c.getSide() == "Ally")
             {
                 allies.Add(c);
-                box = stage.Block(Random.Range(0, 6));
+                box = stage.Block(Random.Range(23, 29));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(0, 6));
-                }                
+                    box = stage.Block(Random.Range(23, 29));
+                }
             }
             else
             {
-                box = stage.Block(Random.Range(60, 71));
+                box = stage.Block(Random.Range(79, 94));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(60, 71));
+                    box = stage.Block(Random.Range(79, 94));
                 }
                 c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
                 c.myAnimator.speed = Random.Range(0.5f, 1.6f);
@@ -62,27 +66,23 @@ public class ManagerHimenopios : Manager
     }
     void Update()
     {
-        if (allies.Count == 1)
-        {
-            if (enemies.Count <= 0)
-            {
-                scene.playTutorialWin();
-            }
-        }
-        else
-        {
-            if (enemies.Count <= 0)
-            {
-                scene.playWin();
+        foreach (Hexagon h in hexagons){
+            if (h.getOccupant()){
+                if (h.getOccupant().GetComponent<Enemy>())
+                {
+                    scene.playLose();
+                }
             }
         }
 
-        if (allies.Count < lose)
+    
+
+        if (enemies.Count == 0)
         {
-            scene.playLose();
+            scene.playWin();
         }
 
-        
+      
 
         if (allyturn && CheckTurn(allies))
         {
@@ -97,13 +97,14 @@ public class ManagerHimenopios : Manager
                 enemies[i].setTurn(1);
                 StartCoroutine(CameraFocus(0.5f * (i + 1), (Enemy)enemies[i]));
             }
+
         }
 
         if (!allyturn && CheckTurn(enemies))
         {
             PlayerReset();
             stage.Reset();
-            StartCoroutine(ShowMessage("Ally turn", 1.0f)); 
+            StartCoroutine(ShowMessage("Ally turn", 1.0f));
             allyturn = true;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -113,6 +114,7 @@ public class ManagerHimenopios : Manager
             }
             Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
             focus.Camera();
+          
         }
     }
 
@@ -129,7 +131,7 @@ public class ManagerHimenopios : Manager
     {
         TurnH.SetActive(true);
         TextMeshProUGUI Turn = GameObject.Find("Turn").GetComponent<TextMeshProUGUI>();
-        Turn.text = message;      
+        Turn.text = message;
         yield return new WaitForSeconds(delay);
         TurnH.SetActive(false);
     }
@@ -155,7 +157,7 @@ public class ManagerHimenopios : Manager
             attacker = Figther1;
             defender = Figther2;
             stage.Reset();
-            if(Figther1.GetComponent<Abilities>())
+            if (Figther1.GetComponent<Abilities>())
                 CombatActivate(Figther1.GetComponent<Abilities>().ActiveIcon);
         }
     }
@@ -182,7 +184,7 @@ public class ManagerHimenopios : Manager
 
     public override void CollisionUp()
     {
-        foreach(Character c in players)
+        foreach (Character c in players)
             c.GetComponent<BoxCollider>().enabled = true;
 
     }
@@ -242,7 +244,7 @@ public class ManagerHimenopios : Manager
         if (Image)//cambiar cuando todos tengan habilidad
         {
             CombatH.Ability.GetComponent<Image>().sprite = Image;
-        }    
+        }
         CombatH.gameObject.SetActive(true);
         if (attacker.getSide() == defender.getSide())
         {
@@ -259,9 +261,9 @@ public class ManagerHimenopios : Manager
             else
             {
                 CombatH.Ability.gameObject.SetActive(true);
-                CombatH.Action.gameObject.SetActive(true);                           
+                CombatH.Action.gameObject.SetActive(true);
             }
-        }     
+        }
     }
 
     public override void CombatDeactivate()
@@ -276,5 +278,4 @@ public class ManagerHimenopios : Manager
     {
         activeAlly = a;
     }
-
 }

@@ -20,7 +20,7 @@ public class TutorialCombat : MonoBehaviour
     public void Open()
     {
         menuTutorial.SetActive(true);
-        menuTutorial.layer = -1;
+        menuTutorial.layer = 5;
         game.CollisionDown();
         foreach (Button b in buttons)
         {

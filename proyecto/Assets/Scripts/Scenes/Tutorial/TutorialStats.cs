@@ -26,7 +26,7 @@ public class TutorialStats : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log(step);
+        
         firstStats = BetweenScenesControler.firstStats;
         
     }
