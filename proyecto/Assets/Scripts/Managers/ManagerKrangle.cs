@@ -10,6 +10,7 @@ public class ManagerKrangle : Manager
 {
     public int turnsCompleted;
     public int KrangleNumbers;
+    public GameObject prefab;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
@@ -78,12 +79,13 @@ public class ManagerKrangle : Manager
 
         if(enemies.Count < KrangleNumbers + 1)
         {
-            Hexagon box = stage.Block(Random.Range(0, stage.board.Length + 1));
+            Hexagon box = stage.Block(Random.Range(0, stage.board.Length));
             while (box.getOccupant())
             {
-                box = stage.Block(Random.Range(0, stage.board.Length + 1));
+                box = stage.Block(Random.Range(0, stage.board.Length));
             }
-            enemies.Add(Instantiate(enemies[0], box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity));
+            GameObject enemy = Instantiate(prefab, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
+            enemies.Add(enemy.GetComponent<Enemy>());
         }
 
         if (allyturn && CheckTurn(allies))

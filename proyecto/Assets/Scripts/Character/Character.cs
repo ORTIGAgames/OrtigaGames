@@ -34,12 +34,9 @@ public abstract class Character : MonoBehaviour
     public virtual void Awake()
     {
         Abilities = GetComponent<Abilities>();
-        game = GetComponentInParent<Manager>();
+        game = GameObject.Find("Manager").GetComponent<Manager>();
         style = GetComponent<Combat>();
-        targetable = false;
-        healthBar = GetComponentInChildren<HealthBar>();
-        print(GetComponentInChildren<HealthBar>());
-        
+        targetable = false;       
         //displacement = GetComponent<Movement>();//uso de la clase movement en un futuro si hay posiblidad para movimientos especiales
     }
 
