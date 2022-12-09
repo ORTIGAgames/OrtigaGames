@@ -93,6 +93,7 @@ public class ManagerKrangle : Manager
             enemy.GetComponent<Enemy>().ncamera = camera;
             enemies.Add(enemy.GetComponent<Enemy>());
             players.Add(enemy.GetComponent<Character>());
+            enemy.GetComponent<Character>().myAnimator.SetTrigger("Appear");
         }
 
         if (allyturn && CheckTurn(allies))
