@@ -27066,7 +27066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346464915774287618, guid: e99a95a05104fb94196e8a1860151f55, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4346464915774287618, guid: e99a95a05104fb94196e8a1860151f55, type: 3}
       propertyPath: sounds.Array.data[10].pitch
@@ -30942,6 +30942,7 @@ MonoBehaviour:
   turnsCompleted: 0
   KrangleNumbers: 0
   prefab: {fileID: 661938348}
+  prefabcamera: {fileID: 4125816601627668668}
 --- !u!1001 &1734114950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38717,7 +38718,7 @@ PrefabInstance:
     - target: {fileID: 3571311372393662859, guid: 85bc5af588f8d25418271c944cb0af4d, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 2119907961}
+      objectReference: {fileID: 0}
     - target: {fileID: 7627362773069485529, guid: 85bc5af588f8d25418271c944cb0af4d, type: 3}
       propertyPath: m_RootOrder
       value: 2

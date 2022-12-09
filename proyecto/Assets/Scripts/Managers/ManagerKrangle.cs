@@ -11,6 +11,7 @@ public class ManagerKrangle : Manager
     public int turnsCompleted;
     public int KrangleNumbers;
     public GameObject prefab;
+    public CinemachineVirtualCamera prefabcamera;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
@@ -78,15 +79,21 @@ public class ManagerKrangle : Manager
             scene.playWin();
         }
 
-        if(enemies.Count < KrangleNumbers + 1)
+        if(enemies.Count < KrangleNumbers + 2)
         {
-            Hexagon box = stage.Block(Random.Range(0, stage.board.Length));
+            Hexagon box = stage.Block(Random.Range(8, 11));
             while (box.getOccupant())
             {
-                box = stage.Block(Random.Range(0, stage.board.Length));
+                box = stage.Block(Random.Range(8, 11));
             }
             GameObject enemy = Instantiate(prefab, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
+            enemy.GetComponent<Enemy>().setActualBlock(box);
+            enemy.GetComponent<Enemy>().setInitialBlock(box);
+            box.setOccupant(enemy.GetComponent<Character>());
+            CinemachineVirtualCamera camera = Instantiate(prefabcamera);
+            camera.Follow = enemy.transform;
             enemies.Add(enemy.GetComponent<Enemy>());
+            players.Add(enemy.GetComponent<Character>());
         }
 
         if (allyturn && CheckTurn(allies))
