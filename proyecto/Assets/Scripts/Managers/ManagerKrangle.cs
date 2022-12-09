@@ -73,7 +73,7 @@ public class ManagerKrangle : Manager
             scene.playLose();
         }
 
-        if (turnsCompleted == 10)
+        if (turnsCompleted == 20)
         {
             scene.playWin();
         }
@@ -129,8 +129,7 @@ public class ManagerKrangle : Manager
                 a.setTurn(1);
             }
             Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
-            focus.Camera();
-           
+            focus.Camera();          
         }
     }
 
@@ -158,9 +157,9 @@ public class ManagerKrangle : Manager
         TextMeshProUGUI Turn = GameObject.Find("Objective").GetComponent<TextMeshProUGUI>();
         if(delay == 4.05f)
         {
-            Turn.text = (10 - turnsCompleted) + message;
+            Turn.text = (20 - turnsCompleted) + message;
         }
-        else { Turn.text = message; }
+        else Turn.text = message; 
         yield return new WaitForSeconds(delay);
         ObjectiveH.SetActive(false);
     }
