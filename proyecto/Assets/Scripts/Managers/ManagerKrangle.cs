@@ -73,7 +73,7 @@ public class ManagerKrangle : Manager
             scene.playLose();
         }
 
-        if (turnsCompleted == 20)
+        if (turnsCompleted == 10)
         {
             scene.playWin();
         }
@@ -120,6 +120,7 @@ public class ManagerKrangle : Manager
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
+            StartCoroutine(ShowObjetive(" turns left", 4.05f));
             allyturn = true;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -129,7 +130,7 @@ public class ManagerKrangle : Manager
             }
             Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
             focus.Camera();
-            turnsCompleted++;
+           
         }
     }
 
@@ -155,7 +156,11 @@ public class ManagerKrangle : Manager
     {
         ObjectiveH.SetActive(true);
         TextMeshProUGUI Turn = GameObject.Find("Objective").GetComponent<TextMeshProUGUI>();
-        Turn.text = message;
+        if(delay == 4.05f)
+        {
+            Turn.text = (10 - turnsCompleted) + message;
+        }
+        else { Turn.text = message; }
         yield return new WaitForSeconds(delay);
         ObjectiveH.SetActive(false);
     }
