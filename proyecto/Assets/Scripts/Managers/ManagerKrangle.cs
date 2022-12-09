@@ -83,7 +83,7 @@ public class ManagerKrangle : Manager
             {
                 box = stage.Block(Random.Range(0, stage.board.Length + 1));
             }
-            Instantiate(enemies[0], box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
+            enemies.Add(Instantiate(enemies[0], box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity));
         }
 
         if (allyturn && CheckTurn(allies))
