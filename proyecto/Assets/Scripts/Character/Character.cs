@@ -36,7 +36,7 @@ public abstract class Character : MonoBehaviour
         Abilities = GetComponent<Abilities>();
         game = GameObject.Find("Manager").GetComponent<Manager>();
         style = GetComponent<Combat>();
-        targetable = false;       
+        targetable = false;
         //displacement = GetComponent<Movement>();//uso de la clase movement en un futuro si hay posiblidad para movimientos especiales
     }
 

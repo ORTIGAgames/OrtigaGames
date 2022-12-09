@@ -49,7 +49,7 @@ public class ManagerHARNCKXSHOR : Manager
                 enemies.Add(c);
             }
             box.setOccupant(c);
-            c.transform.position = box.transform.position + new Vector3(0, .085f, -0.05f);
+            c.transform.position = box.transform.position + new Vector3(0, c.GetComponent<BoxCollider>().size.y / 40, -0.05f);
             c.setInitialBlock(box);
             c.setActualBlock(box);
             c.setTurn(1);

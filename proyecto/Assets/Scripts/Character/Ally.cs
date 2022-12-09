@@ -28,7 +28,7 @@ public class Ally : Character
         if(game.activeAlly != this && !game.CombatH.gameObject.activeSelf)
         {
             if(getInitialBlock().transform.position != this.transform.position)
-                this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, -0.05f);                  
+                this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, -this.transform.localScale.z);                  
             //this.GetComponent<BoxCollider>().enabled = true;
         }
         healthBar.gameObject.SetActive((game.activeAlly == this || game.lastClicked == this) ? true : false);
