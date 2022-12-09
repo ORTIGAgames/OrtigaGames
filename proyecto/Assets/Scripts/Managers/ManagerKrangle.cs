@@ -10,8 +10,6 @@ public class ManagerKrangle : Manager
 {
     public int turnsCompleted;
     public int KrangleNumbers;
-    public GameObject prefab;
-    public CinemachineVirtualCamera prefabcamera;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
@@ -74,7 +72,7 @@ public class ManagerKrangle : Manager
             scene.playLose();
         }
 
-        if (turnsCompleted == 2)
+        if (turnsCompleted == 10)
         {
             scene.playWin();
         }
@@ -86,12 +84,13 @@ public class ManagerKrangle : Manager
             {
                 box = stage.Block(Random.Range(8, 11));
             }
-            GameObject enemy = Instantiate(prefab, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
+            GameObject enemy = Instantiate(enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
             enemy.GetComponent<Enemy>().setActualBlock(box);
             enemy.GetComponent<Enemy>().setInitialBlock(box);
             box.setOccupant(enemy.GetComponent<Character>());
-            CinemachineVirtualCamera camera = Instantiate(prefabcamera);
+            CinemachineVirtualCamera camera = Instantiate(enemies[0].GetComponent<Enemy>().ncamera);
             camera.Follow = enemy.transform;
+            enemy.GetComponent<Enemy>().ncamera = camera;
             enemies.Add(enemy.GetComponent<Enemy>());
             players.Add(enemy.GetComponent<Character>());
         }
@@ -108,6 +107,8 @@ public class ManagerKrangle : Manager
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
+                print(enemies[i]);
+                print(enemies[i].GetComponent<Enemy>().ncamera.Follow);
                 StartCoroutine(CameraFocus(0.5f * (i + 1), (Enemy)enemies[i]));
             }
             turnsCompleted++;
