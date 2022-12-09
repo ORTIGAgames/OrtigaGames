@@ -2527,7 +2527,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c5cc3aed547f30c4aba59f07271ed42b, type: 2}
     - target: {fileID: 919132149155446097, guid: 224f8f174d238144f89d7c2d22bccb92, type: 3}
       propertyPath: m_Name
-      value: CasillaNave2 (3)
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 224f8f174d238144f89d7c2d22bccb92, type: 3}
@@ -5742,7 +5742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 66bb1c90e8110a247b20fa053ac04e9d, type: 3}
       propertyPath: m_Name
-      value: CasillaNave1
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66bb1c90e8110a247b20fa053ac04e9d, type: 3}
@@ -6740,7 +6740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 66bb1c90e8110a247b20fa053ac04e9d, type: 3}
       propertyPath: m_Name
-      value: CasillaNave1 (1)
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66bb1c90e8110a247b20fa053ac04e9d, type: 3}
@@ -14637,7 +14637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 66bb1c90e8110a247b20fa053ac04e9d, type: 3}
       propertyPath: m_Name
-      value: CasillaNave1 (2)
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66bb1c90e8110a247b20fa053ac04e9d, type: 3}
@@ -23503,7 +23503,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c5cc3aed547f30c4aba59f07271ed42b, type: 2}
     - target: {fileID: 919132149155446097, guid: 224f8f174d238144f89d7c2d22bccb92, type: 3}
       propertyPath: m_Name
-      value: CasillaNave2 (1)
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 224f8f174d238144f89d7c2d22bccb92, type: 3}
@@ -32077,7 +32077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 66bb1c90e8110a247b20fa053ac04e9d, type: 3}
       propertyPath: m_Name
-      value: CasillaNave1 (3)
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66bb1c90e8110a247b20fa053ac04e9d, type: 3}
@@ -36838,7 +36838,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c5cc3aed547f30c4aba59f07271ed42b, type: 2}
     - target: {fileID: 919132149155446097, guid: 224f8f174d238144f89d7c2d22bccb92, type: 3}
       propertyPath: m_Name
-      value: CasillaNave2 (2)
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 224f8f174d238144f89d7c2d22bccb92, type: 3}
@@ -37172,7 +37172,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c5cc3aed547f30c4aba59f07271ed42b, type: 2}
     - target: {fileID: 919132149155446097, guid: 224f8f174d238144f89d7c2d22bccb92, type: 3}
       propertyPath: m_Name
-      value: CasillaNave2
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 224f8f174d238144f89d7c2d22bccb92, type: 3}
