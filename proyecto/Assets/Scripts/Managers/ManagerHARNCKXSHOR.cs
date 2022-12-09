@@ -31,24 +31,17 @@ public class ManagerHARNCKXSHOR : Manager
             Hexagon box;
             if (c.getSide() == "Ally")
             {               
-                if (allies.Count == 0)
-                {
-                    box = stage.Block(16);
-                }
-                else
+                box = stage.Block(Random.Range(7, 13));
+                while (box.getOccupant())
                 {
                     box = stage.Block(Random.Range(7, 13));
-                    while (box.getOccupant())
-                    {
-                        box = stage.Block(Random.Range(7, 13));
-                    }
                 }
                 allies.Add(c);
             }
             else
             {
                 if(enemies.Count == 0){
-                    box = stage.Block(0);
+                    box = stage.Block(1);
                     stage.Block(1).setOccupant(c);
                     stage.Block(46).setOccupant(c);
                     stage.Block(47).setOccupant(c);

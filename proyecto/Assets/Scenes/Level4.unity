@@ -1780,8 +1780,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.000061035156, y: -0.00061416626, z: 0}
+  m_Size: {x: 9, y: 4.17, z: 2}
+  m_Center: {x: 0.000061035156, y: -1.39, z: 0}
 --- !u!212 &123731552
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5873,8 +5873,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.000061035156, y: -0.00061416626, z: 0}
+  m_Size: {x: 9, y: 4.17, z: 2}
+  m_Center: {x: 0.000061035156, y: -1.39, z: 0}
 --- !u!212 &325864647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7812,8 +7812,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.00004386902, y: 0.00008678436, z: -0.000015258789}
+  m_Size: {x: 9, y: 4.17, z: 2}
+  m_Center: {x: 0.00004386902, y: -1.39, z: -0.000015258789}
 --- !u!212 &457790772
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10988,8 +10988,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.000061035156, y: -0.00061416626, z: 0}
+  m_Size: {x: 9, y: 4.17, z: 2}
+  m_Center: {x: 0.000061035156, y: -1.39, z: 0}
 --- !u!212 &692281949
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11317,8 +11317,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.000061035156, y: -0.00061416626, z: 0}
+  m_Size: {x: 9, y: 4.17, z: 2}
+  m_Center: {x: 0.000061035156, y: -1.39, z: 0}
 --- !u!212 &700649310
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14681,8 +14681,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.000061035156, y: -0.00061416626, z: 0}
+  m_Size: {x: 9, y: 4.17, z: 2}
+  m_Center: {x: 0.000061035156, y: -1.39, z: 0}
 --- !u!212 &879610738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16547,8 +16547,8 @@ GameObject:
   - component: {fileID: 970897715}
   - component: {fileID: 970897714}
   - component: {fileID: 970897710}
+  - component: {fileID: 970897716}
   - component: {fileID: 970897713}
-  - component: {fileID: 970897712}
   - component: {fileID: 970897711}
   m_Layer: 0
   m_Name: minion1
@@ -16637,19 +16637,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &970897712
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970897707}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.000061035156, y: -0.00061416626, z: 0}
 --- !u!212 &970897713
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16728,6 +16715,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
+--- !u!65 &970897716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970897707}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.06, y: 4.17, z: 1.72}
+  m_Center: {x: 0, y: -1.39, z: 0}
 --- !u!1 &976100128
 GameObject:
   m_ObjectHideFlags: 0
@@ -29307,8 +29307,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.000061035156, y: -0.00061416626, z: 0}
+  m_Size: {x: 9, y: 4.17, z: 2}
+  m_Center: {x: 0.000061035156, y: -1.39, z: 0}
 --- !u!212 &1699390445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35332,8 +35332,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
-  m_Center: {x: 0.000061035156, y: -0.00061416626, z: 0}
+  m_Size: {x: 9, y: 4.17, z: 2}
+  m_Center: {x: 0.000061035156, y: -1.39, z: 0}
 --- !u!212 &2047699523
 SpriteRenderer:
   m_ObjectHideFlags: 0
