@@ -39155,7 +39155,8 @@ MonoBehaviour:
   attacker: {fileID: 0}
   defender: {fileID: 0}
   hexagons:
-  - {fileID: 2729145}
+  - {fileID: 782684270}
+  - {fileID: 431417102}
 --- !u!4 &1995151890
 Transform:
   m_ObjectHideFlags: 0
