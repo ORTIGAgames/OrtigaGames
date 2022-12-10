@@ -58,4 +58,6 @@ public class BetweenScenesControler : MonoBehaviour
 
     public static bool firstTime = true;
     public static bool firstStats = true;
+
+    public static int levelsCompleted = 0;
 }
