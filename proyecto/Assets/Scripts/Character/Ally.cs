@@ -32,6 +32,8 @@ public class Ally : Character
             this.GetComponent<BoxCollider>().enabled = true;
         }
         healthBar.gameObject.SetActive((game.activeAlly == this || game.lastClicked == this) ? true : false);
+        if (Health < MaxHealth / 4) ActualFace = Face[1];
+        else ActualFace = Face[0];
     }
     void LoadData()
     {
@@ -74,7 +76,7 @@ public class Ally : Character
             game.lastClicked = this;
             game.InteractionActivate();
             game.setActiveAlly(this);
-            game.CharacterActivate(Face, NameIcon, Damage.ToString(), Defense.ToString(), MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description, this.GetComponent<Abilities>().icon);
+            game.CharacterActivate(ActualFace, NameIcon, Damage.ToString(), Defense.ToString(), MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description, this.GetComponent<Abilities>().icon);
             game.lastAction = this.InitialBlock;
             this.ActualBlock = this.InitialBlock;
             game.activeAlly.GetComponent<BoxCollider>().enabled = false;

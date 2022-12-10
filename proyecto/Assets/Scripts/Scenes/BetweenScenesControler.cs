@@ -28,7 +28,7 @@ public class BetweenScenesControler : MonoBehaviour
             "Shoots with its bazooka and with its ability it overloads its weapon by sending a burster missile that spreads the damage over an area." } 
     }; //En orden, backgrounds, descripcion y estilo de combate
     public static int[,] enemies = new int[6, 3] { { 16, 6, 2 }, { 12, 8, 1 }, { 10, 7, 2 }, { 20, 5, 10 }, { 100, 10, 7 }, { 10, 8, 1 } };
-    public static string[] namesEnemies = new string[6] { "M. Himenopio", "F. Himenopio", "Krandle", "Ixoda", "HARNCKXSHOR", "Minion" };
+    public static string[] namesEnemies = new string[6] { "M. Himenopio", "F. Himenopio", "Krandle", "Ixoda", "BOSS", "Minion" };
     public static string[,] backgroundsEnemies = new string[3, 6] { 
         { "The himenopios are alien species native to Declan's planet.",
             "The himenopios are alien species native to Declan's planet.",

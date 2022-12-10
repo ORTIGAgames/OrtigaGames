@@ -23,7 +23,8 @@ public abstract class Character : MonoBehaviour
     [SerializeField] protected Hexagon ActualBlock;
     [SerializeField] protected Combat style;
     [SerializeField] protected bool targetable;
-    [SerializeField] protected Sprite Face;
+    [SerializeField] protected List<Sprite> Face = new List<Sprite>();
+    [SerializeField] protected Sprite ActualFace;
     //[SerializeField] Movement displacement; posible uso en mejoras para diferentes movimientos variados
     public HealthBar healthBar;
     public Animator myAnimator;
@@ -112,11 +113,11 @@ public abstract class Character : MonoBehaviour
 
     public virtual void setFace(Sprite c)
     {
-        Face = c;
+        ActualFace = c;
     }
     public virtual Sprite getFace()
     {
-        return Face;
+        return ActualFace;
     }
 
     public virtual string getName()

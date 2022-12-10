@@ -954,7 +954,10 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: a5b25c97ec6330e4092bd952be21b684, type: 3}
+  Face:
+  - {fileID: 21300000, guid: a5b25c97ec6330e4092bd952be21b684, type: 3}
+  - {fileID: 21300000, guid: 3ef9c3c57aa43834599f4fc427eeb842, type: 3}
+  ActualFace: {fileID: 21300000, guid: a5b25c97ec6330e4092bd952be21b684, type: 3}
   healthBar: {fileID: 1635304379}
   myAnimator: {fileID: 59680250}
   NameIcon: {fileID: 21300000, guid: e748fb48eeee7e0458bbc7b1fa4d5ec1, type: 3}
@@ -2326,6 +2329,7 @@ MonoBehaviour:
   character: {fileID: 1942247700}
   draggin: {fileID: 0}
   ImageButton: {fileID: 142800748}
+  images: []
 --- !u!114 &142800748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7417,6 +7421,9 @@ MonoBehaviour:
   character: {fileID: 680665107}
   draggin: {fileID: 2104920237}
   ImageButton: {fileID: 460330472}
+  images:
+  - {fileID: 21300000, guid: 012735e13970ddd409d269b3bf1988b8, type: 3}
+  - {fileID: 21300000, guid: 152f514bc7db6d547af912e3cc0273d8, type: 3}
 --- !u!114 &460330472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10044,6 +10051,9 @@ MonoBehaviour:
   character: {fileID: 1654318295}
   draggin: {fileID: 2104920237}
   ImageButton: {fileID: 602404916}
+  images:
+  - {fileID: 21300000, guid: 0f15672b2f0e3694b996cfcb4cd3fef6, type: 3}
+  - {fileID: 21300000, guid: 9b7d94a963bf5b84387054acb1a72115, type: 3}
 --- !u!114 &602404916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10379,7 +10389,10 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: 03b2cc37f22c4464d8fe996cae496e84, type: 3}
+  Face:
+  - {fileID: 21300000, guid: 03b2cc37f22c4464d8fe996cae496e84, type: 3}
+  - {fileID: 21300000, guid: 471c8f7d95677434e9c395585dcdf5d7, type: 3}
+  ActualFace: {fileID: 21300000, guid: 03b2cc37f22c4464d8fe996cae496e84, type: 3}
   healthBar: {fileID: 544885485}
   myAnimator: {fileID: 622407196}
   NameIcon: {fileID: 21300000, guid: d4fff22d70cdacb46a29d62206cf3f99, type: 3}
@@ -11127,7 +11140,10 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: 152f514bc7db6d547af912e3cc0273d8, type: 3}
+  Face:
+  - {fileID: 21300000, guid: 152f514bc7db6d547af912e3cc0273d8, type: 3}
+  - {fileID: 21300000, guid: 012735e13970ddd409d269b3bf1988b8, type: 3}
+  ActualFace: {fileID: 21300000, guid: 152f514bc7db6d547af912e3cc0273d8, type: 3}
   healthBar: {fileID: 1797617208}
   myAnimator: {fileID: 680665108}
   NameIcon: {fileID: 21300000, guid: 7f3c20461d5fffd4aa3b74f024cc39d0, type: 3}
@@ -11497,6 +11513,9 @@ MonoBehaviour:
   character: {fileID: 622407195}
   draggin: {fileID: 2104920237}
   ImageButton: {fileID: 702917191}
+  images:
+  - {fileID: 21300000, guid: 471c8f7d95677434e9c395585dcdf5d7, type: 3}
+  - {fileID: 21300000, guid: 03b2cc37f22c4464d8fe996cae496e84, type: 3}
 --- !u!114 &702917191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13294,6 +13313,7 @@ MonoBehaviour:
   character: {fileID: 1587629860}
   draggin: {fileID: 0}
   ImageButton: {fileID: 803523866}
+  images: []
 --- !u!114 &803523866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14039,7 +14059,8 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
+  Face: []
+  ActualFace: {fileID: 0}
   healthBar: {fileID: 219341404}
   myAnimator: {fileID: 862337043}
   NameIcon: {fileID: 0}
@@ -15280,6 +15301,7 @@ MonoBehaviour:
   character: {fileID: 59680249}
   draggin: {fileID: 0}
   ImageButton: {fileID: 926031487}
+  images: []
 --- !u!114 &926031487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15569,6 +15591,9 @@ MonoBehaviour:
   character: {fileID: 1587629860}
   draggin: {fileID: 2104920237}
   ImageButton: {fileID: 941825688}
+  images:
+  - {fileID: 21300000, guid: e087e635353bdea409c8aedc73352588, type: 3}
+  - {fileID: 21300000, guid: 8259f100bec2c0d439913dafe9578a37, type: 3}
 --- !u!114 &941825688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21279,7 +21304,8 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
+  Face: []
+  ActualFace: {fileID: 0}
   healthBar: {fileID: 356002855}
   myAnimator: {fileID: 1335576455}
   NameIcon: {fileID: 0}
@@ -25384,7 +25410,8 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 0}
+  Face: []
+  ActualFace: {fileID: 0}
   healthBar: {fileID: 2011239201}
   myAnimator: {fileID: 1570788599}
   NameIcon: {fileID: 0}
@@ -26026,7 +26053,10 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: 8259f100bec2c0d439913dafe9578a37, type: 3}
+  Face:
+  - {fileID: 21300000, guid: 8259f100bec2c0d439913dafe9578a37, type: 3}
+  - {fileID: 21300000, guid: e087e635353bdea409c8aedc73352588, type: 3}
+  ActualFace: {fileID: 21300000, guid: 8259f100bec2c0d439913dafe9578a37, type: 3}
   healthBar: {fileID: 1785085994}
   myAnimator: {fileID: 1587629861}
   NameIcon: {fileID: 21300000, guid: bf3b7e71d4e17ae42b091b822ec954b6, type: 3}
@@ -26557,7 +26587,8 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 0}
+  Face: []
+  ActualFace: {fileID: 0}
   healthBar: {fileID: 1113559165}
   myAnimator: {fileID: 1616285368}
   NameIcon: {fileID: 0}
@@ -27181,7 +27212,10 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: 9b7d94a963bf5b84387054acb1a72115, type: 3}
+  Face:
+  - {fileID: 21300000, guid: 9b7d94a963bf5b84387054acb1a72115, type: 3}
+  - {fileID: 21300000, guid: 0f15672b2f0e3694b996cfcb4cd3fef6, type: 3}
+  ActualFace: {fileID: 21300000, guid: 9b7d94a963bf5b84387054acb1a72115, type: 3}
   healthBar: {fileID: 230675741}
   myAnimator: {fileID: 1654318296}
   NameIcon: {fileID: 21300000, guid: 28f3092f45c5a5d4d9614da5c27aa6fd, type: 3}
@@ -29076,6 +29110,9 @@ MonoBehaviour:
   character: {fileID: 59680249}
   draggin: {fileID: 2104920237}
   ImageButton: {fileID: 1769424713}
+  images:
+  - {fileID: 21300000, guid: 3ef9c3c57aa43834599f4fc427eeb842, type: 3}
+  - {fileID: 21300000, guid: a5b25c97ec6330e4092bd952be21b684, type: 3}
 --- !u!114 &1769424713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29797,6 +29834,9 @@ MonoBehaviour:
   character: {fileID: 1942247700}
   draggin: {fileID: 2104920237}
   ImageButton: {fileID: 1799168931}
+  images:
+  - {fileID: 21300000, guid: c6497d29f7a0c9f4b87550f43c3c87d3, type: 3}
+  - {fileID: 21300000, guid: 94fe420834c779741a4a7a1904e9d50b, type: 3}
 --- !u!114 &1799168931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32471,7 +32511,10 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: 94fe420834c779741a4a7a1904e9d50b, type: 3}
+  Face:
+  - {fileID: 21300000, guid: 94fe420834c779741a4a7a1904e9d50b, type: 3}
+  - {fileID: 21300000, guid: c6497d29f7a0c9f4b87550f43c3c87d3, type: 3}
+  ActualFace: {fileID: 21300000, guid: 94fe420834c779741a4a7a1904e9d50b, type: 3}
   healthBar: {fileID: 552792931}
   myAnimator: {fileID: 1942247701}
   NameIcon: {fileID: 21300000, guid: 3facf3209157ce14aa2b0406d79ae219, type: 3}
@@ -33040,6 +33083,7 @@ MonoBehaviour:
   character: {fileID: 622407195}
   draggin: {fileID: 0}
   ImageButton: {fileID: 1985710730}
+  images: []
 --- !u!114 &1985710730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33467,6 +33511,7 @@ MonoBehaviour:
   character: {fileID: 680665107}
   draggin: {fileID: 0}
   ImageButton: {fileID: 2031430684}
+  images: []
 --- !u!114 &2031430684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33701,7 +33746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039265109}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.12861052, y: 14.581499, z: -28.552689}
+  m_LocalPosition: {x: 0.21308318, y: 14.557678, z: -28.529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35320,7 +35365,8 @@ MonoBehaviour:
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
-  Face: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
+  Face: []
+  ActualFace: {fileID: 0}
   healthBar: {fileID: 906360678}
   myAnimator: {fileID: 2112628155}
   NameIcon: {fileID: 0}
@@ -36101,6 +36147,7 @@ MonoBehaviour:
   character: {fileID: 1654318295}
   draggin: {fileID: 0}
   ImageButton: {fileID: 2143376149}
+  images: []
 --- !u!114 &2143376149
 MonoBehaviour:
   m_ObjectHideFlags: 0
