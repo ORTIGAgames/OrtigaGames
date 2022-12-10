@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,16 @@ public class Krangle : EnemyBehaviour
         Hexagon bestHexagon = hex;
         foreach (Hexagon a in movement)
         {
-            var tempValue = ValueHexagon(a);
-            if (tempValue > value)
+            if (a != null)
             {
-                value = tempValue;
-                bestHexagon = a;
+                var tempValue = ValueHexagon(a);
+                if (tempValue > value)
+                {
+                    value = tempValue;
+                    bestHexagon = a;
+                }
             }
+
         }
         return bestHexagon;
     }
@@ -26,6 +31,7 @@ public class Krangle : EnemyBehaviour
         var value = -1000;
         foreach (Ally a in this.GetComponent<Enemy>().game.allies)
         {
+
             int tempvalue = (40 * 2 - a.getHealth()) - DistanceHexagon(a.getActualBlock());
             if (tempvalue > value)
                 value = tempvalue;
@@ -33,9 +39,18 @@ public class Krangle : EnemyBehaviour
         return value;
     }
 
-    public override int DistanceHexagon(Hexagon goal) //Esto hay que cambiarlo porque xd
+    public override int DistanceHexagon(Hexagon goal)
     {
-        Vector3 goalPos = goal.transform.position;
+        int dx = goal.dx - this.GetComponent<Enemy>().getActualBlock().dx;
+
+        int dy = goal.dy - this.GetComponent<Enemy>().getActualBlock().dy;
+
+        if (Math.Sign(dx) == Math.Sign(dy))
+            return (Math.Abs(dx + dy));
+        else
+            return (Math.Max(Math.Abs(dx), Math.Abs(dy)));
+
+        /*Vector3 goalPos = goal.transform.position;
         Vector3 currentPos = this.GetComponent<Enemy>().getActualBlock().transform.position;
 
         Vector3 distance = goalPos - currentPos;
@@ -108,3 +123,4 @@ public class Krangle : EnemyBehaviour
         }
     }
 }
+
