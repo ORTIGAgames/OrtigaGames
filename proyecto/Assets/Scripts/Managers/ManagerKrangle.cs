@@ -43,10 +43,10 @@ public class ManagerKrangle : Manager
             }
             else
             {
-                box = stage.Block(Random.Range(10, 28));
+                box = stage.Block(Random.Range(0, stage.board.Length));
                 while (box.getOccupant() || box.transform.childCount > 0)
                 {
-                    box = stage.Block(Random.Range(10, 28));
+                    box = stage.Block(Random.Range(0, stage.board.Length));
                 }
                 c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
                 c.myAnimator.speed = Random.Range(0.5f, 1.6f);
@@ -84,7 +84,7 @@ public class ManagerKrangle : Manager
             for(int i = 0; i < 2; i++)
             {
                 Hexagon box = stage.Block(Random.Range(0, stage.board.Length));
-                while (box.getOccupant())
+                while (box.getOccupant() || box.transform.childCount > 0)
                 {
                     box = stage.Block(Random.Range(0, stage.board.Length));
                 }
