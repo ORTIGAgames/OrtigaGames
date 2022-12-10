@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Hexagon : MonoBehaviour
 {
+    public int dx = 0;
+    public int dy = 0;
+
     public Hexagon[] neighbours = new Hexagon[6];
     [SerializeField] Character occupant;
+
+    
     public enum CodeState { Empty, WalkableA, WalkableE, EnemyT, AllyT, Action }
     [SerializeField] CodeState state;
     public Renderer VisualState;

@@ -3847,10 +3847,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 26efd90482c5a2a4d9bc6c5eb0979ef3, type: 3}
   - {fileID: 21300000, guid: c6bddf44298c34a40a02c5e9469d3b99, type: 3}
   levelsImage:
-  - {fileID: 21300000, guid: a47c7ebe5a7259e42b8809368516083d, type: 3}
-  - {fileID: 21300000, guid: 4e016dbad04b7bf4a82479b2e5ca6809, type: 3}
-  - {fileID: 21300000, guid: 2f32e8908ea16dc45a40df73eff782d4, type: 3}
-  - {fileID: 21300000, guid: c29039180b24d7244b81ea675e319e0d, type: 3}
+  - {fileID: 21300000, guid: 9386b343698ab7a4eb275916ac1a079d, type: 3}
+  - {fileID: 21300000, guid: 47614d17c9742e342b0c7145455c6580, type: 3}
+  - {fileID: 21300000, guid: 1ad0b290a5576a24a9c76f769322d52b, type: 3}
+  - {fileID: 21300000, guid: 384858db80e2cc943be6181343874e97, type: 3}
   levelEnemies1:
   - {fileID: 21300000, guid: f3a838744601d664c8215b2e08cf8ce5, type: 3}
   - {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
