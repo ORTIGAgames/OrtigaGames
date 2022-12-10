@@ -77,6 +77,7 @@ public class ManagerKrangle : Manager
         if (turnsCompleted == 20)
         {
             scene.playWin();
+            BetweenScenesControler.level2 = true;
         }
 
         if(turnsSpwan % 2 == 0)

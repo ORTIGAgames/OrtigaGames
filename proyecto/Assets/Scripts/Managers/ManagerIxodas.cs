@@ -80,6 +80,7 @@ public class ManagerIxodas : Manager
         if (enemies.Count == 0)
         {
             scene.playWin();
+            BetweenScenesControler.level3 = true;
         }   
 
         if (allyturn && CheckTurn(allies))

@@ -71,6 +71,31 @@ int upgradePoints;
 
     private void Update()
     {
+        if (BetweenScenesControler.level1 == true)
+        {
+            levels[1].interactable = true;
+        }
+        else
+        {
+            levels[1].interactable = false;
+        }
+        if (BetweenScenesControler.level2 == true)
+        {
+            levels[2].interactable = true;
+        }
+        else
+        {
+            levels[2].interactable = false;
+        }
+        if (BetweenScenesControler.level3 == true)
+        {
+            levels[3].interactable = true;
+        }
+        else
+        {
+            levels[3].interactable = false;
+        }
+
         lifeNumber.text = characterStats[charac,0].ToString();
         attackNumber.text = characterStats[charac, 1].ToString();
         defenseNumber.text = characterStats[charac, 2].ToString();

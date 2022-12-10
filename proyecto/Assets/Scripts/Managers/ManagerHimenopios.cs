@@ -77,6 +77,7 @@ public class ManagerHimenopios : Manager
             if (enemies.Count <= 0)
             {
                 scene.playWin();
+                BetweenScenesControler.level1 = true;
             }
         }
 
