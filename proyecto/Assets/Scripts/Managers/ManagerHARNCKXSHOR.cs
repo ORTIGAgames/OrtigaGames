@@ -32,29 +32,24 @@ public class ManagerHARNCKXSHOR : Manager
             Hexagon box;
             if (c.getSide() == "Ally")
             {               
-                box = stage.Block(Random.Range(7, 13));
+                box = stage.Block(Random.Range(4, 10));
                 while (box.getOccupant())
                 {
-                    box = stage.Block(Random.Range(7, 13));
+                    box = stage.Block(Random.Range(4, 10));
                 }
                 allies.Add(c);
             }
             else
             {
                 if(enemies.Count == 0){
-                    box = stage.Block(1);
-                    stage.Block(1).setOccupant(c);
-                    stage.Block(46).setOccupant(c);
-                    stage.Block(47).setOccupant(c);
-                    stage.Block(13).setOccupant(c);
-                    stage.Block(14).setOccupant(c);
+                    box = stage.Block(0);
                 }
                 else
                 {
-                    box = stage.Block(Random.Range(0, 77));
+                    box = stage.Block(Random.Range(0, stage.board.Length));
                     while (box.getOccupant())
                     {
-                        box = stage.Block(Random.Range(0, 77));
+                        box = stage.Block(Random.Range(0, stage.board.Length));
                     }
                 }
                 c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
