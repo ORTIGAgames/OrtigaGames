@@ -98,7 +98,7 @@ public class ManagerHimenopios : Manager
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
-                StartCoroutine(CameraFocus(0.5f * (i + 1), (Enemy)enemies[i]));
+                StartCoroutine(CameraFocus(1f * (i + 1), (Enemy)enemies[i]));
             }
         }
 
@@ -152,7 +152,7 @@ public class ManagerHimenopios : Manager
     {
         yield return new WaitForSeconds(timer);
         e.Camera();
-        StartCoroutine(Movement(0.5f, e));
+        StartCoroutine(Movement(1f, e));
     }
     IEnumerator Movement(float timer, Enemy e)
     {

@@ -10,6 +10,7 @@ public class ManagerKrangle : Manager
 {
     public int turnsCompleted;
     public int KrangleNumbers;
+    public int turnsSpwan;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
@@ -59,7 +60,7 @@ public class ManagerKrangle : Manager
         }
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
-        StartCoroutine(ShowObjetive("Protect the generator 10 turns", 4.0f));
+        StartCoroutine(ShowObjetive("Protect the generator 20 turns", 4.0f));
         Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
         focus.Camera();
         lose = allies.Count;
@@ -78,23 +79,27 @@ public class ManagerKrangle : Manager
             scene.playWin();
         }
 
-        if(enemies.Count < KrangleNumbers + 2)
+        if(turnsSpwan % 2 == 0)
         {
-            Hexagon box = stage.Block(Random.Range(8, 11));
-            while (box.getOccupant())
+            for(int i = 0; i < 2; i++)
             {
-                box = stage.Block(Random.Range(8, 11));
+                Hexagon box = stage.Block(Random.Range(0, stage.board.Length));
+                while (box.getOccupant())
+                {
+                    box = stage.Block(Random.Range(0, stage.board.Length));
+                }
+                GameObject enemy = Instantiate(enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
+                enemy.GetComponent<Enemy>().setActualBlock(box);
+                enemy.GetComponent<Enemy>().setInitialBlock(box);
+                box.setOccupant(enemy.GetComponent<Character>());
+                CinemachineVirtualCamera camera = Instantiate(enemies[0].GetComponent<Enemy>().ncamera);
+                camera.Follow = enemy.transform;
+                enemy.GetComponent<Enemy>().ncamera = camera;
+                enemies.Add(enemy.GetComponent<Enemy>());
+                players.Add(enemy.GetComponent<Character>());
+                enemy.GetComponent<Character>().myAnimator.SetTrigger("Appear");
             }
-            GameObject enemy = Instantiate(enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
-            enemy.GetComponent<Enemy>().setActualBlock(box);
-            enemy.GetComponent<Enemy>().setInitialBlock(box);
-            box.setOccupant(enemy.GetComponent<Character>());
-            CinemachineVirtualCamera camera = Instantiate(enemies[0].GetComponent<Enemy>().ncamera);
-            camera.Follow = enemy.transform;
-            enemy.GetComponent<Enemy>().ncamera = camera;
-            enemies.Add(enemy.GetComponent<Enemy>());
-            players.Add(enemy.GetComponent<Character>());
-            enemy.GetComponent<Character>().myAnimator.SetTrigger("Appear");
+            turnsSpwan++;
         }
 
         if (allyturn && CheckTurn(allies))
@@ -129,7 +134,8 @@ public class ManagerKrangle : Manager
                 a.setTurn(1);
             }
             Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
-            focus.Camera();          
+            focus.Camera();
+            turnsSpwan++;
         }
     }
 
