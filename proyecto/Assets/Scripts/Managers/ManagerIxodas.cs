@@ -37,7 +37,7 @@ public class ManagerIxodas : Manager
             {
                 allies.Add(c);
                 box = stage.Block(Random.Range(97, 109));
-                while (box.getOccupant())
+                while (box.getOccupant() || (box.transform.childCount > 0))
                 {
                     box = stage.Block(Random.Range(97, 109));
                 }
@@ -45,7 +45,7 @@ public class ManagerIxodas : Manager
             else
             {
                 box = stage.Block(Random.Range(48, 60));
-                while (box.getOccupant())
+                while (box.getOccupant() || (box.transform.childCount > 0))
                 {
                     box = stage.Block(Random.Range(48, 60));
                 }
