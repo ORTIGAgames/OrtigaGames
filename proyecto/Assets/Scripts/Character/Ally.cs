@@ -97,7 +97,7 @@ public class Ally : Character
         {
             if (h != null && !h.getOccupant())
             {
-                if(h.transform.childCount <= 0 || h.transform.GetChild(0).name != "Obstacle" || h.transform.GetChild(0).name != "Obstacle2")
+                if(h.transform.childCount <= 0 || (h.transform.GetChild(0).name != "Obstacle" && h.transform.GetChild(0).name != "Obstacle2"))
                 {
                     h.setState(Hexagon.CodeState.WalkableA);
                     if (i <= ((int)displacement) && h != null)
