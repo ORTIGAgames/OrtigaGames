@@ -16,7 +16,7 @@ public class Ixoda : EnemyBehaviour
         {
             if(a != null)
             {
-                Debug.Log(a.dx);
+                
                 var tempValue = ValueHexagon(a);
                 if (tempValue > value)
                 {
