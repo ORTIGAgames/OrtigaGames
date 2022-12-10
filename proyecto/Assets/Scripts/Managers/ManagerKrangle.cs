@@ -44,7 +44,7 @@ public class ManagerKrangle : Manager
             else
             {
                 box = stage.Block(Random.Range(10, 28));
-                while (box.getOccupant())
+                while (box.getOccupant() || box.transform.childCount > 0)
                 {
                     box = stage.Block(Random.Range(10, 28));
                 }

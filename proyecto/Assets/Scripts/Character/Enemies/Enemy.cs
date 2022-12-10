@@ -71,11 +71,14 @@ public class Enemy : Character
         i++;
         foreach (Hexagon h in t.neighbours)
         {
-            if (h != null && (!h.getOccupant() || h.getOccupant().getSide() == "Enemy"))
+            if (h != null && !h.getOccupant() || h.getOccupant().getSide() == "Enemy")
             {
-                h.setState(Hexagon.CodeState.WalkableE);
-                if (i <= ((int)displacement) && h != null)
-                    Move(h, i);
+                if (h.transform.childCount <= 0 || h.transform.GetChild(0).name != "Obstacle2")
+                {
+                    h.setState(Hexagon.CodeState.WalkableA);
+                    if (i <= ((int)displacement) && h != null)
+                        Move(h, i);
+                }
             }
         }
     }
