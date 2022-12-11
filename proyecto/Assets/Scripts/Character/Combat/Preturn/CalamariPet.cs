@@ -15,8 +15,7 @@ public class CalamariPet : PreTurn
     public void Update()
     {
         timerCount += Time.deltaTime;
-
-        this.transform.position = attached.transform.position + new Vector3(Mathf.Cos(timerCount)/15, .02f, Mathf.Sin(timerCount)/15);
+        if (this.attached) this.transform.position = attached.transform.position + new Vector3(Mathf.Cos(timerCount) / 15, .02f, Mathf.Sin(timerCount) / 15);
     }
     public override void BeforeTurn()
     {

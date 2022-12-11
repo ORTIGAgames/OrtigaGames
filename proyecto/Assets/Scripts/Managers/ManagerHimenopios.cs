@@ -58,9 +58,6 @@ public class ManagerHimenopios : Manager
 
         StartCoroutine(ShowObjetive("Kill all enemies", 4.0f));
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
-
-        Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
-        focus.Camera();
         lose = allies.Count;
     }
     void Update()

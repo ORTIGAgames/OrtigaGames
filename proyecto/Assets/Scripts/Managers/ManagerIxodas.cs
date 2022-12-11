@@ -62,8 +62,6 @@ public class ManagerIxodas : Manager
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
         StartCoroutine(ShowObjetive("Don´t let them get to the exit", 4.0f));
-        Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
-        focus.Camera();
         lose = allies.Count;
     }
     void Update()

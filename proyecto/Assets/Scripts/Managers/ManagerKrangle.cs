@@ -61,8 +61,6 @@ public class ManagerKrangle : Manager
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
         StartCoroutine(ShowObjetive("Protect the generator 20 turns", 4.0f));
-        Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
-        focus.Camera();
         lose = allies.Count;
         KrangleNumbers = enemies.Count;
     }
@@ -126,7 +124,7 @@ public class ManagerKrangle : Manager
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
-            StartCoroutine(ShowObjetive(" turns left", 4.05f));
+            StartCoroutine(ShowObjetive(" turns left", 2.05f));
             allyturn = true;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -162,7 +160,7 @@ public class ManagerKrangle : Manager
     {
         ObjectiveH.SetActive(true);
         TextMeshProUGUI Turn = GameObject.Find("Objective").GetComponent<TextMeshProUGUI>();
-        if(delay == 4.05f)
+        if(delay == 4.05f || delay == 2.05f)
         {
             Turn.text = (20 - turnsCompleted) + message;
         }

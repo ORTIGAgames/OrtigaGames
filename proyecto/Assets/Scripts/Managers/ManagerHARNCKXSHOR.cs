@@ -65,8 +65,6 @@ public class ManagerHARNCKXSHOR : Manager
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
         StartCoroutine(ShowObjetive("End the terror of HARNCKXSHOR", 4.0f));
-        Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
-        focus.Camera();
         lose = allies.Count;
     }
     void Update()

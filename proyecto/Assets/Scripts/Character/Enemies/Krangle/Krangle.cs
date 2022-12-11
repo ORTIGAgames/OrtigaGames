@@ -81,13 +81,13 @@ public class Krangle : EnemyBehaviour
             movement = aux;
         }
 
-        if (!movement.getOccupant())
+        if (!movement.getOccupant() && movement.transform.childCount == 0)
             this.GetComponent<Enemy>().CharacterMove(movement, false);
         else
         {
             foreach (Hexagon h in movement.neighbours)
             {
-                if (h && !h.getOccupant())
+                if (h && !h.getOccupant() && h.transform.childCount == 0)
                 {
                     this.GetComponent<Enemy>().CharacterMove(h, false);
                     break;

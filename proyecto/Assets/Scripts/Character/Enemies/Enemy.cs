@@ -49,8 +49,8 @@ public class Enemy : Character
         }
         else//si el jugador no esta con ningun personaje activo
         {
+            if(game.activeAlly) game.activeAlly.GetComponent<BoxCollider>().enabled = true;
             game.PlayerReset();
-            game.activeAlly.GetComponent<BoxCollider>().enabled = true;
             game.lastClicked = this;
             game.stage.Reset();//para mostrar las casillas donde se esparce en el tablero se resetea
             game.InteractionActivate();
