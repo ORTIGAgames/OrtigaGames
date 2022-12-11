@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 491
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 543
     width: 1429
     height: 404
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 15}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 66
+  controlID: 94
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 67
+  controlID: 95
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 108450
+  m_LastSelectedObjectID: 55580
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -597,9 +597,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 60f2d8d8ab65a154b8dcb763b4621f9b, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 7066604028263325277, guid: 60f2d8d8ab65a154b8dcb763b4621f9b, type: 2}
+  - m_Target: {fileID: 8878292429143964710, guid: abafdd7ee2f037f4b9e9e4d0c1faf363, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1094,22 +1094,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Character/Combat/Abilities/G470
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Character/Combat/Abilities/G470
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\34665\Documents\GitHub\OrtigaGames\proyecto
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 501}
-    m_SelectedIDs: f8610000
-    m_LastClickedID: 25080
-    m_ExpandedIDs: 00000000626100006461000066610000686100006a6100006c6100006e61000070610000726100007461000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 5c6a0000
+    m_LastClickedID: 27228
+    m_ExpandedIDs: 000000005c6a00005e6a0000606a0000626a0000646a0000666a0000686a00006a6a00006c6a00006e6a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1137,7 +1137,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000626100006461000066610000686100006a6100006c6100006e610000706100007261000074610000
+    m_ExpandedIDs: 000000005c6a00005e6a0000606a0000626a0000646a0000666a0000686a00006a6a00006c6a00006e6a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1162,8 +1162,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: eaa70100
-    m_LastClickedInstanceID: 108522
+    m_SelectedInstanceIDs: 1cd90000
+    m_LastClickedInstanceID: 55580
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300002a600000549d0000401c010030f901002ef9010038f9010044f9010046f9010034f9010092650000e25a0000f66100002e620000926a0000
     m_RenameOverlay:
@@ -1265,9 +1265,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a2a70100
-      m_LastClickedID: 108450
-      m_ExpandedIDs: 7e7cffffae92ffff70f8ffff7cf8ffff96f8ffff92f9ffff0afbffffba680000f66800004e690000586a0000286b0000c06c00001ef3000024f3000090f4000096aa010072ab010032ad0100
+      m_SelectedIDs: 1cd90000
+      m_LastClickedID: 55580
+      m_ExpandedIDs: 526effff4486ffff36c6ffffacc7ffff18fbffffa0870000fccd0000bccf00004ad70000b8d90000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1516,9 +1516,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 11.674304, y: -12.987808, z: 18.892134}
+    m_Target: {x: 10.96224, y: -13.286283, z: 19.125788}
     speed: 2
-    m_Value: {x: 11.674304, y: -12.987808, z: 18.892134}
+    m_Value: {x: 10.96224, y: -13.286283, z: 19.125788}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1569,9 +1569,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.25403148, y: 0.2642177, z: -0.07236397, w: 0.9275886}
   m_Size:
-    m_Target: 12.989883
+    m_Target: 15.783812
     speed: 2
-    m_Value: 12.989883
+    m_Value: 15.783812
   m_Ortho:
     m_Target: 0
     speed: 2

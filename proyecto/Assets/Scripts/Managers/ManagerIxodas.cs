@@ -36,19 +36,15 @@ public class ManagerIxodas : Manager
             if (c.getSide() == "Ally")
             {
                 allies.Add(c);
-                box = stage.Block(Random.Range(97, 109));
+                box = stage.Block(Random.Range(0, 6));
                 while (box.getOccupant() || (box.transform.childCount > 0))
                 {
-                    box = stage.Block(Random.Range(97, 109));
+                    box = stage.Block(Random.Range(0, 6));
                 }
             }
             else
             {
-                box = stage.Block(Random.Range(48, 60));
-                while (box.getOccupant() || (box.transform.childCount > 0))
-                {
-                    box = stage.Block(Random.Range(48, 60));
-                }
+                box = stage.Block(6 + enemies.Count);
                 c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
                 c.myAnimator.speed = Random.Range(0.5f, 1.6f);
                 enemies.Add(c);
