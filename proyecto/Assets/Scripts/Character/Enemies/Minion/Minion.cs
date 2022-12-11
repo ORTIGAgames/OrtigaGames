@@ -28,12 +28,12 @@ public class Minion : EnemyBehaviour
 
     public override int ValueHexagon(Hexagon hex)
     {
-        var value = -1000;
+        var value = 1000;
         foreach (Ally a in this.GetComponent<Enemy>().game.allies)
         {
 
             int tempvalue = (40 * 2 - a.getHealth()) - DistanceHexagon(a.getActualBlock());
-            if (tempvalue > value)
+            if (tempvalue < value)
                 value = tempvalue;
         }
         return value;
