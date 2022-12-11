@@ -69,6 +69,7 @@ public class ManagerKrangle : Manager
 
         if (allies.Count < lose)
         {
+            BetweenScenesControler.levelRetry = 1;
             scene.playLose();
         }
 

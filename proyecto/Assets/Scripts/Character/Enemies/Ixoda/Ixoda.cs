@@ -32,9 +32,9 @@ public class Ixoda : EnemyBehaviour
     public override int DistanceHexagon(Hexagon current) 
     {
         
-        int dx = -7 -current.dx;
+        int dx = current.dx - (-7);
 
-        int dy = 4 - current.dy;
+        int dy = current.dy - 4 ;
         
         if (Math.Sign(dx) == Math.Sign(dy))
             return(Math.Abs(dx + dy));

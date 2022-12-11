@@ -72,7 +72,9 @@ public class ManagerHARNCKXSHOR : Manager
 
         if (allies.Count < lose)
         {
+            BetweenScenesControler.levelRetry = 3;
             scene.playLose();
+
         }
 
         if (enemies[0].GetComponent<Character>().getHealth() <= 0)

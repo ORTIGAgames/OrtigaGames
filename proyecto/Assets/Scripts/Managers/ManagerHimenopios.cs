@@ -66,6 +66,7 @@ public class ManagerHimenopios : Manager
         {
             if (enemies.Count <= 0)
             {
+                BetweenScenesControler.levelRetry = 0;
                 scene.playTutorialWin();
             }
         }
