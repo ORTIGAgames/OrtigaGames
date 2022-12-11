@@ -81,13 +81,16 @@ public class Ixoda : EnemyBehaviour
             {
                 if (h && !h.getOccupant())
                 {
+                    print(this.GetComponent<Character>());
+                    print(h);
                     this.GetComponent<Enemy>().CharacterMove(h, false);
                     break;
                 }
 
             }
         }
-
+        print(this.GetComponent<Character>());
+        print(movement);
         /*foreach (Hexagon h in movement.neighbours)
         {
             if (h.getOccupant() != null)
