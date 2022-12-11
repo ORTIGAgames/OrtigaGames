@@ -72,7 +72,7 @@ public class Ally : Character
         {
             if(game.activeAlly) game.activeAlly.GetComponent<BoxCollider>().enabled = true;
             game.PlayerReset();
-            game.lastClicked = this;
+            //game.lastClicked = this;
             game.InteractionActivate();
             game.setActiveAlly(this);
             game.CharacterActivate(ActualFace, NameIcon, Damage.ToString(), Defense.ToString(), MaxHealth, this.GetComponent<Abilities>().Name, this.GetComponent<Abilities>().description, this.GetComponent<Abilities>().icon);
@@ -82,7 +82,8 @@ public class Ally : Character
             game.stage.Reset();//para mostrar las casillas donde se esparce en el tablero se resetea   
             this.Move(this.InitialBlock, 0);
             style.Action(this.InitialBlock, 0, this);
-        }       
+        }
+        game.lastClicked = this;
     }
 
     private void OnMouseOver()
