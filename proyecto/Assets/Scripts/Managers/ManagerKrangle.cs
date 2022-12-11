@@ -60,7 +60,7 @@ public class ManagerKrangle : Manager
         }
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
-        StartCoroutine(ShowObjetive("Survive 20 turns", 4.0f));
+        StartCoroutine(ShowObjetive("Survive 10 turns", 4.0f));
         lose = allies.Count;
         KrangleNumbers = enemies.Count;
     }
@@ -73,7 +73,7 @@ public class ManagerKrangle : Manager
             scene.playLose();
         }
 
-        if (turnsCompleted == 20)
+        if (turnsCompleted == 10)
         {
             scene.playWin();
             BetweenScenesControler.level2 = true;

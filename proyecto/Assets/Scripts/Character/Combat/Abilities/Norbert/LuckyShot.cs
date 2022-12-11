@@ -14,24 +14,20 @@ public class LuckyShot : Abilities
     public override void Effect(Character Figther)
     {
         CombatFigther = Figther;
-        Chance();
-    }
-    public override void BeforeTurn()
-    {
-        cooldown--;
-    }
-    void Chance()
-    {      
         int chanza = Random.Range(0, 11);
         if (chanza % 2 == 0)
         {
             GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Norbert");
-            CombatFigther.setHealth(CombatFigther.getHealth() - 20);
+            CombatFigther.setHealth(CombatFigther.getHealth() - 15);
             this.GetComponent<Character>().myAnimator.SetTrigger("Win");
         }
         else
         {
             this.GetComponent<Character>().myAnimator.SetTrigger("Lose");
         }
+    }
+    public override void BeforeTurn()
+    {
+        cooldown--;
     }
 }

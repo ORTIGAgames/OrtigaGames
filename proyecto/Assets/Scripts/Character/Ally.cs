@@ -31,7 +31,7 @@ public class Ally : Character
                 this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, -this.transform.localScale.z);                  
         }
         healthBar.gameObject.SetActive((game.activeAlly == this || game.lastClicked == this) ? true : false);
-        if (Health < MaxHealth / 4) ActualFace = Face[1];
+        if (Health <= MaxHealth / 4) ActualFace = Face[1];
         else ActualFace = Face[0];
     }
     void LoadData()

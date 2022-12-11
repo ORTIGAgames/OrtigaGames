@@ -57,7 +57,7 @@ public class ManagerIxodas : Manager
         }
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
-        StartCoroutine(ShowObjetive("Don´t let them get to the exit", 4.0f));
+        StartCoroutine(ShowObjetive("Do not let any of them reach the exit", 4.0f));
         lose = allies.Count;
     }
     void Update()
