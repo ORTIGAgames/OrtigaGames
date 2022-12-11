@@ -60,7 +60,7 @@ public class ManagerKrangle : Manager
         }
 
         StartCoroutine(ShowMessage("Ally turn", 1.0f));
-        StartCoroutine(ShowObjetive("Protect the generator 20 turns", 4.0f));
+        StartCoroutine(ShowObjetive("Survive 20 turns", 4.0f));
         lose = allies.Count;
         KrangleNumbers = enemies.Count;
     }
