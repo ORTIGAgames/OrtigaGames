@@ -71,7 +71,7 @@ public class Enemy : Character
         i++;
         foreach (Hexagon h in t.neighbours)
         {
-            if (h != null && !h.getOccupant() || h.getOccupant().getSide() == "Enemy")
+            if (h != null && !h.getOccupant() ||h!=null && h.getOccupant().getSide() == "Enemy")
             {
                 h.setState(Hexagon.CodeState.WalkableE);
                 if (i <= ((int)displacement) && h != null)

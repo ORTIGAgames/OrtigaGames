@@ -108,8 +108,20 @@ public class Himenopios: EnemyBehaviour
 
         //Combat 
 
-        Character weaker = combat(this.GetComponent<Enemy>().getActualBlock(),100,0,this.GetComponent<DmgStyle>().maxCasillas);
-        
+        Character weaker = null;
+        int weakerLife = 100;
+        foreach (Hexagon hex in this.GetComponent<Enemy>().game.stage.board)
+        {
+            if (hex.getState() == Hexagon.CodeState.EnemyT)
+            {
+                if (hex.getOccupant().getHealth() < weakerLife)
+                {
+                    weakerLife = hex.getOccupant().getHealth();
+                    weaker = hex.getOccupant();
+                }
+            }
+
+        }
         if (weaker)
         {
             Debug.Log("Attack " + weaker.getName());
