@@ -9,6 +9,7 @@ using Cinemachine;
 public class ManagerHARNCKXSHOR : Manager
 {
     public int spawnturns;
+    public Character BOSS;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
@@ -77,7 +78,7 @@ public class ManagerHARNCKXSHOR : Manager
 
         }
 
-        if (enemies[0].GetComponent<Character>().getHealth() <= 0)
+        if (BOSS == null)
         {
             scene.playWin();
         }
