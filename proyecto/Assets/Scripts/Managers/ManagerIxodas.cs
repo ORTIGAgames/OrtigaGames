@@ -66,6 +66,7 @@ public class ManagerIxodas : Manager
             if (h.getOccupant()){
                 if (h.getOccupant().GetComponent<Enemy>())
                 {
+                    BetweenScenesControler.levelRetry = 2;
                     scene.playLose();
                 }
             }
