@@ -10,7 +10,7 @@ public class Ixoda : EnemyBehaviour
         
         List<Hexagon> movement = hex.neighbours;
 
-        var value = -1000;
+        var value = 1000;
         Hexagon bestHexagon = hex;
         foreach (Hexagon a in movement)
         {
@@ -18,7 +18,7 @@ public class Ixoda : EnemyBehaviour
             {
                 
                 var tempValue = ValueHexagon(a);
-                if (tempValue > value)
+                if (tempValue < value)
                 {
                     value = tempValue;
                     bestHexagon = a;
@@ -32,9 +32,9 @@ public class Ixoda : EnemyBehaviour
     public override int DistanceHexagon(Hexagon current) 
     {
         
-        int dx = current.dx - (-7);
+        int dx = (-7) - current.dx ;
 
-        int dy = current.dy - 4 ;
+        int dy = 4 - current.dy;
         
         if (Math.Sign(dx) == Math.Sign(dy))
             return(Math.Abs(dx + dy));
@@ -64,7 +64,7 @@ public class Ixoda : EnemyBehaviour
     {
         //Movement
         this.GetComponent<Enemy>().setActualBlock(this.GetComponent<Enemy>().getInitialBlock());
-        //this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
+        this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
         Hexagon movement = this.GetComponent<Enemy>().getActualBlock();
         
         for (int i = 0; i <= ((int)this.GetComponent<Enemy>().getMovement()); i++)
