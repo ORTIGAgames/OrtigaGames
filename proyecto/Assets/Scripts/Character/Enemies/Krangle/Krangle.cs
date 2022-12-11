@@ -114,15 +114,10 @@ public class Krangle : EnemyBehaviour
         }
         if (weaker)
         {
-            Debug.Log("Attack " + weaker.getName());
             this.GetComponent<Enemy>().game.CombatActivation(this.GetComponent<Enemy>(), weaker);
             this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().game, "Action");
         }
-        else
-        {
-            Debug.Log("Termine");
-            this.GetComponent<Enemy>().EndTurn();
-        }
+        this.GetComponent<Enemy>().EndTurn();
     }
 }
 
