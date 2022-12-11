@@ -16,6 +16,13 @@ public class HARNCKSOR : EnemyBehaviour
 
     public override void EnemyControl()
     {
+        //Movement
+        this.GetComponent<Enemy>().setActualBlock(this.GetComponent<Enemy>().getInitialBlock());
+        this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
+        //this.GetComponent<Enemy>().CharacterMove(this.GetComponent<Enemy>().getActualBlock(), false);
+
+        //Combat 
+
         Character weaker = null;
         int weakerLife = 100;
         foreach (Hexagon hex in this.GetComponent<Enemy>().game.stage.board)
@@ -32,6 +39,7 @@ public class HARNCKSOR : EnemyBehaviour
         }
         if (weaker)
         {
+            Debug.Log("Attack " + weaker.getName());
             this.GetComponent<Enemy>().game.CombatActivation(this.GetComponent<Enemy>(), weaker);
             this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().game, "Action");
         }

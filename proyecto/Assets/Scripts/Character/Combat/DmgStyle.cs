@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DmgStyle : MonoBehaviour, Combat
 {
-    [SerializeField] int maxCasillas;
+    public int maxCasillas;
     [SerializeField] Character defender;
     public void Action(Hexagon t, int i, Character c)
     {

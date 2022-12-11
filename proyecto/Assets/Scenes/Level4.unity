@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 1
   defender: {fileID: 0}
 --- !u!114 &153858870
 MonoBehaviour:
@@ -8985,11 +8985,11 @@ GameObject:
   - component: {fileID: 692281944}
   - component: {fileID: 692281945}
   - component: {fileID: 692281951}
-  - component: {fileID: 692281950}
-  - component: {fileID: 692281946}
   - component: {fileID: 692281949}
   - component: {fileID: 692281948}
   - component: {fileID: 692281947}
+  - component: {fileID: 692281953}
+  - component: {fileID: 692281952}
   m_Layer: 0
   m_Name: minion3
   m_TagString: Untagged
@@ -9046,19 +9046,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1533744818}
   worldcamera: {fileID: 442075810}
-  EB: {fileID: 692281946}
---- !u!114 &692281946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692281943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  EB: {fileID: 692281952}
 --- !u!95 &692281947
 Animator:
   serializedVersion: 4
@@ -9144,18 +9132,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &692281950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692281943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &692281951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9170,6 +9146,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
+--- !u!114 &692281952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692281943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12db0c97cba5d294197a985d32e5f987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &692281953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692281943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80172b501464194f9aa77308d4d2855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &700187485
 GameObject:
   m_ObjectHideFlags: 0
@@ -9316,11 +9316,11 @@ GameObject:
   - component: {fileID: 700649305}
   - component: {fileID: 700649306}
   - component: {fileID: 700649312}
-  - component: {fileID: 700649311}
-  - component: {fileID: 700649307}
   - component: {fileID: 700649310}
   - component: {fileID: 700649309}
   - component: {fileID: 700649308}
+  - component: {fileID: 700649313}
+  - component: {fileID: 700649314}
   m_Layer: 0
   m_Name: minion4
   m_TagString: Untagged
@@ -9377,19 +9377,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1985754391}
   worldcamera: {fileID: 442075810}
-  EB: {fileID: 700649307}
---- !u!114 &700649307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700649304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  EB: {fileID: 700649313}
 --- !u!95 &700649308
 Animator:
   serializedVersion: 4
@@ -9475,18 +9463,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &700649311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700649304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &700649312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9501,6 +9477,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 1
   defender: {fileID: 0}
+--- !u!114 &700649313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700649304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12db0c97cba5d294197a985d32e5f987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &700649314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700649304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80172b501464194f9aa77308d4d2855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &708578664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12157,11 +12157,11 @@ GameObject:
   - component: {fileID: 879610733}
   - component: {fileID: 879610734}
   - component: {fileID: 879610740}
-  - component: {fileID: 879610739}
-  - component: {fileID: 879610735}
   - component: {fileID: 879610738}
   - component: {fileID: 879610737}
   - component: {fileID: 879610736}
+  - component: {fileID: 879610742}
+  - component: {fileID: 879610741}
   m_Layer: 0
   m_Name: minion2
   m_TagString: Untagged
@@ -12218,19 +12218,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 440259328}
   worldcamera: {fileID: 442075810}
-  EB: {fileID: 879610735}
---- !u!114 &879610735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879610732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  EB: {fileID: 879610741}
 --- !u!95 &879610736
 Animator:
   serializedVersion: 4
@@ -12316,18 +12304,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &879610739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879610732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &879610740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12342,6 +12318,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 1
   defender: {fileID: 0}
+--- !u!114 &879610741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879610732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12db0c97cba5d294197a985d32e5f987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &879610742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879610732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80172b501464194f9aa77308d4d2855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &889632596
 GameObject:
   m_ObjectHideFlags: 0
@@ -14014,11 +14014,11 @@ GameObject:
   - component: {fileID: 970897708}
   - component: {fileID: 970897709}
   - component: {fileID: 970897715}
-  - component: {fileID: 970897714}
-  - component: {fileID: 970897710}
   - component: {fileID: 970897716}
   - component: {fileID: 970897713}
   - component: {fileID: 970897711}
+  - component: {fileID: 970897718}
+  - component: {fileID: 970897717}
   m_Layer: 0
   m_Name: minion1
   m_TagString: Untagged
@@ -14075,19 +14075,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 121603636}
   worldcamera: {fileID: 442075810}
-  EB: {fileID: 970897710}
---- !u!114 &970897710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970897707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  EB: {fileID: 970897717}
 --- !u!95 &970897711
 Animator:
   serializedVersion: 4
@@ -14160,18 +14148,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &970897714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970897707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &970897715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14199,6 +14175,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.06, y: 4.17, z: 1.72}
   m_Center: {x: 0, y: -1.39, z: 0}
+--- !u!114 &970897717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970897707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12db0c97cba5d294197a985d32e5f987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &970897718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970897707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80172b501464194f9aa77308d4d2855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &976100128
 GameObject:
   m_ObjectHideFlags: 0

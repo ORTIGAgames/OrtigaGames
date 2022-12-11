@@ -2211,7 +2211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 3
   defender: {fileID: 0}
 --- !u!212 &118484501
 SpriteRenderer:
@@ -4564,7 +4564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 3
   defender: {fileID: 0}
 --- !u!114 &212996063
 MonoBehaviour:
@@ -8259,7 +8259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 3
   defender: {fileID: 0}
 --- !u!114 &384970727
 MonoBehaviour:
@@ -13234,7 +13234,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 1559168337}
-  displacement: 0
+  displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
@@ -14515,7 +14515,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 1559168337}
-  displacement: 0
+  displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
@@ -15287,7 +15287,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 1559168337}
-  displacement: 0
+  displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0
@@ -26083,7 +26083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 3
   defender: {fileID: 0}
 --- !u!114 &1412602633
 MonoBehaviour:
@@ -27517,7 +27517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 3
   defender: {fileID: 0}
 --- !u!114 &1509622924
 MonoBehaviour:
@@ -27841,7 +27841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 2
+  maxCasillas: 3
   defender: {fileID: 0}
 --- !u!114 &1518962553
 MonoBehaviour:
@@ -30889,7 +30889,7 @@ MonoBehaviour:
   Name: 
   turn: 0
   game: {fileID: 1559168337}
-  displacement: 0
+  displacement: 1
   InitialBlock: {fileID: 0}
   ActualBlock: {fileID: 0}
   targetable: 0

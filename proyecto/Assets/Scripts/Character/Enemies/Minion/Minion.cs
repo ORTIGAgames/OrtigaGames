@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Himenopios: EnemyBehaviour
+public class Minion : EnemyBehaviour
 {
     public override Hexagon BestMove(Hexagon hex)
     {
@@ -21,7 +21,7 @@ public class Himenopios: EnemyBehaviour
                     bestHexagon = a;
                 }
             }
-                
+
         }
         return bestHexagon;
     }
@@ -39,11 +39,11 @@ public class Himenopios: EnemyBehaviour
         return value;
     }
 
-    public override int DistanceHexagon(Hexagon goal) 
+    public override int DistanceHexagon(Hexagon goal)
     {
-        int dx = goal.dx - this.GetComponent<Enemy>().getActualBlock().dx;
+        int dx = this.GetComponent<Enemy>().getActualBlock().dx - goal.dx;
 
-        int dy = goal.dy - this.GetComponent<Enemy>().getActualBlock().dy;
+        int dy = this.GetComponent<Enemy>().getActualBlock().dy - goal.dy;
 
         if (Math.Sign(dx) == Math.Sign(dy))
             return (Math.Abs(dx + dy));
@@ -68,17 +68,7 @@ public class Himenopios: EnemyBehaviour
         }
         return distance;*/
     }
-    public int DistanceHexagon(Hexagon goal, Hexagon start)
-    {
-        int dx = goal.dx - start.dx;
 
-        int dy = goal.dy - start.dy;
-
-        if (Math.Sign(dx) == Math.Sign(dy))
-            return (Math.Abs(dx + dy));
-        else
-            return (Math.Max(Math.Abs(dx), Math.Abs(dy)));
-    }
     public override void EnemyControl()
     {
         //Movement
@@ -108,8 +98,20 @@ public class Himenopios: EnemyBehaviour
 
         //Combat 
 
-        Character weaker = combat(this.GetComponent<Enemy>().getActualBlock(),100,0,this.GetComponent<DmgStyle>().maxCasillas);
-        
+        Character weaker = null;
+        int weakerLife = 100;
+        foreach (Hexagon hex in this.GetComponent<Enemy>().game.stage.board)
+        {
+            if (hex.getState() == Hexagon.CodeState.EnemyT)
+            {
+                if (hex.getOccupant().getHealth() < weakerLife)
+                {
+                    weakerLife = hex.getOccupant().getHealth();
+                    weaker = hex.getOccupant();
+                }
+            }
+
+        }
         if (weaker)
         {
             Debug.Log("Attack " + weaker.getName());
@@ -121,43 +123,5 @@ public class Himenopios: EnemyBehaviour
             Debug.Log("Termine");
             this.GetComponent<Enemy>().EndTurn();
         }
-    }
-
-    public Character combat(Hexagon actual, int enemyDistance, int iteration, int range)
-    {
-        Character weaker = null;
-        int weakerLife = 100;
-        
-
-        if(iteration<range)
-        {
-            foreach (Hexagon hex in actual.neighbours)
-            {
-                if (hex != null && hex.getState() == Hexagon.CodeState.EnemyT)
-                {
-                    if (hex.getOccupant().getHealth() < weakerLife)
-                    {
-                        weakerLife = hex.getOccupant().getHealth();
-                        weaker = hex.getOccupant();
-
-                    }
-                }
-                else
-                {
-                    foreach (Ally a in this.GetComponent<Enemy>().game.allies)
-                    {
-                        if (hex!=null && DistanceHexagon(a.getActualBlock(), hex) < enemyDistance)
-                        {
-                            enemyDistance = DistanceHexagon(a.getActualBlock(), hex);
-                            combat(a.getActualBlock(),enemyDistance,iteration+1,range);
-                        }
-                            
-                    }
-
-                }
-
-            }
-        }
-        return weaker;
     }
 }
