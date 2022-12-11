@@ -32,18 +32,22 @@ public class Krangle : EnemyBehaviour
         foreach (Ally a in this.GetComponent<Enemy>().game.allies)
         {
 
-            int tempvalue = (40 * 2 - a.getHealth()) - DistanceHexagon(a.getActualBlock());
+            int tempvalue = (40 * 2 - a.getHealth()) + DistanceHexagon(a.getActualBlock());
+            
             if (tempvalue < value)
+            {
                 value = tempvalue;
+            }
+                
         }
         return value;
     }
 
     public override int DistanceHexagon(Hexagon goal)
     {
-        int dx = goal.dx - this.GetComponent<Enemy>().getActualBlock().dx;
+        int dx = this.GetComponent<Enemy>().getActualBlock().dx-goal.dx;
 
-        int dy = goal.dy - this.GetComponent<Enemy>().getActualBlock().dy;
+        int dy = this.GetComponent<Enemy>().getActualBlock().dy -goal.dy;
 
         if (Math.Sign(dx) == Math.Sign(dy))
             return (Math.Abs(dx + dy));
