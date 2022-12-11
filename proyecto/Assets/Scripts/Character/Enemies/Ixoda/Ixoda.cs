@@ -8,7 +8,7 @@ public class Ixoda : EnemyBehaviour
     public override Hexagon BestMove(Hexagon hex)
     {
         
-        Hexagon[] movement = hex.neighbours;
+        List<Hexagon> movement = hex.neighbours;
 
         var value = -1000;
         Hexagon bestHexagon = hex;

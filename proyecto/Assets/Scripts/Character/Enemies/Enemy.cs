@@ -50,6 +50,7 @@ public class Enemy : Character
         else//si el jugador no esta con ningun personaje activo
         {
             game.PlayerReset();
+            game.activeAlly.GetComponent<BoxCollider>().enabled = true;
             game.lastClicked = this;
             game.stage.Reset();//para mostrar las casillas donde se esparce en el tablero se resetea
             game.InteractionActivate();
@@ -71,11 +72,11 @@ public class Enemy : Character
         i++;
         foreach (Hexagon h in t.neighbours)
         {
-            if (h != null && !h.getOccupant() || h.getOccupant().getSide() == "Enemy")
+            if (h != null && (!h.getOccupant() || h.getOccupant().getSide() == "Enemy"))
             {
                 h.setState(Hexagon.CodeState.WalkableE);
                 if (i <= ((int)displacement) && h != null)
-                    Move(h, i);
+                    Move(h, i);                   
             }
         }
     }

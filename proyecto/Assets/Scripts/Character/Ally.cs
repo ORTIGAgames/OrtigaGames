@@ -29,7 +29,6 @@ public class Ally : Character
         {
             if(getInitialBlock().transform.position != this.transform.position)
                 this.transform.position = this.getInitialBlock().transform.position + new Vector3(0, .085f, -this.transform.localScale.z);                  
-            this.GetComponent<BoxCollider>().enabled = true;
         }
         healthBar.gameObject.SetActive((game.activeAlly == this || game.lastClicked == this) ? true : false);
         if (Health < MaxHealth / 4) ActualFace = Face[1];
@@ -70,8 +69,8 @@ public class Ally : Character
             }
         }
         else if (game.allyturn && turn > 0)
-        {            
-
+        {
+            if(game.activeAlly) game.activeAlly.GetComponent<BoxCollider>().enabled = true;
             game.PlayerReset();
             game.lastClicked = this;
             game.InteractionActivate();
@@ -117,6 +116,7 @@ public class Ally : Character
         game.CharacterDeactivate();
         if(game.CombatH)
             game.CombatDeactivate();
+        this.GetComponent<BoxCollider>().enabled = true;
     }
 
     public void Camera()

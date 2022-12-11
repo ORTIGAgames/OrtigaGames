@@ -13337,7 +13337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346464915774287618, guid: e99a95a05104fb94196e8a1860151f55, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4346464915774287618, guid: e99a95a05104fb94196e8a1860151f55, type: 3}
       propertyPath: sounds.Array.data[10].pitch
@@ -14014,11 +14014,11 @@ GameObject:
   - component: {fileID: 970897708}
   - component: {fileID: 970897709}
   - component: {fileID: 970897715}
+  - component: {fileID: 970897718}
+  - component: {fileID: 970897717}
   - component: {fileID: 970897716}
   - component: {fileID: 970897713}
   - component: {fileID: 970897711}
-  - component: {fileID: 970897718}
-  - component: {fileID: 970897717}
   m_Layer: 0
   m_Name: minion1
   m_TagString: Untagged
@@ -31134,7 +31134,7 @@ MonoBehaviour:
   dx: 3
   dy: 3
   neighbours:
-  - {fileID: 381317822}
+  - {fileID: 1402076640}
   - {fileID: 478101043}
   - {fileID: 0}
   - {fileID: 1976821304}

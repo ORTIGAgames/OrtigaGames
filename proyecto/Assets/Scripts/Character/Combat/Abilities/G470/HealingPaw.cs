@@ -15,10 +15,12 @@ public class HealingPaw : Abilities
         GameObject.Find("SoundManager").GetComponent<AudioManager>().Play("Gato");
         Figther.setHealth(Figther.getHealth() + this.GetComponent<Character>().getHealth() * 1 / 5);
         cooldown += 2;
+        GameObject.Find("Manager").GetComponent<Manager>().preTurn.Add(this);
     }
 
     public override void BeforeTurn()
     {
-        cooldown--;
+        if (cooldown > 0) cooldown--;
+        else GameObject.Find("Manager").GetComponent<Manager>().preTurn.Remove(this);
     }
 }

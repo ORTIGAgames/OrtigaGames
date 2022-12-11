@@ -7,7 +7,7 @@ public class Minion : EnemyBehaviour
 {
     public override Hexagon BestMove(Hexagon hex)
     {
-        Hexagon[] movement = hex.neighbours;
+        List<Hexagon> movement = hex.neighbours;
         var value = -1000;
         Hexagon bestHexagon = hex;
         foreach (Hexagon a in movement)
@@ -114,13 +114,11 @@ public class Minion : EnemyBehaviour
         }
         if (weaker)
         {
-            Debug.Log("Attack " + weaker.getName());
             this.GetComponent<Enemy>().game.CombatActivation(this.GetComponent<Enemy>(), weaker);
             this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().game, "Action");
         }
         else
         {
-            Debug.Log("Termine");
             this.GetComponent<Enemy>().EndTurn();
         }
     }

@@ -7,7 +7,7 @@ public class Hexagon : MonoBehaviour
     public int dx = 0;
     public int dy = 0;
 
-    public Hexagon[] neighbours = new Hexagon[12];
+    public List<Hexagon> neighbours = new List<Hexagon>();
     [SerializeField] Character occupant;
 
     
@@ -55,7 +55,7 @@ public class Hexagon : MonoBehaviour
             {
                 return this;
             }
-            neighbour = neighbours[Random.Range(0, neighbours.Length)];
+            neighbour = neighbours[Random.Range(0, neighbours.Count)];
         } while (neighbour == null || neighbour.getOccupant());
 
         return (neighbour);
