@@ -163,7 +163,7 @@ public class ManagerKrangle : Manager
         TextMeshProUGUI Turn = GameObject.Find("Objective").GetComponent<TextMeshProUGUI>();
         if(delay == 4.05f || delay == 2.05f)
         {
-            Turn.text = (20 - turnsCompleted) + message;
+            Turn.text = (10 - turnsCompleted) + message;
         }
         else Turn.text = message; 
         yield return new WaitForSeconds(delay);

@@ -73,13 +73,13 @@ public class Ixoda : EnemyBehaviour
             movement = aux;
         }
 
-        if (!movement.getOccupant())
+        if (!movement.getOccupant() && (movement.transform.childCount == 0 || movement.transform.GetChild(0).name != "Obstacle2"))
             this.GetComponent<Enemy>().CharacterMove(movement, false);
         else
         {
             foreach (Hexagon h in movement.neighbours)
             {
-                if (h && !h.getOccupant())
+                if (h && !h.getOccupant() && (movement.transform.childCount == 0 || movement.transform.GetChild(0).name != "Obstacle2"))
                 {
                     print(this.GetComponent<Character>());
                     print(h);
