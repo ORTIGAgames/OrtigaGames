@@ -23,8 +23,8 @@ public class TutorialMechanics : MonoBehaviour
         "First of all, find your crewmate on the map. If you click on his face at the botton left of the screen the camera will navigate directly to him.",
         "Click on Norbert, your ally, and see what happens.",
         "Each ally has a movement and an action on each of their turns, the green hexagons represent empty spaces where they can move to, yellow ones represent allies and the red ones are for enemies. On the botton right will always appear a cross to cancel the current action. Click on an empty space to move Norbert.",
-        "The turn doesn�t end until you click again on an empty space or do an action. When all the allies end their turn the enemy starts their turn and moves on their own, so you have to think in advantage of what they would do.",
-        "You can see the movement and range of action of an enemy by clicking on it. Let�s try with the enemy on the screen. When you are finished cancel and go back to Norbert.",
+        "The turn doesn't end until you click again on an empty space or do an action. When all the allies end their turn the enemy starts their turn and moves on their own, so you have to think in advantage of what they would do.",
+        "You can see the movement and range of action of an enemy by clicking on it. Let's try with the enemy on the screen. When you are finished cancel and go back to Norbert.",
         "Now let's attack that enemy, click on Norbert and then on the enemy, green hexagons will change into blue ones to show the range of attack of your unit. Click on one of the blue cells.",
         "Notice that the attack and ability buttons pop up. You can learn about the ability by clicking the arrow next to the icon in the combat menu. ",
         "When one of your allies attacks they will damage the enemy based on the enemy's defense and your ally's attack stat. Let's attack the enemy by clicking on them, and then on the button on the right that appears.",
@@ -64,6 +64,7 @@ public class TutorialMechanics : MonoBehaviour
             {
                 h.GetComponent<BoxCollider>().enabled = false;
             }
+
             if (step == 0)
             {
                 Norbert.GetComponent<BoxCollider>().enabled = false;
