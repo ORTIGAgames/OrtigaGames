@@ -7,6 +7,7 @@ public class Enemy : Character
 {
     public CinemachineVirtualCamera ncamera;
     [SerializeField] protected CinemachineBrain worldcamera;
+    [SerializeField] int enemy;
     public EnemyBehaviour EB;
     // Start is called before the first frame update
     public override void Awake()
@@ -14,11 +15,12 @@ public class Enemy : Character
         base.Awake();
         side = "Enemy";
 
-        MaxHealth = 15;
+        
+        MaxHealth = BetweenScenesControler.enemies[enemy,0];
         //Debug.Log(Health);
-        Damage = 6;
+        Damage = BetweenScenesControler.enemies[enemy, 1];
         //Debug.Log(Damage);
-        Defense = 2;
+        Defense = BetweenScenesControler.enemies[enemy, 2];
         //Debug.Log(Defense);
         Name = "Enemigo";
         //Debug.Log(Name);

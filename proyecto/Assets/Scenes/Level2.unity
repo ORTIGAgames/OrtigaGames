@@ -14067,6 +14067,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 83273438}
   worldcamera: {fileID: 2039265111}
+  enemy: 2
   EB: {fileID: 862337048}
 --- !u!95 &862337043
 Animator:
@@ -21312,6 +21313,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 706306848}
   worldcamera: {fileID: 2039265111}
+  enemy: 2
   EB: {fileID: 1335576460}
 --- !u!95 &1335576455
 Animator:
@@ -25418,6 +25420,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 225895362}
   worldcamera: {fileID: 2039265111}
+  enemy: 2
   EB: {fileID: 1570788604}
 --- !u!95 &1570788599
 Animator:
@@ -26595,6 +26598,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 759947384}
   worldcamera: {fileID: 2039265111}
+  enemy: 2
   EB: {fileID: 1616285373}
 --- !u!95 &1616285368
 Animator:
@@ -35373,6 +35377,7 @@ MonoBehaviour:
   FeedbackResponse: {fileID: 8840465587718410758, guid: 8830987da1eba41419f4957cea59f4f2, type: 3}
   ncamera: {fileID: 1507675816}
   worldcamera: {fileID: 2039265111}
+  enemy: 2
   EB: {fileID: 2112628160}
 --- !u!95 &2112628155
 Animator:
