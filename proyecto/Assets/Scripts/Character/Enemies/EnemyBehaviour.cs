@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class EnemyBehaviour : MonoBehaviour
 {
+    [SerializeField] protected Manager game;
+    [SerializeField] protected List<Ally> allies;
     public abstract Hexagon BestMove(Hexagon hex);
 
     public abstract int ValueHexagon(Hexagon hex);

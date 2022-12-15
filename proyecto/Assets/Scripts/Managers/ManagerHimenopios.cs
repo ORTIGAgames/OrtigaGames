@@ -151,7 +151,7 @@ public class ManagerHimenopios : Manager
     {
         yield return new WaitForSeconds(timer);
         e.Camera();
-        StartCoroutine(Movement(1f, e));
+        e.GetComponent<Himenopios>().himenopioState = new MovementState();
     }
     IEnumerator Movement(float timer, Enemy e)
     {
