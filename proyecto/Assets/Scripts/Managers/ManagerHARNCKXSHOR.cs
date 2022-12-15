@@ -85,22 +85,7 @@ public class ManagerHARNCKXSHOR : Manager
 
         if(spawnturns == 2)
         {
-            for(int i = 0; i <=2; i++){
-                Hexagon box = stage.Block(Random.Range(0, stage.board.Length));
-                while (box.getOccupant())
-                {
-                    box = stage.Block(Random.Range(0, stage.board.Length));
-                }
-                GameObject enemy = Instantiate(enemies[1].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
-                enemy.GetComponent<Enemy>().setActualBlock(box);
-                enemy.GetComponent<Enemy>().setInitialBlock(box);
-                box.setOccupant(enemy.GetComponent<Character>());
-                CinemachineVirtualCamera camera = Instantiate(enemies[1].GetComponent<Enemy>().ncamera);
-                camera.Follow = enemy.transform;
-                enemy.GetComponent<Enemy>().ncamera = camera;
-                enemies.Add(enemy.GetComponent<Enemy>());
-                players.Add(enemy.GetComponent<Character>());
-            }
+            enemies[0].GetComponent<HARNCKXSHORSpawner>().Effect(enemies[0]);
             spawnturns = 0;
         }
 
@@ -174,6 +159,7 @@ public class ManagerHARNCKXSHOR : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
+        print(e.EB);
         e.EB.EnemyControl();
     }
 

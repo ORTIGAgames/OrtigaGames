@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HARNCKSOR : EnemyBehaviour
+public class HARNCKXSHOR : EnemyBehaviour
 {
     public override Hexagon BestMove(Hexagon hex)
     {

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class Manager : MonoBehaviour
 {
-    [SerializeField] protected List<Character> players = new List<Character>();
+    public List<Character> players = new List<Character>();
     public List<Character> allies = new List<Character>();
-    [SerializeField] protected List<Character> enemies = new List<Character>();
+    public List<Character> enemies = new List<Character>();
     public List<PreTurn> preTurn = new List<PreTurn>();
     public bool allyturn;
     public Scenery stage;
