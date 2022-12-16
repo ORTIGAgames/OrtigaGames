@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Himenopios: EnemyBehaviour
+public class EnemyBehaviourState: EnemyBehaviour
 {
     private enum TStates { WAITING,MOVEMENT, ATTACK };
     private TStates actual = TStates.WAITING;
 
-    //public State himenopioState = new WaitingState();
+    public State State = new WaitingState();
 
     private void CreateStateMachine()
     {

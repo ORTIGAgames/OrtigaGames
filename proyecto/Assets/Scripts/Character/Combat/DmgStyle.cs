@@ -116,21 +116,9 @@ public class DmgStyle : MonoBehaviour, Combat
         this.GetComponent<Character>().CharacterMove(this.GetComponent<Character>().getActualBlock(), true);
         if (d == "Action")
         {
-            if (maxCasillas > 1)
-                FindObjectOfType<AudioManager>().Play("Range");
-            else
-                FindObjectOfType<AudioManager>().Play("Melee");
-            if (this.GetComponent<Character>().myAnimator.parameterCount > 0)
-            {
-                this.GetComponent<Character>().myAnimator.SetTrigger("Attack");
-            }
-            else//cambiar cuando todos tengan animacion de ataque, quitar esta linea
-            {
-                int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - defender.getDefense();
-                defender.setHealth(defender.getHealth() - damage);
-                this.GetComponent<Character>().EndTurn();
-            }
-                     
+            if (maxCasillas > 1) FindObjectOfType<AudioManager>().Play("Range");
+            else FindObjectOfType<AudioManager>().Play("Melee");
+            this.GetComponent<Character>().myAnimator.SetTrigger("Attack");                    
         }
 
         if (d == "Ability")
@@ -155,7 +143,6 @@ public class DmgStyle : MonoBehaviour, Combat
     }
     public void AttackSequence()
     {
-        print(defender);
         int damage = (this.GetComponent<Attack>().Action() <= defender.getDefense()) ? 1 : this.GetComponent<Attack>().Action() - defender.getDefense();
         defender.setHealth(defender.getHealth() - damage);
         this.GetComponent<Character>().EndTurn();

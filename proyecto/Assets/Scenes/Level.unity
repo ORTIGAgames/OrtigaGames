@@ -2199,7 +2199,7 @@ MonoBehaviour:
   ncamera: {fileID: 700402609}
   worldcamera: {fileID: 963194230}
   enemy: 1
-  EB: {fileID: 118484506}
+  EB: {fileID: 0}
 --- !u!114 &118484500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2323,8 +2323,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1 &120508737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,7 +4459,7 @@ MonoBehaviour:
   ncamera: {fileID: 536600543}
   worldcamera: {fileID: 963194230}
   enemy: 1
-  EB: {fileID: 212996063}
+  EB: {fileID: 0}
 --- !u!95 &212996058
 Animator:
   serializedVersion: 4
@@ -4582,8 +4583,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1 &223637532
 GameObject:
   m_ObjectHideFlags: 0
@@ -8156,7 +8158,7 @@ MonoBehaviour:
   ncamera: {fileID: 885247259}
   worldcamera: {fileID: 963194230}
   enemy: 1
-  EB: {fileID: 384970727}
+  EB: {fileID: 0}
 --- !u!95 &384970722
 Animator:
   serializedVersion: 4
@@ -8280,8 +8282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1 &386813671
 GameObject:
   m_ObjectHideFlags: 0
@@ -13257,7 +13260,7 @@ MonoBehaviour:
   ncamera: {fileID: 1575602000}
   worldcamera: {fileID: 963194230}
   enemy: 0
-  EB: {fileID: 724972037}
+  EB: {fileID: 0}
 --- !u!95 &724972032
 Animator:
   serializedVersion: 4
@@ -13381,8 +13384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1 &731353638
 GameObject:
   m_ObjectHideFlags: 0
@@ -14541,7 +14545,7 @@ MonoBehaviour:
   ncamera: {fileID: 1699435403}
   worldcamera: {fileID: 963194230}
   enemy: 0
-  EB: {fileID: 783895773}
+  EB: {fileID: 0}
 --- !u!95 &783895768
 Animator:
   serializedVersion: 4
@@ -14665,8 +14669,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1001 &788658167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15316,7 +15321,7 @@ MonoBehaviour:
   ncamera: {fileID: 1821908167}
   worldcamera: {fileID: 963194230}
   enemy: 0
-  EB: {fileID: 803636760}
+  EB: {fileID: 0}
 --- !u!212 &803636754
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15440,8 +15445,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1001 &804743421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25992,7 +25998,7 @@ MonoBehaviour:
   ncamera: {fileID: 1769827946}
   worldcamera: {fileID: 963194230}
   enemy: 1
-  EB: {fileID: 1412602633}
+  EB: {fileID: 0}
 --- !u!95 &1412602628
 Animator:
   serializedVersion: 4
@@ -26116,8 +26122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1 &1424700661
 GameObject:
   m_ObjectHideFlags: 0
@@ -27429,7 +27436,7 @@ MonoBehaviour:
   ncamera: {fileID: 1188391282}
   worldcamera: {fileID: 963194230}
   enemy: 1
-  EB: {fileID: 1509622924}
+  EB: {fileID: 0}
 --- !u!95 &1509622919
 Animator:
   serializedVersion: 4
@@ -27553,8 +27560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1001 &1516995732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27756,7 +27764,7 @@ MonoBehaviour:
   ncamera: {fileID: 1748746223}
   worldcamera: {fileID: 963194230}
   enemy: 1
-  EB: {fileID: 1518962553}
+  EB: {fileID: 0}
 --- !u!95 &1518962548
 Animator:
   serializedVersion: 4
@@ -27880,8 +27888,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1001 &1520391772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30930,7 +30939,7 @@ MonoBehaviour:
   ncamera: {fileID: 1687465517}
   worldcamera: {fileID: 963194230}
   enemy: 0
-  EB: {fileID: 1700390878}
+  EB: {fileID: 0}
 --- !u!95 &1700390873
 Animator:
   serializedVersion: 4
@@ -31054,8 +31063,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
+  game: {fileID: 1559168337}
   allies: []
+  State: {fileID: 0}
 --- !u!1 &1707576870
 GameObject:
   m_ObjectHideFlags: 0

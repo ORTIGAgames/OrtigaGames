@@ -106,6 +106,7 @@ public class Enemy : Character
     public override void EndTurn()
     {
         turn--;
+        game.stage.Reset();
     }
    /* public Hexagon BestMove(Hexagon hex)
     {

@@ -5,62 +5,63 @@ using UnityEngine;
 
 public class MovementState : State
 {
-    List<ValueHexagon> valueHexagon;
+    List<ValueHexagon> valueHexagon = new List<ValueHexagon>();
+    Enemy character;
+
+    public MovementState(Enemy c)
+    {
+        character = c;
+        function();
+    }
     public override void function()
     {
-
-        Hexagon directionN = new Hexagon();
-        float auxN = 9999;
         float valueN;
-        List<Hexagon> betters = new List<Hexagon>();
-        List<float> bettersValue = new List<float>();
-        
-        foreach (Hexagon h in this.GetComponent<Character>().getInitialBlock().neighbours)
+
+        character.Move(character.getInitialBlock(), 0);
+
+        foreach (Hexagon hex in character.game.stage.board)
         {
-            foreach (Character c in this.GetComponent<Character>().game.players)
+            if(hex.getState() == Hexagon.CodeState.WalkableE)
             {
-                if (c.getSide() != this.GetComponent<Character>().getSide())
+                foreach (Character c in character.game.allies)
                 {
-                    int dx = c.getInitialBlock().dx - this.GetComponent<Character>().getActualBlock().dx;
-
-                    int dy = c.getInitialBlock().dy - this.GetComponent<Character>().getActualBlock().dy;
-
-                    if (Math.Sign(dx) == Math.Sign(dy)) valueN = (0.6f * c.getHealth()) + (0.4f * Math.Abs(dx + dy));
-
-                    else valueN = c.getHealth() + Math.Max(Math.Abs(dx), Math.Abs(dy));
-
-                    if (valueN < auxN)
+                    if (c.getSide() != character.getSide())
                     {
-                        auxN = valueN;
-                        directionN = c.getInitialBlock();
+                        int dx = c.getInitialBlock().dx - hex.dx;
+
+                        int dy = c.getInitialBlock().dy - hex.dy;
+
+                        if (Math.Sign(dx) == Math.Sign(dy)) valueN = (0.6f * c.getHealth()) + (0.4f * Math.Abs(dx + dy));
+
+                        else valueN = c.getHealth() + Math.Max(Math.Abs(dx), Math.Abs(dy));
+
+                        AddValue(hex, valueN);
                     }
                 }
             }
-            AddValue(directionN, auxN);
         }
 
-        valueHexagon.Sort();
+        Comparer comparer = new Comparer();
+        valueHexagon.Sort(comparer);
 
-        foreach(ValueHexagon V in valueHexagon)
+        foreach (ValueHexagon V in valueHexagon)
         {
             if (!V.hexagon.getOccupant())
             {
-                this.GetComponent<Character>().CharacterMove(V.hexagon, false);
+                character.CharacterMove(V.hexagon, false);
                 break;
             }
         }
 
-        this.GetComponent<Character>().getStyle().Action(this.GetComponent<Character>().getInitialBlock(), 0, this.GetComponent<Character>());
+        character.getStyle().Action(character.getInitialBlock(), 0, character);
 
-        foreach (Hexagon hex in this.GetComponent<Enemy>().game.stage.board)
+        foreach (Hexagon hex in character.game.stage.board)
         {
-            if (hex.getState() == Hexagon.CodeState.EnemyT)
-            {
-                this.GetComponent<EnemyBehaviour>().State = new AttackState();
-            }
+            if (hex.getState() == Hexagon.CodeState.EnemyT) character.GetComponent<EnemyBehaviourState>().State = new AttackState();
+            break;
         }
-
-        this.GetComponent<EnemyBehaviour>().State = new WaitingState();
+        character.GetComponent<EnemyBehaviourState>().State = new WaitingState();
+        character.EndTurn();
     }
 
     public void AddValue(Hexagon direction, float value)
@@ -69,7 +70,7 @@ public class MovementState : State
         valueHexagon.Add(component);
     }
 }
-public class ValueHexagon
+class ValueHexagon
 {
     public Hexagon hexagon;
     public float value;
@@ -78,6 +79,15 @@ public class ValueHexagon
     {
         hexagon = h;
         value = v;
+    }
+}
+class Comparer : IComparer<ValueHexagon>
+{
+    public int Compare(ValueHexagon x, ValueHexagon y)
+    {
+        if (x.value < y.value) return -1;
+        if (x.value > y.value) return 1;
+        else return 0;       
     }
 }
 

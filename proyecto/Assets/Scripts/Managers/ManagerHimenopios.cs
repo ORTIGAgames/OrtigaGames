@@ -157,7 +157,7 @@ public class ManagerHimenopios : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.EB.EnemyControl();
+        e.GetComponent<EnemyBehaviourState>().State = new MovementState(e);
     }
 
     public override void CombatActivation(Character Figther1, Character Figther2)

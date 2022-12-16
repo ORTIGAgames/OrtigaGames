@@ -159,7 +159,6 @@ public class ManagerHARNCKXSHOR : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        print(e.EB);
         e.EB.EnemyControl();
     }
 
