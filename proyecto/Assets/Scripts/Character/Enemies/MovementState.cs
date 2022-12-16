@@ -57,8 +57,11 @@ public class MovementState : State
 
         foreach (Hexagon hex in character.game.stage.board)
         {
-            if (hex.getState() == Hexagon.CodeState.EnemyT) character.GetComponent<EnemyBehaviourState>().State = new AttackState();
-            break;
+            if (hex.getState() == Hexagon.CodeState.EnemyT)
+            {
+                character.GetComponent<EnemyBehaviourState>().State = new AttackState(character);
+                break;
+            }
         }
         character.GetComponent<EnemyBehaviourState>().State = new WaitingState();
         character.EndTurn();

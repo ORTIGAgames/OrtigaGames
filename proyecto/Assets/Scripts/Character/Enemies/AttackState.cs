@@ -13,11 +13,11 @@ public class AttackState : State
     public override void function()
     {
         Character weaker = null;
-        int weakerLife = 100;
+        int weakerLife = int.MaxValue;
 
-        character.getStyle().Action(this.GetComponent<Character>().getInitialBlock(), 0, this.GetComponent<Character>());
+        character.getStyle().Action(character.getInitialBlock(), (int)character.getMovement(), character);
 
-        foreach (Hexagon hex in this.GetComponent<Enemy>().game.stage.board)
+        foreach (Hexagon hex in character.game.stage.board)
         {
             if (hex.getState() == Hexagon.CodeState.EnemyT)
             {
@@ -30,8 +30,8 @@ public class AttackState : State
         }
         if (weaker)
         {
-            character.game.CombatActivation(this.GetComponent<Enemy>(), weaker);
-            character.getStyle().Action(this.GetComponent<Enemy>().game, "Action");
+            character.game.CombatActivation(character, weaker);
+            character.getStyle().Action(character.game, "Action");
         }
         character.EndTurn();
         character.GetComponent<EnemyBehaviourState>().State = new WaitingState();
