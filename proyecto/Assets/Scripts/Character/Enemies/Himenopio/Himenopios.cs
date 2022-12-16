@@ -9,7 +9,7 @@ public class Himenopios: EnemyBehaviour
     private enum TStates { WAITING,MOVEMENT, ATTACK };
     private TStates actual = TStates.WAITING;
 
-    public State himenopioState = new WaitingState();
+    //public State himenopioState = new WaitingState();
 
     private void CreateStateMachine()
     {
@@ -110,7 +110,6 @@ public class Himenopios: EnemyBehaviour
             return (Math.Abs(dx + dy));
         else
             return (Math.Max(Math.Abs(dx), Math.Abs(dy)));
-
     }
     public int DistanceHexagon(Hexagon goal, Hexagon start)
     {

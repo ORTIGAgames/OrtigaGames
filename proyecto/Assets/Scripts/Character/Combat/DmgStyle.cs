@@ -28,16 +28,15 @@ public class DmgStyle : MonoBehaviour, Combat
                                 h.setState(Hexagon.CodeState.AllyT);
                         }
                     }
-                    if (i <= (int)c.getMovement() + 1 && maxCasillas > 1)
-                        Action(h, i + (int)c.getMovement() + 1, c);
-
+                    if(maxCasillas > 1 && i <= (int)c.getMovement() + 2)
+                        limitAction(h, 0, c);
                 }
                 else
                 {
                     if (h.transform.childCount > 0 && h.transform.GetChild(0).name == "Obstacle")
                     {
-                        if (i <= (int)c.getMovement() + 1 && maxCasillas > 1)
-                            Action(h, i + (int)c.getMovement() + 1, c);
+                        if (maxCasillas > 1 && i <= (int)c.getMovement() + 2)
+                            limitAction(h, 0, c);
                     }
                     else
                     {
@@ -45,6 +44,35 @@ public class DmgStyle : MonoBehaviour, Combat
                             Action(h, i, c);
                     }
                 }
+            }
+        }
+    }
+
+    public void limitAction(Hexagon t, int i, Character c)
+    {
+        i++;
+        foreach (Hexagon h in t.neighbours)
+        {
+            if (h != null)
+            {
+                if (h.getOccupant())
+                {
+                    if (h.getOccupant() != c)
+                    {
+                        if (h.getOccupant().getSide() != c.getSide())
+                        {
+                            h.setState(Hexagon.CodeState.EnemyT);
+                            h.getOccupant().setTarget(true);
+                        }
+                        else
+                        {
+                            if (this.GetComponentInParent<Abilities>() && this.GetComponentInParent<Abilities>().Role == "Support")
+                                h.setState(Hexagon.CodeState.AllyT);
+                        }
+                    }
+                }
+                if (i < maxCasillas - 2)
+                    limitAction(h, i, c);
             }
         }
     }
