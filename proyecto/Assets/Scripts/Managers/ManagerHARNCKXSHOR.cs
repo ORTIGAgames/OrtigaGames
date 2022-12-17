@@ -87,7 +87,7 @@ public class ManagerHARNCKXSHOR : Manager
 
         if(spawnturns == 2)
         {
-            enemies[0].GetComponent<HARNCKXSHORSpawner>().Effect(enemies[0]);
+            enemies[0].GetComponent<HARNCKXSHORSpawner>().Effect(BOSS);
             spawnturns = 0;
         }
 
