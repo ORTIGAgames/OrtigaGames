@@ -16,7 +16,6 @@ public class MovementState : State
     public override void function()
     {
         float valueN;
-
         character.Move(character.getInitialBlock(), 0);
 
         foreach (Hexagon hex in character.game.stage.board)
@@ -25,18 +24,11 @@ public class MovementState : State
             {
                 foreach (Character c in character.game.allies)
                 {
-                    if (c.getSide() != character.getSide())
-                    {
-                        int dx = c.getInitialBlock().dx - hex.dx;
-
-                        int dy = c.getInitialBlock().dy - hex.dy;
-
-                        if (Math.Sign(dx) == Math.Sign(dy)) valueN = (0.6f * c.getHealth()) + (0.4f * Math.Abs(dx + dy));
-
-                        else valueN = c.getHealth() + Math.Max(Math.Abs(dx), Math.Abs(dy));
-
-                        AddValue(hex, valueN);
-                    }
+                    int dx = c.getInitialBlock().dx - hex.dx;
+                    int dy = c.getInitialBlock().dy - hex.dy;
+                    if (Math.Sign(dx) == Math.Sign(dy)) valueN = Math.Abs(dx + dy);//meter función para hacer media entre distancia y vida
+                    else valueN = c.getHealth() + Math.Max(Math.Abs(dx), Math.Abs(dy));
+                    AddValue(hex, valueN);
                 }
             }
         }
@@ -46,7 +38,7 @@ public class MovementState : State
 
         foreach (ValueHexagon V in valueHexagon)
         {
-            if (!V.hexagon.getOccupant() && V.hexagon.getOccupant() != character)
+            if (!V.hexagon.getOccupant() || V.hexagon.getOccupant() == character)
             {
                 character.CharacterMove(V.hexagon, false);
                 break;
@@ -59,11 +51,11 @@ public class MovementState : State
         {
             if (hex.getState() == Hexagon.CodeState.EnemyT)
             {
-                character.GetComponent<EnemyBehaviourState>().State = new AttackState(character);
+                character.GetComponent<EnemyBehaviourState>().state = new AttackState(character);
                 break;
             }
         }
-        character.GetComponent<EnemyBehaviourState>().State = new WaitingState();
+        character.GetComponent<EnemyBehaviourState>().state = new WaitingState();
         character.EndTurn();
     }
 

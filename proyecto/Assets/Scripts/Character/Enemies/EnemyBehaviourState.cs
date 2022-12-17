@@ -9,7 +9,12 @@ public class EnemyBehaviourState: EnemyBehaviour
     private enum TStates { WAITING,MOVEMENT, ATTACK };
     private TStates actual = TStates.WAITING;
 
-    public State State = new WaitingState();
+    public State state = new WaitingState();
+
+    public void Action()
+    {
+        state = new MovementState(this.GetComponent<Enemy>());
+    }
 
     private void CreateStateMachine()
     {

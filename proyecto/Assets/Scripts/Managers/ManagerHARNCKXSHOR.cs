@@ -10,6 +10,7 @@ public class ManagerHARNCKXSHOR : Manager
 {
     public int spawnturns;
     public Character BOSS;
+    public List<Enemy> minions = new List<Enemy>();
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
@@ -52,6 +53,7 @@ public class ManagerHARNCKXSHOR : Manager
                     {
                         box = stage.Block(Random.Range(0, stage.board.Length));
                     }
+                    minions.Add((Enemy)c);
                 }
                 c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
                 c.myAnimator.speed = Random.Range(0.5f, 1.6f);

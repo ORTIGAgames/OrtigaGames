@@ -35,6 +35,6 @@ public class AttackState : State
             character.getStyle().Action(character.game, "Action");
         }
         character.EndTurn();
-        character.GetComponent<EnemyBehaviourState>().State = new WaitingState();
+        character.GetComponent<EnemyBehaviourState>().state = new WaitingState();
     }
 }
