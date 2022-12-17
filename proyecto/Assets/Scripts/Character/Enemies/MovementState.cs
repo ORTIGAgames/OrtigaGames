@@ -46,7 +46,7 @@ public class MovementState : State
 
         foreach (ValueHexagon V in valueHexagon)
         {
-            if (!V.hexagon.getOccupant())
+            if (!V.hexagon.getOccupant() && V.hexagon.getOccupant() != character)
             {
                 character.CharacterMove(V.hexagon, false);
                 break;

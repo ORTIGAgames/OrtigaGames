@@ -8,6 +8,7 @@ public class AttackState : State
     public AttackState(Enemy c)
     {
         character = c;
+        character.game.stage.Reset();
         function();
     }
     public override void function()
@@ -15,7 +16,7 @@ public class AttackState : State
         Character weaker = null;
         int weakerLife = int.MaxValue;
 
-        character.getStyle().Action(character.getInitialBlock(), (int)character.getMovement(), character);
+        character.getStyle().limitAction(character.getInitialBlock(), -2, character);
 
         foreach (Hexagon hex in character.game.stage.board)
         {
