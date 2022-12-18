@@ -6,9 +6,14 @@ public class UtilitySystem : EnemyBehaviour
 {
     public void Action(Character c)
     {
-        float valueAttack = Attack(c);
-        float valueHeal = Heal(c);
-        float valueSummon = Summon(c);
+        List<float> values = new List<float>();
+        float valueA = Attack(c);
+        values.Add(valueA);
+        float valueH = Heal(c);
+        values.Add(valueH);
+        float valueSu = Summon(c);
+        values.Add(valueSu);
+        
     }
 
     public float Attack(Character c)
@@ -30,8 +35,7 @@ public class UtilitySystem : EnemyBehaviour
         int aux;
         if (c.GetComponent<HARNCKXSHORHealing>().cooldown == 0) aux = 1;
         else aux = 0;
-
-        return aux * (2 / c.getHealth()) + c.GetComponent<ManagerHARNCKXSHOR>().minions.Count;
+        return aux * (2 / c.getHealth()) + c.GetComponent<ManagerHARNCKXSHOR>().minions.Count;//hay que normalzarlo entre valores para que devuelva 1 o 0
     }
 
     public float Summon(Character c)
@@ -40,7 +44,7 @@ public class UtilitySystem : EnemyBehaviour
         if (c.GetComponent<HARNCKXSHORHealing>().cooldown == 0) aux = 1;
         else aux = 0;
 
-        return aux * 1 / c.GetComponent<ManagerHARNCKXSHOR>().minions.Count;
+        return aux * 1 / c.GetComponent<ManagerHARNCKXSHOR>().minions.Count;//hay que normalzarlo entre valores para que devuelva 1 o 0
     }
 
     public override Hexagon BestMove(Hexagon hex)
