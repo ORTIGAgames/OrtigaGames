@@ -6,7 +6,7 @@ using Cinemachine;
 public class Enemy : Character
 {
     public CinemachineVirtualCamera ncamera;
-    [SerializeField] protected CinemachineBrain worldcamera;
+    public CinemachineBrain worldcamera;
     [SerializeField] int enemy;
     public EnemyBehaviour EB;
     // Start is called before the first frame update

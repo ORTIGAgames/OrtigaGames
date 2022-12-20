@@ -24,6 +24,7 @@ public class HARNCKXSHORSpawner : Abilities
             CinemachineVirtualCamera camera = Instantiate(prefabCamera.GetComponent<CinemachineVirtualCamera>());
             camera.Follow = enemy.transform;
             enemy.GetComponent<Enemy>().ncamera = camera;
+            enemy.GetComponent<Enemy>().worldcamera = GameObject.Find("Main Camera").GetComponent<CinemachineBrain>();
             this.GetComponent<Enemy>().game.enemies.Add(enemy.GetComponent<Enemy>());
             this.GetComponent<Enemy>().game.players.Add(enemy.GetComponent<Character>());
         }

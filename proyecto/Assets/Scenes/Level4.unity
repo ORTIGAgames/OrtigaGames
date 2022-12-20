@@ -1576,7 +1576,7 @@ MonoBehaviour:
   description: 
   icon: {fileID: 0}
   ActiveIcon: {fileID: 0}
-  prefabEnemy: {fileID: 153858861}
+  prefabEnemy: {fileID: 7951848215142005528, guid: 8fafe51e7fd696f44899a350ff7d3d22, type: 3}
   prefabCamera: {fileID: 6349085305879722828, guid: 29f1716c992a87b4f9679b598aff0d6a, type: 3}
 --- !u!114 &153858873
 MonoBehaviour:
@@ -5973,7 +5973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 442e52df2a562e64cb9baa23c5316b3f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.97
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 442e52df2a562e64cb9baa23c5316b3f, type: 3}
       propertyPath: m_LocalScale.y
@@ -5985,7 +5985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 442e52df2a562e64cb9baa23c5316b3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.24
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 442e52df2a562e64cb9baa23c5316b3f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6409,7 +6409,6 @@ MonoBehaviour:
   scene: {fileID: 415553587}
   attacker: {fileID: 0}
   defender: {fileID: 0}
-  spawnturns: 0
   BOSS: {fileID: 153858863}
   minions: []
 --- !u!1001 &508147509

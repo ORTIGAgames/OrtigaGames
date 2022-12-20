@@ -8,7 +8,6 @@ using Cinemachine;
 
 public class ManagerHARNCKXSHOR : Manager
 {
-    public int spawnturns;
     public Character BOSS;
     public List<Enemy> minions = new List<Enemy>();
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
@@ -85,12 +84,6 @@ public class ManagerHARNCKXSHOR : Manager
             scene.playWin();
         }
 
-        if(spawnturns == 2)
-        {
-            enemies[0].GetComponent<HARNCKXSHORSpawner>().Effect(BOSS);
-            spawnturns = 0;
-        }
-
         if (allyturn && CheckTurn(allies))
         {
             PlayerReset();
@@ -104,7 +97,7 @@ public class ManagerHARNCKXSHOR : Manager
                 enemies[i].setTurn(1);
                 StartCoroutine(CameraFocus(1f * (i + 1), (Enemy)enemies[i]));
             }
-            spawnturns++;
+
         }
 
         if (!allyturn && CheckTurn(enemies))
@@ -121,7 +114,6 @@ public class ManagerHARNCKXSHOR : Manager
             }
             Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
             focus.Camera();
-            spawnturns++;
         }
     }
 
@@ -161,6 +153,10 @@ public class ManagerHARNCKXSHOR : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
+        if(e == BOSS)
+        {
+            e.GetComponent<UtilitySystem>().Action(e, minions);
+        }
         e.EB.EnemyControl();
     }
 

@@ -4,47 +4,104 @@ using UnityEngine;
 
 public class UtilitySystem : EnemyBehaviour
 {
-    public void Action(Character c)
+    int maxminions = 20;
+    public void Action(Character c, List<Enemy> m)
     {
         List<float> values = new List<float>();
         float valueA = Attack(c);
         values.Add(valueA);
-        float valueH = Heal(c);
+        float valueH = Heal(c, m);
         values.Add(valueH);
-        float valueSu = Summon(c);
-        values.Add(valueSu);
-        
+        float valueS = Summon(c, m);
+        values.Add(valueS);
+
+        values.Sort(SortByValue);
+
+        foreach(float f in values)
+        {
+            print(f);
+        }
+
+        float action = values[0];
+
+        if(action == valueA)
+        {
+            Character weaker = null;
+            int weakerLife = int.MaxValue;
+
+            c.getStyle().limitAction(c.getInitialBlock(), -2, c);
+
+            foreach (Hexagon hex in c.game.stage.board)
+            {
+                if (hex.getState() == Hexagon.CodeState.EnemyT)
+                {
+                    if (hex.getOccupant().getHealth() < weakerLife)
+                    {
+                        weakerLife = hex.getOccupant().getHealth();
+                        weaker = hex.getOccupant();
+                    }
+                }
+            }
+            if (weaker)
+            {
+                c.game.CombatActivation(c, weaker);
+                c.getStyle().Action(c.game, "Action");
+            }
+        }
+
+        if(action == valueH)
+        {
+            c.GetComponent<HARNCKXSHORHealing>().Effect(null);
+        }
+
+        if(action == valueS)
+        {
+            c.GetComponent<HARNCKXSHORSpawner>().Effect(null);
+        }
+    }
+
+    static int SortByValue(float v1, float v2)
+    {
+        return v2.CompareTo(v1);
     }
 
     public float Attack(Character c)
     {
         c.getStyle().limitAction(c.getInitialBlock(), -2, c);
 
+        float value = 0;
+
         foreach (Hexagon hex in c.game.stage.board)
         {
             if (hex.getState() == Hexagon.CodeState.EnemyT)
             {
-                return 1.0f;
+                value += 1;
             }
         }
-        return 0f;
+        float value2 = (value / 6)/2;
+        print(value2 + " atak");
+        if (value > 1)
+        {
+            return .5f + value2;
+        }
+        else return 0f;
     }
 
-    public float Heal(Character c)
+    public float Heal(Character c, List<Enemy> m)
+    {
+        int aux;
+        if (c.GetComponent<HARNCKXSHORHealing>().cooldown == 0 && m.Count > 0) aux = 1;
+        else aux = 0;
+        print(aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth)) + " hil");
+        return aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth));
+    }
+
+    public float Summon(Character c, List<Enemy> m)
     {
         int aux;
         if (c.GetComponent<HARNCKXSHORHealing>().cooldown == 0) aux = 1;
         else aux = 0;
-        return aux * (2 / c.getHealth()) + c.GetComponent<ManagerHARNCKXSHOR>().minions.Count;//hay que normalzarlo entre valores para que devuelva 1 o 0
-    }
-
-    public float Summon(Character c)
-    {
-        int aux;
-        if (c.GetComponent<HARNCKXSHORHealing>().cooldown == 0) aux = 1;
-        else aux = 0;
-
-        return aux * 1 / c.GetComponent<ManagerHARNCKXSHOR>().minions.Count;//hay que normalzarlo entre valores para que devuelva 1 o 0
+        return aux * (1 / ((float)m.Count + 1f));
     }
 
     public override Hexagon BestMove(Hexagon hex)
