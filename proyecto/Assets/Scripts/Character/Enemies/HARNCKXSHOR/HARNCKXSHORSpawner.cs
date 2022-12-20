@@ -25,6 +25,7 @@ public class HARNCKXSHORSpawner : Abilities
             camera.Follow = enemy.transform;
             enemy.GetComponent<Enemy>().ncamera = camera;
             enemy.GetComponent<Enemy>().worldcamera = GameObject.Find("Main Camera").GetComponent<CinemachineBrain>();
+            GameObject.Find("Manager").GetComponent<ManagerHARNCKXSHOR>().minions.Add(enemy.GetComponent<Enemy>());
             this.GetComponent<Enemy>().game.enemies.Add(enemy.GetComponent<Enemy>());
             this.GetComponent<Enemy>().game.players.Add(enemy.GetComponent<Character>());
         }
