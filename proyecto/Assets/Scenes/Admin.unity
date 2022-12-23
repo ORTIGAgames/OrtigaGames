@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 130446875}
   - component: {fileID: 130446873}
   m_Layer: 5
-  m_Name: InputField (TMP) (2)
+  m_Name: "Contrase\xF1aInput"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,7 +410,7 @@ RectTransform:
   m_Children:
   - {fileID: 762663528}
   m_Father: {fileID: 529065022}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 206131073}
   - component: {fileID: 206131072}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Usuario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Motivo
+  m_text: Usuario
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0090f26031348c14abcf4adf4151f823, type: 2}
   m_sharedMaterial: {fileID: 5245883994495419976, guid: 0090f26031348c14abcf4adf4151f823, type: 2}
@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 529065024}
   - component: {fileID: 529065023}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: "Contrase\xF1a"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Comentario
+  m_text: "Contrase\xF1a"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0090f26031348c14abcf4adf4151f823, type: 2}
   m_sharedMaterial: {fileID: 5245883994495419976, guid: 0090f26031348c14abcf4adf4151f823, type: 2}
@@ -955,7 +955,7 @@ GameObject:
   - component: {fileID: 608813279}
   - component: {fileID: 608813281}
   m_Layer: 5
-  m_Name: InputField (TMP) (1)
+  m_Name: UsuarioInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cargar desde JSON
+  m_text: Ver admins
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1401,7 +1401,7 @@ GameObject:
   - component: {fileID: 746975503}
   - component: {fileID: 746975505}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: IDInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1546111680}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ConvertirAJSON, Assembly-CSharp
         m_MethodName: guardar
         m_Mode: 1
@@ -2259,7 +2259,7 @@ GameObject:
   - component: {fileID: 1546111683}
   - component: {fileID: 1546111682}
   - component: {fileID: 1546111681}
-  - component: {fileID: 1546111680}
+  - component: {fileID: 1546111685}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2267,21 +2267,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1546111680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546111679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b5e9e7810967e843a599e5782da75e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idIF: {fileID: 746975505}
-  motIF: {fileID: 608813281}
-  comIF: {fileID: 130446873}
 --- !u!114 &1546111681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2366,6 +2351,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1546111685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546111679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa5fb169eac42b43b607ec812b2df29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1566433857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,7 +2375,7 @@ GameObject:
   - component: {fileID: 1566433860}
   - component: {fileID: 1566433859}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: ID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2889,7 +2886,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1546111680}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ConvertirAJSON, Assembly-CSharp
         m_MethodName: cargar
         m_Mode: 1
@@ -2997,7 +2994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Guardar como JSON
+  m_text: Registrarse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3109,8 +3106,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 289}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -19.9387, y: 284.2527}
+  m_SizeDelta: {x: 433.5684, y: 70.8882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098917483
 MonoBehaviour:
@@ -3132,7 +3129,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Baneos
+  m_text: 'Creacion admin
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0090f26031348c14abcf4adf4151f823, type: 2}
   m_sharedMaterial: {fileID: 5245883994495419976, guid: 0090f26031348c14abcf4adf4151f823, type: 2}
