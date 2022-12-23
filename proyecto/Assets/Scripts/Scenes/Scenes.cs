@@ -140,4 +140,15 @@ public class Scenes : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(10);
     }
+    public void playGestion()
+    {
+        StartCoroutine(LoadGestion());
+        Time.timeScale = 1f;
+    }
+    IEnumerator LoadGestion()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(11);
+    }
 }

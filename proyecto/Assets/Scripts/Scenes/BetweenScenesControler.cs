@@ -65,4 +65,7 @@ public class BetweenScenesControler : MonoBehaviour
     public static bool level3 = false;
 
     public static int levelRetry = 0;
+
+    public static int bans = 0;
+    public static int admins = 0;
 }
