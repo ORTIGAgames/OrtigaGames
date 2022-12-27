@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UtilitySystem : EnemyBehaviour
 {
-    int maxminions = 20;
     public void Action(Character c, List<Enemy> m)
     {
         List<float> values = new List<float>();
@@ -24,7 +23,7 @@ public class UtilitySystem : EnemyBehaviour
 
         float action = values[0];
 
-        if(action == valueA)
+        if(action > 0 && action == valueA)
         {
             Character weaker = null;
             int weakerLife = int.MaxValue;
@@ -49,12 +48,12 @@ public class UtilitySystem : EnemyBehaviour
             }
         }
 
-        if(action == valueH)
+        if(action > 0 && action == valueH)
         {
             c.GetComponent<HARNCKXSHORHealing>().Effect(null);
         }
 
-        if(action == valueS)
+        if(action > 0 && action == valueS)
         {
             c.GetComponent<HARNCKXSHORSpawner>().Effect(null);
         }
@@ -67,7 +66,7 @@ public class UtilitySystem : EnemyBehaviour
 
     public float Attack(Character c)
     {
-        c.getStyle().limitAction(c.getInitialBlock(), -2, c);
+        this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
 
         float value = 0;
 
@@ -78,9 +77,8 @@ public class UtilitySystem : EnemyBehaviour
                 value += 1;
             }
         }
-        float value2 = (value / 6)/2;
-        print(value2 + " atak");
-        if (value > 1)
+        float value2 = (value / 12);
+        if (value >= 1)
         {
             return .5f + value2;
         }
@@ -92,15 +90,16 @@ public class UtilitySystem : EnemyBehaviour
         int aux;
         if (c.GetComponent<HARNCKXSHORHealing>().cooldown == 0 && m.Count > 0) aux = 1;
         else aux = 0;
-        print(aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth)) + " hil");
+        print(aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth)) + " heal");
         return aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth));
     }
 
     public float Summon(Character c, List<Enemy> m)
     {
         int aux;
-        if (c.GetComponent<HARNCKXSHORHealing>().cooldown == 0) aux = 1;
+        if (c.GetComponent<HARNCKXSHORSpawner>().cooldown == 0) aux = 1;
         else aux = 0;
+        print(aux * (1 / ((float)m.Count + 1f)));
         return aux * (1 / ((float)m.Count + 1f));
     }
 

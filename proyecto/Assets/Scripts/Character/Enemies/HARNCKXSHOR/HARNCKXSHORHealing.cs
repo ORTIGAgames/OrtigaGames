@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class HARNCKXSHORHealing : Abilities
 {
-    public List<Enemy> minions = new List<Enemy>();
+    public List<Enemy> minions;
 
     public override void Effect(Character Figther)
     {
-        foreach(Enemy m in minions)
+        minions = GameObject.Find("Manager").GetComponent<ManagerHARNCKXSHOR>().minions;
+        foreach(Enemy m in minions.ToArray())
         {
             this.GetComponent<Enemy>().setHealth(this.GetComponent<Enemy>().getHealth() + 5);
             this.GetComponent<Enemy>().game.DeleteCharacter(m);
@@ -17,6 +18,7 @@ public class HARNCKXSHORHealing : Abilities
 
     public override void BeforeTurn()
     {
-        cooldown--;
+        if (cooldown > 0) cooldown--;
+        else GameObject.Find("Manager").GetComponent<Manager>().preTurn.Remove(this);
     }
 }

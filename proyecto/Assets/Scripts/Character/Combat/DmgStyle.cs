@@ -71,7 +71,7 @@ public class DmgStyle : MonoBehaviour, Combat
                         }
                     }
                 }
-                if (i < maxCasillas - 2)
+                if (i < maxCasillas - 3)
                     limitAction(h, i, c);
             }
         }

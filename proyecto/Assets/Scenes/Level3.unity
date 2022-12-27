@@ -1309,9 +1309,9 @@ GameObject:
   - component: {fileID: 50943554}
   - component: {fileID: 50943558}
   - component: {fileID: 50943560}
+  - component: {fileID: 50943561}
   - component: {fileID: 50943557}
   - component: {fileID: 50943556}
-  - component: {fileID: 50943559}
   m_Layer: 0
   m_Name: Ixoda 10
   m_TagString: Untagged
@@ -1369,7 +1369,7 @@ MonoBehaviour:
   ncamera: {fileID: 1804729202}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 50943559}
+  EB: {fileID: 0}
 --- !u!95 &50943556
 Animator:
   serializedVersion: 4
@@ -1455,20 +1455,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &50943559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50943552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &50943560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,6 +1469,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &50943561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50943552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1 &55704861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,7 +2418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d213e657404b9664cbbf9f92958f7aa4, type: 3}
       propertyPath: m_Name
-      value: CartelSalida
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d213e657404b9664cbbf9f92958f7aa4, type: 3}
@@ -2760,9 +2760,9 @@ GameObject:
   - component: {fileID: 136693786}
   - component: {fileID: 136693790}
   - component: {fileID: 136693792}
+  - component: {fileID: 136693793}
   - component: {fileID: 136693789}
   - component: {fileID: 136693788}
-  - component: {fileID: 136693791}
   m_Layer: 0
   m_Name: Ixoda 7
   m_TagString: Untagged
@@ -2820,7 +2820,7 @@ MonoBehaviour:
   ncamera: {fileID: 1598763075}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 136693791}
+  EB: {fileID: 0}
 --- !u!95 &136693788
 Animator:
   serializedVersion: 4
@@ -2906,20 +2906,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &136693791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136693784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &136693792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2934,6 +2920,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &136693793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136693784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1001 &138340873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3665,9 +3665,9 @@ GameObject:
   - component: {fileID: 238724299}
   - component: {fileID: 238724303}
   - component: {fileID: 238724305}
+  - component: {fileID: 238724306}
   - component: {fileID: 238724302}
   - component: {fileID: 238724301}
-  - component: {fileID: 238724304}
   m_Layer: 0
   m_Name: Ixoda 2
   m_TagString: Untagged
@@ -3725,7 +3725,7 @@ MonoBehaviour:
   ncamera: {fileID: 1152786774}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 238724304}
+  EB: {fileID: 0}
 --- !u!95 &238724301
 Animator:
   serializedVersion: 4
@@ -3811,20 +3811,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &238724304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238724297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &238724305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3839,6 +3825,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &238724306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238724297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1 &238750919
 GameObject:
   m_ObjectHideFlags: 0
@@ -7972,9 +7972,9 @@ GameObject:
   - component: {fileID: 472764481}
   - component: {fileID: 472764485}
   - component: {fileID: 472764487}
+  - component: {fileID: 472764488}
   - component: {fileID: 472764484}
   - component: {fileID: 472764483}
-  - component: {fileID: 472764486}
   m_Layer: 0
   m_Name: Ixoda 6
   m_TagString: Untagged
@@ -8032,7 +8032,7 @@ MonoBehaviour:
   ncamera: {fileID: 1900995284}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 472764486}
+  EB: {fileID: 0}
 --- !u!95 &472764483
 Animator:
   serializedVersion: 4
@@ -8118,20 +8118,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &472764486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472764479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &472764487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8146,6 +8132,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &472764488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472764479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1 &480449238
 GameObject:
   m_ObjectHideFlags: 0
@@ -12135,9 +12135,9 @@ GameObject:
   - component: {fileID: 682666618}
   - component: {fileID: 682666622}
   - component: {fileID: 682666624}
+  - component: {fileID: 682666625}
   - component: {fileID: 682666621}
   - component: {fileID: 682666620}
-  - component: {fileID: 682666623}
   m_Layer: 0
   m_Name: Ixoda 5
   m_TagString: Untagged
@@ -12195,7 +12195,7 @@ MonoBehaviour:
   ncamera: {fileID: 1802958848}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 682666623}
+  EB: {fileID: 0}
 --- !u!95 &682666620
 Animator:
   serializedVersion: 4
@@ -12281,20 +12281,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &682666623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682666616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &682666624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12309,6 +12295,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &682666625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682666616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1001 &704192873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13061,7 +13061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712190149}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.8516177, y: 14.581499, z: -28.552689}
+  m_LocalPosition: {x: 0.2296237, y: 14.609379, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14314,9 +14314,9 @@ GameObject:
   m_Component:
   - component: {fileID: 776813353}
   - component: {fileID: 776813354}
-  - component: {fileID: 776813359}
   - component: {fileID: 776813358}
   - component: {fileID: 776813360}
+  - component: {fileID: 776813361}
   - component: {fileID: 776813357}
   - component: {fileID: 776813356}
   m_Layer: 0
@@ -14376,7 +14376,7 @@ MonoBehaviour:
   ncamera: {fileID: 1332385157}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 776813359}
+  EB: {fileID: 0}
 --- !u!95 &776813356
 Animator:
   serializedVersion: 4
@@ -14462,20 +14462,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &776813359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776813352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &776813360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14490,6 +14476,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &776813361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776813352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1 &778604427
 GameObject:
   m_ObjectHideFlags: 0
@@ -19767,8 +19767,8 @@ GameObject:
   - component: {fileID: 1020342140}
   - component: {fileID: 1020342141}
   - component: {fileID: 1020342145}
-  - component: {fileID: 1020342146}
   - component: {fileID: 1020342147}
+  - component: {fileID: 1020342148}
   - component: {fileID: 1020342144}
   - component: {fileID: 1020342143}
   m_Layer: 0
@@ -19828,7 +19828,7 @@ MonoBehaviour:
   ncamera: {fileID: 847402537}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 1020342146}
+  EB: {fileID: 0}
 --- !u!95 &1020342143
 Animator:
   serializedVersion: 4
@@ -19914,20 +19914,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1020342146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020342139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &1020342147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19942,6 +19928,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &1020342148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020342139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1001 &1031035910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33715,9 +33715,9 @@ GameObject:
   - component: {fileID: 1701872294}
   - component: {fileID: 1701872298}
   - component: {fileID: 1701872300}
+  - component: {fileID: 1701872301}
   - component: {fileID: 1701872297}
   - component: {fileID: 1701872296}
-  - component: {fileID: 1701872299}
   m_Layer: 0
   m_Name: Ixoda 9
   m_TagString: Untagged
@@ -33775,7 +33775,7 @@ MonoBehaviour:
   ncamera: {fileID: 1538651977}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 1701872299}
+  EB: {fileID: 0}
 --- !u!95 &1701872296
 Animator:
   serializedVersion: 4
@@ -33861,20 +33861,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1701872299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701872292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &1701872300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33889,6 +33875,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &1701872301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701872292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1 &1707740548
 GameObject:
   m_ObjectHideFlags: 0
@@ -34366,8 +34366,8 @@ GameObject:
   - component: {fileID: 1765299123}
   - component: {fileID: 1765299124}
   - component: {fileID: 1765299128}
-  - component: {fileID: 1765299129}
   - component: {fileID: 1765299130}
+  - component: {fileID: 1765299131}
   - component: {fileID: 1765299127}
   - component: {fileID: 1765299126}
   m_Layer: 0
@@ -34427,7 +34427,7 @@ MonoBehaviour:
   ncamera: {fileID: 601235555}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 1765299129}
+  EB: {fileID: 0}
 --- !u!95 &1765299126
 Animator:
   serializedVersion: 4
@@ -34513,20 +34513,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1765299129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765299122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &1765299130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34541,6 +34527,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &1765299131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765299122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1001 &1768256485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38064,9 +38064,9 @@ GameObject:
   - component: {fileID: 1927539628}
   - component: {fileID: 1927539632}
   - component: {fileID: 1927539634}
+  - component: {fileID: 1927539635}
   - component: {fileID: 1927539631}
   - component: {fileID: 1927539630}
-  - component: {fileID: 1927539633}
   m_Layer: 0
   m_Name: Ixoda 4
   m_TagString: Untagged
@@ -38124,7 +38124,7 @@ MonoBehaviour:
   ncamera: {fileID: 1515346239}
   worldcamera: {fileID: 712190150}
   enemy: 3
-  EB: {fileID: 1927539633}
+  EB: {fileID: 0}
 --- !u!95 &1927539630
 Animator:
   serializedVersion: 4
@@ -38210,20 +38210,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1927539633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927539626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472a554e291cd847864d21b070f99d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &1927539634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38238,6 +38224,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 0
   defender: {fileID: 0}
+--- !u!114 &1927539635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927539626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4edab5807e7e6459c1fe8d708c6a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  allies: []
 --- !u!1 &1929207597
 GameObject:
   m_ObjectHideFlags: 0

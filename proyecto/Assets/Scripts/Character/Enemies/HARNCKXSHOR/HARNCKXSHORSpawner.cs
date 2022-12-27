@@ -29,10 +29,13 @@ public class HARNCKXSHORSpawner : Abilities
             this.GetComponent<Enemy>().game.enemies.Add(enemy.GetComponent<Enemy>());
             this.GetComponent<Enemy>().game.players.Add(enemy.GetComponent<Character>());
         }
+        cooldown += 4;
+        GameObject.Find("Manager").GetComponent<Manager>().preTurn.Add(this);
     }
 
     public override void BeforeTurn()
     {
-        cooldown--;
+        if (cooldown > 0) cooldown--;
+        else GameObject.Find("Manager").GetComponent<Manager>().preTurn.Remove(this);
     }
 }

@@ -113,7 +113,7 @@ public class ManagerKrangle : Manager
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
-                StartCoroutine(CameraFocus(2.5f * (i + 1), (Enemy)enemies[i]));
+                StartCoroutine(CameraFocus(1.5f * (i + 1), (Enemy)enemies[i]));
             }
             turnsCompleted++;
         }
@@ -172,14 +172,14 @@ public class ManagerKrangle : Manager
     {
         yield return new WaitForSeconds(timer);
         e.Camera();
-        StartCoroutine(Movement(1.5f, e));
+        StartCoroutine(Movement(0.5f, e));
     }
     IEnumerator Movement(float timer, Enemy e)
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.GetComponent<EnemyBehaviourState>().Action();
-        yield return new WaitForSeconds(2.5f - timer);
+        e.GetComponent<EnemyBehaviourState>().state = new MovementState(e);
+        yield return new WaitForSeconds(1.5f - timer);
     }
 
     public override void CombatActivation(Character Figther1, Character Figther2)

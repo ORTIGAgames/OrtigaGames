@@ -157,7 +157,10 @@ public class ManagerHARNCKXSHOR : Manager
         {
             e.GetComponent<UtilitySystem>().Action(e, minions);
         }
-        e.EB.EnemyControl();
+        if (e)
+        {
+            e.EB.EnemyControl();
+        }
     }
 
     public override void CombatActivation(Character Figther1, Character Figther2)
@@ -188,7 +191,10 @@ public class ManagerHARNCKXSHOR : Manager
         if (c.getSide() == "Ally")
             allies.Remove((Ally)c);
         else
+        {
             enemies.Remove((Enemy)c);
+            minions.Remove((Enemy)c);
+        }
         players.Remove(c);
         Destroy(c.gameObject);
     }

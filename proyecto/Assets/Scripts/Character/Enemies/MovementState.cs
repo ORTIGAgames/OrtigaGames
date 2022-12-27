@@ -15,6 +15,7 @@ public class MovementState : State
     }
     public override void function()
     {
+        Debug.Log("movement State");
         float valueN;
         character.Move(character.getInitialBlock(), 0);
 
@@ -24,17 +25,27 @@ public class MovementState : State
             {
                 foreach (Character c in character.game.allies)
                 {
-                    int dx = c.getInitialBlock().dx - hex.dx;
-                    int dy = c.getInitialBlock().dy - hex.dy;
-                    if (Math.Sign(dx) == Math.Sign(dy)) valueN = Math.Abs(dx + dy);//meter función para hacer media entre distancia y vida
-                    else valueN = c.getHealth() + Math.Max(Math.Abs(dx), Math.Abs(dy));
+                    float dx = c.getInitialBlock().dx - hex.dx;
+                    float dy = c.getInitialBlock().dy - hex.dy;
+                    if (Math.Sign(dx) == Math.Sign(dy)) valueN = Math.Abs(dx + dy) * (1 / (float)c.getHealth());
+                    else valueN = (Math.Max(Math.Abs(dx), Math.Abs(dy)) * (1 / (float)c.getHealth()));
                     AddValue(hex, valueN);
                 }
             }
         }
 
+        foreach(ValueHexagon V in valueHexagon)
+        {
+            Debug.Log(V.hexagon + " " + V.value + " pre value");
+        }
+
         Comparer comparer = new Comparer();
         valueHexagon.Sort(comparer);
+
+        foreach (ValueHexagon V in valueHexagon)
+        {
+            Debug.Log(V.hexagon + " " + V.value + " post value");
+        }
 
         foreach (ValueHexagon V in valueHexagon)
         {

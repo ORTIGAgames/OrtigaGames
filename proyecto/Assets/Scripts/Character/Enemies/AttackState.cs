@@ -13,10 +13,12 @@ public class AttackState : State
     }
     public override void function()
     {
+        Debug.Log("Attack state");
+
         Character weaker = null;
         int weakerLife = int.MaxValue;
 
-        character.getStyle().limitAction(character.getInitialBlock(), -2, character);
+        character.getStyle().limitAction(character.getInitialBlock(), -3, character);
 
         foreach (Hexagon hex in character.game.stage.board)
         {

@@ -33,16 +33,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,18 +115,1140 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 170
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af922da6d51a00948aa3fe56eb5bc341
+      internalID: 1471524785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 213
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39f0ab3f1a238b438b1cfba1a6026df
+      internalID: 1651713733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 9
+        width: 166
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e683eda4f5c585e4fafcfed92c649e5a
+      internalID: 1739355280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_3
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 9
+        width: 171
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2817a12ab431be4985bfff73c91ba8d
+      internalID: 899437016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_4
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 213
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdfd73ee48bea8499a96f1a1d50db1f
+      internalID: -2091671932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_5
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 9
+        width: 165
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de61dc1a7076ed44aba3006ffe032aa
+      internalID: 1955011820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_6
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 9
+        width: 179
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbf4bb77ae836341af5f72df3142027
+      internalID: -1266419630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_7
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 9
+        width: 170
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bee3475d181a814dbd58ec6f9f6fa9e
+      internalID: 1472298258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_8
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 213
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd54b760ab3a6a4fa34f11351a2a148
+      internalID: -1461024708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_9
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 9
+        width: 184
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4ebdafc6386624083735d01a19721f
+      internalID: -782469182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_10
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 9
+        width: 191
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e2249de6539b946a1c56b1218b7c52
+      internalID: -1230795940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_11
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 9
+        width: 190
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3384db142216a8846b4975d1582bab0f
+      internalID: -2083104802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_12
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 9
+        width: 157
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837b5771cdeab4b43afff286b71c1f35
+      internalID: -1699124912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_13
+      rect:
+        serializedVersion: 2
+        x: 2823
+        y: 213
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aecf2bc42e09fb4f8a62e703c60947d
+      internalID: -612768213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_14
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 9
+        width: 186
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b9c7692c801154c8c332ace2fc8e98
+      internalID: -1044551437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_15
+      rect:
+        serializedVersion: 2
+        x: 3259
+        y: 131
+        width: 120
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d720eb55d353c4d8cddc7d09e10d16
+      internalID: -843893344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_16
+      rect:
+        serializedVersion: 2
+        x: 3481
+        y: 9
+        width: 179
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5736a3a7d030843b86174b41068f8d
+      internalID: 2087940748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_17
+      rect:
+        serializedVersion: 2
+        x: 3662
+        y: 107
+        width: 152
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43984d25a8f3d1147a706dc5866dcfef
+      internalID: 545885653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_18
+      rect:
+        serializedVersion: 2
+        x: 3891
+        y: 9
+        width: 186
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf3d2fed0450fe48a94130a7bceef3d
+      internalID: -266616467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_19
+      rect:
+        serializedVersion: 2
+        x: 4070
+        y: 107
+        width: 154
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abea3aad3359034899e277ec4107994
+      internalID: -245162542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_20
+      rect:
+        serializedVersion: 2
+        x: 4302
+        y: 9
+        width: 172
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1242b31ba4407da428537403920b1e0e
+      internalID: -1861410996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_21
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 170
+        width: 106
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d80ccb12a9bfb4081d17b9200d2ef5
+      internalID: 1922300973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_22
+      rect:
+        serializedVersion: 2
+        x: 4599
+        y: 174
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92dc1c03fe597a41ac0aefecb6ad60c
+      internalID: 291867574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_23
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 204
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7137bc004c4af4b8fb580e2979928e
+      internalID: -1878643750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_24
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 204
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a09fb9dc4735ab46a1fa73d6df29bac
+      internalID: 1496996816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_25
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 204
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268ec82555b436a4db1a9ba8f2e186d6
+      internalID: 1357347945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_26
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 204
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d98818513d954041a829b7de8d6f471
+      internalID: 1470407887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_27
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 204
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677dbdb17d338004bb5b0476528f0095
+      internalID: 583781235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_28
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 147
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f5a5008a6b255489e718e4472ceecf
+      internalID: -1755454760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_29
+      rect:
+        serializedVersion: 2
+        x: 2857
+        y: 140
+        width: 104
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231bd29a1d3ee564dafc710d257fb02f
+      internalID: 1728408152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_30
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 170
+        width: 40
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a6844404f14ff46b8736bdf69c3a55
+      internalID: 1931538485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_31
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 172
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cd7da221478a34eaa752f2e07f339a
+      internalID: -51138887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_32
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 170
+        width: 39
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13424c59e21289245b8961c4b21005bd
+      internalID: -198984783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_33
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 172
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14492c3a2008fea4eb2f0fedb0c7953e
+      internalID: -801073134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_34
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 170
+        width: 39
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c6511a36747b049872b78bd248d9ff
+      internalID: 491368266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_35
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 172
+        width: 19
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795d473f8412a7540bf97b5e9e0c232c
+      internalID: -258410078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_36
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 170
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c477566ab82b80341aedf0546c90c1f0
+      internalID: 1516921092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_37
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 172
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1a34e35bd164b438efc30f36ca08e9
+      internalID: 2112927085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_38
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 170
+        width: 38
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b4e2895b34c5d4d82cb956b3bd4385
+      internalID: 455001255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_39
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 172
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ac30f7743a6c44295dfeafec5509b8
+      internalID: 1337639885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_40
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 170
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc5a363661abd944891e4de342705e3
+      internalID: 253113958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_41
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 172
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39530eb751c0ab4a9448ceca8acddea
+      internalID: 1548455904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_42
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 170
+        width: 39
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46dbfcfd2946304789e414fee4c55e8
+      internalID: 1609968854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_43
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 172
+        width: 19
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b8505208361ed49b1e7f06dd772d42
+      internalID: 1917686442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_44
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 170
+        width: 39
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48aa16fe44b2e24f97e5abe558f718e
+      internalID: 1872450468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_45
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 172
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170376472e4cc9f40a7edc3374908627
+      internalID: -84423664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_46
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 159
+        width: 73
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effce24cc12f8fb49a5b84d6f3fb064c
+      internalID: 334129888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_47
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 165
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f5eae52eb579d47bf3aee865954fd9
+      internalID: -1924071498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_48
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 165
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff126a96fdd91840b43a3514b0ad1cd
+      internalID: -1773573945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_49
+      rect:
+        serializedVersion: 2
+        x: 4585
+        y: 113
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161899631bd70ed40a2de63a13e04e9a
+      internalID: 376045613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NorbertSpriteSheetLuckyShot_50
+      rect:
+        serializedVersion: 2
+        x: 4481
+        y: 107
+        width: 109
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884350c80c0a4a148bda7e2098de158f
+      internalID: -1471324039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d4d5fe9507084834eb9b6f6cdbbf8435
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NorbertSpriteSheetLuckyShot_25: 1357347945
+      NorbertSpriteSheetLuckyShot_30: 1931538485
+      NorbertSpriteSheetLuckyShot_1: 1651713733
+      NorbertSpriteSheetLuckyShot_4: -2091671932
+      NorbertSpriteSheetLuckyShot_11: -2083104802
+      NorbertSpriteSheetLuckyShot_10: -1230795940
+      NorbertSpriteSheetLuckyShot_9: -782469182
+      NorbertSpriteSheetLuckyShot_24: 1496996816
+      NorbertSpriteSheetLuckyShot_20: -1861410996
+      NorbertSpriteSheetLuckyShot_34: 491368266
+      NorbertSpriteSheetLuckyShot_40: 253113958
+      NorbertSpriteSheetLuckyShot_45: -84423664
+      NorbertSpriteSheetLuckyShot_17: 545885653
+      NorbertSpriteSheetLuckyShot_5: 1955011820
+      NorbertSpriteSheetLuckyShot_33: -801073134
+      NorbertSpriteSheetLuckyShot_19: -245162542
+      NorbertSpriteSheetLuckyShot_41: 1548455904
+      NorbertSpriteSheetLuckyShot_21: 1922300973
+      NorbertSpriteSheetLuckyShot_47: -1924071498
+      NorbertSpriteSheetLuckyShot_18: -266616467
+      NorbertSpriteSheetLuckyShot_26: 1470407887
+      NorbertSpriteSheetLuckyShot_35: -258410078
+      NorbertSpriteSheetLuckyShot_43: 1917686442
+      NorbertSpriteSheetLuckyShot_8: -1461024708
+      NorbertSpriteSheetLuckyShot_2: 1739355280
+      NorbertSpriteSheetLuckyShot_22: 291867574
+      NorbertSpriteSheetLuckyShot_23: -1878643750
+      NorbertSpriteSheetLuckyShot_13: -612768213
+      NorbertSpriteSheetLuckyShot_3: 899437016
+      NorbertSpriteSheetLuckyShot_49: 376045613
+      NorbertSpriteSheetLuckyShot_7: 1472298258
+      NorbertSpriteSheetLuckyShot_0: 1471524785
+      NorbertSpriteSheetLuckyShot_38: 455001255
+      NorbertSpriteSheetLuckyShot_32: -198984783
+      NorbertSpriteSheetLuckyShot_42: 1609968854
+      NorbertSpriteSheetLuckyShot_6: -1266419630
+      NorbertSpriteSheetLuckyShot_48: -1773573945
+      NorbertSpriteSheetLuckyShot_15: -843893344
+      NorbertSpriteSheetLuckyShot_28: -1755454760
+      NorbertSpriteSheetLuckyShot_27: 583781235
+      NorbertSpriteSheetLuckyShot_12: -1699124912
+      NorbertSpriteSheetLuckyShot_39: 1337639885
+      NorbertSpriteSheetLuckyShot_36: 1516921092
+      NorbertSpriteSheetLuckyShot_16: 2087940748
+      NorbertSpriteSheetLuckyShot_37: 2112927085
+      NorbertSpriteSheetLuckyShot_44: 1872450468
+      NorbertSpriteSheetLuckyShot_29: 1728408152
+      NorbertSpriteSheetLuckyShot_31: -51138887
+      NorbertSpriteSheetLuckyShot_50: -1471324039
+      NorbertSpriteSheetLuckyShot_46: 334129888
+      NorbertSpriteSheetLuckyShot_14: -1044551437
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

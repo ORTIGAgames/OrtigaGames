@@ -89,7 +89,7 @@ public class ManagerIxodas : Manager
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
-                StartCoroutine(CameraFocus(0.5f * (i + 1), (Enemy)enemies[i]));
+                StartCoroutine(CameraFocus(1f * (i + 1), (Enemy)enemies[i]));
             }
 
         }
@@ -149,7 +149,8 @@ public class ManagerIxodas : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.EB.EnemyControl();
+        e.GetComponent<EnemyBehaviourState>().state = new MovementStateExit(e);
+        yield return new WaitForSeconds(1f - timer);
     }
 
     public override void CombatActivation(Character Figther1, Character Figther2)

@@ -13779,7 +13779,6 @@ GameObject:
   - component: {fileID: 862337047}
   - component: {fileID: 862337049}
   - component: {fileID: 862337050}
-  - component: {fileID: 862337048}
   - component: {fileID: 862337045}
   - component: {fileID: 862337044}
   - component: {fileID: 862337043}
@@ -13839,7 +13838,7 @@ MonoBehaviour:
   ncamera: {fileID: 83273438}
   worldcamera: {fileID: 2039265111}
   enemy: 2
-  EB: {fileID: 862337048}
+  EB: {fileID: 0}
 --- !u!95 &862337043
 Animator:
   serializedVersion: 4
@@ -13939,20 +13938,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
---- !u!114 &862337048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862337039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627e3429694e0ff4ca8f1f621ebcc365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &862337049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20883,7 +20868,6 @@ GameObject:
   - component: {fileID: 1335576459}
   - component: {fileID: 1335576461}
   - component: {fileID: 1335576462}
-  - component: {fileID: 1335576460}
   - component: {fileID: 1335576457}
   - component: {fileID: 1335576456}
   - component: {fileID: 1335576455}
@@ -20943,7 +20927,7 @@ MonoBehaviour:
   ncamera: {fileID: 706306848}
   worldcamera: {fileID: 2039265111}
   enemy: 2
-  EB: {fileID: 1335576460}
+  EB: {fileID: 0}
 --- !u!95 &1335576455
 Animator:
   serializedVersion: 4
@@ -21043,20 +21027,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
---- !u!114 &1335576460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335576451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627e3429694e0ff4ca8f1f621ebcc365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &1335576461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24914,7 +24884,6 @@ GameObject:
   - component: {fileID: 1570788603}
   - component: {fileID: 1570788605}
   - component: {fileID: 1570788606}
-  - component: {fileID: 1570788604}
   - component: {fileID: 1570788601}
   - component: {fileID: 1570788600}
   - component: {fileID: 1570788599}
@@ -24974,7 +24943,7 @@ MonoBehaviour:
   ncamera: {fileID: 225895362}
   worldcamera: {fileID: 2039265111}
   enemy: 2
-  EB: {fileID: 1570788604}
+  EB: {fileID: 0}
 --- !u!95 &1570788599
 Animator:
   serializedVersion: 4
@@ -25074,20 +25043,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 1
   defender: {fileID: 0}
---- !u!114 &1570788604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570788595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627e3429694e0ff4ca8f1f621ebcc365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &1570788605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26109,7 +26064,6 @@ GameObject:
   - component: {fileID: 1616285372}
   - component: {fileID: 1616285374}
   - component: {fileID: 1616285375}
-  - component: {fileID: 1616285373}
   - component: {fileID: 1616285370}
   - component: {fileID: 1616285369}
   - component: {fileID: 1616285368}
@@ -26169,7 +26123,7 @@ MonoBehaviour:
   ncamera: {fileID: 759947384}
   worldcamera: {fileID: 2039265111}
   enemy: 2
-  EB: {fileID: 1616285373}
+  EB: {fileID: 0}
 --- !u!95 &1616285368
 Animator:
   serializedVersion: 4
@@ -26269,20 +26223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
---- !u!114 &1616285373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616285364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627e3429694e0ff4ca8f1f621ebcc365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &1616285374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34587,7 +34527,6 @@ GameObject:
   - component: {fileID: 2112628159}
   - component: {fileID: 2112628161}
   - component: {fileID: 2112628162}
-  - component: {fileID: 2112628160}
   - component: {fileID: 2112628157}
   - component: {fileID: 2112628156}
   - component: {fileID: 2112628155}
@@ -34647,7 +34586,7 @@ MonoBehaviour:
   ncamera: {fileID: 1507675816}
   worldcamera: {fileID: 2039265111}
   enemy: 2
-  EB: {fileID: 2112628160}
+  EB: {fileID: 0}
 --- !u!95 &2112628155
 Animator:
   serializedVersion: 4
@@ -34747,20 +34686,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
---- !u!114 &2112628160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112628151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627e3429694e0ff4ca8f1f621ebcc365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 0}
-  allies: []
 --- !u!114 &2112628161
 MonoBehaviour:
   m_ObjectHideFlags: 0
