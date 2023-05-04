@@ -11,6 +11,8 @@ public class ManagerKrangle : Manager
     public int turnsCompleted;
     public int KrangleNumbers;
     public int turnsSpwan;
+    int[] KranglesSpawnHexagons = { 68, 94, 84, 22, 34, 31 };
+    int pointer = 0;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
@@ -43,11 +45,8 @@ public class ManagerKrangle : Manager
             }
             else
             {
-                box = stage.Block(Random.Range(0, stage.board.Length));
-                while (box.getOccupant() || box.transform.childCount > 0)
-                {
-                    box = stage.Block(Random.Range(0, stage.board.Length));
-                }
+                box = stage.Block(KranglesSpawnHexagons[pointer]);//los líderes aparecerán en unas casillas preestablecidas
+                pointer++;
                 c.myAnimator.Play("Idle", -1, Random.Range(0.0f, 1.1f));
                 c.myAnimator.speed = Random.Range(0.5f, 1.6f);
                 enemies.Add(c);
@@ -79,7 +78,7 @@ public class ManagerKrangle : Manager
             BetweenScenesControler.level2 = true;
         }
 
-        if(turnsSpwan % 2 == 0)
+        if(turnsSpwan % 2 == 0 && turnsSpwan != 0)
         {
             for(int i = 0; i < 2; i++)
             {
@@ -89,6 +88,8 @@ public class ManagerKrangle : Manager
                     box = stage.Block(Random.Range(0, stage.board.Length));
                 }
                 GameObject enemy = Instantiate(enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
+                enemy.GetComponent<Crew>().leader = false;
+                enemy.GetComponent<Crew>().followLeader();
                 enemy.GetComponent<Enemy>().setActualBlock(box);
                 enemy.GetComponent<Enemy>().setInitialBlock(box);
                 box.setOccupant(enemy.GetComponent<Character>());
