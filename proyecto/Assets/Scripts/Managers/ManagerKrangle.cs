@@ -101,6 +101,11 @@ public class ManagerKrangle : Manager
                 enemy.GetComponent<Character>().myAnimator.SetTrigger("Appear");
             }
             turnsSpwan++;
+            foreach(Enemy e in enemies)//quitar posibles buffos
+            {
+                e.setDamage(BetweenScenesControler.enemies[e.GetComponent<Enemy>().getEnemy(), 1]);
+                e.GetComponent<DmgStyle>().maxCasillas = 2;
+            }
         }
 
         if (allyturn && CheckTurn(allies))

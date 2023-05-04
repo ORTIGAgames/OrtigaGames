@@ -208,4 +208,9 @@ public class Enemy : Character
         }
         EndTurn();
     }*/
+
+    public int getEnemy()
+    {
+        return enemy;
+    }
 }
