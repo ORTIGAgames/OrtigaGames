@@ -9,7 +9,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
     bool allies = false;
     public void Decission()
     {
-        if(this.GetComponent<Crew>().leader == true)
+        if(this.GetComponent<Crew>().leader == true)//si se es el líder se hará unas cosas si no, otras
         {
             if(this.GetComponent<Crew>().target == null)//comprueba si hay un objetivo al que hacer focus
             {
@@ -36,11 +36,11 @@ public class KrangleTreeBehaviour : MonoBehaviour
                         box = Game.stage.Block(Random.Range(0, Game.stage.board.Length));
                     }
                     GameObject enemy = Instantiate(Game.enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
-                    enemy.GetComponent<Crew>().leader = false;
-                    enemy.GetComponent<Crew>().followLeader();
                     enemy.GetComponent<Enemy>().setActualBlock(box);
                     enemy.GetComponent<Enemy>().setInitialBlock(box);
                     box.setOccupant(enemy.GetComponent<Character>());
+                    enemy.GetComponent<Crew>().leader = false;
+                    enemy.GetComponent<Crew>().followLeader();
                     CinemachineVirtualCamera camera = Instantiate(Game.enemies[0].GetComponent<Enemy>().ncamera);
                     camera.Follow = enemy.transform;
                     enemy.GetComponent<Enemy>().ncamera = camera;
@@ -51,13 +51,32 @@ public class KrangleTreeBehaviour : MonoBehaviour
                 allies = false;
             }
         }
-        if(this.GetComponent<Crew>().following == null)//un arbol que primero compruebe si el krangle tiene líder, por si algún aliado lo ha matado
+        else
         {
-            this.GetComponent<Crew>().followLeader();//si no tiene querrá seguir a uno nuevo
-        }
-        if(this.GetComponent<Enemy>().getHealth() < this.GetComponent<Enemy>().getHealth() / 2)//luego comprobará si tiene menos de 50% de vida
-        {
-            //si no tiene más del 50% de vida podrá cabrearse y quere atacar a su líder
-        }
+            if (this.GetComponent<Crew>().following == null)//primero compruebe si el krangle tiene líder, por si algún aliado lo ha matado
+            {
+                this.GetComponent<Crew>().followLeader();//si no tiene querrá seguir a uno nuevo
+            }
+            if (this.GetComponent<Enemy>().getHealth() < this.GetComponent<Enemy>().getHealth() / 2)//luego comprobará si tiene menos de 50% de vida
+            {
+                if(Random.Range(0, 3) % 2 == 0)
+                {
+                    this.GetComponent<DmgStyle>().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());//si no tiene más del 50% de vida podrá cabrearse y quere atacar a su líder
+                    Enemy attacked = new Enemy();
+                    foreach (Enemy e in Game.enemies)
+                    {
+                        if (e.getTarget() == true)
+                        {
+                            attacked = e;
+                            if (e.GetComponent<Crew>().leader == true) break;//una vez encuentre a un leader lo atacará
+                        }
+                    }
+                    Game.stage.Reset();
+                    this.GetComponent<Enemy>().game.CombatActivation(this.GetComponent<Enemy>(), attacked);//le ataca
+                    this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().game, "Action");
+                }
+            }
+
+        }       
     }
 }

@@ -78,7 +78,7 @@ public class ManagerKrangle : Manager
             BetweenScenesControler.level2 = true;
         }
 
-        if(turnsSpwan % 2 == 0 && turnsSpwan != 0)
+        if(turnsSpwan % 2 == 0)
         {
             for(int i = 0; i < 2; i++)
             {
@@ -88,11 +88,11 @@ public class ManagerKrangle : Manager
                     box = stage.Block(Random.Range(0, stage.board.Length));
                 }
                 GameObject enemy = Instantiate(enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
-                enemy.GetComponent<Crew>().leader = false;
-                enemy.GetComponent<Crew>().followLeader();
                 enemy.GetComponent<Enemy>().setActualBlock(box);
                 enemy.GetComponent<Enemy>().setInitialBlock(box);
                 box.setOccupant(enemy.GetComponent<Character>());
+                enemy.GetComponent<Crew>().leader = false;
+                enemy.GetComponent<Crew>().followLeader();
                 CinemachineVirtualCamera camera = Instantiate(enemies[0].GetComponent<Enemy>().ncamera);
                 camera.Follow = enemy.transform;
                 enemy.GetComponent<Enemy>().ncamera = camera;

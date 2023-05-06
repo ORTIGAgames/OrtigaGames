@@ -3337,6 +3337,7 @@ GameObject:
   - component: {fileID: 221674549}
   - component: {fileID: 221674548}
   - component: {fileID: 221674547}
+  - component: {fileID: 221674553}
   m_Layer: 0
   m_Name: Krangle 6
   m_TagString: Untagged
@@ -3519,6 +3520,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCasillas: 2
   defender: {fileID: 0}
+--- !u!114 &221674553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221674544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c10b8ded44791248bc0a198f263283b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+  leader: 1
+  following: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1 &221754465
 GameObject:
   m_ObjectHideFlags: 0
@@ -14056,6 +14073,7 @@ GameObject:
   - component: {fileID: 862337045}
   - component: {fileID: 862337044}
   - component: {fileID: 862337043}
+  - component: {fileID: 862337051}
   m_Layer: 0
   m_Name: Krangle 4
   m_TagString: Untagged
@@ -14238,6 +14256,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 0}
   allies: []
+--- !u!114 &862337051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862337039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c10b8ded44791248bc0a198f263283b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+  leader: 1
+  following: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1001 &865040379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21360,6 +21394,7 @@ GameObject:
   - component: {fileID: 1335576457}
   - component: {fileID: 1335576456}
   - component: {fileID: 1335576455}
+  - component: {fileID: 1335576463}
   m_Layer: 0
   m_Name: Krangle 5
   m_TagString: Untagged
@@ -21542,6 +21577,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 0}
   allies: []
+--- !u!114 &1335576463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335576451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c10b8ded44791248bc0a198f263283b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+  leader: 1
+  following: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1 &1341930663
 GameObject:
   m_ObjectHideFlags: 0
@@ -25632,7 +25683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc576c8632342949a034eb60a55e8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCasillas: 1
+  maxCasillas: 2
   defender: {fileID: 0}
 --- !u!114 &1570788605
 MonoBehaviour:
@@ -25672,7 +25723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c10b8ded44791248bc0a198f263283b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
+  Game: {fileID: 1728820630}
   leader: 1
   following: {fileID: 0}
   target: {fileID: 0}
@@ -26674,6 +26725,7 @@ GameObject:
   - component: {fileID: 1616285370}
   - component: {fileID: 1616285369}
   - component: {fileID: 1616285368}
+  - component: {fileID: 1616285376}
   m_Layer: 0
   m_Name: Krangle 2
   m_TagString: Untagged
@@ -26856,6 +26908,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 0}
   allies: []
+--- !u!114 &1616285376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616285364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c10b8ded44791248bc0a198f263283b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+  leader: 1
+  following: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1 &1635304377
 GameObject:
   m_ObjectHideFlags: 0
@@ -33641,7 +33709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039265109}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.21631804, y: 14.577679, z: -28.574999}
+  m_LocalPosition: {x: 0.9566134, y: 14.581499, z: -28.552689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35213,6 +35281,7 @@ GameObject:
   - component: {fileID: 2112628157}
   - component: {fileID: 2112628156}
   - component: {fileID: 2112628155}
+  - component: {fileID: 2112628163}
   m_Layer: 0
   m_Name: Krangle 3
   m_TagString: Untagged
@@ -35395,6 +35464,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 0}
   allies: []
+--- !u!114 &2112628163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112628151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c10b8ded44791248bc0a198f263283b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+  leader: 1
+  following: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1 &2114188684
 GameObject:
   m_ObjectHideFlags: 0
