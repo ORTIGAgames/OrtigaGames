@@ -49,10 +49,31 @@ public class Crew : MonoBehaviour
 
     public void focusEnemy()
     {
-        target = (Ally)Game.allies[0];//ponemos de dummy para hacer comprobaciones de distancia
-        foreach(Ally a in Game.allies)
+        float valueN = 999999;
+        foreach (Ally a in Game.allies)//marca a quien hacer focus
         {
-            
+            print("Hola");
+            float auxN;
+            Hexagon hex = a.getActualBlock();
+            float dx = this.GetComponent<Enemy>().getActualBlock().dx - hex.dx;
+            float dy = this.GetComponent<Enemy>().getActualBlock().dy - hex.dy;
+            if (Math.Sign(dx) == Math.Sign(dy)) auxN = Math.Abs(dx + dy);
+            else auxN = (Math.Max(Math.Abs(dx), Math.Abs(dy)));
+            print(auxN + " " + valueN);
+            if (auxN <= valueN)
+            {
+                print("Adios" + a);
+                valueN = auxN;
+                target = a.GetComponent<Ally>();
+            }
+        }
+
+        foreach(Enemy e in Game.enemies)//a quienes le sigan le indica ue vayan a por ellos
+        {
+            if(e.GetComponent<Crew>().following == this.GetComponent<Enemy>())
+            {
+                e.GetComponent<Crew>().target = this.target;
+            }
         }
     }
 }
