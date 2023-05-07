@@ -63,7 +63,7 @@ public class Crew : MonoBehaviour
                 valueN = auxN;
                 target = a.GetComponent<Ally>();
             }
-        }
+        } 
 
         foreach(Enemy e in Game.enemies)//a quienes le sigan le indica ue vayan a por ellos
         {

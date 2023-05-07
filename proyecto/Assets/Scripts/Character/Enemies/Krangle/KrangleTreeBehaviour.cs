@@ -30,7 +30,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
                 Game.stage.Reset();
                 if (allies == false)
                 {
-                    //si no hay aliados cerca generará
+                    //si no hay aliados cerca los llamará
                     Hexagon box = Game.stage.Block(Random.Range(0, Game.stage.board.Length));//Spawn del Krangle
                     while (box.getOccupant() || box.transform.childCount > 0)
                     {
@@ -78,7 +78,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
                 }
             }
             this.GetComponent<Enemy>().Move(this.GetComponent<Enemy>().getInitialBlock(), 0);
-            Hexagon Walkto;
+            Hexagon Walkto = null;
             float valueN = 999999;
             foreach (Hexagon hex in Game.stage.board)//buscan la casilla más óptima a la que desplazarse del target que tengan
             {
@@ -87,15 +87,20 @@ public class KrangleTreeBehaviour : MonoBehaviour
                     float auxN = 0;
                     float dx = this.GetComponent<Crew>().target.getInitialBlock().dx - hex.dx;
                     float dy = this.GetComponent<Crew>().target.getInitialBlock().dy - hex.dy;
-                    if (System.Math.Sign(dx) == System.Math.Sign(dy)) valueN = System.Math.Abs(dx + dy);
-                    else valueN = (System.Math.Max(System.Math.Abs(dx), System.Math.Abs(dy)));
+                    if (System.Math.Sign(dx) == System.Math.Sign(dy)) auxN = System.Math.Abs(dx + dy);
+                    else auxN = (System.Math.Max(System.Math.Abs(dx), System.Math.Abs(dy)));
+                    print("casillas " + auxN + hex);
                     if(auxN < valueN)
                     {
+                        print("Esta casilla " + auxN + " " + hex);
                         Walkto = hex;
                         valueN = auxN;
                     }
                 }
             }
-        }       
+            Game.stage.Reset();
+            this.GetComponent<Enemy>().CharacterMove(Walkto, false);
+        }
+        this.GetComponent<Enemy>().EndTurn();
     }
 }

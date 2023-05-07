@@ -105,7 +105,6 @@ public class ManagerKrangle : Manager
             {
                 e.setDamage(BetweenScenesControler.enemies[e.GetComponent<Enemy>().getEnemy(), 1]);
                 e.GetComponent<DmgStyle>().maxCasillas = 2;
-                e.GetComponent<Crew>().focusEnemy();
             }
         }
 
@@ -185,7 +184,7 @@ public class ManagerKrangle : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.GetComponent<EnemyBehaviourState>().state = new MovementState(e);
+        e.GetComponent<KrangleTreeBehaviour>().Decission();
         yield return new WaitForSeconds(1.5f - timer);
     }
 
