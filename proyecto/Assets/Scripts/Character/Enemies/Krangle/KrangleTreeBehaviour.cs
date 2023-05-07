@@ -21,7 +21,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
                 this.GetComponent<DmgStyle>().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
                 foreach(Enemy e in Game.enemies)//comprobará si hay aliados cerca, si los hay los buffará
                 {
-                    if (e.getTarget() == true && e.GetComponent<Crew>().leader == false && e.GetComponent<Crew>().following == this.GetComponent<Enemy>())
+                    if (e.getActualBlock().getState() == Hexagon.CodeState.AllyT && e.GetComponent<Crew>().leader == false && e.GetComponent<Crew>().following == this.GetComponent<Enemy>())
                     {
                         this.GetComponent<Ability>().Execution(e);
                         allies = true;
@@ -39,6 +39,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
                     GameObject enemy = Instantiate(Game.enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
                     enemy.GetComponent<Enemy>().setActualBlock(box);
                     enemy.GetComponent<Enemy>().setInitialBlock(box);
+                    enemy.GetComponent<Enemy>().setTurn(0);
                     box.setOccupant(enemy.GetComponent<Character>());
                     enemy.GetComponent<Crew>().leader = false;
                     enemy.GetComponent<Crew>().followLeader();

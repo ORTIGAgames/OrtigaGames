@@ -24,7 +24,7 @@ public class DmgStyle : MonoBehaviour, Combat
                         }
                         else
                         {
-                            if (this.GetComponentInParent<Abilities>() && this.GetComponentInParent<Abilities>().Role == "Support")
+                            if (this.GetComponentInParent<Abilities>() && this.GetComponentInParent<Abilities>().Role == "Support" || h.getOccupant().getSide() == "Enemy")
                                 h.setState(Hexagon.CodeState.AllyT);
                         }
                     }

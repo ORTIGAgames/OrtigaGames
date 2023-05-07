@@ -29,17 +29,14 @@ public class Crew : MonoBehaviour
         {
             if(e.GetComponent<Crew>().leader == true)
             {
-                print("Hola");
                 float auxN;
                 Hexagon hex = e.getActualBlock();
                 float dx = this.GetComponent<Enemy>().getActualBlock().dx - hex.dx;
                 float dy = this.GetComponent<Enemy>().getActualBlock().dy - hex.dy;
                 if (Math.Sign(dx) == Math.Sign(dy)) auxN = Math.Abs(dx + dy);
                 else auxN = (Math.Max(Math.Abs(dx), Math.Abs(dy)));
-                print(auxN + " " + valueN);
                 if (auxN <= valueN)
                 {
-                    print("Adios" + e);
                     valueN = auxN;
                     following = e.GetComponent<Enemy>();
                 }
