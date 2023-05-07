@@ -58,7 +58,6 @@ public class Crew : MonoBehaviour
             float dy = this.GetComponent<Enemy>().getActualBlock().dy - hex.dy;
             if (Math.Sign(dx) == Math.Sign(dy)) auxN = Math.Abs(dx + dy);
             else auxN = (Math.Max(Math.Abs(dx), Math.Abs(dy)));
-            print(auxN + " " + valueN);
             if (auxN <= valueN)
             {
                 valueN = auxN;

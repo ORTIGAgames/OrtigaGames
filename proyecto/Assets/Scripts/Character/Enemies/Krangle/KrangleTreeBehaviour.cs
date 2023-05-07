@@ -80,7 +80,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
             this.GetComponent<Enemy>().Move(this.GetComponent<Enemy>().getInitialBlock(), 0);
             Hexagon Walkto;
             float valueN = 999999;
-            foreach (Hexagon hex in Game.stage.board)
+            foreach (Hexagon hex in Game.stage.board)//buscan la casilla más óptima a la que desplazarse del target que tengan
             {
                 if (hex.getState() == Hexagon.CodeState.WalkableE)
                 {

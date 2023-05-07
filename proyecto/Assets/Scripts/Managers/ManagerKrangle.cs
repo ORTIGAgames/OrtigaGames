@@ -105,6 +105,7 @@ public class ManagerKrangle : Manager
             {
                 e.setDamage(BetweenScenesControler.enemies[e.GetComponent<Enemy>().getEnemy(), 1]);
                 e.GetComponent<DmgStyle>().maxCasillas = 2;
+                e.GetComponent<Crew>().focusEnemy();
             }
         }
 
