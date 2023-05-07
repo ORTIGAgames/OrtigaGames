@@ -52,7 +52,6 @@ public class Crew : MonoBehaviour
         float valueN = 999999;
         foreach (Ally a in Game.allies)//marca a quien hacer focus
         {
-            print("Hola");
             float auxN;
             Hexagon hex = a.getActualBlock();
             float dx = this.GetComponent<Enemy>().getActualBlock().dx - hex.dx;
@@ -62,7 +61,6 @@ public class Crew : MonoBehaviour
             print(auxN + " " + valueN);
             if (auxN <= valueN)
             {
-                print("Adios" + a);
                 valueN = auxN;
                 target = a.GetComponent<Ally>();
             }

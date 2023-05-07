@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+
 public class KrangleTreeBehaviour : MonoBehaviour
 {
     public Manager Game;
@@ -76,7 +77,25 @@ public class KrangleTreeBehaviour : MonoBehaviour
                     this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().game, "Action");
                 }
             }
-
+            this.GetComponent<Enemy>().Move(this.GetComponent<Enemy>().getInitialBlock(), 0);
+            Hexagon Walkto;
+            float valueN = 999999;
+            foreach (Hexagon hex in Game.stage.board)
+            {
+                if (hex.getState() == Hexagon.CodeState.WalkableE)
+                {
+                    float auxN = 0;
+                    float dx = this.GetComponent<Crew>().target.getInitialBlock().dx - hex.dx;
+                    float dy = this.GetComponent<Crew>().target.getInitialBlock().dy - hex.dy;
+                    if (System.Math.Sign(dx) == System.Math.Sign(dy)) valueN = System.Math.Abs(dx + dy);
+                    else valueN = (System.Math.Max(System.Math.Abs(dx), System.Math.Abs(dy)));
+                    if(auxN < valueN)
+                    {
+                        Walkto = hex;
+                        valueN = auxN;
+                    }
+                }
+            }
         }       
     }
 }
