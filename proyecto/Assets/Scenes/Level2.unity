@@ -3410,6 +3410,7 @@ GameObject:
   - component: {fileID: 221674547}
   - component: {fileID: 221674553}
   - component: {fileID: 221674554}
+  - component: {fileID: 221674555}
   m_Layer: 0
   m_Name: Krangle 6
   m_TagString: Untagged
@@ -3618,6 +3619,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85cdccdd91747b34b8c9ac39ce0cf35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+--- !u!114 &221674555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221674544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa98de4ad24fa142b2f28f1c1dc7bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Game: {fileID: 1728820630}
@@ -14160,6 +14174,7 @@ GameObject:
   - component: {fileID: 862337043}
   - component: {fileID: 862337051}
   - component: {fileID: 862337052}
+  - component: {fileID: 862337053}
   m_Layer: 0
   m_Name: Krangle 4
   m_TagString: Untagged
@@ -14368,6 +14383,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85cdccdd91747b34b8c9ac39ce0cf35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+--- !u!114 &862337053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862337039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa98de4ad24fa142b2f28f1c1dc7bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Game: {fileID: 1728820630}
@@ -21583,6 +21611,7 @@ GameObject:
   - component: {fileID: 1335576455}
   - component: {fileID: 1335576463}
   - component: {fileID: 1335576464}
+  - component: {fileID: 1335576465}
   m_Layer: 0
   m_Name: Krangle 5
   m_TagString: Untagged
@@ -21791,6 +21820,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85cdccdd91747b34b8c9ac39ce0cf35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+--- !u!114 &1335576465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335576451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa98de4ad24fa142b2f28f1c1dc7bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Game: {fileID: 1728820630}
@@ -25732,6 +25774,7 @@ GameObject:
   - component: {fileID: 1570788599}
   - component: {fileID: 1570788607}
   - component: {fileID: 1570788608}
+  - component: {fileID: 1570788609}
   m_Layer: 0
   m_Name: Krangle 1
   m_TagString: Untagged
@@ -25940,6 +25983,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85cdccdd91747b34b8c9ac39ce0cf35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+--- !u!114 &1570788609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570788595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa98de4ad24fa142b2f28f1c1dc7bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Game: {fileID: 1728820630}
@@ -26943,6 +26999,7 @@ GameObject:
   - component: {fileID: 1616285368}
   - component: {fileID: 1616285376}
   - component: {fileID: 1616285377}
+  - component: {fileID: 1616285378}
   m_Layer: 0
   m_Name: Krangle 2
   m_TagString: Untagged
@@ -27151,6 +27208,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85cdccdd91747b34b8c9ac39ce0cf35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+--- !u!114 &1616285378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616285364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa98de4ad24fa142b2f28f1c1dc7bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Game: {fileID: 1728820630}
@@ -33939,7 +34009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039265109}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.21631804, y: 14.577679, z: -28.574999}
+  m_LocalPosition: {x: 0.12861052, y: 14.581499, z: -28.552689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35513,6 +35583,7 @@ GameObject:
   - component: {fileID: 2112628155}
   - component: {fileID: 2112628163}
   - component: {fileID: 2112628164}
+  - component: {fileID: 2112628165}
   m_Layer: 0
   m_Name: Krangle 3
   m_TagString: Untagged
@@ -35721,6 +35792,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85cdccdd91747b34b8c9ac39ce0cf35b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Game: {fileID: 1728820630}
+--- !u!114 &2112628165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112628151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa98de4ad24fa142b2f28f1c1dc7bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Game: {fileID: 1728820630}

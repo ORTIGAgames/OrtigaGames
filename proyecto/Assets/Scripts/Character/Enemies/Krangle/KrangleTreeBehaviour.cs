@@ -39,6 +39,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
                     GameObject enemy = Instantiate(Game.enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
                     enemy.GetComponent<Enemy>().setActualBlock(box);
                     enemy.GetComponent<Enemy>().setInitialBlock(box);
+                    enemy.GetComponent<Enemy>().setHealth(enemy.GetComponent<Enemy>().getHealth() - 6);
                     enemy.GetComponent<Enemy>().setTurn(0);
                     box.setOccupant(enemy.GetComponent<Character>());
                     enemy.GetComponent<Crew>().leader = false;
@@ -59,15 +60,16 @@ public class KrangleTreeBehaviour : MonoBehaviour
             {
                 this.GetComponent<Crew>().followLeader();//si no tiene querrá seguir a uno nuevo
             }
-            if (this.GetComponent<Enemy>().getHealth() < this.GetComponent<Enemy>().getHealth() / 2)//luego comprobará si tiene menos de 50% de vida
+            if (this.GetComponent<Enemy>().getHealth() < (this.GetComponent<Enemy>().MaxHealth / 2))//luego comprobará si tiene menos de 50% de vida
             {
+                print("por debajo de mitad");
                 if(Random.Range(0, 3) % 2 == 0)
                 {
                     this.GetComponent<DmgStyle>().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());//si no tiene más del 50% de vida podrá cabrearse y quere atacar a su líder
                     Enemy attacked = new Enemy();
                     foreach (Enemy e in Game.enemies)
                     {
-                        if (e.getTarget() == true)
+                        if (e.getActualBlock().getState() == Hexagon.CodeState.AllyT)
                         {
                             attacked = e;
                             if (e.GetComponent<Crew>().leader == true) break;//una vez encuentre a un leader lo atacará
@@ -78,29 +80,32 @@ public class KrangleTreeBehaviour : MonoBehaviour
                     this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().game, "Action");
                 }
             }
-            this.GetComponent<Enemy>().Move(this.GetComponent<Enemy>().getInitialBlock(), 0);
-            Hexagon Walkto = null;
-            float valueN = 999999;
-            foreach (Hexagon hex in Game.stage.board)//buscan la casilla más óptima a la que desplazarse del target que tengan
+            else
             {
-                if (hex.getState() == Hexagon.CodeState.WalkableE)
+                this.GetComponent<Enemy>().Move(this.GetComponent<Enemy>().getInitialBlock(), 0);
+                Hexagon Walkto = null;
+                float valueN = 999999;
+                foreach (Hexagon hex in Game.stage.board)//buscan la casilla más óptima a la que desplazarse del target que tengan
                 {
-                    float auxN = 0;
-                    float dx = this.GetComponent<Crew>().target.getInitialBlock().dx - hex.dx;
-                    float dy = this.GetComponent<Crew>().target.getInitialBlock().dy - hex.dy;
-                    if (System.Math.Sign(dx) == System.Math.Sign(dy)) auxN = System.Math.Abs(dx + dy);
-                    else auxN = (System.Math.Max(System.Math.Abs(dx), System.Math.Abs(dy)));
-                    print("casillas " + auxN + hex);
-                    if(auxN < valueN)
+                    if (hex.getState() == Hexagon.CodeState.WalkableE)
                     {
-                        print("Esta casilla " + auxN + " " + hex);
-                        Walkto = hex;
-                        valueN = auxN;
+                        float auxN = 0;
+                        float dx = this.GetComponent<Crew>().target.getInitialBlock().dx - hex.dx;
+                        float dy = this.GetComponent<Crew>().target.getInitialBlock().dy - hex.dy;
+                        if (System.Math.Sign(dx) == System.Math.Sign(dy)) auxN = System.Math.Abs(dx + dy);
+                        else auxN = (System.Math.Max(System.Math.Abs(dx), System.Math.Abs(dy)));
+                        print("casillas " + auxN + hex);
+                        if (auxN < valueN && hex.getOccupant() == null)
+                        {
+                            print("Esta casilla " + auxN + " " + hex);
+                            Walkto = hex;
+                            valueN = auxN;
+                        }
                     }
                 }
-            }
-            Game.stage.Reset();
-            this.GetComponent<Enemy>().CharacterMove(Walkto, false);
+                Game.stage.Reset();
+                this.GetComponent<Enemy>().CharacterMove(Walkto, false);
+            }         
         }
         this.GetComponent<Enemy>().EndTurn();
     }
