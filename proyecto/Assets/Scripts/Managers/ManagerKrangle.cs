@@ -89,7 +89,6 @@ public class ManagerKrangle : Manager
                 }
                 GameObject enemy = Instantiate(enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
                 enemy.GetComponent<Enemy>().setActualBlock(box);
-                enemy.GetComponent<Enemy>().setHealth(enemy.GetComponent<Enemy>().getHealth() - 6);
                 enemy.GetComponent<Enemy>().setInitialBlock(box);
                 box.setOccupant(enemy.GetComponent<Character>());
                 enemy.GetComponent<Crew>().leader = false;

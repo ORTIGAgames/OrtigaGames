@@ -9,7 +9,7 @@ public class Ability : MonoBehaviour
     public void Execution(Enemy e)
     {
         en = e;
-        int healthValue = ((e.getHealth() - 0) / (e.MaxHealth - 0));
+        float healthValue = (float)(e.getHealth() - 0) / (e.MaxHealth - 0);
 
         int rValue = 0;
 

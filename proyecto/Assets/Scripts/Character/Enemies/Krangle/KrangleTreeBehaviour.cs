@@ -39,7 +39,6 @@ public class KrangleTreeBehaviour : MonoBehaviour
                     GameObject enemy = Instantiate(Game.enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
                     enemy.GetComponent<Enemy>().setActualBlock(box);
                     enemy.GetComponent<Enemy>().setInitialBlock(box);
-                    enemy.GetComponent<Enemy>().setHealth(enemy.GetComponent<Enemy>().getHealth() - 6);
                     enemy.GetComponent<Enemy>().setTurn(0);
                     box.setOccupant(enemy.GetComponent<Character>());
                     enemy.GetComponent<Crew>().leader = false;
@@ -62,7 +61,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
             }
             if (this.GetComponent<Enemy>().getHealth() < (this.GetComponent<Enemy>().MaxHealth / 2))//luego comprobará si tiene menos de 50% de vida
             {
-                if(Random.Range(0, 3) % 2 == 0)
+                if(Random.Range(0, 2) % 2 == 0)
                 {
                     this.GetComponent<DmgStyle>().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());//si no tiene más del 50% de vida podrá cabrearse y quere atacar a su líder
                     Enemy attacked = new Enemy();
@@ -105,7 +104,6 @@ public class KrangleTreeBehaviour : MonoBehaviour
                             print("casillas " + auxN + hex);
                             if (auxN < valueN && hex.getOccupant() == null)
                             {
-                                print("Esta casilla " + auxN + " " + hex);
                                 Walkto = hex;
                                 valueN = auxN;
                             }
