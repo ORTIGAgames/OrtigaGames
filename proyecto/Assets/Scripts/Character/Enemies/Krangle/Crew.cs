@@ -43,6 +43,7 @@ public class Crew : MonoBehaviour
                 }
             }
         }
+        target = following.GetComponent<Crew>().target;
     }
 
     public void focusEnemy()

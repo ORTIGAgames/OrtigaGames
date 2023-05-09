@@ -10,7 +10,6 @@ public class ManagerKrangle : Manager
 {
     public int turnsCompleted;
     public int KrangleNumbers;
-    public int turnsSpwan;
     int[] KranglesSpawnHexagons = { 68, 94, 84, 22, 34, 31 };
     int pointer = 0;
     public List<Character> chosen;
@@ -79,31 +78,6 @@ public class ManagerKrangle : Manager
             BetweenScenesControler.level2 = true;
         }
 
-        if(turnsSpwan % 2 == 0)
-        {
-            for(int i = 0; i < 2; i++)
-            {
-                Hexagon box = stage.Block(Random.Range(0, stage.board.Length));
-                while (box.getOccupant() || box.transform.childCount > 0)
-                {
-                    box = stage.Block(Random.Range(0, stage.board.Length));
-                }
-                GameObject enemy = Instantiate(enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
-                enemy.GetComponent<Enemy>().setActualBlock(box);
-                enemy.GetComponent<Enemy>().setInitialBlock(box);
-                box.setOccupant(enemy.GetComponent<Character>());
-                enemy.GetComponent<Crew>().leader = false;
-                enemy.GetComponent<Crew>().followLeader();
-                CinemachineVirtualCamera camera = Instantiate(enemies[0].GetComponent<Enemy>().ncamera);
-                camera.Follow = enemy.transform;
-                enemy.GetComponent<Enemy>().ncamera = camera;
-                enemies.Add(enemy.GetComponent<Enemy>());
-                players.Add(enemy.GetComponent<Character>());
-                enemy.GetComponent<Character>().myAnimator.SetTrigger("Appear");
-            }
-            turnsSpwan++;
-        }
-
         if (allyturn && CheckTurn(allies))
         {
             foreach (Enemy e in enemies)//quitar posibles buffos
@@ -140,7 +114,6 @@ public class ManagerKrangle : Manager
             }
             Ally focus = (Ally)allies[Random.Range(0, allies.Count)];
             focus.Camera();
-            turnsSpwan++;
         }
     }
 
