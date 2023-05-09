@@ -28929,7 +28929,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: []
   allies: []
-  enemies: []
+  enemies:
+  - {fileID: 1587629860}
+  - {fileID: 622407195}
+  - {fileID: 59680249}
+  - {fileID: 680665107}
+  - {fileID: 1942247700}
+  - {fileID: 1654318295}
   preTurn: []
   allyturn: 0
   stage: {fileID: 0}
@@ -28948,6 +28954,7 @@ MonoBehaviour:
   turnsCompleted: 0
   KrangleNumbers: 0
   turnsSpwan: 0
+  chosen: []
 --- !u!1001 &1734114950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34009,7 +34016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039265109}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.12861052, y: 14.581499, z: -28.552689}
+  m_LocalPosition: {x: 0.21631804, y: 14.577679, z: -28.574999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

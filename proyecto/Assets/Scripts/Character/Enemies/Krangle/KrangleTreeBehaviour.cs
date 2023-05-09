@@ -14,6 +14,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
         {
             if(this.GetComponent<Crew>().target == null)//comprueba si hay un objetivo al que hacer focus
             {
+
                 this.GetComponent<Crew>().focusEnemy();
             }
             else//si ya hay un objetivo se centrará en hacer otras cosas

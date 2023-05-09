@@ -13,6 +13,7 @@ public class ManagerKrangle : Manager
     public int turnsSpwan;
     int[] KranglesSpawnHexagons = { 68, 94, 84, 22, 34, 31 };
     int pointer = 0;
+    public List<Character> chosen;
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
