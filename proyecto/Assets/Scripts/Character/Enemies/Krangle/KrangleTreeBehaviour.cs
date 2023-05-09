@@ -18,6 +18,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
             }
             else//si ya hay un objetivo se centrará en hacer otras cosas
             {
+                Game.PlayerReset();
                 this.GetComponent<DmgStyle>().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
                 foreach(Enemy e in Game.enemies)//comprobará si hay aliados cerca, si los hay los buffará
                 {
@@ -63,6 +64,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
             {
                 if(Random.Range(0, 2) % 2 == 0)
                 {
+                    Game.PlayerReset();
                     this.GetComponent<DmgStyle>().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());//si no tiene más del 50% de vida podrá cabrearse y quere atacar a su líder
                     Enemy attacked = new Enemy();
                     foreach (Enemy e in Game.enemies)
@@ -80,6 +82,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
             }
             else
             {
+                Game.PlayerReset();
                 this.GetComponent<DmgStyle>().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
                 if(this.GetComponent<Crew>().target.getTarget() == true)//si está a rango del target
                 {
