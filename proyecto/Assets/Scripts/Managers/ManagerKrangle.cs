@@ -64,7 +64,7 @@ public class ManagerKrangle : Manager
         KrangleNumbers = enemies.Count;
     }
     void Update()
-    {
+    {   
 
         if (allies.Count < lose)
         {

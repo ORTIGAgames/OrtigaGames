@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Crew : MonoBehaviour
 {
@@ -10,11 +11,11 @@ public class Crew : MonoBehaviour
     public bool leader;
     public Enemy following;
     public Ally target;
+    public Image TargetSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -43,7 +44,7 @@ public class Crew : MonoBehaviour
                 }
             }
         }
-        target = following.GetComponent<Crew>().target;
+        setTarget(following.GetComponent<Crew>().target);
     }
 
     public void focusEnemy()
@@ -59,11 +60,12 @@ public class Crew : MonoBehaviour
             else auxN = Math.Max(Math.Abs(dx), Math.Abs(dy));
             if (auxN <= valueN)
             {
-                print(a.GetComponent<Ally>());
                 valueN = auxN;
                 target = a.GetComponent<Ally>();
             }
         }
+
+        setTarget(target);
 
         Game.chosen.Remove(target);
 
@@ -71,8 +73,17 @@ public class Crew : MonoBehaviour
         {
             if(e.GetComponent<Crew>().following == this.GetComponent<Enemy>())
             {
-                e.GetComponent<Crew>().target = this.target;
+                e.GetComponent<Crew>().setTarget(this.target);
             }
         }
+    }
+
+
+    public void setTarget(Character c)
+    {
+        print("he llegado");
+        target = (Ally)c;
+        TargetSprite.gameObject.SetActive(true);
+        TargetSprite.sprite = target.GetComponent<Character>().getFace();
     }
 }
