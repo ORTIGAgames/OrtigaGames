@@ -27,26 +27,20 @@ public class Ability : MonoBehaviour
         }
         else Heal();
 
-        print(this.GetComponent<Enemy>() + " Ability executed " + en);
-
     }
 
     void Heal()
     {
         en.setHealth(en.getHealth() + 2);
-        print("Curado");
     }
 
     void DmgBoost()
     {
         en.setDamage(en.getDamage() + 2);
-        print("Daño");
     }
 
     void RangeBoost()
     {
         en.GetComponent<DmgStyle>().maxCasillas += 1;
-        print("Rango");
-        print(en.GetComponent<DmgStyle>().maxCasillas);
     }
 }

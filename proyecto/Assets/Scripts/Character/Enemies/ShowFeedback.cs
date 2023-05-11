@@ -10,6 +10,7 @@ public class ShowFeedback : MonoBehaviour
     void Start()
     {
         this.gameObject.SetActive(false);
+        show.sprite = null;
     }
 
     // Update is called once per frame
@@ -33,6 +34,8 @@ public class ShowFeedback : MonoBehaviour
     IEnumerator Function(Sprite d)
     {
         yield return new WaitForSeconds(1.5f);
+        print(this.gameObject.active);
+        print(show.sprite);
         show.sprite = d;
     }
 }
