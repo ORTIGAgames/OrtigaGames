@@ -81,7 +81,6 @@ public class Crew : MonoBehaviour
 
     public void setTarget(Character c)
     {
-        print("he llegado");
         target = (Ally)c;
         TargetSprite.gameObject.SetActive(true);
         TargetSprite.sprite = target.GetComponent<Character>().getFace();

@@ -87,14 +87,14 @@ public class ManagerKrangle : Manager
             }
             PlayerReset();
             stage.Reset();
-            StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
+            StartCoroutine(ShowMessage("Enemy Turn", 3.0f));
             allyturn = false;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
-                StartCoroutine(CameraFocus(1.5f * (i + 1), (Enemy)enemies[i]));
+                StartCoroutine(CameraFocus(3f * (i + 1), (Enemy)enemies[i]));
             }
             turnsCompleted++;
         }
@@ -158,8 +158,8 @@ public class ManagerKrangle : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.GetComponent<KrangleTreeBehaviour>().Decission();
-        yield return new WaitForSeconds(1.5f - timer);
+        e.GetComponent<KrangleTreeBehaviour>().DecissionShow();
+        yield return new WaitForSeconds(3f - timer);
     }
 
     public override void CombatActivation(Character Figther1, Character Figther2)

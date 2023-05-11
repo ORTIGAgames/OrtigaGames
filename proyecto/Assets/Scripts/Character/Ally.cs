@@ -122,7 +122,7 @@ public class Ally : Character
 
     public void Camera()
     {
-        worldcamera.ActiveVirtualCamera.Priority = 10;
+        GameObject.Find("Cameras").GetComponent<CameraControl>().DeactivatePriority();
         ncamera.Priority = 100;
     }
 
