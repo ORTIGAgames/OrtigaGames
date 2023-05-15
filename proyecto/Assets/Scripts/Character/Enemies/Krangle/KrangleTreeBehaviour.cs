@@ -12,7 +12,12 @@ public class KrangleTreeBehaviour : MonoBehaviour
     public Image action;
     public Sprite[] differentActions;
     int election;
+    public GameObject generate;
 
+    private void Awake()
+    {
+        Game = GameObject.Find("Manager").GetComponent<Manager>();
+    }
     public void DecissionShow()
     {
         if(this.GetComponent<Crew>().leader == true)//si se es el líder se hará unas cosas si no, otras
@@ -114,7 +119,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
                 {
                     box = Game.stage.Block(Random.Range(0, Game.stage.board.Length));
                 }
-                GameObject enemy = Instantiate(Game.enemies[0].gameObject, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
+                GameObject enemy = Instantiate(generate, box.transform.position + new Vector3(0, .085f, -0.05f), Quaternion.identity);
                 enemy.GetComponent<Enemy>().setActualBlock(box);
                 enemy.GetComponent<Enemy>().setInitialBlock(box);
                 enemy.GetComponent<Enemy>().setTurn(0);
@@ -167,8 +172,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
                         float dx = this.GetComponent<Crew>().target.getInitialBlock().dx - hex.dx;
                         float dy = this.GetComponent<Crew>().target.getInitialBlock().dy - hex.dy;
                         if (System.Math.Sign(dx) == System.Math.Sign(dy)) auxN = System.Math.Abs(dx + dy);
-                        else auxN = (System.Math.Max(System.Math.Abs(dx), System.Math.Abs(dy)));
-                        print("casillas " + auxN + hex);
+                        else auxN = System.Math.Max(System.Math.Abs(dx), System.Math.Abs(dy));
                         if (auxN < valueN && hex.getOccupant() == null)
                         {
                             Walkto = hex;

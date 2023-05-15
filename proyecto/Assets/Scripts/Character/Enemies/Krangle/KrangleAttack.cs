@@ -18,10 +18,8 @@ public class KrangleAttack : Attack
 
         value = healtV * DefenseV;
 
-        print(value + " " + healtV + " " + DefenseV);
         if (value > .5)
         {
-            print("hola");
             return (int)((this.GetComponent<Character>().getDamage() / .75 - this.GetComponent<Enemy>().game.defender.GetComponent<Character>().getDefense()) * 2);
         }
         else

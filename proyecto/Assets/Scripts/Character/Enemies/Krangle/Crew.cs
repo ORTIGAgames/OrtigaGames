@@ -14,8 +14,9 @@ public class Crew : MonoBehaviour
     public Image TargetSprite;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Game = GameObject.Find("Manager").GetComponent<ManagerKrangle>();
     }
 
     // Update is called once per frame

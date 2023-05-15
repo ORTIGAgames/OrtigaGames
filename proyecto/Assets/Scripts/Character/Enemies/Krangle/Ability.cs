@@ -6,6 +6,11 @@ public class Ability : MonoBehaviour
 {
     public Manager Game;
     Enemy en;
+
+    private void Awake()
+    {
+        Game = GameObject.Find("Manager").GetComponent<Manager>();
+    }
     public void Execution(Enemy e)
     {
         en = e;
