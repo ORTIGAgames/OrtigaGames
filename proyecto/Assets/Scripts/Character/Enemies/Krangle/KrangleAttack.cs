@@ -20,7 +20,9 @@ public class KrangleAttack : Attack
 
         if (value > .5)
         {
-            return (int)((this.GetComponent<Character>().getDamage() / .75 - this.GetComponent<Enemy>().game.defender.GetComponent<Character>().getDefense()) * 2);
+            print(this.GetComponent<Character>());
+            print(this.GetComponent<DmgStyle>().defender.GetComponent<Character>());
+            return (int)((this.GetComponent<Character>().getDamage() / .75 - this.GetComponent<DmgStyle>().defender.GetComponent<Character>().getDefense()) * 2);
         }
         else
         {

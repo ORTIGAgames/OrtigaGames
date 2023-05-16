@@ -173,7 +173,7 @@ public class KrangleTreeBehaviour : MonoBehaviour
                         float dy = this.GetComponent<Crew>().target.getInitialBlock().dy - hex.dy;
                         if (System.Math.Sign(dx) == System.Math.Sign(dy)) auxN = System.Math.Abs(dx + dy);
                         else auxN = System.Math.Max(System.Math.Abs(dx), System.Math.Abs(dy));
-                        if (auxN < valueN && hex.getOccupant() == null)
+                        if (auxN < valueN && hex.getOccupant() == null && (hex.transform.childCount <= 0 || (hex.transform.GetChild(0).name != "Obstacle" && hex.transform.GetChild(0).name != "Obstacle2")))
                         {
                             Walkto = hex;
                             valueN = auxN;
