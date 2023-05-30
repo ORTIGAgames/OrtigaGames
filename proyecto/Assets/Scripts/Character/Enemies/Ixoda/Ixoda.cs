@@ -7,18 +7,18 @@ public class Ixoda : EnemyBehaviour
 {
     public override Hexagon BestMove(Hexagon hex)
     {
-        
+        //lista con los vecinos
         List<Hexagon> movement = hex.neighbours;
-
+        
         var value = 1000;
         Hexagon bestHexagon = hex;
         foreach (Hexagon a in movement)
         {
-            if(a != null)
+            if(a != null) //si existe ese vecino
             {
                 
-                var tempValue = ValueHexagon(a);
-                if (tempValue < value)
+                var tempValue = ValueHexagon(a);    //se calcula su valor
+                if (tempValue < value) //si es mas grande que 1000, pasa a ser el mejor
                 {
                     value = tempValue;
                     bestHexagon = a;
@@ -26,7 +26,7 @@ public class Ixoda : EnemyBehaviour
             }
             
         }
-        return bestHexagon;
+        return bestHexagon;     //se queda el de mejpr valor
     }
 
     public override int DistanceHexagon(Hexagon current) 
@@ -40,37 +40,20 @@ public class Ixoda : EnemyBehaviour
             return(Math.Abs(dx + dy));
         else
             return(Math.Max(Math.Abs(dx), Math.Abs(dy)));
-
-        /*Hacer manhattan en hexagonal que ya me da hasta miedo esta mierda
-        Vector3 goalPos = goal.transform.position;
-        Vector3 currentPos = this.GetComponent<Enemy>().getActualBlock().transform.position;
-
-        Vector3 distance = goalPos - currentPos;
-
-        return (int)Mathf.Round(distance.magnitude);
-
-        /*
-        foreach(Hexagon a in goal.neighbours)
-        {
-            if (a == ActualBlock)
-                return distance;
-            else
-                distance++;
-                DistanceHexagon(a,distance);
-        }
-        return distance;*/
+   
     }
+
     public override void EnemyControl()
     {
         //Movement
         this.GetComponent<Enemy>().setActualBlock(this.GetComponent<Enemy>().getInitialBlock());
-        this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
-        Hexagon movement = this.GetComponent<Enemy>().getActualBlock();
+        this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>()); 
+        Hexagon movement = this.GetComponent<Enemy>().getActualBlock(); 
         
-        for (int i = 0; i <= ((int)this.GetComponent<Enemy>().getMovement()); i++)
+        for (int i = 0; i <= ((int)this.GetComponent<Enemy>().getMovement()); i++) //segun tu rango de movement
         {
-            Hexagon aux = BestMove(movement);
-            movement = aux;
+            Hexagon aux = BestMove(movement);   //aux es el mejor vecino de movement
+            movement = aux;         //se hace tantas veces como su rango de movimiento
         }
 
         if (!movement.getOccupant())
