@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UtilitySystem : EnemyBehaviour
 {
+    public Image feedback;
+    public Sprite[] differentActions;
     public void Action(Character c, List<Enemy> m)
     {
         List<float> values = new List<float>();
@@ -25,37 +28,23 @@ public class UtilitySystem : EnemyBehaviour
 
         if(action > 0 && action == valueA)
         {
-            Character weaker = null;
-            int weakerLife = int.MaxValue;
-
-            c.getStyle().limitAction(c.getInitialBlock(), -2, c);
-
-            foreach (Hexagon hex in c.game.stage.board)
-            {
-                if (hex.getState() == Hexagon.CodeState.EnemyT)
-                {
-                    if (hex.getOccupant().getHealth() < weakerLife)
-                    {
-                        weakerLife = hex.getOccupant().getHealth();
-                        weaker = hex.getOccupant();
-                    }
-                }
-            }
-            if (weaker)
-            {
-                c.game.CombatActivation(c, weaker);
-                c.getStyle().Action(c.game, "Action");
-            }
+            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[0]);
+            StartCoroutine(DecissionMake(0, c));
+            StartCoroutine(Wait());
         }
 
         if(action > 0 && action == valueH)
         {
-            c.GetComponent<HARNCKXSHORHealing>().Effect(null);
+            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[1]);
+            StartCoroutine(DecissionMake(1, c));
+            StartCoroutine(Wait());
         }
 
         if(action > 0 && action == valueS)
         {
-            c.GetComponent<HARNCKXSHORSpawner>().Effect(null);
+            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[2]);
+            StartCoroutine(DecissionMake(2, c));
+            StartCoroutine(Wait());
         }
     }
 
@@ -85,6 +74,49 @@ public class UtilitySystem : EnemyBehaviour
         else return 0f;
     }
 
+    IEnumerator DecissionMake(int e, Character c)
+    {
+        yield return new WaitForSeconds(2f);
+        switch (e)
+        {
+            case 0:
+                Character weaker = null;
+                int weakerLife = int.MaxValue;
+
+                c.getStyle().limitAction(c.getInitialBlock(), -2, c);
+
+                foreach (Hexagon hex in c.game.stage.board)
+                {
+                    if (hex.getState() == Hexagon.CodeState.EnemyT)
+                    {
+                        if (hex.getOccupant().getHealth() < weakerLife)
+                        {
+                            weakerLife = hex.getOccupant().getHealth();
+                            weaker = hex.getOccupant();
+                        }
+                    }
+                }
+                if (weaker)
+                {
+                    c.game.CombatActivation(c, weaker);
+                    c.getStyle().Action(c.game, "Action");
+                }
+                break;
+            case 1:
+                c.GetComponent<HARNCKXSHORHealing>().Effect(null);
+                break;
+            case 2:
+                c.GetComponent<HARNCKXSHORSpawner>().Effect(null);
+                break;
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2.5f);
+        this.feedback.GetComponent<ShowFeedback>().Unshow();
+        this.GetComponent<Enemy>().EndTurn();
+    }
     public float Heal(Character c, List<Enemy> m)
     {
         int aux;

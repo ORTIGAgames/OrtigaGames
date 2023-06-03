@@ -88,14 +88,14 @@ public class ManagerHARNCKXSHOR : Manager
         {
             PlayerReset();
             stage.Reset();
-            StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
+            StartCoroutine(ShowMessage("Enemy Turn", 3.0f));
             allyturn = false;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
-                StartCoroutine(CameraFocus(1f * (i + 1), (Enemy)enemies[i]));
+                StartCoroutine(CameraFocus(3f * (i + 1), (Enemy)enemies[i]));
             }
 
         }
@@ -147,7 +147,7 @@ public class ManagerHARNCKXSHOR : Manager
     {
         yield return new WaitForSeconds(timer);
         e.Camera();
-        StartCoroutine(Movement(1f, e));
+        StartCoroutine(Movement(0.5f, e));
     }
     IEnumerator Movement(float timer, Enemy e)
     {
@@ -161,6 +161,7 @@ public class ManagerHARNCKXSHOR : Manager
         {
             e.EB.EnemyControl();
         }
+        yield return new WaitForSeconds(3f - timer);
     }
 
     public override void CombatActivation(Character Figther1, Character Figther2)

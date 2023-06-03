@@ -3637,7 +3637,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdbbe82dba26e9647bcd0d5d0a391778, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14733,7 +14733,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdbbe82dba26e9647bcd0d5d0a391778, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22500,7 +22500,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdbbe82dba26e9647bcd0d5d0a391778, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27575,7 +27575,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdbbe82dba26e9647bcd0d5d0a391778, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -36311,7 +36311,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af6177dc1cb65894b954b4f253f84216, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdbbe82dba26e9647bcd0d5d0a391778, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -37203,6 +37203,10 @@ PrefabInstance:
       propertyPath: Game
       value: 
       objectReference: {fileID: 1728820630}
+    - target: {fileID: 2903259569752069383, guid: 4eb7a5b0f870c8345a6540ce1b19c7da, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bdbbe82dba26e9647bcd0d5d0a391778, type: 3}
     - target: {fileID: 2903259569752069386, guid: 4eb7a5b0f870c8345a6540ce1b19c7da, type: 3}
       propertyPath: m_RootOrder
       value: 7
