@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 public class Ixoda : EnemyBehaviour
 {
-
+    public Image feedback;
+    public Sprite[] differentActions;
     Ally closest;
     int turns;
     Random random = new Random();
@@ -35,22 +37,22 @@ public class Ixoda : EnemyBehaviour
 
         if (motivation > 0.6 && odds == 7)
         {
-
-            for (int i = 0; i < 2; i++)
-            { //BIG JUMP
-                EnemyControl();
-            }
-            print("SALTO");
+            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[0]);
+            StartCoroutine(DecissionMake(0));
+            StartCoroutine(Wait());
         }
         else if (fear > 0.6 && odds % 2 == 0)
         {
-            print("HUIR");
-            ScaredAway(); //RUN AWAY FROM ALLY
+            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[1]);
+            StartCoroutine(DecissionMake(1));
+            StartCoroutine(Wait());
+            //RUN AWAY FROM ALLY
         }
         else
         {
-            print("AVANZAR");
-            EnemyControl();
+            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[2]);
+            StartCoroutine(DecissionMake(2));
+            StartCoroutine(Wait());
         }
 
         //ACCIONES
@@ -242,6 +244,33 @@ public class Ixoda : EnemyBehaviour
         //Valor es mas grande cuanto mas lejos esté del aliado cercano
         int value = (int)Vector3.Distance(hex.transform.position, closest.transform.position);
         return value;
+    }
+
+    IEnumerator DecissionMake(int e)
+    {
+        yield return new WaitForSeconds(2f);
+        switch (e)
+        {
+            case 0:
+                for (int i = 0; i < 2; i++)
+                { //BIG JUMP
+                    EnemyControl();
+                }
+                break;
+            case 1:
+                ScaredAway();
+                break;
+            case 2:
+                EnemyControl();
+                break;
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2.5f);
+        this.feedback.GetComponent<ShowFeedback>().Unshow();
+        this.GetComponent<Enemy>().EndTurn();
     }
 }
 
