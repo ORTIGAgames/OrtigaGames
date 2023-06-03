@@ -149,7 +149,7 @@ public class ManagerIxodas : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.GetComponent<EnemyBehaviourState>().state = new MovementStateExit(e);
+        e.GetComponent<Ixoda>().utilSystem();
         yield return new WaitForSeconds(1f - timer);
     }
 

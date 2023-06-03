@@ -13,35 +13,7 @@ public class EnemyBehaviourState: EnemyBehaviour
         state = new MovementState(this.GetComponent<Enemy>());
     }
 
-    /*private void CreateStateMachine()
-    {
-       switch (actual)
-       {
-            case TStates.WAITING:
-                if (this.GetComponent<Enemy>().getTurn() == 1)
-                {
-                    actual = TStates.MOVEMENT;
-                }
-                break;
-            case TStates.MOVEMENT:
-                movement();
-                if (this.GetComponent<Enemy>().getInitialBlock()!= this.GetComponent<Enemy>().getActualBlock())
-                {
-                    actual = TStates.ATTACK;
-                }
-                break;
-            case TStates.ATTACK:
-                attack();
-                if (this.GetComponent<Enemy>().getTurn() == 0)
-                {
-                    actual = TStates.WAITING;
-                }
-                break;
-            default:
-                Debug.LogError("Error");
-                break;
-        }
-    }*/
+
     public void movement()
     {
 
