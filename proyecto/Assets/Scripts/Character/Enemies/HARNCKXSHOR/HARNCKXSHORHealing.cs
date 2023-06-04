@@ -8,17 +8,27 @@ public class HARNCKXSHORHealing : Abilities
 
     public override void Effect(Character Figther)
     {
+
         minions = GameObject.Find("Manager").GetComponent<ManagerHARNCKXSHOR>().minions;
         foreach(Enemy m in minions.ToArray())
         {
-            this.GetComponent<Enemy>().setHealth(this.GetComponent<Enemy>().getHealth() + 5);
-            this.GetComponent<Enemy>().game.DeleteCharacter(m);
+            foreach(Hexagon h in this.GetComponent<Enemy>().getActualBlock().neighbours){
+                
+                    foreach (Hexagon e in h.neighbours)
+                    {
+                        if (e == m.GetComponent<Enemy>().getActualBlock() || h == m.GetComponent<Enemy>().getActualBlock())
+                        {
+                            this.GetComponent<Enemy>().setHealth(this.GetComponent<Enemy>().getHealth() + 5);
+                            this.GetComponent<Enemy>().game.DeleteCharacter(m);
+                            break;
+                        }
+                    }
+            }
         }
     }
 
     public override void BeforeTurn()
     {
-        if (cooldown > 0) cooldown--;
-        else GameObject.Find("Manager").GetComponent<Manager>().preTurn.Remove(this);
+       
     }
 }

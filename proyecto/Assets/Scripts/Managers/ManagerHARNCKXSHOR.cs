@@ -157,7 +157,7 @@ public class ManagerHARNCKXSHOR : Manager
         {
             e.GetComponent<UtilitySystem>().Action(e, minions);
         }
-        if (e)
+        else
         {
             e.EB.EnemyControl();
         }

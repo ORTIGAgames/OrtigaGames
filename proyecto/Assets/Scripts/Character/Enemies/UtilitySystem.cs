@@ -7,11 +7,15 @@ public class UtilitySystem : EnemyBehaviour
 {
     public Image feedback;
     public Sprite[] differentActions;
+    public bool scream = false;
+
     public void Action(Character c, List<Enemy> m)
     {
         List<float> values = new List<float>();
         float valueA = Attack(c);
         values.Add(valueA);
+        float valueSC = Scream(c, m);
+        values.Add(valueSC);
         float valueH = Heal(c, m);
         values.Add(valueH);
         float valueS = Summon(c, m);
@@ -44,6 +48,13 @@ public class UtilitySystem : EnemyBehaviour
         {
             feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[2]);
             StartCoroutine(DecissionMake(2, c));
+            StartCoroutine(Wait());
+        }
+
+        if (action > 0 && action == valueSC)
+        {
+            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[3]);
+            StartCoroutine(DecissionMake(3, c));
             StartCoroutine(Wait());
         }
     }
@@ -108,6 +119,9 @@ public class UtilitySystem : EnemyBehaviour
             case 2:
                 c.GetComponent<HARNCKXSHORSpawner>().Effect(null);
                 break;
+            case 3:
+                c.GetComponent<HARNCKXSHORScream>().Effect(null);
+                break;
         }
     }
 
@@ -117,10 +131,10 @@ public class UtilitySystem : EnemyBehaviour
         this.feedback.GetComponent<ShowFeedback>().Unshow();
         this.GetComponent<Enemy>().EndTurn();
     }
-    public float Heal(Character c, List<Enemy> m)
+    public float Scream(Character c, List<Enemy> m)
     {
         int aux;
-        if (c.GetComponent<HARNCKXSHORHealing>().cooldown == 0 && m.Count > 0) aux = 1;
+        if (c.GetComponent<HARNCKXSHORScream>().cooldown == 0 && m.Count > 0) aux = 1;
         else aux = 0;
         print(aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth)) + " heal");
         return aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth));
@@ -134,6 +148,20 @@ public class UtilitySystem : EnemyBehaviour
         print(aux * (1 / ((float)m.Count + 1f)));
         return aux * (1 / ((float)m.Count + 1f));
     }
+
+    public float Heal(Character c, List<Enemy> m)
+    {
+        int aux;
+        if (scream)
+        {
+            aux = 10;
+            scream = false;
+        }
+        else aux = 0;
+        print(aux +"Sream");
+        return aux;
+    }
+
 
     public override Hexagon BestMove(Hexagon hex)
     {
