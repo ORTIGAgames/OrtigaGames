@@ -120,6 +120,11 @@ public abstract class Character : MonoBehaviour
         return ActualFace;
     }
 
+    public virtual Sprite getFaceTarget(int i)
+    {
+        return Face[i];
+    }
+
     public virtual string getName()
     {
         return Name;

@@ -431,7 +431,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -100, y: 100}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 500, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2903259569518341301
 CanvasRenderer:
@@ -704,13 +704,14 @@ MonoBehaviour:
   Game: {fileID: 0}
   action: {fileID: 2903259569059314366}
   differentActions:
-  - {fileID: 21300000, guid: fc6185fc8d4c64041a2d4a384b84bf5c, type: 3}
-  - {fileID: 21300000, guid: dd38ac89c444ade41a1217b7076b5684, type: 3}
-  - {fileID: 21300000, guid: d09587fe007783a4c98bb992b98e307c, type: 3}
-  - {fileID: 21300000, guid: eab16aa8cb208994ea30fd4fae0a97e8, type: 3}
-  - {fileID: 21300000, guid: b0dc837d45067454ebe5c83f58d400d0, type: 3}
   - {fileID: 21300000, guid: c7df6892820e5e749ad3a238d1e59176, type: 3}
-  - {fileID: 21300000, guid: 934b9329f8b47814eaed0070cb532f40, type: 3}
+  - {fileID: 21300000, guid: 17197b0248a8aec458f5def29ac22203, type: 3}
+  - {fileID: 21300000, guid: 10b092bb5be44a74098ee146c44c4748, type: 3}
+  - {fileID: 21300000, guid: 4c2d614237fd4c64e96330b9ecdc446a, type: 3}
+  - {fileID: 21300000, guid: fd649f7dbc86a9d4e8c5e548254dc749, type: 3}
+  - {fileID: 21300000, guid: fd649f7dbc86a9d4e8c5e548254dc749, type: 3}
+  - {fileID: 21300000, guid: 0ae8d21449d6cad46b26dd3a5fca6627, type: 3}
+  generate: {fileID: 0}
 --- !u!114 &2903259569752069375
 MonoBehaviour:
   m_ObjectHideFlags: 0

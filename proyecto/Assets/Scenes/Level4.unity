@@ -1676,9 +1676,9 @@ MonoBehaviour:
   allies: []
   feedback: {fileID: 1475096005}
   differentActions:
-  - {fileID: 21300000, guid: eab16aa8cb208994ea30fd4fae0a97e8, type: 3}
-  - {fileID: 21300000, guid: fc6185fc8d4c64041a2d4a384b84bf5c, type: 3}
-  - {fileID: 21300000, guid: 934b9329f8b47814eaed0070cb532f40, type: 3}
+  - {fileID: 21300000, guid: 4421b72b269738643b3aa111da387264, type: 3}
+  - {fileID: 21300000, guid: 68453563dbec6684296a718e850d8479, type: 3}
+  - {fileID: 21300000, guid: b99e835983f14fb44adbadf3860267bd, type: 3}
   - {fileID: 21300000, guid: dd38ac89c444ade41a1217b7076b5684, type: 3}
   - {fileID: 21300000, guid: c7df6892820e5e749ad3a238d1e59176, type: 3}
   scream: 0
@@ -12114,9 +12114,9 @@ MonoBehaviour:
   listen: 0
   feedback: {fileID: 358166044}
   differentActions:
-  - {fileID: 21300000, guid: b0dc837d45067454ebe5c83f58d400d0, type: 3}
-  - {fileID: 21300000, guid: eab16aa8cb208994ea30fd4fae0a97e8, type: 3}
-  - {fileID: 21300000, guid: dd38ac89c444ade41a1217b7076b5684, type: 3}
+  - {fileID: 21300000, guid: 0ae8d21449d6cad46b26dd3a5fca6627, type: 3}
+  - {fileID: 21300000, guid: 0a544c0569c57be40b1b14ed02ede1ea, type: 3}
+  - {fileID: 21300000, guid: 0ae8d21449d6cad46b26dd3a5fca6627, type: 3}
 --- !u!114 &879610742
 MonoBehaviour:
   m_ObjectHideFlags: 0
