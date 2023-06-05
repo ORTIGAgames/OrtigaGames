@@ -8,12 +8,16 @@ using Cinemachine;
 
 public class ManagerHimenopios : Manager
 {
+    [SerializeField]
+    List<HealingTree> arboles = new();
+    [SerializeField]
+    AttackBuffTree arbolBufo = new();
     void Start()//el manager es start mientras que el resto es awake debido a que todo tiene que estar creado antes de que el manager empiece a actuar
     {
         allyturn = true;
         Character[] StartingPlayers = GetComponentsInChildren<Character>();
         stage = GetComponentInChildren<Scenery>();
-
+        
         //interface
         InteractionH = GameObject.Find("Interaction Hud");
         CombatH = GameObject.Find("Combat Hud").GetComponent<CombatHud>();
@@ -95,6 +99,12 @@ public class ManagerHimenopios : Manager
             allyturn = false;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
+            foreach (HealingTree a in arboles)
+            {
+                a.CanHeal();
+               
+            }
+            arbolBufo.RestarTurno();
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);

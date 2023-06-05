@@ -7,18 +7,27 @@ public class MovementState : State
 {
     List<ValueHexagon> valueHexagon = new List<ValueHexagon>();
     Enemy character;
-
+    
     public MovementState(Enemy c)
     {
         character = c;
         function();
+    }
+    public MovementState(Enemy c, bool activated)
+    {
+        character = c;
+        function2();
+    }
+    public void function2()
+    {
+
     }
     public override void function()
     {
         Debug.Log("movement State");
         float valueN;
         character.Move(character.getInitialBlock(), 0);
-
+        //El primero que llegue se lo lleva
         foreach (Hexagon hex in character.game.stage.board)
         {
             if(hex.getState() == Hexagon.CodeState.WalkableE)
