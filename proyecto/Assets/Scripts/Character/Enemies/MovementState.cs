@@ -20,6 +20,55 @@ public class MovementState : State
     }
     public void function2()
     {
+        Debug.Log("Entrando");
+        AttackBuffTree arbol = GameObject.Find("Obstacle2").GetComponent<AttackBuffTree>();
+        float valueN;
+        character.Move(character.getInitialBlock(), 0);
+        foreach(Hexagon hex in character.game.stage.board)
+        {
+            if(hex.getState() == Hexagon.CodeState.WalkableE)
+            {
+                float dx = arbol.hexagon.dx;
+                float dy = arbol.hexagon.dy;
+                if (Math.Sign(dx) == Math.Sign(dy)) valueN = Math.Abs(dx + dy);
+                else valueN = (Math.Max(Math.Abs(dx), Math.Abs(dy)));
+                AddValue(hex, valueN);
+            }
+        }
+        //foreach (ValueHexagon V in valueHexagon)
+        //{
+        //    Debug.Log(V.hexagon + " " + V.value + " pre value");
+        //}
+
+        Comparer comparer = new Comparer();
+        valueHexagon.Sort(comparer);
+
+        //foreach (ValueHexagon V in valueHexagon)
+        //{
+        //    Debug.Log(V.hexagon + " " + V.value + " post value");
+        //}
+
+        foreach (ValueHexagon V in valueHexagon)
+        {
+            if (!V.hexagon.getOccupant() || V.hexagon.getOccupant() == character)
+            {
+                character.CharacterMove(V.hexagon, false);
+                break;
+            }
+        }
+
+        character.getStyle().Action(character.getInitialBlock(), 0, character);
+
+        foreach (Hexagon hex in character.game.stage.board)
+        {
+            if (hex.getState() == Hexagon.CodeState.EnemyT)
+            {
+                character.GetComponent<EnemyBehaviourState>().state = new AttackState(character);
+                break;
+            }
+        }
+        character.GetComponent<EnemyBehaviourState>().state = new WaitingState();
+        character.EndTurn();
 
     }
     public override void function()
@@ -43,18 +92,18 @@ public class MovementState : State
             }
         }
 
-        foreach(ValueHexagon V in valueHexagon)
-        {
-            Debug.Log(V.hexagon + " " + V.value + " pre value");
-        }
+        //foreach(ValueHexagon V in valueHexagon)
+        //{
+        //    Debug.Log(V.hexagon + " " + V.value + " pre value");
+        //}
 
         Comparer comparer = new Comparer();
         valueHexagon.Sort(comparer);
 
-        foreach (ValueHexagon V in valueHexagon)
-        {
-            Debug.Log(V.hexagon + " " + V.value + " post value");
-        }
+        //foreach (ValueHexagon V in valueHexagon)
+        //{
+        //    Debug.Log(V.hexagon + " " + V.value + " post value");
+        //}
 
         foreach (ValueHexagon V in valueHexagon)
         {

@@ -93,6 +93,7 @@ public class ManagerHimenopios : Manager
 
         if (allyturn && CheckTurn(allies))
         {
+            
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
@@ -104,7 +105,9 @@ public class ManagerHimenopios : Manager
                 a.CanHeal();
                
             }
-            arbolBufo.RestarTurno();
+            
+            Debug.Log("Funka?");
+            
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
@@ -114,6 +117,7 @@ public class ManagerHimenopios : Manager
 
         if (!allyturn && CheckTurn(enemies))
         {
+            arbolBufo.RestarTurno();
             PlayerReset();
             stage.Reset();
             StartCoroutine(ShowMessage("Ally turn", 1.0f));
@@ -168,7 +172,9 @@ public class ManagerHimenopios : Manager
     {
         yield return new WaitForSeconds(timer);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-        e.GetComponent<EnemyBehaviourState>().state = new MovementState(e);
+
+        if (arbolBufo.countdown == 0) e.GetComponent<EnemyBehaviourState>().state = new MovementState(e, true);
+        else e.GetComponent<EnemyBehaviourState>().state = new MovementState(e);
     }
 
     public override void CombatActivation(Character Figther1, Character Figther2)
