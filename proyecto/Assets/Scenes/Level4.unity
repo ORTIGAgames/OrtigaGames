@@ -1678,9 +1678,8 @@ MonoBehaviour:
   differentActions:
   - {fileID: 21300000, guid: 4421b72b269738643b3aa111da387264, type: 3}
   - {fileID: 21300000, guid: 68453563dbec6684296a718e850d8479, type: 3}
-  - {fileID: 21300000, guid: b99e835983f14fb44adbadf3860267bd, type: 3}
-  - {fileID: 21300000, guid: dd38ac89c444ade41a1217b7076b5684, type: 3}
-  - {fileID: 21300000, guid: c7df6892820e5e749ad3a238d1e59176, type: 3}
+  - {fileID: 21300000, guid: 4f502df509a13df4b899b2415697ff26, type: 3}
+  - {fileID: 21300000, guid: d3edce97da0bfb74d94f1e3b73b04a14, type: 3}
   scream: 0
 --- !u!114 &153858875
 MonoBehaviour:
@@ -5674,7 +5673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442075808}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0.2693881, y: 14.589378, z: -28.529}
+  m_LocalPosition: {x: 0.04497709, y: 14.766373, z: -28.529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -3721,7 +3721,7 @@ MonoBehaviour:
   Game: {fileID: 1728820630}
   action: {fileID: 2050865486}
   differentActions:
-  - {fileID: 21300000, guid: c7df6892820e5e749ad3a238d1e59176, type: 3}
+  - {fileID: 21300000, guid: e091f1f1a4414974186758fc5dc8377b, type: 3}
   - {fileID: 21300000, guid: 17197b0248a8aec458f5def29ac22203, type: 3}
   - {fileID: 21300000, guid: 10b092bb5be44a74098ee146c44c4748, type: 3}
   - {fileID: 21300000, guid: 4c2d614237fd4c64e96330b9ecdc446a, type: 3}
@@ -14819,7 +14819,7 @@ MonoBehaviour:
   Game: {fileID: 1728820630}
   action: {fileID: 111871605}
   differentActions:
-  - {fileID: 21300000, guid: c7df6892820e5e749ad3a238d1e59176, type: 3}
+  - {fileID: 21300000, guid: e091f1f1a4414974186758fc5dc8377b, type: 3}
   - {fileID: 21300000, guid: 17197b0248a8aec458f5def29ac22203, type: 3}
   - {fileID: 21300000, guid: 10b092bb5be44a74098ee146c44c4748, type: 3}
   - {fileID: 21300000, guid: 4c2d614237fd4c64e96330b9ecdc446a, type: 3}
@@ -22586,7 +22586,7 @@ MonoBehaviour:
   Game: {fileID: 1728820630}
   action: {fileID: 374892374}
   differentActions:
-  - {fileID: 21300000, guid: c7df6892820e5e749ad3a238d1e59176, type: 3}
+  - {fileID: 21300000, guid: e091f1f1a4414974186758fc5dc8377b, type: 3}
   - {fileID: 21300000, guid: 17197b0248a8aec458f5def29ac22203, type: 3}
   - {fileID: 21300000, guid: 10b092bb5be44a74098ee146c44c4748, type: 3}
   - {fileID: 21300000, guid: 4c2d614237fd4c64e96330b9ecdc446a, type: 3}
@@ -27662,7 +27662,7 @@ MonoBehaviour:
   Game: {fileID: 1728820630}
   action: {fileID: 1900806278}
   differentActions:
-  - {fileID: 21300000, guid: c7df6892820e5e749ad3a238d1e59176, type: 3}
+  - {fileID: 21300000, guid: e091f1f1a4414974186758fc5dc8377b, type: 3}
   - {fileID: 21300000, guid: 17197b0248a8aec458f5def29ac22203, type: 3}
   - {fileID: 21300000, guid: 10b092bb5be44a74098ee146c44c4748, type: 3}
   - {fileID: 21300000, guid: 4c2d614237fd4c64e96330b9ecdc446a, type: 3}
@@ -36400,7 +36400,7 @@ MonoBehaviour:
   Game: {fileID: 1728820630}
   action: {fileID: 1117637255}
   differentActions:
-  - {fileID: 21300000, guid: c7df6892820e5e749ad3a238d1e59176, type: 3}
+  - {fileID: 21300000, guid: e091f1f1a4414974186758fc5dc8377b, type: 3}
   - {fileID: 21300000, guid: 17197b0248a8aec458f5def29ac22203, type: 3}
   - {fileID: 21300000, guid: 10b092bb5be44a74098ee146c44c4748, type: 3}
   - {fileID: 21300000, guid: 4c2d614237fd4c64e96330b9ecdc446a, type: 3}
@@ -37253,6 +37253,10 @@ PrefabInstance:
       propertyPath: generate
       value: 
       objectReference: {fileID: 2903259569752069389, guid: 4eb7a5b0f870c8345a6540ce1b19c7da, type: 3}
+    - target: {fileID: 2903259569752069374, guid: 4eb7a5b0f870c8345a6540ce1b19c7da, type: 3}
+      propertyPath: differentActions.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: e091f1f1a4414974186758fc5dc8377b, type: 3}
     - target: {fileID: 2903259569752069374, guid: 4eb7a5b0f870c8345a6540ce1b19c7da, type: 3}
       propertyPath: differentActions.Array.data[1]
       value: 
