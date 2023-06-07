@@ -171,9 +171,10 @@ public class ManagerHimenopios : Manager
     IEnumerator Movement(float timer, Enemy e)
     {
         yield return new WaitForSeconds(timer);
+        //e.GetComponent<EnemyBehaviourState>().state = new MovementState(e, arboles);
         //e.CharacterMove(e.getInitialBlock().randomNeighbour());
-
-        if (arbolBufo.countdown == 0) e.GetComponent<EnemyBehaviourState>().state = new MovementState(e, true);
+        if (e.getHealth() < 5) e.GetComponent<EnemyBehaviourState>().state = new MovementState(e, arboles);
+        else if (arbolBufo.countdown == 0) e.GetComponent<EnemyBehaviourState>().state = new MovementState(e, true);
         else e.GetComponent<EnemyBehaviourState>().state = new MovementState(e);
     }
 

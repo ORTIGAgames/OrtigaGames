@@ -6,6 +6,7 @@ using UnityEngine;
 public class MovementState : State
 {
     List<ValueHexagon> valueHexagon = new List<ValueHexagon>();
+    List<HealingTree> arbolesC = new();
     Enemy character;
     
     public MovementState(Enemy c)
@@ -17,6 +18,67 @@ public class MovementState : State
     {
         character = c;
         function2();
+    }
+    public MovementState(Enemy c, List<HealingTree> arboles)
+    {
+        arbolesC = arboles;
+        character = c;
+        function3();
+    }
+    public void function3()
+    {
+        Debug.Log("Buscando arbol de cura");
+        float valueN;
+        character.Move(character.getInitialBlock(), 0);
+        foreach(Hexagon hex in character.game.stage.board)
+        {
+            if(hex.getState() == Hexagon.CodeState.WalkableE)
+            {
+                foreach(HealingTree a in arbolesC)
+                {
+                    float dx = a.hexagon.dx - hex.dx;
+                    float dy = a.hexagon.dy - hex.dy;
+                    if (Math.Sign(dx) == Math.Sign(dy)) valueN = Math.Abs(dx + dy);
+                    else valueN = (Math.Max(Math.Abs(dx), Math.Abs(dy)));
+                    AddValue(hex, valueN);
+
+                }
+            }
+        }
+        //foreach(ValueHexagon V in valueHexagon)
+        //{
+        //    Debug.Log(V.hexagon + " " + V.value + " pre value");
+        //}
+
+        Comparer comparer = new Comparer();
+        valueHexagon.Sort(comparer);
+
+        //foreach (ValueHexagon V in valueHexagon)
+        //{
+        //    Debug.Log(V.hexagon + " " + V.value + " post value");
+        //}
+
+        foreach (ValueHexagon V in valueHexagon)
+        {
+            if (!V.hexagon.getOccupant() || V.hexagon.getOccupant() == character)
+            {
+                character.CharacterMove(V.hexagon, false);
+                break;
+            }
+        }
+
+        character.getStyle().Action(character.getInitialBlock(), 0, character);
+
+        foreach (Hexagon hex in character.game.stage.board)
+        {
+            if (hex.getState() == Hexagon.CodeState.EnemyT)
+            {
+                character.GetComponent<EnemyBehaviourState>().state = new AttackState(character);
+                break;
+            }
+        }
+        character.GetComponent<EnemyBehaviourState>().state = new WaitingState();
+        character.EndTurn();
     }
     public void function2()
     {

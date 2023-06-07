@@ -13885,6 +13885,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &740044269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+  m_PrefabInstance: {fileID: 740044266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &740044270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740044269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b03a8d7852c544088d74c9ae2aa0fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: 0
+  enemies: []
+  neihbourgs:
+  - {fileID: 1520391775}
+  - {fileID: 585474144}
+  - {fileID: 359818673}
+  - {fileID: 1257096645}
+  hexagon: {fileID: 1475656644}
 --- !u!1 &741745620
 GameObject:
   m_ObjectHideFlags: 0
@@ -28437,6 +28462,10 @@ MonoBehaviour:
   scene: {fileID: 2017710468}
   attacker: {fileID: 0}
   defender: {fileID: 0}
+  arboles:
+  - {fileID: 740044270}
+  - {fileID: 1815359006}
+  arbolBufo: {fileID: 0}
 --- !u!4 &1559168338
 Transform:
   m_ObjectHideFlags: 0
@@ -32419,6 +32448,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814620931}
   m_CullTransparentMesh: 1
+--- !u!1 &1815359004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+  m_PrefabInstance: {fileID: 1448117550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1815359006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815359004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b03a8d7852c544088d74c9ae2aa0fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: 0
+  enemies: []
+  neihbourgs:
+  - {fileID: 2070536140}
+  - {fileID: 2070536140}
+  hexagon: {fileID: 2070536140}
 --- !u!1 &1821779994
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class HealingTree : MonoBehaviour
     public List<Character> enemies = new();
     [SerializeField]
     List<Hexagon> neihbourgs = new();
+    public Hexagon hexagon;
     // Start is called before the first frame update
     void Start()
     {
