@@ -83,32 +83,8 @@ public class Minion : EnemyBehaviour
         {
             //Movement
             feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[0]);
-            StartCoroutine(DecissionMake(0));
-
-
-            //Combat 
-            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[1]);
-            StartCoroutine(DecissionMake(1));
             StartCoroutine(Wait());
-            
-        }
-        else
-        {
-            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[2]);
-            StartCoroutine(DecissionMake(2));
-            StartCoroutine(Wait());
-            //Movement to scream
-            
-        }
-        
-    }
-    IEnumerator DecissionMake(int e)
-    {
-        yield return new WaitForSeconds(2f);
-        switch (e)
-        {
-            case 0:
-                this.GetComponent<Enemy>().setActualBlock(this.GetComponent<Enemy>().getInitialBlock());
+            this.GetComponent<Enemy>().setActualBlock(this.GetComponent<Enemy>().getInitialBlock());
                 this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
                 Hexagon movement = this.GetComponent<Enemy>().getActualBlock();
                 for (int i = 0; i <= ((int)this.GetComponent<Enemy>().getMovement()); i++)
@@ -131,60 +107,68 @@ public class Minion : EnemyBehaviour
 
                     }
                 }
-                break;
-            case 1:
-                Character weaker = null;
-                int weakerLife = 100;
-                foreach (Hexagon hex in this.GetComponent<Enemy>().game.stage.board)
+
+            Character weaker = null;
+            int weakerLife = 100;
+            foreach (Hexagon hex in this.GetComponent<Enemy>().game.stage.board)
+            {
+                if (hex.getState() == Hexagon.CodeState.EnemyT)
                 {
-                    if (hex.getState() == Hexagon.CodeState.EnemyT)
+                    if (hex.getOccupant().getHealth() < weakerLife)
                     {
-                        if (hex.getOccupant().getHealth() < weakerLife)
-                        {
-                            weakerLife = hex.getOccupant().getHealth();
-                            weaker = hex.getOccupant();
-                        }
-                    }
-
-                }
-                if (weaker)
-                {
-                    this.GetComponent<Enemy>().game.CombatActivation(this.GetComponent<Enemy>(), weaker);
-                    this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().game, "Action");
-                }
-                else
-                {
-                    this.GetComponent<Enemy>().EndTurn();
-                }
-                break;
-            case 2:
-                this.GetComponent<Enemy>().setActualBlock(this.GetComponent<Enemy>().getInitialBlock());
-                this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
-                movement = this.GetComponent<Enemy>().getActualBlock();
-                for (int i = 0; i <= ((int)this.GetComponent<Enemy>().getMovement() + 1) * 2; i++)
-                {
-                    Hexagon aux = BestMoveBOSS(movement);
-                    movement = aux;
-                }
-
-                if (!movement.getOccupant())
-                    this.GetComponent<Enemy>().CharacterMove(movement, false);
-                else
-                {
-                    foreach (Hexagon h in movement.neighbours)
-                    {
-                        if (h && !h.getOccupant())
-                        {
-                            this.GetComponent<Enemy>().CharacterMove(h, false);
-                            break;
-                        }
-
+                        weakerLife = hex.getOccupant().getHealth();
+                        weaker = hex.getOccupant();
                     }
                 }
-                listen = false;
-                break;
+
+            }
+            if (weaker)
+            {
+                feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[1]);
+
+                this.GetComponent<Enemy>().game.CombatActivation(this.GetComponent<Enemy>(), weaker);
+                this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().game, "Action");
+            }
+            else
+            {
+                this.GetComponent<Enemy>().EndTurn();
+            }
+
+           
         }
+        else
+        {
+            feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[2]);
+            StartCoroutine(Wait());
+            this.GetComponent<Enemy>().setActualBlock(this.GetComponent<Enemy>().getInitialBlock());
+            this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
+            Hexagon movement = this.GetComponent<Enemy>().getActualBlock();
+            for (int i = 0; i <= ((int)this.GetComponent<Enemy>().getMovement() + 1) * 2; i++)
+            {
+                Hexagon aux = BestMoveBOSS(movement);
+                movement = aux;
+            }
+
+            if (!movement.getOccupant())
+                this.GetComponent<Enemy>().CharacterMove(movement, false);
+            else
+            {
+                foreach (Hexagon h in movement.neighbours)
+                {
+                    if (h && !h.getOccupant())
+                    {
+                        this.GetComponent<Enemy>().CharacterMove(h, false);
+                        break;
+                    }
+
+                }
+            }
+            listen = false;
+
+        }
+        
     }
+    
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(2.5f);

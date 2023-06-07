@@ -44,7 +44,7 @@ public class UtilitySystem : EnemyBehaviour
             StartCoroutine(Wait());
         }
 
-        if(action > 0 && action == valueS)
+        if((action > 0 && action == valueS) || action ==0)
         {
             feedback.GetComponent<ShowFeedback>().ShowDecission(differentActions[2]);
             StartCoroutine(DecissionMake(2, c));
