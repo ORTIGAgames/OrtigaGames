@@ -57,32 +57,28 @@ public class Minion : EnemyBehaviour
         var value = 1000;
         foreach (Ally a in this.GetComponent<Enemy>().game.allies)
         {
+            int tempvalue;
 
-            int tempvalue = (40 * 2 - a.getHealth()) - DistanceHexagon(a.getActualBlock());
+            int dx = hex.dx - a.getActualBlock().dx;
+
+            int dy = hex.dy - a.getActualBlock().dy;
+
+            if (Math.Sign(dx) == Math.Sign(dy))
+                tempvalue = Math.Abs(dx + dy);
+            else
+                tempvalue = Math.Max(Math.Abs(dx), Math.Abs(dy));
+
             if (tempvalue < value)
                 value = tempvalue;
         }
         return value;
     }
 
-    public override int DistanceHexagon(Hexagon goal)
-    {
-        int dx = this.GetComponent<Enemy>().getActualBlock().dx - goal.dx;
-
-        int dy = this.GetComponent<Enemy>().getActualBlock().dy - goal.dy;
-
-        if (Math.Sign(dx) == Math.Sign(dy))
-            return (Math.Abs(dx + dy));
-        else
-            return (Math.Max(Math.Abs(dx), Math.Abs(dy)));
-
-    }
-
     public override void EnemyControl()
     {
         if(listen == false)
         {
-            game.stage.Reset();
+            GameObject.Find("Manager").GetComponent<ManagerHARNCKXSHOR>().stage.Reset();
             this.GetComponent<Enemy>().setActualBlock(this.GetComponent<Enemy>().getInitialBlock());
             this.GetComponent<Enemy>().getStyle().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
             Character weaker = null;
@@ -191,5 +187,10 @@ public class Minion : EnemyBehaviour
         yield return new WaitForSeconds(2.5f);
         this.feedback.GetComponent<ShowFeedback>().Unshow();
         this.GetComponent<Enemy>().EndTurn();
+    }
+
+    public override int DistanceHexagon(Hexagon goal)
+    {
+        throw new NotImplementedException();
     }
 }
