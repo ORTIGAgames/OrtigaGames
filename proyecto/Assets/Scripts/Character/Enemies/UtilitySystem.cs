@@ -25,7 +25,7 @@ public class UtilitySystem : EnemyBehaviour
 
         foreach(float f in values)
         {
-            print(f);
+            //print(f);
         }
 
         float action = values[0];
@@ -136,7 +136,7 @@ public class UtilitySystem : EnemyBehaviour
         int aux;
         if (c.GetComponent<HARNCKXSHORScream>().cooldown == 0 && m.Count > 0) aux = 1;
         else aux = 0;
-        print(aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth)) + " heal");
+        //print(aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth)) + " heal");
         return aux * (1 - ((float)c.getHealth() / (float)c.MaxHealth));
     }
 
@@ -145,7 +145,7 @@ public class UtilitySystem : EnemyBehaviour
         int aux;
         if (c.GetComponent<HARNCKXSHORSpawner>().cooldown == 0) aux = 1;
         else aux = 0;
-        print(aux * (1 / ((float)m.Count + 1f)));
+        //print(aux * (1 / ((float)m.Count + 1f)));
         return aux * (1 / ((float)m.Count + 1f));
     }
 
@@ -158,7 +158,7 @@ public class UtilitySystem : EnemyBehaviour
             scream = false;
         }
         else aux = 0;
-        print(aux +"Sream");
+        //print(aux +"Sream");
         return aux;
     }
 
