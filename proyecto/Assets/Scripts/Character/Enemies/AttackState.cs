@@ -13,8 +13,7 @@ public class AttackState : State
     }
     public override void function()
     {
-        if (character.gameObject.name == "Female Himenopio") character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("femaleAttack"));
-        else character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("maleAttack"));
+
         Character weaker = null;
         int weakerLife = int.MaxValue;
 
@@ -33,6 +32,8 @@ public class AttackState : State
         }
         if (weaker)
         {
+            if(character.gameObject.name == "Female Himenopio") character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("femaleAttack"));
+            else character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("maleAttack"));
             character.game.CombatActivation(character, weaker);
             character.getStyle().Action(character.game, "Action");
         }
