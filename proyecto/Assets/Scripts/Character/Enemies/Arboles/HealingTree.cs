@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class HealingTree : MonoBehaviour
@@ -10,6 +11,9 @@ public class HealingTree : MonoBehaviour
     [SerializeField]
     List<Hexagon> neihbourgs = new();
     public Hexagon hexagon;
+    public Image feedback;
+    public Sprite show;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,12 +45,19 @@ public class HealingTree : MonoBehaviour
                 //nada
                 if (g.getOccupant().getSide() == "Enemy")
                 {
+                    print("si");
                     g.getOccupant().setHealth(g.getOccupant().getHealth() + 2);
-                    Debug.Log("curao");
+                    feedback.GetComponent<ShowFeedback>().ShowDecission(show);
                 }
             }
-            Debug.Log("No hay nadie");
         }
         
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2.5f);
+        this.feedback.GetComponent<ShowFeedback>().Unshow();
+        this.GetComponent<Enemy>().EndTurn();
     }
 }

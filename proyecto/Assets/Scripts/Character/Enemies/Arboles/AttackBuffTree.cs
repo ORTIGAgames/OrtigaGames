@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackBuffTree : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class AttackBuffTree : MonoBehaviour
     [SerializeField]
     List<Hexagon> neighbours = new();
     public Hexagon hexagon;
+    public Image feedback;
+    public Sprite show;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,8 @@ public class AttackBuffTree : MonoBehaviour
                     if (hex.getOccupant().getSide() == "Enemy")
                     {
                         hex.getOccupant().setDamage(hex.getOccupant().getDamage() + 2);
+                        feedback.GetComponent<ShowFeedback>().ShowDecission(show);
+                        StartCoroutine(Wait());
                         Debug.Log("El daño de " + hex.getOccupant().getName() + "es: " + hex.getOccupant().getDamage());
                         break;
                     }
@@ -43,8 +49,10 @@ public class AttackBuffTree : MonoBehaviour
         }
         
     }
-    public void CallHimenopios()
+    IEnumerator Wait()
     {
-        
+        yield return new WaitForSeconds(2.5f);
+        this.feedback.GetComponent<ShowFeedback>().Unshow();
+        this.GetComponent<Enemy>().EndTurn();
     }
 }

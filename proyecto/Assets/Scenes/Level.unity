@@ -9436,18 +9436,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426754073}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.18}
-  m_LocalScale: {x: 0.00049999997, y: 0.00049999985, z: 0.0009999997}
+  m_LocalRotation: {x: -0, y: -0.258819, z: -0, w: 0.9659259}
+  m_LocalPosition: {x: 0, y: 0, z: 0.06499992}
+  m_LocalScale: {x: 0.00049999997, y: 0.0004999998, z: 0.0009999996}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1753397206}
-  m_Father: {fileID: 2070536139}
-  m_RootOrder: 0
+  m_Father: {fileID: 1448117553}
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.12, y: -0}
+  m_AnchoredPosition: {x: 0.11258327, y: 0.20000012}
   m_SizeDelta: {x: 336.8875, y: 70.5588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426754075
@@ -13758,18 +13758,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699506502}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.18}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00049999997, y: 0.00049999985, z: 0.0009999997}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1368771474}
-  m_Father: {fileID: 1475656642}
-  m_RootOrder: 1
+  m_Father: {fileID: 740044270}
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.12, y: 0}
+  m_AnchoredPosition: {x: 0.14, y: 0.20000009}
   m_SizeDelta: {x: 336.8875, y: 70.5588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699506504
@@ -14778,6 +14778,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1418168387022425682, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11a93b757060f2942bdb754e7ab865e5, type: 2}
     - target: {fileID: 919132149155446097, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
       propertyPath: m_Name
       value: Obstacle
@@ -14814,7 +14818,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
   m_PrefabInstance: {fileID: 740044266}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &740044270
+--- !u!4 &740044270 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+  m_PrefabInstance: {fileID: 740044266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &740044271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14823,17 +14832,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 740044269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90b03a8d7852c544088d74c9ae2aa0fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c2b7118bf1a23d47839dba99ebd550b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  random: 0
-  enemies: []
-  neihbourgs:
-  - {fileID: 1520391775}
+  countdown: 2
+  neighbours:
   - {fileID: 585474144}
+  - {fileID: 1520391775}
   - {fileID: 359818673}
   - {fileID: 1257096645}
   hexagon: {fileID: 1475656644}
+  feedback: {fileID: 1368771476}
+  show: {fileID: 21300000, guid: e9ee2e5adfdd68a4687aa76f87223fe0, type: 3}
 --- !u!1 &741745620
 GameObject:
   m_ObjectHideFlags: 0
@@ -28532,7 +28542,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28574,6 +28584,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -1418168387022425682, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a55d39a3fb4a94bb523f383bf2b9a8, type: 2}
     - target: {fileID: 919132149155446097, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
       propertyPath: m_Name
       value: Obstacle
@@ -28605,6 +28619,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1448117553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b80cb3921d8b1754d830537d841471eb, type: 3}
+  m_PrefabInstance: {fileID: 1448117550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1449889463
 GameObject:
   m_ObjectHideFlags: 0
@@ -30111,9 +30130,8 @@ MonoBehaviour:
   attacker: {fileID: 0}
   defender: {fileID: 0}
   arboles:
-  - {fileID: 740044270}
   - {fileID: 1815359006}
-  arbolBufo: {fileID: 0}
+  arbolBufo: {fileID: 740044271}
 --- !u!4 &1559168338
 Transform:
   m_ObjectHideFlags: 0
@@ -34569,9 +34587,13 @@ MonoBehaviour:
   random: 0
   enemies: []
   neihbourgs:
-  - {fileID: 2070536140}
-  - {fileID: 2070536140}
+  - {fileID: 1394156183}
+  - {fileID: 71373612}
+  - {fileID: 1176565299}
+  - {fileID: 820639582}
   hexagon: {fileID: 2070536140}
+  feedback: {fileID: 1753397208}
+  show: {fileID: 21300000, guid: 5c63bbaa76e28b9409f6a065c9141630, type: 3}
 --- !u!1 &1821779994
 GameObject:
   m_ObjectHideFlags: 0
