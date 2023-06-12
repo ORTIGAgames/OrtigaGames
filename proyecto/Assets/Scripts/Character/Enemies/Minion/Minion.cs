@@ -191,6 +191,14 @@ public class Minion : EnemyBehaviour
 
     public override int DistanceHexagon(Hexagon goal)
     {
-        throw new NotImplementedException();
+        int dx = this.GetComponent<Enemy>().getActualBlock().dx - goal.dx;
+
+        int dy = this.GetComponent<Enemy>().getActualBlock().dy - goal.dy;
+
+        if (Math.Sign(dx) == Math.Sign(dy))
+            return (Math.Abs(dx + dy));
+        else
+            return (Math.Max(Math.Abs(dx), Math.Abs(dy)));
+
     }
 }

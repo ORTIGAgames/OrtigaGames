@@ -64,8 +64,6 @@ public class Ixoda : EnemyBehaviour
         }
         */
         turns++;
-        this.GetComponent<Enemy>().EndTurn();
-
     }
 
 
@@ -210,7 +208,6 @@ public class Ixoda : EnemyBehaviour
         }
         print(this.GetComponent<Character>());
         print(movement);
-        // this.GetComponent<Enemy>().EndTurn();
     }
 
     public Hexagon BestMoveScared(Hexagon hex)

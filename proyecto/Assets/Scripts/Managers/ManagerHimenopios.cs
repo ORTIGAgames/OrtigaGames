@@ -103,10 +103,8 @@ public class ManagerHimenopios : Manager
             foreach (HealingTree a in arboles)
             {
                 a.CanHeal();
-               
+
             }
-            
-            Debug.Log("Funka?");
             
             for (int i = 0; i < enemies.Count; i++)
             {
