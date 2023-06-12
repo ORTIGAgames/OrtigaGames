@@ -94,8 +94,8 @@ public class MovementState : State
         {
             if(hex.getState() == Hexagon.CodeState.WalkableE)
             {
-                float dx = arbol.hexagon.dx;
-                float dy = arbol.hexagon.dy;
+                float dx = arbol.hexagon.dx - hex.dx;
+                float dy = arbol.hexagon.dy - hex.dy;
                 if (Math.Sign(dx) == Math.Sign(dy)) valueN = Math.Abs(dx + dy);
                 else valueN = (Math.Max(Math.Abs(dx), Math.Abs(dy)));
                 AddValue(hex, valueN);

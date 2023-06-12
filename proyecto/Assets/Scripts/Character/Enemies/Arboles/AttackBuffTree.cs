@@ -22,12 +22,12 @@ public class AttackBuffTree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(countdown == 0) feedback.GetComponent<ShowFeedback>().ShowDecission(show);
+        else this.feedback.GetComponent<ShowFeedback>().Unshow();
     }
     public void RestarTurno()
     {
-        int count = 0;
-        countdown--;
+        if (countdown != 0) countdown--;
         Debug.Log(countdown);
         if(countdown == 0)
         {
@@ -39,15 +39,12 @@ public class AttackBuffTree : MonoBehaviour
                     if (hex.getOccupant().getSide() == "Enemy")
                     {
                         hex.getOccupant().setDamage(hex.getOccupant().getDamage() + 2);
-                        feedback.GetComponent<ShowFeedback>().ShowDecission(show);
                         Debug.Log("El daño de " + hex.getOccupant().getName() + "es: " + hex.getOccupant().getDamage());
+                        countdown = 2;
                         break;
                     }
                 }
-                else count++;
-            }
-            countdown = 2;
-            if (count == neighbours.Count) this.feedback.GetComponent<ShowFeedback>().Unshow();
+            }         
         }
         
     }

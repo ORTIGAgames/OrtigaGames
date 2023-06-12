@@ -34,7 +34,6 @@ public class ShowFeedback : MonoBehaviour
     IEnumerator Function(Sprite d)
     {
         yield return new WaitForSeconds(1.5f);
-        print(this.gameObject.active + " " + this.transform.parent.transform.parent.gameObject);
         show.sprite = d;
     }
 }
