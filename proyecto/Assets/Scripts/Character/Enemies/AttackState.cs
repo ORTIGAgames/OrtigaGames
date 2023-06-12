@@ -13,8 +13,8 @@ public class AttackState : State
     }
     public override void function()
     {
-        Debug.Log("Attack state");
-
+        if (character.gameObject.name == "Female Himenopio") character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("femaleAttack"));
+        else character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("maleAttack"));
         Character weaker = null;
         int weakerLife = int.MaxValue;
 
@@ -33,18 +33,11 @@ public class AttackState : State
         }
         if (weaker)
         {
-            character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("gohealTree"));
-            Attack(character, weaker);
+            character.game.CombatActivation(character, weaker);
+            character.getStyle().Action(character.game, "Action");
         }
         character.StartCoroutine(Wait(character));
         character.GetComponent<EnemyBehaviourState>().state = new WaitingState();
-    }
-
-    IEnumerator Attack(Character c, Character w)
-    {
-        yield return new WaitForSeconds(2f);
-        character.game.CombatActivation(c, w);
-        character.getStyle().Action(character.game, "Action");
     }
 
     IEnumerator Wait(Character c)

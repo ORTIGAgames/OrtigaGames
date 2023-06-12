@@ -10,6 +10,5 @@ public class WaitingState : State
     }
     public override void function()
     {
-        Debug.Log("Waiting State");
     }
 }
