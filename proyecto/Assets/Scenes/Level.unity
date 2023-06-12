@@ -2457,6 +2457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 2057992111}
 --- !u!65 &118484504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2480,7 +2481,7 @@ Animator:
   m_GameObject: {fileID: 118484493}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a73a3b767f2e18468152bb22b7e7359, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2504,6 +2505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1 &120508737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4649,7 +4651,7 @@ Animator:
   m_GameObject: {fileID: 212996055}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a73a3b767f2e18468152bb22b7e7359, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4736,6 +4738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 1739835813}
 --- !u!114 &212996062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4764,6 +4767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1 &223637532
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,7 +5334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 351.4201, y: 238.0069}
+  m_AnchoredPosition: {x: 350, y: 240}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261118580
@@ -8530,7 +8534,7 @@ Animator:
   m_GameObject: {fileID: 384970719}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a73a3b767f2e18468152bb22b7e7359, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8617,6 +8621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 261118580}
 --- !u!114 &384970726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8645,6 +8650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1 &386813671
 GameObject:
   m_ObjectHideFlags: 0
@@ -11050,7 +11056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 351.4201, y: 238.0069}
+  m_AnchoredPosition: {x: 350, y: 240}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556473790
@@ -14292,6 +14298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 1197015603}
 --- !u!114 &724972036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14320,6 +14327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1 &731353638
 GameObject:
   m_ObjectHideFlags: 0
@@ -15611,6 +15619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 1271527637}
 --- !u!114 &783895772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15639,6 +15648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1001 &788658167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16246,7 +16256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803636746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 163.84, y: -116.809, z: -1.9813226}
+  m_LocalPosition: {x: 164.111, y: -116.809, z: -1.9813226}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16367,6 +16377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 1430523809}
 --- !u!65 &803636758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16414,6 +16425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1001 &804743421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24443,7 +24455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88.206, y: 238.0069}
+  m_AnchoredPosition: {x: 350, y: 240}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197015603
@@ -25552,7 +25564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.412544, y: 238.0069}
+  m_AnchoredPosition: {x: 350, y: 240}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271527637
@@ -26576,7 +26588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.412544, y: 238.0069}
+  m_AnchoredPosition: {x: 350, y: 240}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1326637397
@@ -27608,7 +27620,7 @@ Animator:
   m_GameObject: {fileID: 1412602625}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a73a3b767f2e18468152bb22b7e7359, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -27695,6 +27707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 1745555344}
 --- !u!114 &1412602632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27723,6 +27736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1 &1424700661
 GameObject:
   m_ObjectHideFlags: 0
@@ -29145,7 +29159,7 @@ Animator:
   m_GameObject: {fileID: 1509622916}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a73a3b767f2e18468152bb22b7e7359, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -29232,6 +29246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 1936700162}
 --- !u!114 &1509622923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29260,6 +29275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1001 &1516995732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29472,7 +29488,7 @@ Animator:
   m_GameObject: {fileID: 1518962545}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e695dd236271a244d9be013916b1730b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a73a3b767f2e18468152bb22b7e7359, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -29559,6 +29575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 556473790}
 --- !u!114 &1518962552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29587,6 +29604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1001 &1520391772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32827,6 +32845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fbc93a584c5c945bcfeaa9f81ffb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 1326637397}
 --- !u!114 &1700390877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32855,6 +32874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 1559168337}
   allies: []
+  state: {fileID: 0}
 --- !u!1 &1707576870
 GameObject:
   m_ObjectHideFlags: 0
@@ -33231,7 +33251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 351.4201, y: 238.0069}
+  m_AnchoredPosition: {x: 350, y: 240}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739835813
@@ -33322,7 +33342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350.0163, y: 238.0069}
+  m_AnchoredPosition: {x: 350, y: 240}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745555344
@@ -34720,7 +34740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821908165}
   m_LocalRotation: {x: 0.2164396, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: -0.0036221594, y: 14.589378, z: -28.529}
+  m_LocalPosition: {x: 0.26737395, y: 14.589378, z: -28.529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36757,7 +36777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350.0163, y: 238.0069}
+  m_AnchoredPosition: {x: 350, y: 240}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936700162

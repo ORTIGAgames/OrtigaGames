@@ -62,23 +62,27 @@ public class MovementState : State
         {
             if (!V.hexagon.getOccupant() || V.hexagon.getOccupant() == character)
             {
-                character.CharacterMove(V.hexagon, false);
+                character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("gohealTree"));
+                character.StartCoroutine(Move(character, V));
                 break;
             }
         }
 
         character.getStyle().Action(character.getInitialBlock(), 0, character);
 
+        bool there = false;
+
         foreach (Hexagon hex in character.game.stage.board)
         {
             if (hex.getState() == Hexagon.CodeState.EnemyT)
             {
+                there = true;
                 character.GetComponent<EnemyBehaviourState>().state = new AttackState(character);
                 break;
             }
         }
+        if (!there) character.StartCoroutine(Wait(character));
         character.GetComponent<EnemyBehaviourState>().state = new WaitingState();
-        character.EndTurn();
     }
     public void function2()
     {
@@ -114,23 +118,27 @@ public class MovementState : State
         {
             if (!V.hexagon.getOccupant() || V.hexagon.getOccupant() == character)
             {
-                character.CharacterMove(V.hexagon, false);
+                character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("goUpgradeattackTree"));
+                character.StartCoroutine(Move(character, V));
                 break;
             }
         }
 
         character.getStyle().Action(character.getInitialBlock(), 0, character);
 
+        bool there = false;
+
         foreach (Hexagon hex in character.game.stage.board)
         {
             if (hex.getState() == Hexagon.CodeState.EnemyT)
             {
+                there = true;
                 character.GetComponent<EnemyBehaviourState>().state = new AttackState(character);
                 break;
             }
         }
+        if (!there) character.StartCoroutine(Wait(character));
         character.GetComponent<EnemyBehaviourState>().state = new WaitingState();
-        character.EndTurn();
 
     }
     public override void function()
@@ -171,29 +179,46 @@ public class MovementState : State
         {
             if (!V.hexagon.getOccupant() || V.hexagon.getOccupant() == character)
             {
-                character.CharacterMove(V.hexagon, false);
+
+                character.GetComponent<HimenopioAttack>().s.ShowDecission(Resources.Load<Sprite>("move"));
+                character.StartCoroutine(Move(character, V));          
                 break;
             }
         }
 
         character.getStyle().Action(character.getInitialBlock(), 0, character);
 
+        bool there = false;
         foreach (Hexagon hex in character.game.stage.board)
         {
             if (hex.getState() == Hexagon.CodeState.EnemyT)
             {
+                there = true;
                 character.GetComponent<EnemyBehaviourState>().state = new AttackState(character);
                 break;
             }
         }
+        if(!there) character.StartCoroutine(Wait(character));
         character.GetComponent<EnemyBehaviourState>().state = new WaitingState();
-        character.EndTurn();
     }
 
     public void AddValue(Hexagon direction, float value)
     {
         ValueHexagon component = new ValueHexagon(direction, value);
         valueHexagon.Add(component);
+    }
+
+    IEnumerator Move(Character c, ValueHexagon V)
+    {
+        yield return new WaitForSeconds(2f);
+        c.CharacterMove(V.hexagon, false);
+    }
+
+    IEnumerator Wait(Character c)
+    {
+        yield return new WaitForSeconds(2.5f);
+        c.GetComponentInChildren<ShowFeedback>().Unshow();
+        c.GetComponent<Enemy>().EndTurn();
     }
 }
 class ValueHexagon
@@ -216,5 +241,7 @@ class Comparer : IComparer<ValueHexagon>
         else return 0;       
     }
 }
+
+
 
 

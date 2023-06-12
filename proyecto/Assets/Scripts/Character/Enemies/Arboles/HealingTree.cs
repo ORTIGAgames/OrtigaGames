@@ -38,7 +38,8 @@ public class HealingTree : MonoBehaviour
     }
     public void Heal()
     {
-        foreach(Hexagon g in neihbourgs)
+        int count = 0;
+        foreach (Hexagon g in neihbourgs)
         {
             if(g.getOccupant() != null)
             {
@@ -50,14 +51,8 @@ public class HealingTree : MonoBehaviour
                     feedback.GetComponent<ShowFeedback>().ShowDecission(show);
                 }
             }
+            else count++;
         }
-        
-    }
-
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(2.5f);
-        this.feedback.GetComponent<ShowFeedback>().Unshow();
-        this.GetComponent<Enemy>().EndTurn();
+        if (count == neihbourgs.Count) this.feedback.GetComponent<ShowFeedback>().Unshow();
     }
 }

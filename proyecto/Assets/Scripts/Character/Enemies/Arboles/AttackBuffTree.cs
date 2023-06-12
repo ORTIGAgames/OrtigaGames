@@ -26,6 +26,7 @@ public class AttackBuffTree : MonoBehaviour
     }
     public void RestarTurno()
     {
+        int count = 0;
         countdown--;
         Debug.Log(countdown);
         if(countdown == 0)
@@ -39,20 +40,15 @@ public class AttackBuffTree : MonoBehaviour
                     {
                         hex.getOccupant().setDamage(hex.getOccupant().getDamage() + 2);
                         feedback.GetComponent<ShowFeedback>().ShowDecission(show);
-                        StartCoroutine(Wait());
                         Debug.Log("El daño de " + hex.getOccupant().getName() + "es: " + hex.getOccupant().getDamage());
                         break;
                     }
                 }
+                else count++;
             }
             countdown = 2;
+            if (count == neighbours.Count) this.feedback.GetComponent<ShowFeedback>().Unshow();
         }
         
-    }
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(2.5f);
-        this.feedback.GetComponent<ShowFeedback>().Unshow();
-        this.GetComponent<Enemy>().EndTurn();
     }
 }

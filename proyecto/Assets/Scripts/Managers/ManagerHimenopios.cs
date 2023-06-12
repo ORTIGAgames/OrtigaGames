@@ -96,7 +96,7 @@ public class ManagerHimenopios : Manager
             
             PlayerReset();
             stage.Reset();
-            StartCoroutine(ShowMessage("Enemy Turn", 1.0f));
+            StartCoroutine(ShowMessage("Enemy Turn", 3.0f));
             allyturn = false;
             foreach (PreTurn p in preTurn.ToArray())
                 p.BeforeTurn();
@@ -111,7 +111,7 @@ public class ManagerHimenopios : Manager
             for (int i = 0; i < enemies.Count; i++)
             {
                 enemies[i].setTurn(1);
-                StartCoroutine(CameraFocus(1f * (i + 1), (Enemy)enemies[i]));
+                StartCoroutine(CameraFocus(3f * (i + 1), (Enemy)enemies[i]));
             }
         }
 
@@ -166,7 +166,7 @@ public class ManagerHimenopios : Manager
     {
         yield return new WaitForSeconds(timer);
         e.Camera();
-        StartCoroutine(Movement(1f, e));
+        StartCoroutine(Movement(0.5f, e));
     }
     IEnumerator Movement(float timer, Enemy e)
     {
@@ -176,6 +176,7 @@ public class ManagerHimenopios : Manager
         if (e.getHealth() < 5) e.GetComponent<EnemyBehaviourState>().state = new MovementState(e, arboles);
         else if (arbolBufo.countdown == 0) e.GetComponent<EnemyBehaviourState>().state = new MovementState(e, true);
         else e.GetComponent<EnemyBehaviourState>().state = new MovementState(e);
+        yield return new WaitForSeconds(3f - timer);
     }
 
     public override void CombatActivation(Character Figther1, Character Figther2)
