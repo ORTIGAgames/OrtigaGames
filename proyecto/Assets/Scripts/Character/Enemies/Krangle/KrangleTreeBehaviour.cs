@@ -67,8 +67,24 @@ public class KrangleTreeBehaviour : MonoBehaviour
                 {
                     if (Random.Range(0, 2) % 2 == 0)
                     {
+                        print("ataque");
                         action.GetComponent<ShowFeedback>().ShowDecission(differentActions[4]);
                         election = 4;
+                    }
+                    else
+                    {
+                        Game.PlayerReset();
+                        this.GetComponent<DmgStyle>().Action(this.GetComponent<Enemy>().getActualBlock(), 0, this.GetComponent<Enemy>());
+                        if (this.GetComponent<Crew>().target.getTarget() == true)//si está a rango del target
+                        {
+                            action.GetComponent<ShowFeedback>().ShowDecission(differentActions[5]);
+                            election = 5;
+                        }
+                        else
+                        {
+                            action.GetComponent<ShowFeedback>().ShowDecission(differentActions[6]);
+                            election = 6;
+                        }
                     }
                 }
                 else
