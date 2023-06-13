@@ -44,8 +44,8 @@ public class AttackState : State
     IEnumerator Wait(Character c)
     {
         yield return new WaitForSeconds(2.5f);
-        c.GetComponentInChildren<ShowFeedback>().Unshow();
         c.GetComponent<Enemy>().EndTurn();
+        if(c.GetComponentInChildren<ShowFeedback>()) c.GetComponentInChildren<ShowFeedback>().Unshow();
     }
 
 }

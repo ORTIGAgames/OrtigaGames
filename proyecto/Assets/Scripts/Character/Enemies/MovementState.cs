@@ -202,6 +202,7 @@ public class MovementState : State
             {
                 if (hex.getState() == Hexagon.CodeState.EnemyT)
                 {
+                    print("atacando");
                     there = true;
                     character.GetComponent<EnemyBehaviourState>().state = new AttackState(character);
                     break;
